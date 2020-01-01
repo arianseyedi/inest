@@ -9,19 +9,16 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     width: '100%',
-    marginBottom: 0,
+    margin: 0,
     padding: '15px 0px 15px 0px',
   },
   bg: {
-    // borderTop: `2px solid ${theme.palette.grey[300]}`,
-    // borderBottom: `2px solid ${theme.palette.grey[300]}`,
     color: theme.palette.text.secondary,
-    backgroundColor: theme.palette.grey[900],
-    opacity: '50%',
+    background: 'rgba(24,24,24, .3)',
   },
   logo: {
     fontSize: 65,
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(0),
   },
 }))
 

@@ -5,9 +5,9 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    color: theme.palette.grey[300],
+    color: theme.palette.grey[600],
     backgroundColor: theme.palette.grey[900],
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
   },
 }))
 
@@ -16,7 +16,7 @@ const CopyrightAndTerms = () => {
 
   return (
     <div className={classes.root}>
-      <Typography variant="subtitle2" color="textSecondary" align="center">
+      <Typography variant="subtitle2" align="center">
         {'Copyright © '}
         <MuiLink color="inherit" href="#">
           Inest.ca

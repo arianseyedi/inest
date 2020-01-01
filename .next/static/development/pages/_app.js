@@ -54819,7 +54819,8 @@ var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["create
       "default": '#fff'
     },
     text: {
-      secondary: _material_ui_core_colors_grey__WEBPACK_IMPORTED_MODULE_2___default.a[200]
+      secondary: _material_ui_core_colors_grey__WEBPACK_IMPORTED_MODULE_2___default.a[300],
+      primary: _material_ui_core_colors_grey__WEBPACK_IMPORTED_MODULE_2___default.a[800]
     }
   }
 });

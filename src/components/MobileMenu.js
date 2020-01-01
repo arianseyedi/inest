@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       cursor: 'pointer',
     },
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(0),
   },
 }))
 

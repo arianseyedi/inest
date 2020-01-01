@@ -7,6 +7,9 @@ import Link from '../components/Link'
 import Bottombar from '../components/Bottombar'
 import Topbar from '../components/Topbar'
 import { makeStyles } from '@material-ui/core/styles'
+import Spinner from '../components/spinner/Spinner'
+import Contactbar from '../components/Contactbar'
+import Partners from '../components/Partners'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
@@ -17,12 +20,14 @@ const useStyles = makeStyles(theme => ({
   },
   nobg1: {
     height: 'auto',
+    minHeight: '50vh',
   },
-  nobg1: {
+  nobg2: {
     height: 'auto',
+    minHeight: '50vh',
   },
   box3bg: {
-    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${'cinema.jpg'})`,
+    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${'touchSmart.jpg'})`,
     backgroundSize: ' cover',
     backgroundPosition: 'center',
     minHeight: '800px',
@@ -36,6 +41,7 @@ export default function Index() {
   return (
     <React.Fragment>
       <div className={classes.box1bg}>
+        <Contactbar />
         <Topbar />
         <Container maxWidth="lg">
           <Box my={4}>
@@ -74,6 +80,9 @@ export default function Index() {
             <ProTip />
           </Box>
         </Container>
+      </div>
+      <div className={classes.partners}>
+        <Partners />
       </div>
       <div className={classes.nobg2}>
         <Container maxWidth="lg">

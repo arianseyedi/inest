@@ -1,0 +1,22 @@
+.img-box {
+  max-width: 100%;
+  max-height: 100%;
+  display: block; /*remove extra space below image*/
+}
+.box {
+  width: 20%;
+  height: 80px;
+}
+.box-2 {
+  width: 25%;
+  height: 80px;
+}
+.box,
+.box-2 {
+  display: inline-grid;
+}
+.container-box {
+  padding-left: 32px;
+  padding-right: 32px;
+  align-items: space-between;
+}
