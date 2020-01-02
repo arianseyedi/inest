@@ -54810,7 +54810,7 @@ var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["create
       main: '#556cd6'
     },
     secondary: {
-      main: '#19857b'
+      main: '#FFD300'
     },
     error: {
       main: _material_ui_core_colors__WEBPACK_IMPORTED_MODULE_1__["red"].A400
@@ -54824,7 +54824,7 @@ var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["create
     }
   }
 });
-theme.typography.h4 = {
+theme.typography.h6 = {
   '@media (max-width:600px)': {
     fontSize: '0.75rem',
     fontWeight: 'normal'

@@ -30,10 +30,10 @@ export default function SelectiveServices() {
           <SelectiveService image={servicesImg[1]} msg="Lighting Automation" />
         </Grid>
         <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-          <SelectiveService image={servicesImg[2]} msg="Smart Home" />
+          <SelectiveService image={servicesImg[2]} msg="Sound System" />
         </Grid>
         <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-          <SelectiveService image={servicesImg[3]} msg="Sound System" />
+          <SelectiveService image={servicesImg[3]} msg="Smart Home" />
         </Grid>
       </Grid>
     </Container>

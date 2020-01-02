@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Paper } from '@material-ui/core'
+import { Grid, Paper, Button, TextField } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
   box: {
@@ -15,6 +15,10 @@ const useStyles = makeStyles(() => ({
   paper: {
     background: 'transparent',
   },
+  semiTransparentPaper: {
+    background: `rgba(255,255,255,0.2)`,
+    borderRadius: 7,
+  },
 }))
 
 export default function HomeIntro() {
@@ -22,14 +26,8 @@ export default function HomeIntro() {
 
   return (
     <Container maxWidth="lg" style={{ height: '100%' }}>
-      <Grid
-        container
-        direction="row"
-        spacing={10}
-        className={classes.box}
-        alignItems="flex-end"
-      >
-        <Grid item sm={12} md={6}>
+      <Grid container direction="row" spacing={10} className={classes.box} alignItems="center">
+        <Grid item sm={12} md={7}>
           <Paper className={classes.paper} elevation={0}>
             <Typography
               variant="h3"
@@ -38,31 +36,54 @@ export default function HomeIntro() {
               className={classes.text_intro}
               style={{ paddingBottom: '30px' }}
             >
-              We Level up Your Home
+              Smart, Convenient and Secure
             </Typography>
             <Typography className={classes.text_intro}>
-              With over 20 years of experience under our belt, iNest Canada equips your home
-              with the latest smart home technology and gives you the experience you are
-              looking for.
+              Enhance security, save energy, and promote comfort with iNest home automation.
             </Typography>
           </Paper>
         </Grid>
-        <Grid item sm={12} md={6}>
-          <Paper className={classes.paper} elevation={0}>
-            <Typography
-              variant="h3"
-              component="h1"
-              gutterBottom
-              className={classes.text_intro}
-              style={{ paddingBottom: '30px' }}
+        <Grid item sm={12} md={5}>
+          <Paper className={classes.semiTransparentPaper} elevation={2}>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="stretch"
+              style={{ padding: 35 }}
             >
-              We Level up Your Home
-            </Typography>
-            <Typography className={classes.text_intro}>
-              With over 20 years of experience under our belt, iNest Canada equips your home
-              with the latest smart home technology and gives you the experience you are
-              looking for.
-            </Typography>
+              <Grid item>
+                <Typography
+                  variant="h4"
+                  component="h1"
+                  gutterBottom
+                  className={classes.text_intro}
+                  style={{ paddingBottom: '30px' }}
+                >
+                  Would like to know more?
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Grid container direction="column" spacing={2}>
+                  <Grid item>
+                    <TextField
+                      required
+                      id="standard-required"
+                      label="Your Email"
+                      style={{ width: '100%' }}
+                      // variant="secondary"
+                      variant="filled"
+                      color="secondary"
+                    />
+                  </Grid>
+                  <Grid item>
+                    <Button variant="contained" color="secondary" style={{ width: '100%' }}>
+                      Get a quote
+                    </Button>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
           </Paper>
         </Grid>
       </Grid>

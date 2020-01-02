@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
@@ -7,23 +8,23 @@ import Link from '../components/Link'
 import Bottombar from '../components/Bottombar'
 import Topbar from '../components/Topbar'
 import { makeStyles } from '@material-ui/core/styles'
-import Spinner from '../components/spinner/Spinner'
 import Contactbar from '../components/Contactbar'
 import Partners from '../components/PartnersSlideShow'
 import HomeIntro from '../components/HomeIntro'
 import { Grid } from '@material-ui/core'
 import SelectiveServices from '../components/SelectiveServices'
-import clsx from 'clsx'
+import StepByStepGuide from '../components/StepByStepGuide'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center bottom',
   },
   nobg1: {
     height: 'auto',
     minHeight: '50vh',
+    marginTop: 150,
   },
   nobg2: {
     height: 'auto',
@@ -92,17 +93,7 @@ export default function Index() {
         <SelectiveServices />
       </div>
       <div className={classes.nobg1}>
-        <Container maxWidth="lg">
-          <Box my={4}>
-            <Typography variant="h4" component="h1" gutterBottom>
-              Next.js example {process.env.customKey}
-            </Typography>
-            <Link href="/about" color="secondary">
-              Go to the about page
-            </Link>
-            <ProTip />
-          </Box>
-        </Container>
+        <StepByStepGuide />
       </div>
       <div className={classes.box3bg}>
         <Container maxWidth="lg">

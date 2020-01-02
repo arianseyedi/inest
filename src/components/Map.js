@@ -10,11 +10,11 @@ const styles = theme => ({
   root: {
     [theme.breakpoints.down('sm')]: {
       height: 100,
-      width: 150,
+      width: 175,
     },
     [theme.breakpoints.up('sm')]: {
       height: 175,
-      width: 250,
+      width: 300,
     },
   },
 })

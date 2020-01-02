@@ -17,7 +17,7 @@ const theme = createMuiTheme({
       main: '#556cd6',
     },
     secondary: {
-      main: '#19857b',
+      main: '#FFD300',
     },
     error: {
       main: red.A400,
@@ -32,7 +32,7 @@ const theme = createMuiTheme({
   },
 })
 
-theme.typography.h4 = {
+theme.typography.h6 = {
   '@media (max-width:600px)': {
     fontSize: '0.75rem',
     fontWeight: 'normal',

@@ -29,7 +29,11 @@ export default function BottomContacts() {
             <MapIcon className={classes.icon} />
           </Grid>
           <Grid item>
-            <Typography className={classes.text}>57 Glen Cameron Rd #16</Typography>
+            <Typography className={classes.text}>
+              57 Glen Cameron Rd #16,
+              <br /> Thornhill, ON L3T 1P3, <br />
+              Canada
+            </Typography>
           </Grid>
         </Grid>
       </Grid>

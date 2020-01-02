@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1497,7 +1497,7 @@ const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["crea
       main: '#556cd6'
     },
     secondary: {
-      main: '#19857b'
+      main: '#FFD300'
     },
     error: {
       main: _material_ui_core_colors__WEBPACK_IMPORTED_MODULE_1__["red"].A400
@@ -1511,7 +1511,7 @@ const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["crea
     }
   }
 });
-theme.typography.h4 = {
+theme.typography.h6 = {
   '@media (max-width:600px)': {
     fontSize: '0.75rem',
     fontWeight: 'normal'
@@ -1694,7 +1694,7 @@ MyDocument.getInitialProps = async ctx => {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*********************************************!*\
   !*** multi private-next-pages/_document.js ***!
   \*********************************************/
