@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     width: '100%',
     '&:hover': {
+      cursor: 'pointer',
       WebkitFilter: 'brightness(150%)',
       transform: 'scale(1.05)',
       webkitTransition: ' all 0.5s ease',

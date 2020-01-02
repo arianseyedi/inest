@@ -27,7 +27,7 @@ export default class MyApp extends App {
             <Page background="red">
               <Component {...pageProps} />
             </Page>
-          </div>{' '}
+          </div>
           <style global jsx>{`
             html,
             body,

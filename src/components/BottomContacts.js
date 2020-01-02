@@ -24,18 +24,20 @@ export default function BottomContacts() {
   return (
     <Grid container direction="column" className={classes.contactBar}>
       <Grid item>
-        <Grid container direction="row" alignItems="center" className={classes.contactBar}>
-          <Grid item>
-            <MapIcon className={classes.icon} />
+        <a href="https://goo.gl/maps/feGHvBJEUgpmu7xs8" className={classes.text}>
+          <Grid container direction="row" alignItems="center" className={classes.contactBar}>
+            <Grid item>
+              <MapIcon className={classes.icon} />
+            </Grid>
+            <Grid item>
+              <Typography className={classes.text}>
+                57 Glen Cameron Rd #16,
+                <br /> Thornhill, ON L3T 1P3, <br />
+                Canada
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item>
-            <Typography className={classes.text}>
-              57 Glen Cameron Rd #16,
-              <br /> Thornhill, ON L3T 1P3, <br />
-              Canada
-            </Typography>
-          </Grid>
-        </Grid>
+        </a>
       </Grid>
       <Grid item>
         <a href="mailto:info@inest.ca" className={classes.text}>

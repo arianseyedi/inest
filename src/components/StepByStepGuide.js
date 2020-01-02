@@ -3,10 +3,13 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Paper } from '@material-ui/core'
+import MultimediaIcon from '../resource/MultimediaIcon'
+import SecurityIcon from '../resource/SecurityIcon'
+import ClimateIcon from '../resource/ClimateIcon'
+import LightingAutomationIcon from '../resource/LightingAutomationIcon'
 
 const useStyles = makeStyles(() => ({
   box: {
-    // marginTop: 200,
     height: '100%',
   },
   text_intro: {
@@ -14,6 +17,9 @@ const useStyles = makeStyles(() => ({
   },
   paper: {
     background: 'transparent',
+  },
+  icon: {
+    fontSize: 64,
   },
 }))
 
@@ -42,33 +48,41 @@ export default function HomeIntro() {
           <Grid container direction="row" justify="space-around" alignItems="center">
             <Grid item>
               <Grid container direction="column" justify="center" alignItems="center">
-                <Grid item>ICON</Grid>
                 <Grid item>
-                  <Typography variant="body1">text_here</Typography>
+                  <SecurityIcon className={classes.icon} />
+                </Grid>
+                <Grid item>
+                  <Typography variant="body1">Security</Typography>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item>
               <Grid container direction="column" justify="center" alignItems="center">
-                <Grid item>ICON</Grid>
                 <Grid item>
-                  <Typography variant="body1">text_here</Typography>
+                  <ClimateIcon className={classes.icon} />
+                </Grid>
+                <Grid item>
+                  <Typography variant="body1">Climate Control</Typography>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item>
               <Grid container direction="column" justify="center" alignItems="center">
-                <Grid item>ICON</Grid>
                 <Grid item>
-                  <Typography variant="body1">text_here</Typography>
+                  <LightingAutomationIcon className={classes.icon} />
+                </Grid>
+                <Grid item>
+                  <Typography variant="body1">Lighting</Typography>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item>
               <Grid container direction="column" justify="center" alignItems="center">
-                <Grid item>ICON</Grid>
                 <Grid item>
-                  <Typography variant="body1">text_here</Typography>
+                  <MultimediaIcon className={classes.icon} />
+                </Grid>
+                <Grid item>
+                  <Typography variant="body1">Audio-Visual Systems</Typography>
                 </Grid>
               </Grid>
             </Grid>

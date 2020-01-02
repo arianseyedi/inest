@@ -19,13 +19,16 @@ const useStyles = makeStyles(() => ({
     background: `rgba(255,255,255,0.2)`,
     borderRadius: 7,
   },
+  text: {
+    color: 'white !important',
+  },
 }))
 
 export default function HomeIntro() {
   const classes = useStyles()
 
   return (
-    <Container maxWidth="lg" style={{ height: '100%' }}>
+    <Container maxWidth="lg" style={{ height: '100%', marginTop: 24 }}>
       <Grid container direction="row" spacing={10} className={classes.box} alignItems="center">
         <Grid item sm={12} md={7}>
           <Paper className={classes.paper} elevation={0}>
@@ -71,9 +74,9 @@ export default function HomeIntro() {
                       id="standard-required"
                       label="Your Email"
                       style={{ width: '100%' }}
-                      // variant="secondary"
                       variant="filled"
                       color="secondary"
+                      InputProps={{ style: { color: 'white' } }}
                     />
                   </Grid>
                   <Grid item>

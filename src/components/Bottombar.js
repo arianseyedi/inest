@@ -55,7 +55,7 @@ export default function Bottombar() {
             <Grid item xs={'auto'}>
               <Grid container direction="column" justify="space-around" alignItems="center">
                 <Grid item>
-                  <TransparentLogo style={{ fontSize: 180 }} />
+                  <TransparentLogo style={{ fontSize: 150 }} />
                 </Grid>
                 <Grid item>
                   <LinkedinButton /> <InstagramButton /> <FacebookButton />

@@ -14,6 +14,7 @@ import HomeIntro from '../components/HomeIntro'
 import { Grid } from '@material-ui/core'
 import SelectiveServices from '../components/SelectiveServices'
 import StepByStepGuide from '../components/StepByStepGuide'
+import Benefits from '../components/Benefits'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     minHeight: '50vh',
   },
   box3bg: {
-    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url(${'touchSmart.jpg'})`,
+    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80) ), url(${'touchSmart.jpg'})`,
     backgroundSize: ' cover',
     backgroundPosition: 'center',
     minHeight: '800px',
@@ -96,19 +97,9 @@ export default function Index() {
         <StepByStepGuide />
       </div>
       <div className={classes.box3bg}>
-        <Container maxWidth="lg">
-          <Box my={4}>
-            <Typography variant="h4" component="h1" gutterBottom>
-              Next.js example {process.env.customKey}
-            </Typography>
-            <Link href="/about" color="secondary">
-              Go to the about page
-            </Link>
-            <ProTip />
-          </Box>
-        </Container>
+        <Benefits />
       </div>
-      <div className={classes.partners}>
+      <div className={selectiveServiceStyles}>
         <Partners />
       </div>
       <div className={classes.nobg2}>
