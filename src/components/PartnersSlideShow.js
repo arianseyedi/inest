@@ -1,15 +1,15 @@
 import React from 'react'
-import { Fade, Slide } from 'react-slideshow-image'
+import { Fade } from 'react-slideshow-image'
 import { makeStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import './Partners.css'
+import './Partners.scss'
 import { Typography } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   title: {
+    background: theme.palette.grey[100],
     textAlign: 'center',
     padding: 10,
-    fontWeight: 'bold',
+    fontSize: 28,
   },
 }))
 const slideImages = [
@@ -24,16 +24,6 @@ const slideImages = [
   'partners/dsc_logo2.jpg',
 ]
 
-const properties = {
-  duration: 2000,
-  transitionDuration: 700,
-  infinite: true,
-  indicators: false,
-  arrows: true,
-  onChange: (oldIndex, newIndex) => {
-    console.log(`slide transition from ${oldIndex} to ${newIndex}`)
-  },
-}
 const fadeProperties = {
   duration: 2500,
   transitionDuration: 500,
@@ -48,10 +38,9 @@ export default function Slideshow() {
 
   return (
     <div className="slide-container">
-      <Typography classes={{ root: classes.title }} variant="h5">
+      <Typography classes={{ root: classes.title }} variant="body1" gutterBottom>
         Our Partners
       </Typography>
-      {/* <Slide {...properties}> */}
       <Fade {...fadeProperties}>
         <div className="each-fade">
           <div className="container-box">
@@ -89,8 +78,6 @@ export default function Slideshow() {
           </div>
         </div>
       </Fade>
-
-      {/* </Slide> */}
     </div>
   )
 }

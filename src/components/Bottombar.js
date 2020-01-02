@@ -10,7 +10,9 @@ import LinkedinButton from './button/LinkedinButton'
 import FacebookButton from './button/FacebookButton'
 import InstagramButton from './button/InstagramButton'
 import CopyrightAndTerms from './CopyrightAndTerms'
-import { Container } from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
+import Map from './Map'
+import BottomContacts from './BottomContacts'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -49,7 +51,7 @@ export default function Bottombar() {
     <div className={classes.bg}>
       <Container maxWidth="lg">
         <div className={classes.root}>
-          <Grid container direction="row" justify="space-around" alignqItems="center">
+          <Grid container direction="row" justify="space-around" alignItems="center">
             <Grid item xs={'auto'}>
               <Grid container direction="column" justify="space-around" alignItems="center">
                 <Grid item>
@@ -67,28 +69,16 @@ export default function Bottombar() {
             <Grid item xs={'auto'}>
               <Grid
                 container
-                direction="column"
+                direction="row"
                 justify="space-around"
                 alignItems="center"
-                style={{ height: '100%' }}
+                spacing={2}
               >
                 <Grid item>
-                  <div>
-                    Article: What is the difference between a home improvement and a home
-                    enhancement
-                  </div>
+                  <Map />
                 </Grid>
                 <Grid item>
-                  <div>
-                    Article: What is the difference between a home improvement and a home
-                    enhancement
-                  </div>
-                </Grid>
-                <Grid item>
-                  <div>
-                    Article: What is the difference between a home improvement and a home
-                    enhancement
-                  </div>
+                  <BottomContacts />
                 </Grid>
               </Grid>
             </Grid>

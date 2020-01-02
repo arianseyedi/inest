@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -704,6 +704,21 @@ const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["crea
     }
   }
 });
+theme.typography.h4 = {
+  '@media (max-width:600px)': {
+    fontSize: '0.75rem',
+    fontWeight: 'normal'
+  },
+  '@media (min-width:600px)': {
+    fontSize: '1.5rem'
+  } // [theme.breakpoints.down('s')]: {
+  //   fontSize: 11,
+  // },
+  // [theme.breakpoints.up('s')]: {
+  //   fontSize: 18,
+  // },
+
+};
 /* harmony default export */ __webpack_exports__["default"] = (theme);
 
 /***/ }),
@@ -775,7 +790,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!****************************************!*\
   !*** multi private-next-pages/_app.js ***!
   \****************************************/

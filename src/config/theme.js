@@ -32,4 +32,20 @@ const theme = createMuiTheme({
   },
 })
 
+theme.typography.h4 = {
+  '@media (max-width:600px)': {
+    fontSize: '0.75rem',
+    fontWeight: 'normal',
+  },
+  '@media (min-width:600px)': {
+    fontSize: '1.5rem',
+  },
+  // [theme.breakpoints.down('s')]: {
+  //   fontSize: 11,
+  // },
+  // [theme.breakpoints.up('s')]: {
+  //   fontSize: 18,
+  // },
+}
+
 export default theme
