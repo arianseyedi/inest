@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
   condMargin: {
     [theme.breakpoints.down('sm')]: {
-      marginBottom: 64,
+      marginBottom: 84,
     },
   },
 }))

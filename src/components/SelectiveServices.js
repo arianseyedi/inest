@@ -10,7 +10,7 @@ const servicesImg = ['cinema.jpg', 'lighting.jpg', 'audiosystem.jpg', 'smart-hom
 const useStyles = makeStyles(() => ({
   paper: {
     paddingTop: 10,
-    marginTop: -98,
+    marginTop: -148,
   },
   box: {},
   text: {
