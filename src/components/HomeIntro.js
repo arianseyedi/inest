@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Paper, Button, TextField } from '@material-ui/core'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
   box: {
     // marginTop: 200,
     height: '100%',
@@ -21,6 +21,11 @@ const useStyles = makeStyles(() => ({
   },
   text: {
     color: 'white !important',
+  },
+  condMargin: {
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: 64,
+    },
   },
 }))
 
@@ -54,6 +59,7 @@ export default function HomeIntro() {
               justify="center"
               alignItems="stretch"
               style={{ padding: 35 }}
+              className={classes.condMargin}
             >
               <Grid item>
                 <Typography

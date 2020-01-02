@@ -10,7 +10,6 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: props =>
       `linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(${props.image})`,
     backgroundSize: 'cover',
-    marginTop: -50,
     [theme.breakpoints.down('sm')]: {
       height: 100,
     },
