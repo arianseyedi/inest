@@ -3,8 +3,8 @@ import App from 'next/app'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../config/theme'
-import { Page } from '../components/Page'
-import CustomHead from '../components/CustomHead'
+import { Page } from '../components/common/Page'
+import CustomHead from '../components/common/CustomHead'
 
 export default class MyApp extends App {
   componentDidMount() {

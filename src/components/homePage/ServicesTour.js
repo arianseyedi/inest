@@ -3,10 +3,10 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Paper, Button } from '@material-ui/core'
-import MultimediaIcon from '../resource/MultimediaIcon'
-import SecurityIcon from '../resource/SecurityIcon'
-import ClimateIcon from '../resource/ClimateIcon'
-import LightingAutomationIcon from '../resource/LightingAutomationIcon'
+import MultimediaIcon from '../../resource/MultimediaIcon'
+import SecurityIcon from '../../resource/SecurityIcon'
+import ClimateIcon from '../../resource/ClimateIcon'
+import LightingAutomationIcon from '../../resource/LightingAutomationIcon'
 
 const useStyles = makeStyles(() => ({
   box: {

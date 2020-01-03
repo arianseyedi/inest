@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import classNames from 'classnames'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
 import SelectiveService from './SelectiveService'

@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import TransparentLogo from '../resource/TransparentLogoMini'
+import TransparentLogo from '../../resource/TransparentLogoMini'
 import Menu from './Menu'
 import { Container } from '@material-ui/core'
 

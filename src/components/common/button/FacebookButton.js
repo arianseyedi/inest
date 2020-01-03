@@ -1,6 +1,6 @@
 import React from 'react'
 import IconButton from './IconButton'
-import FacebookLogo from '../../resource/FacebookLogo'
+import FacebookLogo from '../../../resource/FacebookLogo'
 
 const FacebookButton = props => {
   return (

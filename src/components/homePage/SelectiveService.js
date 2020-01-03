@@ -1,11 +1,8 @@
 import React from 'react'
-import classNames from 'classnames'
 import { makeStyles } from '@material-ui/core/styles'
 import { Paper, Typography, Grid } from '@material-ui/core'
-import imagesStyles from '../config/imageStyles'
 
 const useStyles = makeStyles(theme => ({
-  ...imagesStyles,
   paper: {
     backgroundImage: props =>
       `linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url(${props.image})`,

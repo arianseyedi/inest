@@ -2,8 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import { Container, Typography } from '@material-ui/core'
-import EmailIcon from '../resource/EmailIcon'
-import PhoneIcon from '../resource/PhoneIcon'
+import EmailIcon from '../../resource/EmailIcon'
+import PhoneIcon from '../../resource/PhoneIcon'
 
 const useStyles = makeStyles(theme => ({
   text: {

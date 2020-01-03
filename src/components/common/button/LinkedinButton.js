@@ -1,11 +1,11 @@
 import React from 'react'
 import IconButton from './IconButton'
-import InstagramLogo from '../../resource/InstagramLogo'
+import LinkedinLogo from '../../../resource/LinkedinLogo'
 
 const LinkedinButton = props => {
   return (
     <IconButton {...props}>
-      <InstagramLogo style={{ color: 'white' }} />
+      <LinkedinLogo style={{ color: 'white' }} />
     </IconButton>
   )
 }

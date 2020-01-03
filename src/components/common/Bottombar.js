@@ -5,14 +5,14 @@ import Grid from '@material-ui/core/Grid'
 import Divider from '@material-ui/core/Divider'
 import clsx from 'clsx'
 
-import TransparentLogo from '../resource/TransparentLogo'
+import TransparentLogo from '../../resource/TransparentLogo'
 import LinkedinButton from './button/LinkedinButton'
 import FacebookButton from './button/FacebookButton'
 import InstagramButton from './button/InstagramButton'
 import CopyrightAndTerms from './CopyrightAndTerms'
 import { Container, Typography } from '@material-ui/core'
 import Map from './Map'
-import BottomContacts from './BottomContacts'
+import BottomContacts from '../homePage/BottomContacts'
 
 const useStyles = makeStyles(theme => ({
   root: {
