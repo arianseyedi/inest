@@ -55,22 +55,19 @@ export default function Benefits() {
         direction="row"
         justify="center"
         alignItems="center"
-        style={{ marginTop: 145, marginBottom: 145, paddingLeft: 16, paddingRight: 16 }}
+        style={{ marginTop: 103, marginBottom: 103, paddingLeft: 16, paddingRight: 16 }}
         spacing={8}
       >
         <Grid item sm={12} md={6}>
-          <Grid container direction="column" spacing={4}>
-            <Grid>
+          <Grid container direction="column" spacing={1}>
+            <Grid item>
               <Typography variant="h3" className={classes.text_intro} color="textSecondary">
                 The
-                <span variant="h4" noWrap={true} className={classes.specialText}>
-                  {' '}
-                  5{' '}
-                </span>
+                <span className={classes.specialText}> 5 </span>
                 greater advantages of Smart Home Automation
               </Typography>
             </Grid>
-            <Grid>
+            <Grid item>
               <Typography variant="body1" className={classes.text_intro} color="textSecondary">
                 Spend more time doing what you love, while you maximize scurity and comfort!
               </Typography>
