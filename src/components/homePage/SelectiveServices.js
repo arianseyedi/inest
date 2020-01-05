@@ -4,7 +4,12 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
 import SelectiveService from './SelectiveService'
 
-const servicesImg = ['cinema.jpg', 'lighting.jpg', 'audiosystem.jpg', 'smart-home.jpg']
+const servicesImg = [
+  'lighting.jpg',
+  'homeSecurity.jpg',
+  'climateControl.jpg',
+  'audiosystem.jpg',
+]
 
 const useStyles = makeStyles(() => ({
   paper: {
@@ -37,16 +42,16 @@ export default function SelectiveServices() {
             className={classes.box}
           >
             <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-              <SelectiveService image={servicesImg[0]} msg="Home Theatre" />
+              <SelectiveService image={servicesImg[0]} msg="Lighting Automation" />
             </Grid>
             <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-              <SelectiveService image={servicesImg[1]} msg="Lighting Automation" />
+              <SelectiveService image={servicesImg[1]} msg="Security System" />
             </Grid>
             <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-              <SelectiveService image={servicesImg[2]} msg="Sound System" />
+              <SelectiveService image={servicesImg[2]} msg="Climate Control" />
             </Grid>
             <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-              <SelectiveService image={servicesImg[3]} msg="Smart Home" />
+              <SelectiveService image={servicesImg[3]} msg="Sound System" />
             </Grid>
           </Grid>
         </Grid>

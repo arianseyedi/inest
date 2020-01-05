@@ -32,7 +32,7 @@ export default function ServicesTour() {
               </Typography>
             </Grid>
             <Grid item>
-              <Button variant="contained" color="secondary">
+              <Button variant="contained" color="secondary" href="/services">
                 Visit Services Page
               </Button>
             </Grid>

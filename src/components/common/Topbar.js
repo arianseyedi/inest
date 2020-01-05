@@ -33,7 +33,9 @@ export default function Topbar() {
             <Grid item>
               <Grid container direction="column" justify="space-between" alignItems="center">
                 <Grid item>
-                  <TransparentLogo className={classes.logo} />
+                  <a href="/">
+                    <TransparentLogo className={classes.logo} />
+                  </a>
                 </Grid>
               </Grid>
             </Grid>

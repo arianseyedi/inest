@@ -52,7 +52,10 @@ export default function StandardMenu() {
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-          <HoverButton title="WHAT" />
+          <Link href="/services" className={classes.link}>
+            WHAT
+          </Link>
+          {/* <HoverButton title="WHAT" href="/services" /> */}
         </ListItem>
         <ListItem className={classes.listItem}>
           <Link href="#" className={classes.link}>

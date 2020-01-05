@@ -65,6 +65,7 @@ export default function HoverButton(props) {
           style={{ color: 'inherit' }}
           variant="text"
           disableFocusRipple={true}
+          href={props.href}
         >
           {props.title}
         </Button>

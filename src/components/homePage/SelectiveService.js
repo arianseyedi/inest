@@ -33,19 +33,21 @@ export default function SelectiveService(props) {
   const classes = useStyles(props)
   return (
     <Paper className={classes.paper} elevation={4}>
-      <Grid
-        container
-        direction="row"
-        justify="flex-start"
-        alignItems="flex-end"
-        style={{ height: '100%' }}
-      >
-        <Grid item xs={6}>
-          <Typography gutterBottom style={{ padding: 5, color: 'white' }} variant="h6">
-            {props.msg}
-          </Typography>
+      <a href="/services" style={{ textDecoration: 'none' }}>
+        <Grid
+          container
+          direction="row"
+          justify="flex-start"
+          alignItems="flex-end"
+          style={{ height: '100%' }}
+        >
+          <Grid item xs={6}>
+            <Typography gutterBottom style={{ padding: 5, color: 'white' }} variant="h6">
+              {props.msg}
+            </Typography>
+          </Grid>
         </Grid>
-      </Grid>
+      </a>
     </Paper>
   )
 }
