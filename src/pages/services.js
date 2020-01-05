@@ -20,6 +20,7 @@ import VacuumService from '../components/services/VacuumService'
 import ClimateControlService from '../components/services/ClimateControlService'
 import SmartBlindsService from '../components/services/SmartBlindsService'
 import SecurityCameraService from '../components/services/SecurityCameraService'
+import GetQuote from '../components/services/GetQuote'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
@@ -90,7 +91,7 @@ export default function Services() {
       <div className={selectiveServiceStyles}>
         <ServicesContainer>{servicesList}</ServicesContainer>
       </div>
-      {/* <GetQuote /> */}
+      <GetQuote />
       <Bottombar />
     </React.Fragment>
   )
