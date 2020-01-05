@@ -12,6 +12,7 @@ export default function SecurityCameraService(props) {
       image="gallery/wardrobe.jpg"
       icon={SecurityIcon}
       {...props}
+      anchortag="security"
     />
   )
 }

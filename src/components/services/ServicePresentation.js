@@ -26,23 +26,22 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
-  content: {
-    [theme.breakpoints.down('xs')]: {
-      padding: 10,
-    },
-    [theme.breakpoints.down('sm')]: {
-      padding: 24,
-    },
-    [theme.breakpoints.down('md')]: {
-      padding: 48,
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: 80,
-    },
-  },
+  content: {},
   icon: {
     [theme.breakpoints.down('sm')]: {
       marginTop: 32,
+    },
+  },
+  title: {
+    fontWeight: 'bold',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 16,
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: 20,
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 28,
     },
   },
 }))
@@ -68,71 +67,69 @@ export default function ServicesTop(props) {
       }
     })
     return (
-      <React.Fragment>
-        {res[0]}
-        <ul>{res.splice(1)}</ul>
-      </React.Fragment>
+      <Grid container direction="column">
+        <Grid item> {res[0]}</Grid>
+        <Grid item>
+          <ul>{res.splice(1)}</ul>
+        </Grid>
+      </Grid>
     )
   }
   const { icon: Icon } = props
   return (
-    <Container maxWidth="lg" style={{ height: '100%' }}>
-      <div id="hover-parent" className={classes.root}>
-        <Grid
-          container
-          direction={props.reverse ? 'row-reverse' : 'row'}
-          justify="space-between"
-          className={classes.row}
-        >
-          <Grid item className={classes.condHide} xs={12} sm={12} md={4}>
-            <Grid item style={{ height: '100%' }}>
+    <div id={props.anchortag}>
+      <Container maxWidth="lg" style={{ height: '100%' }}>
+        <div id="hover-parent" className={classes.root}>
+          <Grid
+            container
+            direction={props.reverse ? 'row-reverse' : 'row'}
+            justify="space-between"
+            className={classes.row}
+          >
+            <Grid item className={classes.condHide} xs={12} sm={12} md={4}>
+              <Grid item style={{ height: '100%' }}>
+                <Grid
+                  container
+                  justify="center"
+                  alignItems="center"
+                  direction="column"
+                  style={{ height: '100%' }}
+                >
+                  <Grid item>
+                    <Icon
+                      style={{ fontSize: 136 }}
+                      id="hover-child"
+                      className={classes.icon}
+                    />
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} sm={12} md={8}>
               <Grid
                 container
-                justify="center"
-                alignItems="center"
                 direction="column"
+                justify="center"
+                alignItems="stretch"
                 style={{ height: '100%' }}
               >
                 <Grid item>
-                  <Icon style={{ fontSize: 136 }} id="hover-child" className={classes.icon} />
+                  <Typography variant="overline" id="hover-child" className={classes.title}>
+                    {props.title}
+                  </Typography>
                 </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={12} sm={12} md={8}>
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="stretch"
-              className={classes.content}
-              spacing={5}
-            >
-              <Grid item>
-                <Grid container direction={'row'} spacing={2} justify="flex-start">
-                  <Grid item>
-                    <Typography variant="h4" id="hover-child">
-                      {props.title}
-                    </Typography>
-                  </Grid>
-                  {/* {Icon ? (
                 <Grid item>
-                  <Icon style={{ fontSize: 36 }} id="hover-child" />
+                  {Array.isArray(props.content) ? (
+                    handleArry(props.content)
+                  ) : (
+                    <Typography variant="body1">{props.content}</Typography>
+                  )}
                 </Grid>
-              ) : null} */}
-                </Grid>
-              </Grid>
-              <Grid item>
-                {Array.isArray(props.content) ? (
-                  handleArry(props.content)
-                ) : (
-                  <Typography variant="body1">{props.content}</Typography>
-                )}
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </div>
-    </Container>
+        </div>
+      </Container>
+    </div>
   )
 }

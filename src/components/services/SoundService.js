@@ -12,6 +12,7 @@ export default function SoundService(props) {
       image="gallery/wardrobe.jpg"
       icon={AudioSystemIcon}
       {...props}
+      anchortag="sound"
     />
   )
 }

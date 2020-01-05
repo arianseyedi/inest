@@ -12,6 +12,7 @@ export default function LightingService(props) {
       image="gallery/wardrobe.jpg"
       icon={LightingAutomationIcon}
       {...props}
+      anchortag="lighting"
     />
   )
 }

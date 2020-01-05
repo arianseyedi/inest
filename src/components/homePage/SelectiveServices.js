@@ -42,16 +42,28 @@ export default function SelectiveServices() {
             className={classes.box}
           >
             <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-              <SelectiveService image={servicesImg[0]} msg="Lighting Automation" />
+              <SelectiveService
+                image={servicesImg[0]}
+                msg="Lighting Automation"
+                anchortag="lighting"
+              />
             </Grid>
             <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-              <SelectiveService image={servicesImg[1]} msg="Security System" />
+              <SelectiveService
+                image={servicesImg[1]}
+                msg="Security System"
+                anchortag="security"
+              />
             </Grid>
             <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-              <SelectiveService image={servicesImg[2]} msg="Climate Control" />
+              <SelectiveService
+                image={servicesImg[2]}
+                msg="Climate Control"
+                anchortag="climatecontrol"
+              />
             </Grid>
             <Grid item xs={3} s={3} md={3} lg={3} xl={3}>
-              <SelectiveService image={servicesImg[3]} msg="Sound System" />
+              <SelectiveService image={servicesImg[3]} msg="Sound System" anchortag="sound" />
             </Grid>
           </Grid>
         </Grid>

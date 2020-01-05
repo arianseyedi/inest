@@ -12,6 +12,7 @@ export default function VacuumService(props) {
       image="gallery/wardrobe.jpg"
       icon={VacuumIcon}
       {...props}
+      anchortag="vacuum"
     />
   )
 }

@@ -12,6 +12,7 @@ export default function SmartBlindsService(props) {
       image="gallery/wardrobe.jpg"
       icon={BlindsIcon}
       {...props}
+      anchortag="blinds"
     />
   )
 }

@@ -17,6 +17,7 @@ export default function ElectricalService(props) {
       image="gallery/wardrobe.jpg"
       icon={ElectricalIcon}
       {...props}
+      anchortag="electrical"
     />
   )
 }

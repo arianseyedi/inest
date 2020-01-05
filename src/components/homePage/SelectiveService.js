@@ -33,7 +33,7 @@ export default function SelectiveService(props) {
   const classes = useStyles(props)
   return (
     <Paper className={classes.paper} elevation={4}>
-      <a href="/services" style={{ textDecoration: 'none' }}>
+      <a href={`/services#${props.anchortag}`} style={{ textDecoration: 'none' }}>
         <Grid
           container
           direction="row"

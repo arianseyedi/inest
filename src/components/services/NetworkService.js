@@ -12,6 +12,7 @@ export default function NetworkService(props) {
       image="gallery/wardrobe.jpg"
       icon={SmartHouseIcon}
       {...props}
+      anchortag="smarthome"
     />
   )
 }

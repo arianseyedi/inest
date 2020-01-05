@@ -12,6 +12,7 @@ export default function ClimateControlService(props) {
       image="gallery/wardrobe.jpg"
       icon={ClimateIcon}
       {...props}
+      anchortag="climatecontrol"
     />
   )
 }

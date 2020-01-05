@@ -12,6 +12,7 @@ export default function HomeTheatreService(props) {
       image="gallery/wardrobe.jpg"
       icon={HomeTheatreIcon}
       {...props}
+      anchortag="hometheatre"
     />
   )
 }
