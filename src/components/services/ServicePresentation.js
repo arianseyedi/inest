@@ -110,11 +110,15 @@ export default function ServicesTop(props) {
                 container
                 direction="column"
                 justify="center"
-                alignItems="stretch"
+                // alignItems="stretch"
                 style={{ height: '100%' }}
               >
-                <Grid item>
-                  <Typography variant="overline" id="hover-child" className={classes.title}>
+                <Grid item id="hover-child" style={{ width: 'fit-content' }}>
+                  <Typography
+                    variant="overline"
+                    id="hover-child-text"
+                    className={classes.title}
+                  >
                     {props.title}
                   </Typography>
                 </Grid>

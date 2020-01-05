@@ -2,19 +2,18 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Paper } from '@material-ui/core'
-import MultimediaIcon from '../../resource/MultimediaIcon'
+import { Grid } from '@material-ui/core'
 import GuaranteeIcon from '../../resource/GuaranteeIcon'
 import MaintenanceIcon from '../../resource/MaintenanceIcon'
 import CertifiedIcon from '../../resource/CertifiedIcon'
-import FancyCheckmarkIcon from '../../resource/FancyCheckmarkIcon'
 import './ServicesOverview.scss'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   text_intro: {
     textAlign: 'center',
   },
   icon: {
+    color: '#7ed13f',
     fontSize: 64,
   },
   container: {
@@ -23,15 +22,8 @@ const useStyles = makeStyles(theme => ({
   checkmark: {
     // marginLeft: -15,
     // marginBottom: 40
-    color: 'green',
   },
 }))
-const checkmarkIcon = (
-  <svg style={{ width: 25, height: 25 }} class="checkmark" viewBox="0 0 52 52">
-    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 17.7-16.8" />
-  </svg>
-)
 export default function ServicesOverview() {
   const classes = useStyles()
 
@@ -61,7 +53,13 @@ export default function ServicesOverview() {
           </Typography>
         </Grid>
         <Grid item>
-          <Grid container direction="row" justify="space-around" alignItems="center">
+          <Grid
+            container
+            direction="row"
+            justify="space-around"
+            alignItems="center"
+            spacing={2}
+          >
             <Grid item>
               <Grid
                 container
@@ -74,7 +72,7 @@ export default function ServicesOverview() {
                   <GuaranteeIcon id="hover-child-1" className={classes.icon} />
                 </Grid>
                 <Grid item>
-                  <Typography id="hover-child-1" variant="body1">
+                  <Typography id="hover-child-1" variant="caption">
                     Maximum of 1-Year Guarantee
                   </Typography>
                 </Grid>
@@ -86,7 +84,7 @@ export default function ServicesOverview() {
                   <MaintenanceIcon id="hover-child-2" className={classes.icon} />
                 </Grid>
                 <Grid item>
-                  <Typography id="hover-child-2" variant="body1">
+                  <Typography id="hover-child-2" variant="caption">
                     System Maintenance Support
                   </Typography>
                 </Grid>
@@ -100,7 +98,7 @@ export default function ServicesOverview() {
                 <Grid item>
                   <Grid direction="row">
                     <Grid item>
-                      <Typography id="hover-child-3" variant="body1">
+                      <Typography id="hover-child-3" variant="caption">
                         AAA Certified
                       </Typography>
                     </Grid>
