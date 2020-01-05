@@ -26,8 +26,8 @@ const useStyles = makeStyles(theme => ({
   nobg2: {
     height: 'auto',
     // minHeight: '50vh',
-    marginTop: 150,
-    marginBottom: 64,
+    marginTop: 128,
+    marginBottom: 84,
   },
   box3bg: {
     backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80) ), url(${'touchSmart.jpg'})`,
