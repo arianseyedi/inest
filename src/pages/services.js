@@ -78,9 +78,13 @@ export default function Services() {
   ]
   const end = servicesListRaw.length - 1
   const servicesList = servicesListRaw.map((Component, index) => (
-    <React.Fragment>
-      {index % 2 ? <Component /> : <Component reverse />}
-      {end !== index ? <Divider /> : null}
+    <React.Fragment key={`service-fgmt-${index}`}>
+      {index % 2 ? (
+        <Component key={`component-${index}`} />
+      ) : (
+        <Component reverse key={`component-${index}`} />
+      )}
+      {end !== index ? <Divider key={`component-div-${index}`} /> : null}
     </React.Fragment>
   ))
   return (
