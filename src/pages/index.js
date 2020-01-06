@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => ({
     height: 'auto',
     minHeight: '50vh',
     marginTop: 150,
+    marginBottom: 100,
   },
   nobg2: {
     height: 'auto',
@@ -64,6 +65,17 @@ const useStyles = makeStyles(theme => ({
     boxShadow:
       '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
   },
+  minHeightTop: {
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 400,
+    },
+    [theme.breakpoints.down('md')]: {
+      minHeight: 700,
+    },
+    [theme.breakpoints.up('md')]: {
+      minHeight: 800,
+    },
+  },
 }))
 
 export default function Index() {
@@ -75,7 +87,12 @@ export default function Index() {
   return (
     <React.Fragment>
       <div className={classes.box1bg}>
-        <Grid container direction="column" style={{ minHeight: '80vh' }}>
+        <Grid
+          container
+          direction="column"
+          // alignItems="stretch"
+          className={classes.minHeightTop}
+        >
           <Grid item>
             <Contactbar />
           </Grid>

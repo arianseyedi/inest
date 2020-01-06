@@ -35,7 +35,7 @@ export default function HomeIntro() {
   return (
     <Container maxWidth="lg" style={{ height: '100%', marginTop: 24 }}>
       <Grid container direction="row" spacing={10} className={classes.box} alignItems="center">
-        <Grid item sm={12} md={7}>
+        <Grid item sm={6} md={7}>
           <Paper className={classes.paper} elevation={0}>
             <Typography
               variant="h3"
@@ -51,7 +51,7 @@ export default function HomeIntro() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item sm={12} md={5}>
+        <Grid item sm={6} md={5}>
           <Paper className={classes.semiTransparentPaper} elevation={2}>
             <Grid
               container
