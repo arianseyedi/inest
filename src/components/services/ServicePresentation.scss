@@ -9,13 +9,12 @@ $thecolor: #ffd300;
 #hover-child {
   position: relative;
   display: inline-block;
-  cursor: pointer;
 }
 
 #hover-child::before {
   content: '';
   position: absolute;
-  width: 5%;
+  width: 20px;
   height: 4px;
   border-radius: 4px;
   top: 45%;
