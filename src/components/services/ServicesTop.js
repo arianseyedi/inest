@@ -6,8 +6,16 @@ import { Grid } from '@material-ui/core'
 import ServicesIntroTitle from './ServicesIntroTitle'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    minHeight: '40vh',
+  minHeightTop: {
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 600,
+    },
+    [theme.breakpoints.down('md')]: {
+      minHeight: 600,
+    },
+    [theme.breakpoints.up('md')]: {
+      minHeight: 600,
+    },
   },
   box1bg: {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
@@ -29,7 +37,7 @@ export default function ServicesTop() {
   const classes = useStyles()
   return (
     <div>
-      <Grid container direction="column" className={classes.root}>
+      <Grid container direction="column" className={classes.minHeightTop}>
         <Grid item>
           <Contactbar />
         </Grid>

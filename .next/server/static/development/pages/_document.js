@@ -1518,13 +1518,27 @@ theme.typography.h6 = {
   },
   '@media (min-width:600px)': {
     fontSize: '1.5rem'
-  } // [theme.breakpoints.down('s')]: {
-  //   fontSize: 11,
-  // },
-  // [theme.breakpoints.up('s')]: {
-  //   fontSize: 18,
-  // },
-
+  }
+};
+theme.typography.h3 = {
+  '@media (max-width:600px)': {
+    fontSize: '2.2rem',
+    fontWeight: 'normal'
+  },
+  '@media (min-width:600px)': {
+    fontSize: '2.7rem',
+    fontWeight: 'normal'
+  }
+};
+theme.typography.h4 = {
+  '@media (max-width:600px)': {
+    fontSize: '1.8rem',
+    fontWeight: 'normal'
+  },
+  '@media (min-width:600px)': {
+    fontSize: '2.2rem',
+    fontWeight: 'normal'
+  }
 };
 /* harmony default export */ __webpack_exports__["default"] = (theme);
 

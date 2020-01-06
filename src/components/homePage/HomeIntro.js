@@ -34,7 +34,14 @@ export default function HomeIntro() {
 
   return (
     <Container maxWidth="lg" style={{ height: '100%', marginTop: 24 }}>
-      <Grid container direction="row" spacing={10} className={classes.box} alignItems="center">
+      <Grid
+        container
+        direction="row"
+        spacing={10}
+        className={classes.box}
+        alignItems="center"
+        justify="center"
+      >
         <Grid item sm={6} md={7}>
           <Paper className={classes.paper} elevation={0}>
             <Typography
@@ -58,13 +65,12 @@ export default function HomeIntro() {
               direction="column"
               justify="center"
               alignItems="stretch"
-              style={{ padding: 35 }}
+              style={{ padding: 35, width: '100%' }}
               className={classes.condMargin}
             >
               <Grid item>
                 <Typography
                   variant="h4"
-                  component="h1"
                   gutterBottom
                   className={classes.text_intro}
                   style={{ paddingBottom: '30px' }}
