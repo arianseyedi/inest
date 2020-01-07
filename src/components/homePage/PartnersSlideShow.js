@@ -38,7 +38,7 @@ export default function Slideshow() {
   const classes = useStyles()
 
   return (
-    <div className="slide-container">
+    <div className="slide-container" id="unselectable-text">
       <Typography classes={{ root: classes.title }} variant="body1" gutterBottom>
         Our Partners
       </Typography>

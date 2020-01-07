@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
 export default function SelectiveServices() {
   const classes = useStyles()
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" id="unselectable-text">
       <Grid container direction="column" className={classes.paper}>
         <Grid item>
           <Typography gutterBottom variant="h4" className={classes.text}>

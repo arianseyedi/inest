@@ -142,6 +142,7 @@ export default function Benefits() {
                 justify="center"
                 alignItems="stretch"
                 style={{ padding: 35 }}
+                id="unselectable-text"
               >
                 <Grid item>
                   <Typography
