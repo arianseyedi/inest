@@ -48,7 +48,7 @@ export default function StandardMenu() {
 
   return (
     <div className={classes.root}>
-      <List className={classes.list}>
+      <List className={classes.list} id="unselectable-text">
         <ListItem className={classes.listItem}>
           <Link href="#" className={classes.link}>
             <Typography variant="overline" className={classes.text}>
