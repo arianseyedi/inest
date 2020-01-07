@@ -50,10 +50,11 @@ export default function HomeIntro() {
               gutterBottom
               className={classes.text_intro}
               style={{ paddingBottom: '30px' }}
+              id="unselectable-text"
             >
               Smart, Convenient and Secure
             </Typography>
-            <Typography className={classes.text_intro}>
+            <Typography className={classes.text_intro} id="unselectable-text">
               Enhance security, save energy, and promote comfort with iNest home automation.
             </Typography>
           </Paper>

@@ -42,11 +42,11 @@ export default function ServicesIntro() {
               component="h1"
               gutterBottom
               className={classes.text_intro}
-              // style={{ paddingBottom: '130px' }}
+              id="unselectable-text"
             >
               Excellent service, Great experience and Maximum Security
             </Typography>
-            <Typography className={classes.text_intro}>
+            <Typography className={classes.text_intro} id="unselectable-text">
               Enhance security, save energy, and promote comfort with iNest home automation.
             </Typography>
           </Paper>
