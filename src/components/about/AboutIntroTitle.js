@@ -1,11 +1,8 @@
 import React from 'react'
-import clsx from 'clsx'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Paper, Button, TextField } from '@material-ui/core'
-import CloseQuoteIcon from '../../resource/CloseQuoteIcon'
-import OpenQuoteIcon from '../../resource/OpenQuoteIcon'
 import './AboutIntro.scss'
 
 const useStyles = makeStyles(theme => ({
@@ -20,13 +17,13 @@ const useStyles = makeStyles(theme => ({
   },
   transparentPaper: {
     borderRadius: 8,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
   },
   text: {
     color: 'white',
   },
   condMarginTop: {
-        [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('sm')]: {
       marginLeft: '5%',
     },
   },
@@ -59,7 +56,7 @@ export default function AboutIntro() {
         alignItems="center"
         className={classes.box}
       >
-        <Grid item xs={12}  sm={4}>
+        <Grid item xs={12} sm={4}>
           <Paper className={classes.paper} elevation={0}>
             <Grid
               container
@@ -87,7 +84,7 @@ export default function AboutIntro() {
             </Grid>
           </Paper>
         </Grid>
-        <Grid item xs={12}  sm={7}>
+        <Grid item xs={12} sm={7}>
           <Paper className={classes.transparentPaper} elevation={6}>
             <Grid
               container
@@ -98,32 +95,27 @@ export default function AboutIntro() {
               className={classes.condMargin}
             >
               <Grid item>
-                <div
-              style={{
-
-              }}
-            >
-              <div class="testimonial-quote group right">
-                <div class="quote-container">
-                  <div>
-                    <blockquote>
-                      <p>
-                        It was like the staff were installing the systems for themselves, in their
-                  own home - wanting everything to be perfect!”
-                      </p>
-                    </blockquote>
-                    <cite>
-                      <span>Tasha Monir</span>
-                      <br />
-                      iNest Client
-                    </cite>
+                <div>
+                  <div class="testimonial-quote group right">
+                    <div class="quote-container">
+                      <div>
+                        <blockquote>
+                          <p>
+                            It was like the staff were installing the systems for themselves,
+                            in their own home - wanting everything to be perfect!”
+                          </p>
+                        </blockquote>
+                        <cite>
+                          <span>Tasha Monir</span>
+                          <br />
+                          iNest Client
+                        </cite>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
               </Grid>
-            </Grid> 
-            
+            </Grid>
           </Paper>
         </Grid>
       </Grid>
