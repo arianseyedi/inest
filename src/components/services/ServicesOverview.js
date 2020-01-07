@@ -6,14 +6,13 @@ import { Grid } from '@material-ui/core'
 import GuaranteeIcon from '../../resource/GuaranteeIcon'
 import MaintenanceIcon from '../../resource/MaintenanceIcon'
 import CertifiedIcon from '../../resource/CertifiedIcon'
-import './ServicesOverview.scss'
 
 const useStyles = makeStyles(() => ({
   text_intro: {
     textAlign: 'center',
   },
   icon: {
-    color: '#7ed13f',
+    color: '#76c53a',
     fontSize: 64,
   },
   container: {

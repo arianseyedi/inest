@@ -26,7 +26,12 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
-  content: {},
+  content: {
+    height: '100%',
+    [theme.breakpoints.up('md')]: {
+      marginLeft: props => (props.reverse ? '10%' : 'inherit'),
+    },
+  },
   icon: {
     [theme.breakpoints.down('sm')]: {
       marginTop: 32,
@@ -111,7 +116,7 @@ export default function ServicesTop(props) {
                 direction="column"
                 justify="center"
                 // alignItems="stretch"
-                style={{ height: '100%' }}
+                className={classes.content}
               >
                 <Grid item id="hover-child" style={{ width: 'fit-content' }}>
                   <Typography

@@ -27,8 +27,8 @@ export default function ServicesTour() {
           <Grid container direction="column" justify="center" alignItems="center" spacing={3}>
             <Grid item>
               <Typography variant="body1">
-                We offer a vast variety of services, check then out so you can get a detailed
-                quote based on your needs
+                We offer a vast variety of services, check them out so you can get a detailed
+                quote based on your needs!
               </Typography>
             </Grid>
             <Grid item>

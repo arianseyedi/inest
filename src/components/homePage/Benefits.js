@@ -69,7 +69,7 @@ export default function Benefits() {
             </Grid>
             <Grid item>
               <Typography variant="body1" className={classes.text_intro} color="textSecondary">
-                Spend more time doing what you love, while you maximize scurity and comfort!
+                It is not about the technology, it is about making things work for you.
               </Typography>
               <ul style={{ color: 'grey' }}>
                 <li className="benefits">
@@ -78,8 +78,9 @@ export default function Benefits() {
                     className={classes.text_intro}
                     color="textSecondary"
                   >
-                    You can set back the thermostats, turn off the lights and alarm the house
-                    in one click. Just save yourself the drive home and check your phone!
+                    Spend more time doing what you love! Being able to control all of your home
+                    tech systems through one device is a step forward in technology and home
+                    management.
                   </Typography>
                 </li>
                 <li className="benefits">
@@ -88,10 +89,10 @@ export default function Benefits() {
                     className={classes.text_intro}
                     color="textSecondary"
                   >
-                    Home security automation connects motion detectors, surveillance cameras,
-                    automated door locks, and other tangible security measures through your
-                    home so you can activate them from your smartphone before heading to bed or
-                    leaving your home for a vacation.
+                    Feel a new level of security! Home automation systems can connect motion
+                    detectors, surveillance cameras, automated door locks, and other tangible
+                    security measures through your home so you can control them all from your
+                    smart phone.
                   </Typography>
                 </li>
                 <li className="benefits">
@@ -100,7 +101,9 @@ export default function Benefits() {
                     className={classes.text_intro}
                     color="textSecondary"
                   >
-                    By saving significant amount of energy, you are helping the environment.
+                    Give back to the environment! Full home automation keeps your home
+                    comfortable while conserving energy and saving utility spend. Help the
+                    environment by saving significant amount of energy.{' '}
                   </Typography>
                 </li>
                 <li className="benefits">
@@ -109,9 +112,10 @@ export default function Benefits() {
                     className={classes.text_intro}
                     color="textSecondary"
                   >
-                    A smart home allows you to use security cameras and an internet connection
-                    to check the status of your home or kids from anywhere in the world using
-                    your laptop, tablet, or smartphone.
+                    Enjoy anywhere, anytime convenience! Never again worry about your home when
+                    you are away! A smart home allows you to use security cameras and internet
+                    connection to check the status of your home or kids from anywhere in the
+                    world using your laptop, tablet, or smartphone.
                   </Typography>
                 </li>
                 <li className="benefits">
@@ -120,11 +124,9 @@ export default function Benefits() {
                     className={classes.text_intro}
                     color="textSecondary"
                   >
-                    Get peace of mind: A smart home system helps to prevent potentially
-                    dangerous accidents from happening by enabling you to control parts of your
-                    home from your smartphone and other devices. For the ones who have lots on
-                    their plates, being able to easily check on their home makes a smart home
-                    worth the investment.
+                    Get peace of mind! A smart home system helps to prevent potentially bad
+                    things from happening by enabling you to control parts of your home from
+                    your smartphone and other devices.
                   </Typography>
                 </li>
               </ul>
@@ -156,7 +158,7 @@ export default function Benefits() {
                   <Grid container direction="column" spacing={2}>
                     <Grid item>
                       <a href="https://my.matterport.com/show/?m=EJ33Bp9SU3j" target="_blank">
-                        <img src="sampleWork.png" className={classes.img} />
+                        <img src="3dproject.png" className={classes.img} />
                       </a>
                     </Grid>
                   </Grid>

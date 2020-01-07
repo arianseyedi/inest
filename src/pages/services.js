@@ -28,23 +28,6 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
-  nobg1: {
-    // minHeight: '50vh',
-    // marginTop: 150,
-  },
-  nobg2: {
-    height: 'auto',
-    // minHeight: '50vh',
-    marginTop: 128,
-    marginBottom: 84,
-  },
-  box3bg: {
-    backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80) ), url(${'touchSmart.jpg'})`,
-    backgroundSize: ' cover',
-    backgroundPosition: 'center',
-    minHeight: '800px',
-    overflow: 'hidden',
-  },
   selectiveServices: {
     background: '#FFFFFF',
     position: 'relative',

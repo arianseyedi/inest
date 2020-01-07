@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import HoverButton from './HoverButton'
-import { List, ListItem } from '@material-ui/core'
+import { List, ListItem, Typography } from '@material-ui/core'
 import Link from './Link'
 
 const useStyles = makeStyles(theme => ({
@@ -14,6 +14,9 @@ const useStyles = makeStyles(theme => ({
       width: '480px',
       flexGrow: 1,
     },
+  },
+  text: {
+    fontSize: 14,
   },
   list: {
     display: 'flex',
@@ -48,23 +51,31 @@ export default function StandardMenu() {
       <List className={classes.list}>
         <ListItem className={classes.listItem}>
           <Link href="#" className={classes.link}>
-            WHO
+            <Typography variant="overline" className={classes.text}>
+              about
+            </Typography>
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
           <Link href="/services" className={classes.link}>
-            WHAT
+            <Typography variant="overline" className={classes.text}>
+              services
+            </Typography>
           </Link>
           {/* <HoverButton title="WHAT" href="/services" /> */}
         </ListItem>
         <ListItem className={classes.listItem}>
           <Link href="#" className={classes.link}>
-            CONTACT
+            <Typography variant="overline" className={classes.text}>
+              contact
+            </Typography>
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
           <Link href="#" className={classes.link}>
-            ARTICLES
+            <Typography variant="overline" className={classes.text}>
+              gallery
+            </Typography>
           </Link>
         </ListItem>
       </List>

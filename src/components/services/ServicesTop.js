@@ -23,10 +23,8 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: 'center bottom',
   },
   homeIntro: {
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: 80,
-      marginTop: 80,
-    },
+    marginBottom: 80,
+    marginTop: 50,
     [theme.breakpoints.up('sm')]: {
       minHeight: '40vh',
     },
