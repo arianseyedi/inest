@@ -38,7 +38,6 @@ const useStyles = makeStyles(theme => ({
     overflow: 'hidden',
   },
   selectiveServices: {
-    background: '#FFFFFF',
     position: 'relative',
     zIndex: '3',
   },
@@ -57,7 +56,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   partners: {
-    background: '#FFFFFF',
+    backgroundColor: 'transparent',
     position: 'relative',
     zIndex: '3',
     margin: '-60px 30px 0px',
@@ -114,7 +113,7 @@ export default function Index() {
           </Grid>
         </Grid>
       </div>
-      <div classNames={selectiveServiceStyles}>
+      <div>
         <SelectiveServices />
       </div>
       <div className={classes.nobg1}>
@@ -123,7 +122,7 @@ export default function Index() {
       <div className={classes.box3bg}>
         <Benefits />
       </div>
-      <Container maxWidth="xlg">
+      <Container maxWidth="xl">
         <div className={classes.partners}>
           <Partners />
         </div>

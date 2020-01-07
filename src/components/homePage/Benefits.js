@@ -1,19 +1,28 @@
 import React from 'react'
+import clsx from 'clsx'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Paper, Button } from '@material-ui/core'
-import MultimediaIcon from '../../resource/MultimediaIcon'
-import SecurityIcon from '../../resource/SecurityIcon'
-import ClimateIcon from '../../resource/ClimateIcon'
-import LightingAutomationIcon from '../../resource/LightingAutomationIcon'
-import './Benefits.scss'
+import { Grid, Paper } from '@material-ui/core'
+import DoubleTickIcon from '../../resource/DoubleTickIcon'
 
 const useStyles = makeStyles(theme => ({
   box: {
     height: '100%',
   },
+  text_title: {
+    color: 'white',
+  },
   text_intro: {
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 16,
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: 18,
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 20,
+    },
     color: 'white',
   },
   paper: {
@@ -43,6 +52,11 @@ const useStyles = makeStyles(theme => ({
       transition: 'all 0.5s ease',
     },
   },
+  tick: {
+    marginRight: 15,
+    marginBottom: -3,
+    color: '#87ff28',
+  },
 }))
 
 export default function Benefits() {
@@ -53,87 +67,58 @@ export default function Benefits() {
       <Grid
         container
         direction="row"
-        justify="center"
+        justify="space-between"
         alignItems="center"
         style={{ marginTop: 103, marginBottom: 103, paddingLeft: 16, paddingRight: 16 }}
-        spacing={8}
+        spacing={4}
       >
-        <Grid item sm={12} md={6}>
+        <Grid item xs={12} sm={6} md={8}>
           <Grid container direction="column" spacing={1}>
             <Grid item>
-              <Typography variant="h3" className={classes.text_intro} color="textSecondary">
+              <Typography variant="h3" color="textSecondary">
                 The
-                <span className={classes.specialText}> 5 </span>
+                <span className={clsx(classes.specialText)}> 4 </span>
                 greater advantages of Smart Home Automation
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="body1" className={classes.text_intro} color="textSecondary">
-                It is not about the technology, it is about making things work for you.
-              </Typography>
-              <ul style={{ color: 'grey' }}>
-                <li className="benefits">
-                  <Typography
-                    variant="body1"
-                    className={classes.text_intro}
-                    color="textSecondary"
-                  >
-                    Spend more time doing what you love! Being able to control all of your home
-                    tech systems through one device is a step forward in technology and home
-                    management.
+              <Grid container direction="column" spacing={4}>
+                <Grid item>
+                  <Typography className={classes.text_intro} color="textSecondary">
+                    It is not about the technology, it is about making things work for you.
                   </Typography>
-                </li>
-                <li className="benefits">
-                  <Typography
-                    variant="body1"
-                    className={classes.text_intro}
-                    color="textSecondary"
-                  >
-                    Feel a new level of security! Home automation systems can connect motion
-                    detectors, surveillance cameras, automated door locks, and other tangible
-                    security measures through your home so you can control them all from your
-                    smart phone.
+                </Grid>
+                <Grid item>
+                  <Typography className={classes.text_intro} color="textSecondary">
+                    <DoubleTickIcon className={classes.tick} />
+                    Controll all your home tech systems through one device.
                   </Typography>
-                </li>
-                <li className="benefits">
-                  <Typography
-                    variant="body1"
-                    className={classes.text_intro}
-                    color="textSecondary"
-                  >
-                    Give back to the environment! Full home automation keeps your home
-                    comfortable while conserving energy and saving utility spend. Help the
-                    environment by saving significant amount of energy.{' '}
-                  </Typography>
-                </li>
-                <li className="benefits">
-                  <Typography
-                    variant="body1"
-                    className={classes.text_intro}
-                    color="textSecondary"
-                  >
-                    Enjoy anywhere, anytime convenience! Never again worry about your home when
-                    you are away! A smart home allows you to use security cameras and internet
-                    connection to check the status of your home or kids from anywhere in the
-                    world using your laptop, tablet, or smartphone.
-                  </Typography>
-                </li>
-                <li className="benefits">
-                  <Typography
-                    variant="body1"
-                    className={classes.text_intro}
-                    color="textSecondary"
-                  >
-                    Get peace of mind! A smart home system helps to prevent potentially bad
-                    things from happening by enabling you to control parts of your home from
-                    your smartphone and other devices.
-                  </Typography>
-                </li>
-              </ul>
+                </Grid>
+              </Grid>
+              <Grid item>
+                <Typography className={classes.text_intro} color="textSecondary">
+                  <DoubleTickIcon className={classes.tick} />
+                  Maximize your home security by monitoring and controlling locks and
+                  surveillance cameras through your phone.
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography className={classes.text_intro} color="textSecondary">
+                  <DoubleTickIcon className={classes.tick} />
+                  Reduce utility costs by saving more energy.
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography className={classes.text_intro} color="textSecondary">
+                  <DoubleTickIcon className={classes.tick} />
+                  Become worry free! You are only a few taps of a finger away from checking
+                  your home status from anywhere through phone.
+                </Typography>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item sm={12} md={6}>
+        <Grid item xs={12} sm={6} md={4}>
           <Grid>
             <Paper className={classes.semiTransparentPaper} elevation={2}>
               <Grid

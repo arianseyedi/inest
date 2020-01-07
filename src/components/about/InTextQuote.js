@@ -9,12 +9,12 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function ServicesContainer(props) {
+export default function InTextQuote(props) {
   const classes = useStyles()
 
   return (
     <Paper elevation={4} className={classes.root}>
-      {props.children}
+      Here is a Quote
     </Paper>
   )
 }

@@ -10,7 +10,8 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     padding: 10,
     fontSize: 28,
-    borderRadius: 6,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
   },
 }))
 const slideImages = [

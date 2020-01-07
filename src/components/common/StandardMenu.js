@@ -50,7 +50,7 @@ export default function StandardMenu() {
     <div className={classes.root}>
       <List className={classes.list} id="unselectable-text">
         <ListItem className={classes.listItem}>
-          <Link href="#" className={classes.link}>
+          <Link href="/about" className={classes.link}>
             <Typography variant="overline" className={classes.text}>
               about
             </Typography>
@@ -65,14 +65,14 @@ export default function StandardMenu() {
           {/* <HoverButton title="WHAT" href="/services" /> */}
         </ListItem>
         <ListItem className={classes.listItem}>
-          <Link href="#" className={classes.link}>
+          <Link href="/contact" className={classes.link}>
             <Typography variant="overline" className={classes.text}>
               contact
             </Typography>
           </Link>
         </ListItem>
         <ListItem className={classes.listItem}>
-          <Link href="#" className={classes.link}>
+          <Link href="/gallery" className={classes.link}>
             <Typography variant="overline" className={classes.text}>
               gallery
             </Typography>

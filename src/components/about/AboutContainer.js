@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function ServicesContainer(props) {
+export default function AboutContainer(props) {
   const classes = useStyles()
 
   return (
