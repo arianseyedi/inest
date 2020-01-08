@@ -24,7 +24,7 @@ export default function MobileMenu(props) {
   return (
     props.open && (
       <div className={classes.root}>
-        {/* <div id="mySidenav" class="sidenav"> */}
+        {/* <div id="mySidenav" className="sidenav"> */}
         <IconButton onClick={props.onClickClose}>
           <CloseIcon />
         </IconButton>
@@ -36,3 +36,4 @@ export default function MobileMenu(props) {
     )
   )
 }
+c

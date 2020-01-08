@@ -43,12 +43,12 @@ export default function ServicesOverview() {
         </Grid>
         <Grid item>
           <Typography variant="body1" className={classes.text_intro}>
-            iNest’s robust smart home technology system provides a unique experience for
-            homeowners, home builders, and property managers. Our trained licensed team will
-            automate key aspects and features of your home or business space based on
-            automation systems focusing on: Security, Climate Control, Lighting, audio-visual
-            systems and more. We help you integrate different technology systems onto one
-            platform to make your day simpler and more efficient.
+            We are experts in commercial and residential integrated technology and bring years
+            of high-end automation experience into each project. iNest services include home
+            theatre, security system, climate control, audio/video, lighting control, smart
+            home, automated shading, and a variety of electrical services. We’re passionate
+            about creating exceptional systems for our clients, and our primary focus is your
+            satisfaction.
           </Typography>
         </Grid>
         <Grid item>

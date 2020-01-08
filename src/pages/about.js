@@ -36,11 +36,8 @@ export default function Services() {
       <div className={classes.box1bg}>
         <AboutTop />
       </div>
-      <div className={selectiveServiceStyles}>
-        <AboutContainer>
-          <AboutContent />
-        </AboutContainer>
-      </div>
+      <AboutContent />
+
       <GetQuote />
       <Bottombar />
     </React.Fragment>

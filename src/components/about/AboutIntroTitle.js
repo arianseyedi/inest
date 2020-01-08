@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Paper, Button, TextField } from '@material-ui/core'
-import './AboutIntro.scss'
+import FancyQuotation from '../common/FancyQuotation'
 
 const useStyles = makeStyles(theme => ({
   box: {
@@ -95,25 +95,11 @@ export default function AboutIntro() {
               className={classes.condMargin}
             >
               <Grid item>
-                <div>
-                  <div class="testimonial-quote group right">
-                    <div class="quote-container">
-                      <div>
-                        <blockquote>
-                          <p>
-                            It was like the staff were installing the systems for themselves,
-                            in their own home - wanting everything to be perfect!”
-                          </p>
-                        </blockquote>
-                        <cite>
-                          <span>Tasha Monir</span>
-                          <br />
-                          iNest Client
-                        </cite>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <FancyQuotation 
+                  text={"It was like the staff were installing the systems for themselves, in their own home - wanting everything to be perfect!"} 
+                  by={"Tasha Monir"}
+                  byTitle={"iNest Client"}
+                />
               </Grid>
             </Grid>
           </Paper>

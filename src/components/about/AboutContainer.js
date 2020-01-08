@@ -12,9 +12,5 @@ const useStyles = makeStyles(() => ({
 export default function AboutContainer(props) {
   const classes = useStyles()
 
-  return (
-    <Paper elevation={4} className={classes.root}>
-      {props.children}
-    </Paper>
-  )
+  return <div className={classes.root}>{props.children}</div>
 }
