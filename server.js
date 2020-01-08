@@ -21,6 +21,6 @@ app.prepare().then(() => {
 
   server.listen(3019, err => {
     if (err) throw err
-    console.log('> Read on http://localhost:3000')
+    console.log('> Read on http://localhost:3019')
   })
 })

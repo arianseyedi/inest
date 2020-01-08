@@ -63,7 +63,7 @@ export default function Services() {
   const servicesList = servicesListRaw.map((Component, index) => (
     <React.Fragment key={`service-fgmt-${index}`}>
       {index % 2 ? (
-        <Component key={`component-${index}`} />
+        <Component key={`sv-component-${index}`} />
       ) : (
         <Component reverse key={`component-${index}`} />
       )}

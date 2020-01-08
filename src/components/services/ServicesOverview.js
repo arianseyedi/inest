@@ -95,7 +95,7 @@ export default function ServicesOverview() {
                   <CertifiedIcon id="hover-child-3" className={classes.icon} />
                 </Grid>
                 <Grid item>
-                  <Grid direction="row">
+                  <Grid container direction="row">
                     <Grid item>
                       <Typography id="hover-child-3" variant="caption">
                         AAA Certified

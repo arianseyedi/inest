@@ -57,16 +57,14 @@ export default function ServicesTop(props) {
     const res = arr.map((item, index) => {
       if (index == 0) {
         return (
-          <Typography variant="body1" key={`item ${index}`}>
+          <Typography variant="body1" key={`text-item ${index}`}>
             {item}
           </Typography>
         )
       } else {
         return (
-          <li>
-            <Typography variant="body1" key={`item ${index}`}>
-              {item}
-            </Typography>
+          <li key={`tex-item ${index}`}>
+            <Typography variant="body1">{item}</Typography>
           </li>
         )
       }
@@ -75,7 +73,7 @@ export default function ServicesTop(props) {
       <Grid container direction="column">
         <Grid item> {res[0]}</Grid>
         <Grid item>
-          <ul>{res.splice(1)}</ul>
+          <ul key={'unique-splice'}>{res.splice(1)}</ul>
         </Grid>
       </Grid>
     )
