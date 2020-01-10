@@ -74,9 +74,7 @@ export default function Bottombar() {
                 alignItems="center"
                 spacing={2}
               >
-                <Grid item>
-                  <Map />
-                </Grid>
+                <Grid item>{/* <Map /> */}</Grid>
                 <Grid item>
                   <BottomContacts />
                 </Grid>
