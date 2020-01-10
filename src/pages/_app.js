@@ -6,7 +6,7 @@ import theme from '../config/theme'
 import { Page } from '../components/common/Page'
 import CustomHead from '../components/common/CustomHead'
 import '../components/common/FancyQuotation.scss'
-import '../components/services/ServicePresentation.scss'
+import '../components/servicesPage/ServicePresentation.scss'
 
 export default class MyApp extends App {
   componentDidMount() {

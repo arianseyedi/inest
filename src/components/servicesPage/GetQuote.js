@@ -28,7 +28,6 @@ export default function GetQuote(props) {
   return (
     <div className={classes.root}>
       <Container maxWidth="xs">
-        {/* <Paper elevation={0}> */}
         <Grid container direction="column" justify="center" alignItems="stretch" spacing={6}>
           <Grid item>
             <Grid container direction="column" justify="flex-end" spacing={1}>
@@ -65,7 +64,6 @@ export default function GetQuote(props) {
             </Grid>
           </Grid>
         </Grid>
-        {/* </Paper> */}
       </Container>
     </div>
   )

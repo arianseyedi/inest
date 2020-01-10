@@ -2,9 +2,8 @@ import React from 'react'
 import clsx from 'clsx'
 import Bottombar from '../components/common/Bottombar'
 import { makeStyles } from '@material-ui/core/styles'
-import GetQuote from '../components/services/GetQuote'
+import GetQuote from '../components/servicesPage/GetQuote'
 import AboutTop from '../components/about/AboutTop'
-import AboutContainer from '../components/about/AboutContainer'
 import AboutContent from '../components/about/AboutContent'
 
 const useStyles = makeStyles(theme => ({
@@ -37,7 +36,6 @@ export default function Services() {
         <AboutTop />
       </div>
       <AboutContent />
-
       <GetQuote />
       <Bottombar />
     </React.Fragment>

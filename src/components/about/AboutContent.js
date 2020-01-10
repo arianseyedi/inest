@@ -107,7 +107,7 @@ export default function AboutContent(props) {
         </Grid>
         <Grid item>
           <QuoteStrip
-            text="Most importantly, the work was finished on time and on the budget"
+            text="Most importantly, the work was finished on time and on the budget."
             by="Ron Moreta"
             byTitle="client"
             image="gallery/toronto.jpg"
@@ -118,12 +118,12 @@ export default function AboutContent(props) {
             <Container maxWidth="lg">
               <Grid direction="column">
                 <Grid item xs={12}>
-                    <div style={{ marginBottom: 40 }}>
-                      <Typography variant="h3" className={classes.aboutTitle}>
+                  <div style={{ marginBottom: 40 }}>
+                    <Typography variant="h3" className={classes.aboutTitle}>
                       — Our Team —
-                      </Typography>
-                    </div>
-                  </Grid>
+                    </Typography>
+                  </div>
+                </Grid>
                 <Grid item xs={12}>
                   <div>
                     <Typography variant="body1" className={classes.aboutText}>
