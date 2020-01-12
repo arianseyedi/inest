@@ -78,9 +78,9 @@ const useStyles = makeStyles(theme => ({
 
 export default function ImageGridList(props) {
   const classes = useStyles()
-  const smDown = useMediaQuery(theme => theme.breakpoints.down('sm'))
-  const mdDown = useMediaQuery(theme => theme.breakpoints.down('md'))
-  const lgUp = useMediaQuery(theme => theme.breakpoints.up('lg'))
+  const smDown = useMediaQuery(theme => theme.breakpoints.down('xs'))
+  const mdDown = useMediaQuery(theme => theme.breakpoints.down('sm'))
+  const mdUp = useMediaQuery(theme => theme.breakpoints.down('md'))
 
   const [state, setState] = React.useState({
     description: '',
@@ -89,7 +89,7 @@ export default function ImageGridList(props) {
   })
   console.log(smDown)
   console.log(mdDown)
-  console.log(lgUp)
+  console.log(mdUp)
 
   const handleClickOpen = (img, title) => {
     setState({ description: title, img, open: true })
@@ -147,7 +147,7 @@ export default function ImageGridList(props) {
         <GridList
           cellHeight={260}
           className={classes.gridList}
-          cols={smDown ? 1 : mdDown ? 4 : lgUp ? 8 : 8}
+          cols={smDown ? 1 : mdDown ? 8 : 8}
         >
           {tileData.map((tile, index) => (
             <GridListTile
