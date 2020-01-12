@@ -52,7 +52,7 @@ export default function HomeIntro() {
               style={{ paddingBottom: '30px' }}
               id="unselectable-text"
             >
-              Smart Convenient and Secure
+              Smart, Convenient and Secure
             </Typography>
             <Typography className={classes.text_intro} id="unselectable-text">
               Enhance security, save energy, and promote comfort with iNest home automation.

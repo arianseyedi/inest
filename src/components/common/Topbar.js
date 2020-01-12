@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     background: 'rgba(24,24,24, .3)',
   },
   logo: {
-    fontSize: 65,
+    fontSize: 90,
     marginLeft: theme.spacing(0),
   },
 }))

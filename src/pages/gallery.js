@@ -8,7 +8,7 @@ import GalleryContent from '../components/galleryPage/GalleryContent'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.90)), url(${'gallery/stairwayToHeaven.jpg'})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.90)), url(${'gallery/livingroom.jpg'})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },

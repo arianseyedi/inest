@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
 import GridListTileBar from '@material-ui/core/GridListTileBar'
-import ListSubheader from '@material-ui/core/ListSubheader'
 import IconButton from '@material-ui/core/IconButton'
-import InfoIcon from '@material-ui/icons/Info'
-import { Container } from '@material-ui/core'
+import { Container, Grid } from '@material-ui/core'
+import CustomizedDialogs from '../common/CustomDialog'
+import EnlargeIcon from '../../resource/EnlargeIcon'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -21,6 +21,30 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: 'auto',
   },
+  gridItem: {
+    cursor: 'pointer',
+    '&:hover': {
+      cursor: 'pointer',
+      transform: 'scale(1.02)',
+      webkitTransition: ' all 0.5s ease',
+      mozTransition: ' all 0.5s ease',
+      oTransition: ' all 0.5s ease',
+      msTransition: ' all 0.5s ease',
+      transition: 'all 0.5s ease',
+    },
+  },
+  title: {
+    '&:hover': {
+      color: '#FFD300',
+      fontWeight: 'bold',
+    },
+  },
+  icon: {
+    color: theme.palette.grey[500],
+    '&:hover': {
+      color: '#FFD300',
+    },
+  },
 }))
 
 /**
@@ -33,8 +57,7 @@ const useStyles = makeStyles(theme => ({
  *   {
  *     img: image,
  *     title: 'Image',
- *     author: 'author',
- *     cols: 2,
+ *  *     cols: 2,
  *   },
  *   {
  *     [etc...]
@@ -45,77 +68,92 @@ const useStyles = makeStyles(theme => ({
 const tileData = [
   {
     img: 'gallery/livingroom.jpg',
-    title: 'Image',
-    author: 'author',
+    title: 'Automation',
     cols: 2,
   },
   {
     img: 'gallery/stairwayToHeaven.jpg',
-    title: 'Image',
-    author: 'author',
+    title: 'Security',
     cols: 3,
   },
   {
     img: 'gallery/wardrobe.jpg',
-    title: 'Image',
-    author: 'author',
+    title: 'Electrical',
     cols: 3,
   },
   // row
   {
     img: 'gallery/home.jpg',
-    title: 'Image',
-    author: 'author',
+    title: 'Camera',
     cols: 2,
   },
   {
     img: 'cinema.jpg',
-    title: 'Image',
-    author: 'author',
+    title: 'Home Theatre',
     cols: 4,
   },
   {
     img: 'lighting.jpg',
     title: 'Image',
-    author: 'author',
     cols: 2,
   },
   // row
   {
     img: '/gallery/theatre-gallery.jpg',
-    title: 'Image',
-    author: 'author',
+    title: 'Home Theatre',
     cols: 4,
   },
   {
     img: 'lighting.jpg',
-    title: 'Image',
-    author: 'author',
+    title: 'Lighting',
     cols: 4,
   },
 ]
 export default function ImageGridList() {
   const classes = useStyles()
+  const [state, setState] = React.useState(false)
+
+  const handleClickOpen = (img, title) => {
+    setState({ description: title, img, open: true })
+  }
+  const handleClose = () => {
+    setState({ ...state, open: false })
+  }
 
   return (
     <div className={classes.root}>
       <Container maxWidth="lg">
         <GridList cellHeight={260} className={classes.gridList} cols={8}>
           {tileData.map(tile => (
-            <GridListTile key={tile.img} cols={tile.cols || 1} title={tile.title}>
+            <GridListTile
+              key={tile.img}
+              cols={tile.cols || 1}
+              title={tile.title}
+              onClick={() => handleClickOpen(tile.img, tile.title)}
+              className={classes.gridItem}
+            >
               <img src={tile.img} alt={tile.title} />
               <GridListTileBar
                 title={tile.title}
-                subtitle={<span>by: {tile.author}</span>}
+                classes={{ title: classes.title, root: classes.title }}
                 actionIcon={
                   <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
-                    <InfoIcon />
+                    <EnlargeIcon />
                   </IconButton>
                 }
               />
             </GridListTile>
           ))}
         </GridList>
+
+        <CustomizedDialogs
+          content={'gallery item'}
+          handleClose={handleClose}
+          open={state.open}
+          img={state.img}
+          title={'Gallery'}
+          description={state.description}
+        />
       </Container>
     </div>
   )

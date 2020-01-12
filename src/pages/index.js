@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import clsx from 'clsx'
 import Bottombar from '../components/common/Bottombar'
 import Topbar from '../components/common/Topbar'
@@ -11,6 +11,7 @@ import SelectiveServices from '../components/homePage/SelectiveServices'
 import StepByStepGuide from '../components/homePage/StepByStepGuide'
 import Benefits from '../components/homePage/Benefits'
 import ServicesTour from '../components/homePage/ServicesTour'
+import { Router } from 'next/router'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
@@ -20,9 +21,10 @@ const useStyles = makeStyles(theme => ({
   },
   nobg1: {
     height: 'auto',
-    minHeight: '50vh',
-    marginTop: 150,
-    marginBottom: 100,
+    [theme.breakpoints.down('xl')]: {
+      marginTop: 150,
+      marginBottom: 150,
+    },
   },
   nobg2: {
     height: 'auto',
@@ -49,10 +51,14 @@ const useStyles = makeStyles(theme => ({
   },
   homeIntro: {
     [theme.breakpoints.down('sm')]: {
+      marginTop: 200,
+      marginBottom: 100,
       paddingBottom: 80,
     },
     [theme.breakpoints.up('sm')]: {
-      minHeight: '40vh',
+      marginTop: 200,
+      marginBottom: 250,
+      // paddingBottom: '10%',
     },
   },
   partners: {
@@ -83,6 +89,18 @@ export default function Index() {
     classes.selectiveServices,
     classes.selectiveServicesRaised
   )
+
+  useEffect(() => {
+    const handleRouteChange = url => {
+      return <div style={{ height: 200, width: 200, backgroundColor: 'red' }}>{url}</div>
+    }
+
+    Router.events.on('routeChangeStart', handleRouteChange)
+    return () => {
+      Router.events.off('routeChangeStart', handleRouteChange)
+    }
+  }, [])
+
   return (
     <React.Fragment>
       <div className={classes.box1bg}>

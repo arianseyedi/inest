@@ -78,7 +78,7 @@ export default function GalleryIntro() {
               </Grid>
               <Grid item>
                 <Typography className={classes.text_intro} id="unselectable-text">
-                  presenting previous projects
+                  presenting our previous projects.
                 </Typography>
               </Grid>
             </Grid>
