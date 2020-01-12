@@ -87,9 +87,6 @@ export default function ImageGridList(props) {
     img: undefined,
     open: false,
   })
-  console.log(smDown)
-  console.log(mdDown)
-  console.log(mdUp)
 
   const handleClickOpen = (img, title) => {
     setState({ description: title, img, open: true })
