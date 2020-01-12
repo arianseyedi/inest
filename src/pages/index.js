@@ -36,7 +36,15 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80) ), url(${'touchSmart.jpg'})`,
     backgroundSize: ' cover',
     backgroundPosition: 'center',
-    minHeight: '800px',
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 200,
+    },
+    [theme.breakpoints.down('md')]: {
+      minHeight: 600,
+    },
+    [theme.breakpoints.up('md')]: {
+      minHeight: 700,
+    },
     overflow: 'hidden',
   },
   selectiveServices: {
@@ -44,20 +52,18 @@ const useStyles = makeStyles(theme => ({
     zIndex: '3',
   },
   selectiveServicesRaised: {
-    margin: '-60px 30px 0px',
+    margin: '-60px 0px 0px',
     borderRadius: '6px',
     boxShadow:
       '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
   },
   homeIntro: {
+    marginTop: 30,
     [theme.breakpoints.down('sm')]: {
-      marginTop: 200,
-      marginBottom: 100,
-      paddingBottom: 80,
+      marginBottom: 120,
     },
     [theme.breakpoints.up('sm')]: {
-      marginTop: 200,
-      marginBottom: 250,
+      marginBottom: 120,
       // paddingBottom: '10%',
     },
   },
@@ -75,20 +81,20 @@ const useStyles = makeStyles(theme => ({
       minHeight: 400,
     },
     [theme.breakpoints.down('md')]: {
-      minHeight: 700,
+      minHeight: 500,
     },
     [theme.breakpoints.up('md')]: {
-      minHeight: 800,
+      minHeight: 600,
     },
   },
 }))
 
 export default function Index() {
   const classes = useStyles()
-  const selectiveServiceStyles = clsx(
-    classes.selectiveServices,
-    classes.selectiveServicesRaised
-  )
+  // const selectiveServiceStyles = clsx(
+  //   classes.selectiveServices,
+  //   classes.selectiveServicesRaised
+  // )
 
   useEffect(() => {
     const handleRouteChange = url => {
@@ -107,7 +113,7 @@ export default function Index() {
         <Grid
           container
           direction="column"
-          // alignItems="stretch"
+          alignItems="stretch"
           className={classes.minHeightTop}
         >
           <Grid item>
