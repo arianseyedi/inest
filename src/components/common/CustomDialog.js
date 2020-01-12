@@ -73,11 +73,9 @@ export default function CustomizedDialogs(props) {
           onClose={props.handleClose}
           className={classes.topRibbon}
         >
-          <Typography variant="h5" color="secondary">
-            {props.title}
-          </Typography>
+          {props.title}
         </DialogTitle>
-        <DialogContent dividerse className={classes.bg}>
+        <DialogContent className={classes.bg}>
           <div>
             <Typography
               gutterBottom

@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton'
 import { Container, Grid } from '@material-ui/core'
 import CustomizedDialogs from '../common/CustomDialog'
 import EnlargeIcon from '../../resource/EnlargeIcon'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,8 +21,18 @@ const useStyles = makeStyles(theme => ({
   gridList: {
     width: '100%',
     height: 'auto',
+    // [theme.breakpoints.down('sm')]: {
+    //   width: '100%',
+    // },
+    // [theme.breakpoints.down('md')]: {
+    //   width: '100%',
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //   width: 1280,
+    // },
   },
   gridItem: {
+    height: '100%',
     cursor: 'pointer',
     '&:hover': {
       cursor: 'pointer',
@@ -65,53 +76,20 @@ const useStyles = makeStyles(theme => ({
  * ];
  */
 
-const tileData = [
-  {
-    img: 'gallery/livingroom.jpg',
-    title: 'Automation',
-    cols: 2,
-  },
-  {
-    img: 'gallery/stairwayToHeaven.jpg',
-    title: 'Security',
-    cols: 3,
-  },
-  {
-    img: 'gallery/wardrobe.jpg',
-    title: 'Electrical',
-    cols: 3,
-  },
-  // row
-  {
-    img: 'gallery/home.jpg',
-    title: 'Camera',
-    cols: 2,
-  },
-  {
-    img: 'cinema.jpg',
-    title: 'Home Theatre',
-    cols: 4,
-  },
-  {
-    img: 'lighting.jpg',
-    title: 'Image',
-    cols: 2,
-  },
-  // row
-  {
-    img: '/gallery/theatre-gallery.jpg',
-    title: 'Home Theatre',
-    cols: 4,
-  },
-  {
-    img: 'lighting.jpg',
-    title: 'Lighting',
-    cols: 4,
-  },
-]
-export default function ImageGridList() {
+export default function ImageGridList(props) {
   const classes = useStyles()
-  const [state, setState] = React.useState(false)
+  const smDown = useMediaQuery(theme => theme.breakpoints.down('sm'))
+  const mdDown = useMediaQuery(theme => theme.breakpoints.down('md'))
+  const lgUp = useMediaQuery(theme => theme.breakpoints.up('lg'))
+
+  const [state, setState] = React.useState({
+    description: '',
+    img: undefined,
+    open: false,
+  })
+  console.log(smDown)
+  console.log(mdDown)
+  console.log(lgUp)
 
   const handleClickOpen = (img, title) => {
     setState({ description: title, img, open: true })
@@ -120,19 +98,67 @@ export default function ImageGridList() {
     setState({ ...state, open: false })
   }
 
+  const tileData = [
+    {
+      img: 'gallery/livingroom.jpg',
+      title: 'Automation',
+      cols: smDown ? 1 : mdDown ? 4 : 2,
+    },
+    {
+      img: 'gallery/stairwayToHeaven.jpg',
+      title: 'Security',
+      cols: smDown ? 1 : mdDown ? 4 : 4,
+    },
+    {
+      img: 'gallery/wardrobe.jpg',
+      title: 'Electrical',
+      cols: smDown ? 1 : mdDown ? 4 : 2,
+    },
+    {
+      img: 'gallery/home.jpg',
+      title: 'Camera',
+      cols: smDown ? 1 : mdDown ? 4 : 3,
+    },
+    {
+      img: 'cinema.jpg',
+      title: 'Home Theatre',
+      cols: smDown ? 1 : mdDown ? 4 : 2,
+    },
+    {
+      img: 'lighting.jpg',
+      title: 'Image',
+      cols: smDown ? 1 : mdDown ? 4 : 3,
+    },
+    {
+      img: '/gallery/theatre-gallery.jpg',
+      title: 'Home Theatre',
+      cols: smDown ? 1 : mdDown ? 4 : 4,
+    },
+    {
+      img: 'lighting.jpg',
+      title: 'Lighting',
+      cols: smDown ? 1 : mdDown ? 4 : 4,
+    },
+  ]
+
   return (
     <div className={classes.root}>
       <Container maxWidth="lg">
-        <GridList cellHeight={260} className={classes.gridList} cols={8}>
-          {tileData.map(tile => (
+        <GridList
+          cellHeight={260}
+          className={classes.gridList}
+          cols={smDown ? 1 : mdDown ? 4 : lgUp ? 8 : 8}
+        >
+          {tileData.map((tile, index) => (
             <GridListTile
-              key={tile.img}
+              key={`tile-gallery-${index}`}
               cols={tile.cols || 1}
               title={tile.title}
               onClick={() => handleClickOpen(tile.img, tile.title)}
               className={classes.gridItem}
+              classes={{ tile: { overflowY: 'scroll !important' } }}
             >
-              <img src={tile.img} alt={tile.title} />
+              <img src={tile.img} alt={tile.title} style={{ width: '100%', height: '100%' }} />
               <GridListTileBar
                 title={tile.title}
                 classes={{ title: classes.title, root: classes.title }}
@@ -145,7 +171,6 @@ export default function ImageGridList() {
             </GridListTile>
           ))}
         </GridList>
-
         <CustomizedDialogs
           content={'gallery item'}
           handleClose={handleClose}

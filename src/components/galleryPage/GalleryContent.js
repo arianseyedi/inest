@@ -83,22 +83,16 @@ export default function GalleryContent(props) {
   return (
     <div className={classes.root}>
       <Grid container direction="column" spacing={0}>
-        <Grid item>
-          <Paper elevation={0} style={{ height: '100%', width: '100%' }}>
-            <Container maxWidth="lg">
-              <Grid direction="column" className={classes.visionInner}>
-                <Grid item>
-                  <div style={{ marginBottom: 10 }}>
-                    <Typography variant="h3" className={classes.missionTitle}>
-                      At iNest, we let our work speak for itself.
-                    </Typography>
-                  </div>
-                </Grid>
-              </Grid>
-            </Container>
-          </Paper>
+        <Grid item xs={12}>
+          <Container maxWidth="lg">
+            <Grid item className={classes.visionInner}>
+              <Typography variant="h3" className={classes.missionTitle}>
+                At iNest, we let our work speak for itself.
+              </Typography>
+            </Grid>
+          </Container>
         </Grid>
-        <Grid item style={{ maxHeight: '100%' }}>
+        <Grid item>
           <PhotoGallery />
         </Grid>
       </Grid>

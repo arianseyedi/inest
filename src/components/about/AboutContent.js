@@ -116,7 +116,7 @@ export default function AboutContent(props) {
         <Grid item className={classes.aboutBox}>
           <Paper elevation={0}>
             <Container maxWidth="lg">
-              <Grid direction="column">
+              <Grid container direction="column">
                 <Grid item xs={12}>
                   <div style={{ marginBottom: 40 }}>
                     <Typography variant="h3" className={classes.aboutTitle}>
