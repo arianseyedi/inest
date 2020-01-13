@@ -30,6 +30,9 @@ const useStyles = makeStyles(theme => ({
     },
     marginRight: theme.spacing(0),
   },
+  paper: {
+    fontWeight: 'bold',
+  },
 }))
 
 export default function MobileMenu() {
@@ -53,11 +56,27 @@ export default function MobileMenu() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+        {['About', 'Services', 'Contact', 'Gallery'].map((text, index) => (
+          <a
+            href={`/${text.toLowerCase()}`}
+            key={`${text}-m-menu-item`}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            {index < 3 ? (
+              <React.Fragment>
+                <ListItem button>
+                  <ListItemText primary={text} />
+                </ListItem>
+                <Divider></Divider>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <ListItem button>
+                  <ListItemText primary={text} />
+                </ListItem>
+              </React.Fragment>
+            )}
+          </a>
         ))}
       </List>
     </div>
@@ -74,6 +93,7 @@ export default function MobileMenu() {
         open={state.right}
         onClose={toggleDrawer('right', false)}
         onOpen={toggleDrawer('right', true)}
+        PaperProps={{ style: { backgroundColor: 'black', opacity: '0.75', color: 'white' } }}
       >
         {sideList('right')}
       </SwipeableDrawer>
