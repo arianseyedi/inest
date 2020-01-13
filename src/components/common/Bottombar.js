@@ -46,46 +46,57 @@ const useStyles = makeStyles(theme => ({
 
 export default function Bottombar() {
   const classes = useStyles()
-
+  const styles = {
+    stickToBottom: {},
+  }
   return (
-    <div className={classes.bg}>
-      <Container maxWidth="lg">
-        <div className={classes.root}>
-          <Grid container direction="row" justify="space-around" alignItems="center">
-            <Grid item xs={'auto'}>
-              <Grid container direction="column" justify="space-around" alignItems="center">
-                <Grid item>
-                  <TransparentLogo style={{ fontSize: 150 }} />
+    <Grid container direction="row" style={{ height: '1px' }}>
+      <Grid item xs={12}>
+        <div className={classes.bg}>
+          <Container maxWidth="lg">
+            <div className={classes.root}>
+              <Grid container direction="row" justify="space-around" alignItems="center">
+                <Grid item xs={'auto'}>
+                  <Grid
+                    container
+                    direction="column"
+                    justify="space-around"
+                    alignItems="center"
+                  >
+                    <Grid item>
+                      <TransparentLogo style={{ fontSize: 150 }} />
+                    </Grid>
+                    <Grid item>
+                      <LinkedinButton /> <InstagramButton /> <FacebookButton />
+                    </Grid>
+                  </Grid>
                 </Grid>
-                <Grid item>
-                  <LinkedinButton /> <InstagramButton /> <FacebookButton />
+                <Divider
+                  orientation="vertical"
+                  className={clsx([classes.hideOnSize, classes.divider])}
+                />
+                <Grid item xs={'auto'}>
+                  <Grid
+                    container
+                    direction="row"
+                    justify="space-around"
+                    alignItems="center"
+                    spacing={2}
+                  >
+                    <Grid item>{/* <Map /> */}</Grid>
+                    <Grid item>
+                      <BottomContacts />
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-            <Divider
-              orientation="vertical"
-              className={clsx([classes.hideOnSize, classes.divider])}
-            />
-            <Grid item xs={'auto'}>
-              <Grid
-                container
-                direction="row"
-                justify="space-around"
-                alignItems="center"
-                spacing={2}
-              >
-                <Grid item>{/* <Map /> */}</Grid>
-                <Grid item>
-                  <BottomContacts />
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
+            </div>
+            <Box>
+              <CopyrightAndTerms />
+            </Box>
+          </Container>
         </div>
-        <Box>
-          <CopyrightAndTerms />
-        </Box>
-      </Container>
-    </div>
+      </Grid>
+    </Grid>
   )
 }

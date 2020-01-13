@@ -5,7 +5,9 @@ export default (req, res) => {
     case 'GET':
       break
     case 'POST':
-      res.status(200).json({ error: 'Got here (POST)' })
+      const { email, name } = req.body
+      console.log(req.body)
+      console.log(res)
       break
     default:
       res.status(405).end() //Method Not Allowed
