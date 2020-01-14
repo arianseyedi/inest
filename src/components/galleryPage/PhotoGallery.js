@@ -17,10 +17,13 @@ const useStyles = makeStyles(theme => ({
     overflow: 'hidden',
     backgroundColor: theme.palette.background.paper,
     marginBottom: 45,
+    overflowY: 'hidden',
   },
   gridList: {
     width: '100%',
     height: 'auto',
+    overflowY: 'hidden',
+
     // [theme.breakpoints.down('sm')]: {
     //   width: '100%',
     // },
@@ -36,18 +39,18 @@ const useStyles = makeStyles(theme => ({
     cursor: 'pointer',
     '&:hover': {
       cursor: 'pointer',
-      transform: 'scale(1.02)',
+      transform: 'scale(1.015)',
       webkitTransition: ' all 0.5s ease',
       mozTransition: ' all 0.5s ease',
       oTransition: ' all 0.5s ease',
       msTransition: ' all 0.5s ease',
       transition: 'all 0.5s ease',
     },
+    overflowY: 'hidden',
   },
   title: {
     '&:hover': {
       color: '#FFD300',
-      fontWeight: 'bold',
     },
   },
   icon: {
@@ -139,44 +142,53 @@ export default function ImageGridList(props) {
   ]
 
   return (
-    <div className={classes.root}>
-      <Container maxWidth="lg">
-        <GridList
-          cellHeight={260}
-          className={classes.gridList}
-          cols={smDown ? 1 : mdDown ? 8 : 8}
-        >
-          {tileData.map((tile, index) => (
-            <GridListTile
-              key={`tile-gallery-${index}`}
-              cols={tile.cols || 1}
-              title={tile.title}
-              onClick={() => handleClickOpen(tile.img, tile.title)}
-              className={classes.gridItem}
-              classes={{ tile: { overflowY: 'scroll !important' } }}
-            >
-              <img src={tile.img} alt={tile.title} style={{ width: '100%', height: '100%' }} />
-              <GridListTileBar
+    <React.Fragment>
+      <div className={classes.root}>
+        <Container maxWidth="lg">
+          <GridList
+            cellHeight={260}
+            className={classes.gridList}
+            cols={smDown ? 1 : mdDown ? 8 : 8}
+          >
+            {tileData.map((tile, index) => (
+              <GridListTile
+                key={`tile-gallery-${index}`}
+                cols={tile.cols || 1}
                 title={tile.title}
-                classes={{ title: classes.title, root: classes.title }}
-                actionIcon={
-                  <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
-                    <EnlargeIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
-        </GridList>
-        <CustomizedDialogs
-          content={'gallery item'}
-          handleClose={handleClose}
-          open={state.open}
-          img={state.img}
-          title={'Gallery'}
-          description={state.description}
-        />
-      </Container>
-    </div>
+                onClick={() => handleClickOpen(tile.img, tile.title)}
+                className={classes.gridItem}
+              >
+                <img
+                  src={tile.img}
+                  alt={tile.title}
+                  style={{ width: '100%', height: '100%' }}
+                />
+                <GridListTileBar
+                  title={tile.title}
+                  classes={{ title: classes.title, root: classes.title }}
+                  style={{ height: '100%', textAlign: 'center', fontWeight: 'bolder' }}
+                  // actionIcon={
+                  //   <IconButton
+                  //     aria-label={`info about ${tile.title}`}
+                  //     className={classes.icon}
+                  //   >
+                  //     <EnlargeIcon />
+                  //   </IconButton>
+                  // }
+                />
+              </GridListTile>
+            ))}
+          </GridList>
+        </Container>
+      </div>
+      <CustomizedDialogs
+        content={'gallery item'}
+        handleClose={handleClose}
+        open={state.open}
+        img={state.img}
+        title={'Gallery'}
+        description={state.description}
+      />
+    </React.Fragment>
   )
 }

@@ -51,6 +51,7 @@ const DialogActions = withStyles(theme => ({
 
 const useStyles = makeStyles(theme => ({
   topRibbon: {
+    color: theme.palette.grey[100],
     backgroundColor: theme.palette.grey[900],
   },
   bg: {},
@@ -85,7 +86,7 @@ export default function CustomizedDialogs(props) {
             >
               {props.description}
             </Typography>
-            <img style={{ width: '100%', height: '100%' }} src={props.img} />
+            <img style={{ width: '100%', height: '100%', borderRadius: 4 }} src={props.img} />
           </div>
         </DialogContent>
       </Dialog>
