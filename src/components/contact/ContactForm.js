@@ -5,6 +5,9 @@ import Paper from '@material-ui/core/Paper'
 import { Typography, makeStyles, Container } from '@material-ui/core'
 import ContactFormContent from './ContactFormContent'
 import SuccessMessage from './SuccessMessage'
+import ErrorMessage from './ErrorMessage'
+
+import 'isomorphic-fetch'
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -36,10 +39,38 @@ const validationSchema = Yup.object({
 
 export default function ContactForm(props) {
   const classes = useStyles()
-  const [submitState, setSubmitState] = useState(false)
+  const [submitState, setSubmitState] = useState({ submitted: false, error: false })
   const submit = data => {
-    console.log(data)
-    setSubmitState(true)
+    const formData = new FormData()
+    console.log('handle submit', data)
+    if (data.attachment) {
+      formData.append('attachment', data.attachment)
+    }
+    if (data.name) {
+      formData.append('name', data.name)
+    }
+    if (data.email) {
+      formData.append('email', data.email)
+    }
+    if (data.services) {
+      formData.append('services', data.services)
+    }
+    if (data.description) {
+      formData.append('description', data.description)
+    }
+    fetch('/api/contact', {
+      method: 'post',
+      // headers: {
+      //   // Accept: 'application/json, text/plain, */*',
+      //   // 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+      // },
+      body: formData,
+    }).then(res => {
+      console.log(res)
+      res && res.status === 200
+        ? setSubmitState({ submitted: true, error: false })
+        : setSubmitState({ submitted: true, error: true })
+    })
   }
   const values = {
     name: '',
@@ -52,7 +83,7 @@ export default function ContactForm(props) {
     <React.Fragment>
       <Container maxWidth="sm">
         <Paper elevation={6} className={classes.paper}>
-          {!submitState && (
+          {!submitState.submitted && (
             <React.Fragment>
               <Typography
                 variant="body2"
@@ -66,7 +97,6 @@ export default function ContactForm(props) {
               </Typography>
               <Formik
                 render={props => {
-                  console.log(props.values)
                   return <ContactFormContent {...props} />
                 }}
                 initialValues={values}
@@ -75,7 +105,8 @@ export default function ContactForm(props) {
               />
             </React.Fragment>
           )}
-          {submitState && <SuccessMessage />}
+          {submitState.submitted && !submitState.error && <SuccessMessage />}
+          {submitState.submitted && submitState.error && <ErrorMessage />}
         </Paper>
       </Container>
     </React.Fragment>

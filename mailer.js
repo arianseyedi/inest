@@ -1,25 +1,20 @@
 const nodemailer = require('nodemailer')
 
-const transporter = nodemailer.createTransport({
-  service: 'Gmail',
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
   auth: {
-    type: 'OAuth2',
     user: 'freelanceinest@gmail.com',
-    refreshToken: '',
-    accessToken: '',
-    clientId: '',
-    clientSecret: '',
+    pass: 'Fa787ARL@',
   },
 })
 
-const send = ({ email, name, text }) => {
-  const from = name && email ? `${name} <${email}>` : `${name || email}`
+const send = ({ subject, body, file }) => {
   const message = {
-    from,
-    to: 'kevin@thecouch.nyc',
-    subject: `[QUOTATION_REQUEST]-${from}`,
-    text,
-    // replyTo: from,
+    from: 'freelanceinest@gmail.com',
+    to: 'freelanceinest@gmail.com',
+    // to: 'info@inest.ca',
+    subject,
+    html: body,
   }
 
   return new Promise((resolve, reject) => {

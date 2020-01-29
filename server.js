@@ -1,3 +1,4 @@
+const formidable = require('formidable')
 const express = require('express')
 const next = require('next')
 const bodyParser = require('body-parser')
@@ -7,7 +8,7 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 const mailer = require('./mailer')
-const builder = require('./emailBuilder')
+const emailBuilder = require('./emailBuilder')
 
 app.prepare().then(() => {
   const server = express()
@@ -19,22 +20,65 @@ app.prepare().then(() => {
   })
 
   server.post('/api/contact', (req, res) => {
-    const { email = '', name = '', services = [] } = req.body
+    const form = new formidable.IncomingForm()
+    form.parse(req, (err, fields, files) => {
+      if (err) {
+        console.log('500', error)
+        res.status(500).send(`parsing error occured`)
+      } else {
+        try {
+          //   event = {
+          //      email: "abc",
+          //      name: 'Asghar Farhadi',
+          //      services: "3,4,0",
+          //      description: "I have a big house",
+          //      contactInfo: {
+          //        email: 'asghar@farhadi.film'
+          //      },
+          //      timestamp: '2020-01-20 22:22 PM'
 
-    mailer({ email, name, services })
-      .then(() => {
-        const text = builder({
-          email,
-          name,
-          services,
-        })
-        res.send(text)
-      })
-      .catch(error => {
-        res.send(`An error occured: \n ${error}`)
-      })
+          var now = new Date()
+          var formatted_time =
+            '' +
+            now.getUTCFullYear() +
+            '-' +
+            (now.getUTCMonth() + 1) +
+            '-' +
+            (now.getUTCDate() + 1) +
+            '  ' +
+            now.getUTCHours() +
+            ':' +
+            now.getUTCMinutes() +
+            ' ' +
+            (now.getUTCHours() >= 12 ? 'pm' : 'am')
+          console.log(formatted_time)
+          const event = {
+            name: fields.name,
+            services: fields.services,
+            description: fields.description,
+            contactInfo: {
+              email: fields.email,
+            },
+            timestamp: formatted_time, //now.format('M jS, Y \\i\\s \\h\\e\\r\\e!'),
+          }
+          const body = emailBuilder.emailContent(event)
+          const subject = emailBuilder.emailSubject(event)
+          mailer({ subject, body, files })
+            .then(info => {
+              console.log('200 success', info)
+              res.status(200).send('success')
+            })
+            .catch(error => {
+              console.log('204', error)
+              res.status(204).send(`An error occured: \n ${error}`)
+            })
+        } catch (error) {
+          console.log(error)
+          res.status(500).send(`an error occured while building email body`)
+        }
+      }
+    })
   })
-
   server.listen(3019, err => {
     if (err) throw err
     console.log('> Read on http://localhost:3019')

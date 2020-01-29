@@ -42,7 +42,7 @@ export default function SelectiveService(props) {
           style={{ height: '100%' }}
         >
           <Grid item xs={6}>
-            <Typography gutterBottom style={{ padding: 5, color: 'white' }} variant="h6">
+            <Typography gutterBottom style={{ padding: 5, color: 'white' }} variant="h5">
               {props.msg}
             </Typography>
           </Grid>

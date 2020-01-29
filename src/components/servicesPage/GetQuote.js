@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Paper, Grid, Typography, TextField, Button, Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -25,6 +25,19 @@ const useStyles = makeStyles(theme => ({
 
 export default function GetQuote(props) {
   const classes = useStyles()
+  const [email, setEmail] = useState({ queryStr: { name: '', at: '', domain: '' } })
+
+  const handleOnChange = event => {
+    const text = event.target.value
+    const name = text.split('@')[0]
+    const at = text.split('@')[1]
+    const domain = text.split('.')[1]
+    console.log('name', name)
+    console.log('at', at)
+    console.log('domain', domain)
+    setEmail({ queryStr: { name, at, domain } })
+  }
+
   return (
     <div className={classes.root}>
       <Container maxWidth="xs">
@@ -44,20 +57,27 @@ export default function GetQuote(props) {
           </Grid>
           <Grid item>
             <Grid container direction="column" spacing={2}>
-              <Grid item>
+              {/* <Grid item>
                 <TextField
                   required
                   id="standard-required"
                   label="Your Email"
                   style={{ width: '100%' }}
                   variant="filled"
+                  name="email"
                   color="secondary"
                   InputLabelProps={{ style: { color: 'black' } }}
                   InputProps={{ style: { color: 'black' } }}
+                  onChange={handleOnChange}
                 />
-              </Grid>
+              </Grid> */}
               <Grid item>
-                <Button variant="contained" color="secondary" style={{ width: '100%' }}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  style={{ width: '100%' }}
+                  href="/contact"
+                >
                   Get a quote
                 </Button>
               </Grid>

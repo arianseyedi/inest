@@ -54,13 +54,13 @@ const useStyles = makeStyles(theme => ({
       transition: 'all 0.5s ease',
     },
     [theme.breakpoints.down('sm')]: {
-      height: 130,
+      height: 150,
     },
     [theme.breakpoints.down('md')]: {
-      height: 200,
+      height: 150,
     },
     [theme.breakpoints.up('md')]: {
-      height: 200,
+      height: 250,
     },
   },
   tick: {
@@ -83,7 +83,7 @@ export default function Benefits() {
         style={{ marginTop: 103, marginBottom: 103, paddingLeft: 16, paddingRight: 16 }}
         spacing={4}
       >
-        <Grid item xs={12} sm={12} md={8}>
+        <Grid item xs={12} sm={12} md={7}>
           <Grid container direction="column" spacing={1}>
             <Grid item>
               <Typography variant="h3" color="textSecondary">
@@ -147,7 +147,7 @@ export default function Benefits() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={10} sm={8} md={4}>
+        <Grid item xs={10} sm={8} md={5}>
           <Grid>
             <Paper className={classes.semiTransparentPaper} elevation={2}>
               <Grid

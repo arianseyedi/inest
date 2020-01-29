@@ -29,13 +29,14 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />
 const servicesList = [
   { title: 'Lighting Automation', code: 0 },
   { title: 'Security System', code: 1 },
-  { title: 'Smart Home', code: 2 },
+  { title: 'Security Camera', code: 2 },
   { title: 'Central Vacuum', code: 3 },
   { title: 'Electrical', code: 4 },
   { title: 'Sound System', code: 5 },
   { title: 'Climate Control', code: 6 },
   { title: 'Home Theatre', code: 7 },
   { title: 'Smart Blinds', code: 8 },
+  { title: 'Other', code: 9 },
 ]
 
 export default function ContactFormContent(props) {
@@ -61,7 +62,6 @@ export default function ContactFormContent(props) {
     }
   }
   const handleResetServices = () => {
-    console.log('here')
     props.setFieldValue('services', [])
   }
   return (

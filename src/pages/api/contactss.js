@@ -6,6 +6,7 @@ export default (req, res) => {
       break
     case 'POST':
       const { email, name } = req.body
+      console.log('API BELOW')
       console.log(req.body)
       console.log(res)
       break

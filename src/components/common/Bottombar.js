@@ -67,7 +67,18 @@ export default function Bottombar() {
                       <TransparentLogo style={{ fontSize: 150 }} />
                     </Grid>
                     <Grid item>
-                      <LinkedinButton /> <InstagramButton /> <FacebookButton />
+                      <LinkedinButton
+                        href="https://www.linkedin.com/company/inestt/"
+                        target="_blank"
+                      />
+                      <InstagramButton
+                        href="https://www.instagram.com/inest.ca/?hl=en"
+                        target="_blank"
+                      />
+                      <FacebookButton
+                        href="https://www.facebook.com/INest-114704206654630/"
+                        target="_blank"
+                      />
                     </Grid>
                   </Grid>
                 </Grid>

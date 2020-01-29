@@ -8,6 +8,7 @@ import { Container, Grid } from '@material-ui/core'
 import CustomizedDialogs from '../common/CustomDialog'
 import EnlargeIcon from '../../resource/EnlargeIcon'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Link from '../common/Link'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -50,13 +51,13 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     '&:hover': {
-      color: '#FFD300',
+      color: '#FBC02D',
     },
   },
   icon: {
     color: theme.palette.grey[500],
     '&:hover': {
-      color: '#FFD300',
+      color: '#FBC02D',
     },
   },
 }))
@@ -99,6 +100,11 @@ export default function ImageGridList(props) {
   }
 
   const tileData = [
+    {
+      img: '3dproject.png',
+      title: '3DProject',
+      cols: smDown ? 1 : mdDown ? 4 : 2,
+    },
     {
       img: 'gallery/livingroom.jpg',
       title: 'Automation',
@@ -155,27 +161,56 @@ export default function ImageGridList(props) {
                 key={`tile-gallery-${index}`}
                 cols={tile.cols || 1}
                 title={tile.title}
-                onClick={() => handleClickOpen(tile.img, tile.title)}
+                onClick={() =>
+                  tile.title === '3DProject'
+                    ? "location.href='pageurl.html';"
+                    : handleClickOpen(tile.img, tile.title)
+                }
                 className={classes.gridItem}
               >
-                <img
-                  src={tile.img}
-                  alt={tile.title}
-                  style={{ width: '100%', height: '100%' }}
-                />
-                <GridListTileBar
-                  title={tile.title}
-                  classes={{ title: classes.title, root: classes.title }}
-                  style={{ height: '100%', textAlign: 'center', fontWeight: 'bolder' }}
-                  // actionIcon={
-                  //   <IconButton
-                  //     aria-label={`info about ${tile.title}`}
-                  //     className={classes.icon}
-                  //   >
-                  //     <EnlargeIcon />
-                  //   </IconButton>
-                  // }
-                />
+                {tile.title === '3DProject' ? (
+                  <a href="https://my.matterport.com/show/?m=EJ33Bp9SU3j" target="_blank">
+                    <img
+                      src={tile.img}
+                      alt={tile.title}
+                      style={{ width: '100%', height: '100%' }}
+                    />
+                    <GridListTileBar
+                      title={tile.title}
+                      classes={{ title: classes.title, root: classes.title }}
+                      style={{ height: '100%', textAlign: 'center', fontWeight: 'bolder' }}
+                      // actionIcon={
+                      //   // <IconButton
+                      //   //   aria-label={`info about ${tile.title}`}
+                      //   //   className={classes.icon}
+                      //   // >
+                      //   //   <EnlargeIcon />
+                      //   // </IconButton>
+                      // }
+                    />
+                  </a>
+                ) : (
+                  <React.Fragment>
+                    <img
+                      src={tile.img}
+                      alt={tile.title}
+                      style={{ width: '100%', height: '100%' }}
+                    />
+                    <GridListTileBar
+                      title={tile.title}
+                      classes={{ title: classes.title, root: classes.title }}
+                      style={{ height: '100%', textAlign: 'center', fontWeight: 'bolder' }}
+                      // actionIcon={
+                      //   // <IconButton
+                      //   //   aria-label={`info about ${tile.title}`}
+                      //   //   className={classes.icon}
+                      //   // >
+                      //   //   <EnlargeIcon />
+                      //   // </IconButton>
+                      // }
+                    />
+                  </React.Fragment>
+                )}
               </GridListTile>
             ))}
           </GridList>

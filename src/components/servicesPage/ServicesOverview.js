@@ -98,7 +98,7 @@ export default function ServicesOverview() {
                   <Grid container direction="row">
                     <Grid item>
                       <Typography id="hover-child-3" variant="caption">
-                        AAA Certified
+                        Control4 Authorized Dealer
                       </Typography>
                     </Grid>
                     {/* <Grid item>{checkmarkIcon}</Grid> */}

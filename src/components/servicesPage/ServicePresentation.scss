@@ -1,6 +1,6 @@
 // animation is slow so you can see it, but probably should be .25 or .15
 $thetransition: all 0.75s cubic-bezier(1, 0.25, 0, 0.75) 0s;
-$thecolor: #ffd300;
+$thecolor: #fbc02d;
 #hover-parent:hover #hover-child {
   color: $thecolor;
   transition: $thetransition;

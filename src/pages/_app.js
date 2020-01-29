@@ -7,7 +7,7 @@ import { Page } from '../components/common/Page'
 import CustomHead from '../components/common/CustomHead'
 import '../components/common/FancyQuotation.scss'
 import '../components/servicesPage/ServicePresentation.scss'
-
+import '../components/homePage/HomeIntro.scss'
 export default class MyApp extends App {
   componentDidMount() {
     // Remove the server-side injected CSS.

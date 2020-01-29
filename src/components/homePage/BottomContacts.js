@@ -58,23 +58,26 @@ export default function BottomContacts() {
         </a>
       </Grid>
       <Grid item>
-        <a href="tel:6476127580" className={classes.text}>
-          <Grid
-            container
-            direction="row"
-            justify="flex-start"
-            alignItems="center"
-            spacing={1}
-            className={classes.contactBar}
-          >
-            <Grid item>
-              <PhoneIcon className={classes.icon} />
-            </Grid>
-            <Grid item style={{ marginTop: 3 }}>
-              <Typography className={classes.text}>6476127580</Typography>
-            </Grid>
+        <Grid
+          container
+          direction="row"
+          justify="flex-start"
+          alignItems="center"
+          spacing={1}
+          className={classes.contactBar}
+        >
+          <Grid item>
+            <PhoneIcon className={classes.icon} />
           </Grid>
-        </a>
+          <Grid item style={{ marginTop: 3 }}>
+            <a href="tel:+14165667241" className={classes.text}>
+              <Typography className={classes.text}>416-566-7241</Typography>
+            </a>
+            <a href="tel:+16477677580" className={classes.text}>
+              <Typography className={classes.text}>647-767-7580</Typography>
+            </a>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   )

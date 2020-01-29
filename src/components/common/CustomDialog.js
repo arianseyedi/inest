@@ -67,7 +67,7 @@ export default function CustomizedDialogs(props) {
         open={props.open}
         fullWidth
         maxWidth="lg"
-        PaperProps={{ style: { borderRadius: 15 } }}
+        // PaperProps={{ style: { borderRadius: 15 } }}
       >
         <DialogTitle
           id="customized-dialog-title"

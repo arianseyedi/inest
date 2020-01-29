@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
@@ -9,8 +10,12 @@ const useStyles = makeStyles(theme => ({
     // marginTop: 200,
     height: '100%',
   },
-  text_intro: {
+  textHeader: {
     color: 'white',
+  },
+  text: {
+    color: 'white',
+    fontSize: 22,
   },
   paper: {
     background: 'transparent',
@@ -24,7 +29,12 @@ const useStyles = makeStyles(theme => ({
   },
   condMargin: {
     [theme.breakpoints.down('sm')]: {
+      marginTop: 16,
       marginBottom: 84,
+    },
+    [theme.breakpoints.up('sm')]: {
+      marginTop: 32,
+      marginBottom: 24,
     },
   },
 }))
@@ -39,27 +49,28 @@ export default function HomeIntro() {
         direction="row"
         spacing={10}
         className={classes.box}
-        alignItems="center"
-        justify="center"
+        alignItems="flex-start"
+        justify="flex-start"
+        id="unselectable-text"
       >
         <Grid item sm={6} md={7}>
-          <Paper className={classes.paper} elevation={0}>
+          <Paper className={clsx(classes.paper, classes.condMargin)} elevation={0}>
             <Typography
-              variant="h3"
+              variant="h2"
               component="h1"
               gutterBottom
-              className={classes.text_intro}
+              className={classes.textHeader}
               style={{ paddingBottom: '30px' }}
-              id="unselectable-text"
+              id="animated-home-intro-title"
             >
               Smart, Convenient and Secure
             </Typography>
-            <Typography className={classes.text_intro} id="unselectable-text">
+            <Typography className={classes.text} id="animated-home-intro-text" variant="h5">
               Enhance security, save energy, and promote comfort with iNest home automation.
             </Typography>
           </Paper>
         </Grid>
-        <Grid item sm={6} md={5}>
+        {/* <Grid item sm={6} md={5}>
           <Paper className={classes.semiTransparentPaper} elevation={2}>
             <Grid
               container
@@ -73,7 +84,7 @@ export default function HomeIntro() {
                 <Typography
                   variant="h4"
                   gutterBottom
-                  className={classes.text_intro}
+                  className={classes.textHeader}
                   style={{ paddingBottom: '30px' }}
                 >
                   Would like to know more?
@@ -101,7 +112,7 @@ export default function HomeIntro() {
               </Grid>
             </Grid>
           </Paper>
-        </Grid>
+        </Grid> */}
       </Grid>
     </Container>
   )
