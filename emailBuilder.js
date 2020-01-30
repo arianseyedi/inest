@@ -497,7 +497,7 @@ module.exports = {
     ]
     for (const service in services_arr) {
       const obj = servicesList.find(i => i.code == service)
-      htmls.push(obj.title)
+      if (obj !== undefined) htmls.push(obj.title)
     }
     const html = htmls.join(', <br/>')
     return html

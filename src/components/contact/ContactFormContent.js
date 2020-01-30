@@ -5,7 +5,7 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 import NameIcon from '@material-ui/icons/SupervisorAccount'
 import EmailIcon from '@material-ui/icons/Email'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import { Chip, Grid, Typography, Input, InputLabel } from '@material-ui/core'
+import { Chip, Grid, Typography, Input, InputLabel, CircularProgress } from '@material-ui/core'
 import Checkbox from '@material-ui/core/Checkbox'
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank'
 import CheckBoxIcon from '@material-ui/icons/CheckBox'
@@ -76,6 +76,7 @@ export default function ContactFormContent(props) {
       >
         <Grid item>
           <TextField
+            disabled={props.isSubmitting}
             color="secondary"
             name="name"
             required
@@ -106,6 +107,7 @@ export default function ContactFormContent(props) {
         </Grid>
         <Grid item>
           <TextField
+            disabled={props.isSubmitting}
             color="secondary"
             name="email"
             required
@@ -136,6 +138,7 @@ export default function ContactFormContent(props) {
         </Grid>
         <Grid item>
           <Autocomplete
+            disabled={props.isSubmitting}
             onInputChange={handleResetServices}
             renderTags={e => {
               return e.map(i => <Chip key={i.title} label={i.title} style={{ margin: 1 }} />)
@@ -164,6 +167,7 @@ export default function ContactFormContent(props) {
             style={{ width: '100%' }}
             renderInput={params => (
               <TextField
+                disabled={props.isSubmitting}
                 color="secondary"
                 {...params}
                 variant="outlined"
@@ -185,6 +189,7 @@ export default function ContactFormContent(props) {
         </Grid>
         <Grid item>
           <TextField
+            disabled={props.isSubmitting}
             color="secondary"
             name="description"
             multiline
@@ -219,6 +224,7 @@ export default function ContactFormContent(props) {
             Attachment
           </InputLabel>
           <Input
+            disabled={props.isSubmitting}
             id="attachment"
             style={{ width: '100%' }}
             inputProps={{ style: { color: 'white' } }}
@@ -251,11 +257,17 @@ export default function ContactFormContent(props) {
             type="submit"
             fullWidth
             variant="contained"
-            disabled={!isValid}
+            disabled={!isValid || props.isSubmitting}
             style={{ marginTop: 24 }}
             color="secondary"
           >
-            Get a Quote
+            {props.isSubmitting ? (
+              <React.Fragment>
+                <CircularProgress color="secondary" size={20} />
+              </React.Fragment>
+            ) : (
+              'Get a Quote'
+            )}
           </Button>
         </Grid>
       </Grid>

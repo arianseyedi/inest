@@ -8,13 +8,14 @@ var transporter = nodemailer.createTransport({
   },
 })
 
-const send = ({ subject, body, file }) => {
+const send = ({ subject, body, attachments }) => {
   const message = {
     from: 'freelanceinest@gmail.com',
     to: 'freelanceinest@gmail.com',
     // to: 'info@inest.ca',
     subject,
     html: body,
+    attachments,
   }
 
   return new Promise((resolve, reject) => {

@@ -21,6 +21,9 @@ app.prepare().then(() => {
 
   server.post('/api/contact', (req, res) => {
     const form = new formidable.IncomingForm()
+    form.maxFields = 10
+    form.maxFieldsSize = 2 * 1024 * 1024 // 2 MB
+    form.maxFileSize = 10 * 1024 * 1024 // 10 MB
     form.parse(req, (err, fields, files) => {
       if (err) {
         console.log('500', error)
@@ -36,7 +39,6 @@ app.prepare().then(() => {
           //        email: 'asghar@farhadi.film'
           //      },
           //      timestamp: '2020-01-20 22:22 PM'
-
           var now = new Date()
           var formatted_time =
             '' +
@@ -51,7 +53,6 @@ app.prepare().then(() => {
             now.getUTCMinutes() +
             ' ' +
             (now.getUTCHours() >= 12 ? 'pm' : 'am')
-          console.log(formatted_time)
           const event = {
             name: fields.name,
             services: fields.services,
@@ -63,7 +64,16 @@ app.prepare().then(() => {
           }
           const body = emailBuilder.emailContent(event)
           const subject = emailBuilder.emailSubject(event)
-          mailer({ subject, body, files })
+          const attachments =
+            files && files.attachment && files.attachment.name && files.attachment.path
+              ? [
+                  {
+                    filename: files.attachment.name,
+                    path: files.attachment.path,
+                  },
+                ]
+              : undefined
+          mailer({ subject, body, attachments })
             .then(info => {
               console.log('200 success', info)
               res.status(200).send('success')

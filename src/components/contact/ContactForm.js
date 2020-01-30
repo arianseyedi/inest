@@ -37,12 +37,20 @@ const validationSchema = Yup.object({
   attachment: Yup.mixed(),
 })
 
+function timeout(ms, promise) {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      reject(new Error('timeout'))
+    }, ms)
+    promise.then(resolve, reject)
+  })
+}
+
 export default function ContactForm(props) {
   const classes = useStyles()
   const [submitState, setSubmitState] = useState({ submitted: false, error: false })
   const submit = data => {
     const formData = new FormData()
-    console.log('handle submit', data)
     if (data.attachment) {
       formData.append('attachment', data.attachment)
     }
@@ -58,19 +66,27 @@ export default function ContactForm(props) {
     if (data.description) {
       formData.append('description', data.description)
     }
-    fetch('/api/contact', {
-      method: 'post',
-      // headers: {
-      //   // Accept: 'application/json, text/plain, */*',
-      //   // 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
-      // },
-      body: formData,
-    }).then(res => {
-      console.log(res)
-      res && res.status === 200
-        ? setSubmitState({ submitted: true, error: false })
-        : setSubmitState({ submitted: true, error: true })
-    })
+    timeout(
+      10000, // 10 seconds
+      fetch('/api/contact', {
+        method: 'post',
+        // headers: {
+        //   // Accept: 'application/json, text/plain, */*',
+        //   // 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+        // },
+        body: formData,
+      })
+    )
+      .then(function(response) {
+        console.log(res)
+        res && res.status === 200
+          ? setSubmitState({ submitted: true, error: false })
+          : setSubmitState({ submitted: true, error: true })
+      })
+      .catch(function(err) {
+        console.log(err)
+        setSubmitState({ submitted: true, error: true })
+      })
   }
   const values = {
     name: '',
