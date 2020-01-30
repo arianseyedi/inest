@@ -1,8 +1,8 @@
 import React from 'react'
-import { Fade } from 'react-slideshow-image'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Container } from '@material-ui/core'
 import './Partners.scss'
+import Fade from '../common/imageSlideshow/fade'
 
 const useStyles = makeStyles(theme => ({
   title: {

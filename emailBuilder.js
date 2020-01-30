@@ -446,10 +446,11 @@ module.exports = {
                     </div>
                     <div>
                       <div style='padding-left: 20px'>
+                        <p>contact: 
+                        <span>${event.contactInfo.email}</span></p>
+                        
                         <p>timestamp: 
                         <span>${event.timestamp}</span></p>
-                        <p>contact info: 
-                        <span>${event.contactInfo.email}</span></p>
                       </div>
                     <div>
                     <!-- Description -->
@@ -501,36 +502,5 @@ module.exports = {
     }
     const html = htmls.join(', <br/>')
     return html
-  },
-
-  nodeinfo: function(
-    id,
-    job_name,
-    job_group_name,
-    job_created_date,
-    job_started_date,
-    node_info
-  ) {
-    const ts = node_info['timestamp']
-    const node_ts = node_info['node_timestamp']
-    return `
-    <div class="EmailTemplates-JOB" style='margin-top: 20px'>
-      <p><strong>Job Group: ${job_group_name}</strong>
-      <br/><strong>Job Name: ${job_name}</strong>
-      <br/><br/> Last reading time: ${ts}
-      <br/> Time since last reading: ${node_ts['amount']} ${node_ts['unit']}
-      <br/><br/> LumiHub ID: ${node_info['gateway_id']}
-      <br/> LumiNode ID: ${id.substring(0, Math.floor(id.length) / 2)}
-      <span> | LumiSense ID: ${node_info['cable_id']}
-      <br/>Job created on: ${job_created_date ? job_created_date : ''}
-      <br/>Job started on: ${job_started_date ? job_started_date : ''}</p>
-    </div>
-    `
-  },
-  officePhoneLink: function() {
-    return `<a href="tel:+1877-873-1792">+1 (877) 873-1792</a>`
-  },
-  emailAddressLink: function() {
-    return `<span style='text-decoration: underline;'><a href="mailto:support@aoms-tech.com?Subject=" target="_blank">support@aoms-tech.com</a></span>`
   },
 }

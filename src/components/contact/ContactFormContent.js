@@ -49,7 +49,7 @@ export default function ContactFormContent(props) {
     handleChange,
     isValid,
   } = props
-
+  const allowedSize = 10
   const handleServiceChange = (e, setFieldValue) => {
     const lengthBefore = props.values.services.length
     const services = props.values.services
@@ -221,7 +221,7 @@ export default function ContactFormContent(props) {
         </Grid>
         <Grid item>
           <InputLabel shrink style={{ textAlign: 'left' }}>
-            Attachment
+            {`Attachment (${allowedSize} MB Limit)`}
           </InputLabel>
           <Input
             disabled={props.isSubmitting}
@@ -231,15 +231,23 @@ export default function ContactFormContent(props) {
             variant="outlined"
             type="file"
             color="secondary"
-            placeholder="Attachment"
+            placeholder={`Attachment ${allowedSize} MB Limit`}
             label="A"
             onChange={event => {
               if (event.currentTarget.files && event.currentTarget.files.length > 0) {
-                var extension = event.currentTarget.files[0].type
-                if (extension.startsWith('image/') || extension === 'application/pdf') {
-                  props.setFieldValue('attachment', event.currentTarget.files[0])
+                const size = 10
+                if (event.currentTarget.files[0].size / 1024 / 1024 < size) {
+                  var extension = event.currentTarget.files[0].type
+                  if (extension.startsWith('image/') || extension === 'application/pdf') {
+                    props.setFieldValue('attachment', event.currentTarget.files[0])
+                  } else {
+                    props.setFieldError('attachment', `Unacceptable file type: ${extension}`)
+                  }
                 } else {
-                  props.setFieldError('attachment', `Unacceptable file type: ${extension}`)
+                  props.setFieldError(
+                    'attachment',
+                    `Files must be of size ${size} MB or less.`
+                  )
                 }
               }
             }}
