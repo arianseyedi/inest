@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../config/theme'
 import { Page } from '../components/common/Page'
 import CustomHead from '../components/common/CustomHead'
+import { PageTransition } from 'next-page-transitions'
 import '../components/common/FancyQuotation.scss'
 import '../components/servicesPage/ServicePresentation.scss'
 import '../components/homePage/HomeIntro.scss'
@@ -19,7 +20,15 @@ export default class MyApp extends App {
     }
   }
 
-  componendDidM
+  static async getInitialProps({ Component, router, ctx }) {
+    let pageProps = {}
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx)
+    }
+
+    return { pageProps }
+  }
 
   render() {
     const { Component, pageProps } = this.props
@@ -30,9 +39,11 @@ export default class MyApp extends App {
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
           <div id="app">
-            <Page background="red">
-              <Component {...pageProps} />
-            </Page>
+            <PageTransition timeout={300} classNames="page-transition">
+              <Page background="red">
+                <Component {...pageProps} />
+              </Page>
+            </PageTransition>
           </div>
           <style global jsx>{`
             html,
@@ -76,6 +87,20 @@ export default class MyApp extends App {
               -webkit-text-fill-color: white;
               -webkit-box-shadow: 0 0 0px 1000px transparent inset;
               transition: background-color 5000s ease-in-out 0s;
+            }
+            .page-transition-enter {
+              opacity: 0;
+            }
+            .page-transition-enter-active {
+              opacity: 1;
+              transition: opacity 300ms;
+            }
+            .page-transition-exit {
+              opacity: 1;
+            }
+            .page-transition-exit-active {
+              opacity: 0;
+              transition: opacity 300ms;
             }
           `}</style>
         </ThemeProvider>

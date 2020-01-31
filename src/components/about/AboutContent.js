@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Paper, Grid, Typography, Container } from '@material-ui/core'
+import { Paper, Grid, Typography, Container, useMediaQuery } from '@material-ui/core'
 import QuoteStrip from '../common/QuoteStrip'
 
 const useStyles = makeStyles(theme => ({
@@ -78,6 +78,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function AboutContent(props) {
   const classes = useStyles()
+  const xsmDown = useMediaQuery(theme => theme.breakpoints.down('xs'))
 
   return (
     <div className={classes.root}>
@@ -107,9 +108,13 @@ export default function AboutContent(props) {
         </Grid>
         <Grid item>
           <QuoteStrip
-            text="Most importantly, the work was finished on time and on the budget."
-            by="Ron Moreta"
-            byTitle="client"
+            text={
+              xsmDown
+                ? 'Fair Pricing & Excellent Business record. Our full Home Automation was completed by a punctual, tidy, and knowledgable team with lots of experience.'
+                : 'Fair Pricing & Excellent Business record. Our full Home Automation was completed by a punctual, tidy, and knowledgable team with lots of experience. We’re enjoying it now and we know it will be an asset to selling our home when the time comes.'
+            }
+            by="K. W"
+            byTitle="Richmond Hill"
             image="gallery/toronto.jpg"
           />
         </Grid>

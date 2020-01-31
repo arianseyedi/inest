@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Paper, Button, TextField } from '@material-ui/core'
 import FancyQuotation from '../common/FancyQuotation'
+import QuoteRotation from '../common/QuoteRotation'
 
 const useStyles = makeStyles(theme => ({
   box: {
@@ -29,7 +30,10 @@ const useStyles = makeStyles(theme => ({
   },
   condMargin: {
     [theme.breakpoints.down('sm')]: {
-      marginBottom: 48,
+      // marginBottom: 200,
+    },
+    [theme.breakpoints.up('sm')]: {
+      // marginBottom: 200,
     },
   },
   quotationMarks: {
@@ -52,11 +56,11 @@ export default function ContactTitle() {
       <Grid
         container
         direction="row"
-        justify="space-between"
+        justify="center"
         alignItems="center"
         className={classes.box}
       >
-        <Grid item xs={12} sm={4}>
+        {/* <Grid item xs={12} sm={4}>
           <Paper className={classes.paper} elevation={0}>
             <Grid
               container
@@ -83,25 +87,19 @@ export default function ContactTitle() {
               </Grid>
             </Grid>
           </Paper>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} sm={7}>
-          <Paper className={classes.transparentPaper} elevation={6}>
+          <Paper className={classes.transparentPaper} elevation={0}>
             <Grid
               container
               direction="column"
               justify="center"
               alignItems="stretch"
-              style={{ padding: 35 }}
+              // style={{ padding: 35 }}
               className={classes.condMargin}
             >
               <Grid item>
-                <FancyQuotation
-                  text={
-                    'It was like the staff were installing the systems for themselves, in their own home - wanting everything to be perfect!'
-                  }
-                  by={'Tasha Monir'}
-                  byTitle={'iNest Client'}
-                />
+                <QuoteRotation />
               </Grid>
             </Grid>
           </Paper>

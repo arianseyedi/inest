@@ -1,56 +1,36 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
-import { Paper, Grid, Typography, Container } from '@material-ui/core'
+import { Grid, Container } from '@material-ui/core'
 import FancyQuotation from './FancyQuotation'
 
 const useStyles = makeStyles(theme => ({
-  container: {},
+  rot: {
+    height: '1000px',
+  },
   box: {
+    height: '100%',
     [theme.breakpoints.down('sm')]: {
-      paddingTop: 200,
-      paddingBottom: 200,
+      // paddingTop: 100,
+      paddingBottom: 100,
     },
     [theme.breakpoints.down('md')]: {
-      paddingTop: 200,
-      paddingBottom: 200,
+      paddingTop: 50,
+      paddingBottom: 150,
     },
     [theme.breakpoints.up('lg')]: {
-      paddingTop: 200,
-      paddingBottom: 200,
+      paddingTop: 50,
+      paddingBottom: 110,
     },
   },
   img: {
     width: '100%',
     height: '100%',
-    backgroundImage: props => `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.60)), url(${props.image})`,
+    backgroundImage: props =>
+      `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.60)), url(${props.image})`,
     backgroundPosition: 'center',
     backgroundRepeat: ' no-repeat',
     backgroundSize: ' cover',
-  },
-  quote: {
-    color: 'white',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 30,
-    },
-    [theme.breakpoints.down('md')]: {
-      fontSize: 36,
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 42,
-    },
-  },
-  overline: {
-    color: 'white',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 15,
-    },
-    [theme.breakpoints.down('md')]: {
-      fontSize: 15,
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 15,
-    },
   },
 }))
 
@@ -59,15 +39,17 @@ export default function QuoteStrip(props) {
 
   return (
     <div className={classes.img}>
-      <Grid container direction="column" alignItems="center" justify="center" className={classes.box}>
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        justify="center"
+        className={classes.box}
+      >
         <Grid item>
-          <div className={clsx(classes.root, classes.img)}>
-            <Container maxWidth="lg">
-              <FancyQuotation 
-                  text={props.text}
-                  by={props.by}
-                  byTitle={props.byTitle}
-                />
+          <div className={clsx(classes.root)}>
+            <Container maxWidth="md">
+              <FancyQuotation text={props.text} by={props.by} byTitle={props.byTitle} />
             </Container>
           </div>
         </Grid>

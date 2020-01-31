@@ -7,12 +7,14 @@ import ContactTitle from './ContactTitle'
 
 const useStyles = makeStyles(theme => ({
   minHeightTop: {
-    [theme.breakpoints.down('sm')]: {},
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 400,
+    },
     [theme.breakpoints.down('md')]: {
-      marginBottom: 30,
+      minHeight: 400,
     },
     [theme.breakpoints.up('md')]: {
-      // minHeight: 600,
+      minHeight: 400,
     },
   },
   box1bg: {

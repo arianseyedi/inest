@@ -97,10 +97,10 @@ export default function GalleryIntro() {
               <Grid item>
                 <FancyQuotation
                   text={
-                    'It was like the staff were installing the systems for themselves, in their own home - wanting everything to be perfect!'
+                    'iNest team went above & beyond to make sure we’re happy with the final results.'
                   }
-                  by={'Tasha Monir'}
-                  byTitle={'iNest Client'}
+                  by={'S.S.'}
+                  byTitle={'Toronto'}
                 />
               </Grid>
             </Grid>

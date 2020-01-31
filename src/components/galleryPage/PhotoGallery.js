@@ -103,48 +103,78 @@ export default function ImageGridList(props) {
     {
       img: '3dproject.png',
       title: '3DProject',
-      cols: smDown ? 1 : mdDown ? 4 : 2,
+      cols: smDown ? 1 : mdDown ? 6 : 4,
     },
     {
       img: 'gallery/livingroom.jpg',
-      title: 'Automation',
-      cols: smDown ? 1 : mdDown ? 4 : 2,
+      title: 'Lighting Automation',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
     },
     {
       img: 'gallery/stairwayToHeaven.jpg',
-      title: 'Security',
-      cols: smDown ? 1 : mdDown ? 4 : 4,
-    },
+      title: 'Lighting Automation',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    }, // -----------------------------
     {
       img: 'gallery/wardrobe.jpg',
       title: 'Electrical',
-      cols: smDown ? 1 : mdDown ? 4 : 2,
+      cols: smDown ? 1 : mdDown ? 6 : 4,
     },
     {
       img: 'gallery/home.jpg',
       title: 'Camera',
-      cols: smDown ? 1 : mdDown ? 4 : 3,
+      cols: smDown ? 1 : mdDown ? 6 : 4,
     },
     {
-      img: 'cinema.jpg',
-      title: 'Home Theatre',
-      cols: smDown ? 1 : mdDown ? 4 : 2,
-    },
+      img: 'gallerytwo/camera.jpeg',
+      title: 'Security Camera',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    }, // ----------------------------
     {
-      img: 'lighting.jpg',
-      title: 'Image',
-      cols: smDown ? 1 : mdDown ? 4 : 3,
+      img: 'gallerytwo/camera2.jpeg',
+      title: 'Security Camera 2',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
     },
     {
       img: '/gallery/theatre-gallery.jpg',
       title: 'Home Theatre',
-      cols: smDown ? 1 : mdDown ? 4 : 4,
+      cols: smDown ? 1 : mdDown ? 6 : 4,
     },
     {
-      img: 'lighting.jpg',
-      title: 'Lighting',
-      cols: smDown ? 1 : mdDown ? 4 : 4,
+      img: 'gallerytwo/climate-control.jpeg',
+      title: 'Climate Control',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    }, // ------------------------------
+    {
+      img: 'gallerytwo/homesecurity3.jpeg',
+      title: 'Security System',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
     },
+    {
+      img: '/gallerytwo/lighting.jpeg',
+      title: 'Lighting Automation',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    },
+    {
+      img: 'gallerytwo/sound.jpeg',
+      title: 'Sound System',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    }, // ------------------------------
+    {
+      img: 'gallerytwo/security.jpeg',
+      title: 'Security System',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    },
+    {
+      img: '/gallerytwo/smarthome2.jpeg',
+      title: 'Smart Home',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    },
+    {
+      img: 'gallerytwo/lighting3.jpeg',
+      title: 'Lighting Automation',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    }, // ------------------------------
   ]
 
   return (
@@ -154,7 +184,7 @@ export default function ImageGridList(props) {
           <GridList
             cellHeight={260}
             className={classes.gridList}
-            cols={smDown ? 1 : mdDown ? 8 : 8}
+            cols={smDown ? 1 : mdDown ? 12 : 12}
           >
             {tileData.map((tile, index) => (
               <GridListTile

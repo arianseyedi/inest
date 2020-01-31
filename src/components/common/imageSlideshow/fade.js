@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TWEEN from '@tweenjs/tween.js'
 import PropTypes from 'prop-types'
+// import './fade.scss'
 
 class Fade extends Component {
   constructor(props) {

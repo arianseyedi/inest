@@ -42,17 +42,11 @@ const DialogContent = withStyles(theme => ({
   },
 }))(MuiDialogContent)
 
-const DialogActions = withStyles(theme => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions)
-
 const useStyles = makeStyles(theme => ({
   topRibbon: {
     color: theme.palette.grey[100],
     backgroundColor: theme.palette.grey[900],
+    maxHeight: '80vh',
   },
   bg: {},
 }))
@@ -86,7 +80,10 @@ export default function CustomizedDialogs(props) {
             >
               {props.description}
             </Typography>
-            <img style={{ width: '100%', height: '100%', borderRadius: 4 }} src={props.img} />
+            <img
+              style={{ width: '100%', maxHeight: '80vh', borderRadius: 4 }}
+              src={props.img}
+            />
           </div>
         </DialogContent>
       </Dialog>

@@ -1,9 +1,8 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Paper, Button, TextField } from '@material-ui/core'
-import FancyQuotation from '../common/FancyQuotation'
+import { Grid } from '@material-ui/core'
+import QuoteRotation from '../common/QuoteRotation'
 
 const useStyles = makeStyles(theme => ({
   box: {
@@ -52,11 +51,11 @@ export default function AboutIntro() {
       <Grid
         container
         direction="row"
-        justify="space-between"
-        alignItems="center"
-        className={classes.box}
+        justify="center"
+        // alignItems="center"
+        // className={classes.box}
       >
-        <Grid item xs={12} sm={4}>
+        {/* <Grid item xs={12} sm={4}>
           <Paper className={classes.paper} elevation={0}>
             <Grid
               container
@@ -83,26 +82,9 @@ export default function AboutIntro() {
               </Grid>
             </Grid>
           </Paper>
-        </Grid>
-        <Grid item xs={12} sm={7}>
-          <Paper className={classes.transparentPaper} elevation={6}>
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="stretch"
-              style={{ padding: 35 }}
-              className={classes.condMargin}
-            >
-              <Grid item>
-                <FancyQuotation 
-                  text={"It was like the staff were installing the systems for themselves, in their own home - wanting everything to be perfect!"} 
-                  by={"Tasha Monir"}
-                  byTitle={"iNest Client"}
-                />
-              </Grid>
-            </Grid>
-          </Paper>
+        </Grid> */}
+        <Grid item xs={12} sm={8}>
+          <QuoteRotation />
         </Grid>
       </Grid>
     </Container>

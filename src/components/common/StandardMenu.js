@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
     },
     [theme.breakpoints.up('xs')]: {
-      width: '480px',
+      width: '440px',
       flexGrow: 1,
     },
   },

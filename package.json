@@ -25,12 +25,16 @@
     "isomorphic-unfetch": "^3.0.0",
     "micro-form": "^2.0.5",
     "next": "9.1.5",
+    "next-page-transitions": "^1.0.0-beta.2",
     "node-sass": "^4.13.0",
     "nodemailer": "^6.4.2",
-    "react": "16.12.0",
+    "pure-react-carousel": "^1.24.1",
+    "react": "^16.12.0",
     "react-dom": "16.12.0",
     "react-helmet": "^5.2.1",
     "react-pure-render": "^1.0.2",
+    "react-responsive-carousel": "^3.1.51",
+    "slick": "^1.12.2",
     "yup": "^0.28.0"
   },
   "devDependencies": {

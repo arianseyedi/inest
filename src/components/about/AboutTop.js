@@ -8,13 +8,13 @@ import AboutIntro from './AboutIntroTitle'
 const useStyles = makeStyles(theme => ({
   minHeightTop: {
     [theme.breakpoints.down('sm')]: {
-      minHeight: 600,
+      minHeight: 500,
     },
     [theme.breakpoints.down('md')]: {
-      minHeight: 600,
+      minHeight: 500,
     },
     [theme.breakpoints.up('md')]: {
-      minHeight: 600,
+      minHeight: 500,
     },
   },
   box1bg: {
@@ -23,10 +23,10 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: 'center bottom',
   },
   homeIntro: {
-    marginBottom: 80,
+    marginBottom: 30,
     marginTop: 50,
     [theme.breakpoints.up('sm')]: {
-      minHeight: '40vh',
+      // minHeight: '20vh',
     },
   },
 }))
