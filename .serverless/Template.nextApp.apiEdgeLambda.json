@@ -1,0 +1,17 @@
+{
+  "name": "0yrua2-1gx0ohh",
+  "hash": "gR0k3zvF6BatMBXXGoASHpJ/nMiLvsqvAX9Wm9vGKAc=",
+  "description": "API Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/Users/arian/Documents/Projects/InestCA/inest/.serverless_nextjs/api-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs10.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::462483490358:role/0yrua2-bkagjll"
+  },
+  "arn": "arn:aws:lambda:us-east-1:462483490358:function:0yrua2-1gx0ohh",
+  "region": "us-east-1"
+}
