@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
 const send = ({ subject, body, attachments }) => {
   const message = {
     from: 'freelanceinest@gmail.com',
-    to: 'freelanceinest@gmail.com',
+    to: 'freelanceinest@gmail.com, info@inest.ca',
     // to: 'info@inest.ca',
     subject,
     html: body,
