@@ -46,17 +46,7 @@ export default function ContactTop() {
           <Topbar />
         </Grid>
         <Grid item>
-          <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="stretch"
-            className={classes.homeIntro}
-          >
-            <Grid item>
-              <ContactTitle />
-            </Grid>
-          </Grid>
+          <ContactTitle />
         </Grid>
       </Grid>
     </div>

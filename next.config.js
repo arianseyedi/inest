@@ -26,5 +26,6 @@ module.exports = withCSS(
     env: {
       email_to: '',
     },
+    target: 'serverless',
   })
 )

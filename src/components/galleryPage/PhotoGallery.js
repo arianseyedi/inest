@@ -114,27 +114,28 @@ export default function ImageGridList(props) {
       img: 'gallery/stairwayToHeaven.jpg',
       title: 'Lighting Automation',
       cols: smDown ? 1 : mdDown ? 6 : 4,
-    }, // -----------------------------
+    }, // ------------------------------
+
     {
-      img: 'gallery/wardrobe.jpg',
-      title: 'Electrical',
-      cols: smDown ? 1 : mdDown ? 6 : 4,
+      img: 'gallerytwo/homesecurity3.jpeg',
+      title: 'Security System',
+      cols: smDown ? 1 : mdDown ? 6 : 3,
     },
     {
       img: 'gallery/home.jpg',
-      title: 'Camera',
-      cols: smDown ? 1 : mdDown ? 6 : 4,
+      title: 'Lighting Automation',
+      cols: smDown ? 1 : mdDown ? 6 : 3,
     },
     {
       img: 'gallerytwo/camera.jpeg',
       title: 'Security Camera',
-      cols: smDown ? 1 : mdDown ? 6 : 4,
-    }, // ----------------------------
+      cols: smDown ? 1 : mdDown ? 6 : 3,
+    },
     {
       img: 'gallerytwo/camera2.jpeg',
       title: 'Security Camera 2',
-      cols: smDown ? 1 : mdDown ? 6 : 4,
-    },
+      cols: smDown ? 1 : mdDown ? 6 : 3,
+    }, // ------------------------------
     {
       img: '/gallery/theatre-gallery.jpg',
       title: 'Home Theatre',
@@ -144,37 +145,48 @@ export default function ImageGridList(props) {
       img: 'gallerytwo/climate-control.jpeg',
       title: 'Climate Control',
       cols: smDown ? 1 : mdDown ? 6 : 4,
+    },
+    {
+      img: 'gallery/wardrobe.jpg',
+      title: 'Electrical',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
     }, // ------------------------------
     {
-      img: 'gallerytwo/homesecurity3.jpeg',
-      title: 'Security System',
-      cols: smDown ? 1 : mdDown ? 6 : 4,
+      img: 'gallerytwo/sound.jpeg',
+      title: 'Sound System',
+      cols: smDown ? 1 : mdDown ? 6 : 3,
     },
+    {
+      img: 'gallerytwo/security.jpeg',
+      title: 'Security System',
+      cols: smDown ? 1 : mdDown ? 6 : 3,
+    },
+    {
+      img: 'gallerytwo/lightautomation2.jpeg',
+      title: 'Lighting Controls',
+      cols: smDown ? 1 : mdDown ? 6 : 3,
+    },
+    {
+      img: '/gallerytwo/smarthome2.jpeg',
+      title: 'Smart Home',
+      cols: smDown ? 1 : mdDown ? 6 : 3,
+    },
+    // ------------------------------
     {
       img: '/gallerytwo/lighting.jpeg',
       title: 'Lighting Automation',
       cols: smDown ? 1 : mdDown ? 6 : 4,
     },
     {
-      img: 'gallerytwo/sound.jpeg',
-      title: 'Sound System',
-      cols: smDown ? 1 : mdDown ? 6 : 4,
-    }, // ------------------------------
-    {
-      img: 'gallerytwo/security.jpeg',
-      title: 'Security System',
-      cols: smDown ? 1 : mdDown ? 6 : 4,
-    },
-    {
-      img: '/gallerytwo/smarthome2.jpeg',
-      title: 'Smart Home',
-      cols: smDown ? 1 : mdDown ? 6 : 4,
-    },
-    {
       img: 'gallerytwo/lighting3.jpeg',
       title: 'Lighting Automation',
       cols: smDown ? 1 : mdDown ? 6 : 4,
-    }, // ------------------------------
+    },
+    {
+      img: 'gallery/lighting-gallery.jpg',
+      title: 'Lighting Automation',
+      cols: smDown ? 1 : mdDown ? 6 : 4,
+    },
   ]
 
   return (

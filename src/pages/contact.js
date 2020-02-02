@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 export default function Services() {
   const classes = useStyles()
   return (
-    <Grid container direction="row" style={{ height: '100%' }}>
+    <Grid container style={{ height: '100%' }}>
       <Grid item xs={12}>
         <ContactTop />
       </Grid>

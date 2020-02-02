@@ -1485,6 +1485,19 @@ __webpack_require__.r(__webpack_exports__);
 
 const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["createMuiTheme"])({
   overrides: {
+    typography: {
+      fontFamily: [// '-apple-system',
+      // 'BlinkMacSystemFont',
+      // '"Segoe UI"',
+      // 'Roboto',
+      // '"Helvetica Neue"',
+      // 'Arial',
+      // 'sans-serif',
+      // '"Apple Color Emoji"',
+      // '"Segoe UI Emoji"',
+      // '"Segoe UI Symbol"',
+      'Nunito', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'].join(',')
+    },
     MuiDivider: {
       root: {// Dividers not consistent when zooming.
         // https://github.com/mui-org/material-ui/issues/14815

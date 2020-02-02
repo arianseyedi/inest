@@ -5,7 +5,7 @@ import LinkedinLogo from '../../../resource/LinkedinLogo'
 const LinkedinButton = props => {
   return (
     <IconButton {...props}>
-      <LinkedinLogo style={{ color: 'white' }} />
+      <LinkedinLogo {...props} />
     </IconButton>
   )
 }

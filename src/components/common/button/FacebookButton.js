@@ -5,7 +5,7 @@ import FacebookLogo from '../../../resource/FacebookLogo'
 const FacebookButton = props => {
   return (
     <IconButton {...props}>
-      <FacebookLogo style={{ color: 'white' }} />
+      <FacebookLogo {...props} />
     </IconButton>
   )
 }

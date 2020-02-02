@@ -46,9 +46,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function Bottombar() {
   const classes = useStyles()
-  const styles = {
-    stickToBottom: {},
-  }
   return (
     <Grid container direction="row" style={{ height: '1px' }}>
       <Grid item xs={12}>
@@ -70,14 +67,17 @@ export default function Bottombar() {
                       <LinkedinButton
                         href="https://www.linkedin.com/company/inestt/"
                         target="_blank"
+                        style={{ fontSize: 24, color: 'white' }}
                       />
                       <InstagramButton
                         href="https://www.instagram.com/inest.ca/?hl=en"
                         target="_blank"
+                        style={{ fontSize: 24, color: 'white' }}
                       />
                       <FacebookButton
                         href="https://www.facebook.com/INest-114704206654630/"
                         target="_blank"
+                        style={{ fontSize: 24, color: 'white' }}
                       />
                     </Grid>
                   </Grid>

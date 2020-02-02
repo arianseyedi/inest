@@ -4,6 +4,10 @@ import Grid from '@material-ui/core/Grid'
 import TransparentLogo from '../../resource/TransparentLogoMini'
 import Menu from './Menu'
 import { Container } from '@material-ui/core'
+import LinkedinButton from './button/LinkedinButton'
+import FacebookButton from './button/FacebookButton'
+import InstagramButton from './button/InstagramButton'
+import { grey } from '@material-ui/core/colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,6 +23,11 @@ const useStyles = makeStyles(theme => ({
   logo: {
     fontSize: 90,
     marginLeft: theme.spacing(0),
+  },
+  hover: {
+    '&:hover': {
+      color: 'white',
+    },
   },
 }))
 
@@ -36,6 +45,35 @@ export default function Topbar() {
                   <a href="/">
                     <TransparentLogo className={classes.logo} />
                   </a>
+                </Grid>
+                <Grid item>
+                  <Grid container direction="row" justify="center" alignItems="center">
+                    <Grid item>
+                      <LinkedinButton
+                        href="https://www.linkedin.com/company/inestt/"
+                        target="_blank"
+                        style={{ fontSize: 16, color: grey[500] }}
+                        className={classes.hover}
+                      />
+                    </Grid>
+
+                    <Grid item>
+                      <InstagramButton
+                        href="https://www.instagram.com/inest.ca/?hl=en"
+                        target="_blank"
+                        style={{ fontSize: 16, color: grey[500] }}
+                        className={classes.hover}
+                      />
+                    </Grid>
+                    <Grid item>
+                      <FacebookButton
+                        href="https://www.facebook.com/INest-114704206654630/"
+                        target="_blank"
+                        style={{ fontSize: 16, color: grey[500] }}
+                        className={classes.hover}
+                      />
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
