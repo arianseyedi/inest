@@ -32,7 +32,7 @@ export default function Contacts() {
       className={classes.contactBar}
     >
       <Grid item>
-        <Grid container spacing={2} className={classes.contactBar}>
+        <Grid container className={classes.contactBar}>
           <Grid item>
             <a href="mailto:info@inest.ca" className={classes.text}>
               <Grid
@@ -40,13 +40,12 @@ export default function Contacts() {
                 direction="row"
                 justify="flex-end"
                 alignItems="center"
-                spacing={1}
                 className={classes.contactBar}
               >
-                <Grid item>
+                <Grid item style={{ marginLeft: 8 }}>
                   <EmailIcon className={classes.icon} />
                 </Grid>
-                <Grid item>
+                <Grid item style={{ marginLeft: 8 }}>
                   <Typography className={classes.text}>info@inest.ca</Typography>
                 </Grid>
               </Grid>
@@ -58,21 +57,20 @@ export default function Contacts() {
               direction="row"
               justify="flex-end"
               alignItems="center"
-              spacing={1}
               className={classes.contactBar}
             >
-              <Grid item>
+              <Grid item style={{ marginLeft: 24 }}>
                 <PhoneIcon className={classes.icon} style={{ fontSize: 17, marginTop: 3 }} />
               </Grid>
-              <Grid item style={{ marginTop: 3 }}>
+              <Grid item style={{ marginTop: 3, marginLeft: 8 }}>
                 <a href="tel:+16476127580" className={classes.text}>
                   <Typography className={classes.text}>647-612-7580</Typography>
                 </a>
               </Grid>
-              <Grid item style={{ marginTop: 3 }}>
+              <Grid item style={{ marginTop: 3, marginLeft: 8 }}>
                 <Typography className={classes.text}>-</Typography>
               </Grid>
-              <Grid item style={{ marginTop: 3 }}>
+              <Grid item style={{ marginTop: 3, marginLeft: 8 }}>
                 <a href="tel:+14165667241" className={classes.text}>
                   <Typography className={classes.text}>416-566-7241</Typography>
                 </a>

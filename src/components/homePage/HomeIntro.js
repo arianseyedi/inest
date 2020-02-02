@@ -21,8 +21,8 @@ const useStyles = makeStyles(theme => ({
     background: 'transparent',
   },
   semiTransparentPaper: {
-    background: `rgba(255,255,255,0.2)`,
-    borderRadius: 7,
+    // background: `rgba(255,255,255,0.2)`,
+    // borderRadius: 7,
   },
   text: {
     color: 'white !important',
@@ -61,11 +61,10 @@ export default function HomeIntro() {
               gutterBottom
               className={classes.textHeader}
               style={{ paddingBottom: '30px' }}
-              id="animated-home-intro-title"
             >
               Smart, Convenient and Secure
             </Typography>
-            <Typography className={classes.text} id="animated-home-intro-text" variant="h5">
+            <Typography className={classes.text} variant="h5">
               Enhance security, save energy, and promote comfort with iNest home automation.
             </Typography>
           </Paper>

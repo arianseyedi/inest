@@ -90,9 +90,9 @@ export default function Bottombar() {
                   <Grid
                     container
                     direction="row"
-                    justify="space-around"
+                    justify="center"
                     alignItems="center"
-                    spacing={2}
+                    // spacing={2}
                   >
                     <Grid item>
                       <Map />

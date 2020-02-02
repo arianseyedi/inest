@@ -63,7 +63,7 @@ export default function BottomContacts() {
           direction="row"
           justify="flex-start"
           alignItems="center"
-          spacing={1}
+          // spacing={1}
           className={classes.contactBar}
         >
           <Grid item>
