@@ -10,7 +10,7 @@ import LinkedinButton from './button/LinkedinButton'
 import FacebookButton from './button/FacebookButton'
 import InstagramButton from './button/InstagramButton'
 import CopyrightAndTerms from './CopyrightAndTerms'
-import { Container, Typography } from '@material-ui/core'
+import { Container, Typography, useMediaQuery } from '@material-ui/core'
 import Map from './Map'
 import BottomContacts from '../homePage/BottomContacts'
 
@@ -46,6 +46,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function Bottombar() {
   const classes = useStyles()
+  const mdDown = useMediaQuery(theme => theme.breakpoints.down('md'))
+
   return (
     <Grid container direction="row" style={{ height: '1px' }}>
       <Grid item xs={12}>
@@ -54,30 +56,25 @@ export default function Bottombar() {
             <div className={classes.root}>
               <Grid container direction="row" justify="space-around" alignItems="center">
                 <Grid item xs={'auto'}>
-                  <Grid
-                    container
-                    direction="column"
-                    justify="space-around"
-                    alignItems="center"
-                  >
+                  <Grid container direction="column" justify="center" alignItems="center">
                     <Grid item>
-                      <TransparentLogo style={{ fontSize: 150 }} />
+                      <TransparentLogo style={{ fontSize: mdDown ? 88 : 150 }} />
                     </Grid>
                     <Grid item>
                       <LinkedinButton
                         href="https://www.linkedin.com/company/inestt/"
                         target="_blank"
-                        style={{ fontSize: 24, color: 'white' }}
+                        style={{ fontSize: mdDown ? 16 : 24, color: 'white' }}
                       />
                       <InstagramButton
                         href="https://www.instagram.com/inest.ca/?hl=en"
                         target="_blank"
-                        style={{ fontSize: 24, color: 'white' }}
+                        style={{ fontSize: mdDown ? 16 : 24, color: 'white' }}
                       />
                       <FacebookButton
                         href="https://www.facebook.com/INest-114704206654630/"
                         target="_blank"
-                        style={{ fontSize: 24, color: 'white' }}
+                        style={{ fontSize: mdDown ? 16 : 24, color: 'white' }}
                       />
                     </Grid>
                   </Grid>
@@ -87,13 +84,7 @@ export default function Bottombar() {
                   className={clsx([classes.hideOnSize, classes.divider])}
                 />
                 <Grid item xs={'auto'}>
-                  <Grid
-                    container
-                    direction="row"
-                    justify="center"
-                    alignItems="center"
-                    // spacing={2}
-                  >
+                  <Grid container direction="row" justify="center" alignItems="center">
                     <Grid item>
                       <Map />
                     </Grid>

@@ -8,11 +8,17 @@
   height: 80px;
 }
 .box-2 {
-  width: 25%;
+  width: 20%;
   height: 80px;
 }
+.box-3 {
+  width: 30%;
+  height: 80px;
+  align-items: center;
+}
 .box,
-.box-2 {
+.box-2,
+.box-3 {
   display: inline-grid;
 }
 .container-box {

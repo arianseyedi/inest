@@ -2,11 +2,13 @@
   "name": "inest",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "scripts": {
     "dev": "node server.js",
-    "old_dev": "next dev",
+    "prodstart": "NODE_ENV=production node server.js",
+    "olddev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@material-ui/core": "latest",

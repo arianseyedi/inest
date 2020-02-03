@@ -59,26 +59,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/arian/Documents/Projects/InestCA/inest/src/pages/_error.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 function PageError(props) {
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: this
-  }, "Error!");
+  return __jsx("div", null, "Error!");
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (PageError);
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!**********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_error&absolutePagePath=%2FUsers%2Farian%2FDocuments%2FProjects%2FInestCA%2Finest%2Fsrc%2Fpages%2F_error.js ***!
   \**********************************************************************************************************************************************************/
@@ -101,5 +94,5 @@ module.exports = dll_24e240eb1453fb0dfc79;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[6,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_error.js.map

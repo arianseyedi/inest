@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Container } from '@material-ui/core'
+import { Typography, Container, useMediaQuery } from '@material-ui/core'
 import './Partners.scss'
 import Fade from '../common/imageSlideshow/fade'
 
@@ -37,49 +37,93 @@ const fadeProperties = {
 }
 export default function Slideshow() {
   const classes = useStyles()
-
+  const xsmDown = useMediaQuery(theme => theme.breakpoints.down('xs'))
   return (
     <div className="slide-container" id="unselectable-text">
       <Typography classes={{ root: classes.title }} variant="body1" gutterBottom>
         Our Partners
       </Typography>
-      <Fade {...fadeProperties}>
-        <div className="each-fade">
-          <div className="container-box">
-            <div className="box">
-              <img className="img-box" src={`${slideImages[0]}`} />
-            </div>
-            <div className="box">
-              <img className="img-box" src={`${slideImages[1]}`} />
-            </div>
-            <div className="box">
-              <img className="img-box" src={`${slideImages[2]}`} />
-            </div>
-            <div className="box">
-              <img className="img-box" src={`${slideImages[3]}`} />
-            </div>
-            <div className="box">
-              <img className="img-box" src={`${slideImages[4]}`} />
+      {xsmDown ? (
+        <Fade {...fadeProperties}>
+          <div className="each-fade">
+            <div className="container-box">
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[0]}`} />
+              </div>
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[1]}`} />
+              </div>
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[2]}`} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="each-fade">
-          <div className="container-box">
-            <div className="box-2">
-              <img className="img-box" src={`${slideImages[8]}`} />
-            </div>
-            <div className="box-2">
-              <img className="img-box" src={`${slideImages[7]}`} />
-            </div>
-            <div className="box-2">
-              <img className="img-box" src={`${slideImages[6]}`} />
-            </div>
-            <div className="box-2">
-              <img className="img-box" src={`${slideImages[5]}`} />
+          <div className="each-fade">
+            <div className="container-box">
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[3]}`} />
+              </div>
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[4]}`} />
+              </div>
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[5]}`} />
+              </div>
             </div>
           </div>
-        </div>
-      </Fade>
+          <div className="each-fade">
+            <div className="container-box">
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[6]}`} />
+              </div>
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[7]}`} />
+              </div>
+              <div className="box-3">
+                <img className="img-box" src={`${slideImages[8]}`} />
+              </div>
+            </div>
+          </div>
+        </Fade>
+      ) : (
+        <Fade {...fadeProperties}>
+          <div className="each-fade">
+            <div className="container-box">
+              <div className="box">
+                <img className="img-box" src={`${slideImages[0]}`} />
+              </div>
+              <div className="box">
+                <img className="img-box" src={`${slideImages[1]}`} />
+              </div>
+              <div className="box">
+                <img className="img-box" src={`${slideImages[2]}`} />
+              </div>
+              <div className="box">
+                <img className="img-box" src={`${slideImages[3]}`} />
+              </div>
+              <div className="box">
+                <img className="img-box" src={`${slideImages[4]}`} />
+              </div>
+            </div>
+          </div>
+          <div className="each-fade">
+            <div className="container-box">
+              <div className="box-2">
+                <img className="img-box" src={`${slideImages[8]}`} />
+              </div>
+              <div className="box-2">
+                <img className="img-box" src={`${slideImages[7]}`} />
+              </div>
+              <div className="box-2">
+                <img className="img-box" src={`${slideImages[6]}`} />
+              </div>
+              <div className="box-2">
+                <img className="img-box" src={`${slideImages[5]}`} />
+              </div>
+            </div>
+          </div>
+        </Fade>
+      )}
     </div>
   )
 }

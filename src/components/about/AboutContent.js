@@ -82,7 +82,7 @@ export default function AboutContent(props) {
 
   return (
     <div className={classes.root}>
-      <Grid container direction="column" alignItems="stretch" spacing={10}>
+      <Grid container direction="column" alignItems="stretch">
         <Grid item>
           <Paper elevation={0} style={{ height: '100%', width: '100%' }}>
             <Container maxWidth="lg">

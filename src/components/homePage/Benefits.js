@@ -81,10 +81,9 @@ export default function Benefits() {
         justify="center"
         alignItems="center"
         style={{ marginTop: 103, marginBottom: 103, paddingLeft: 16, paddingRight: 16 }}
-        spacing={4}
       >
         <Grid item xs={12} sm={12} md={7}>
-          <Grid container direction="column" spacing={1}>
+          <Grid container direction="column">
             <Grid item>
               <Typography variant="h3" color="textSecondary">
                 The
@@ -93,13 +92,13 @@ export default function Benefits() {
               </Typography>
             </Grid>
             <Grid item>
-              <Grid container direction="column" spacing={2}>
+              <Grid container direction="column">
                 <Grid item>
                   <Typography className={classes.text_intro} color="textSecondary">
                     It is not about the technology, it is about making things work for you.
                   </Typography>
                 </Grid>
-                {/* <Grid container direction="column" spacing={2}>
+                {/* <Grid container direction="column" >
                 <Grid item> */}
                 <Grid item>
                   <Typography className={classes.text_intro} color="textSecondary">
@@ -170,7 +169,7 @@ export default function Benefits() {
                   </Typography>
                 </Grid>
                 <Grid item>
-                  <Grid container direction="column" spacing={2}>
+                  <Grid container direction="column">
                     <Grid item>
                       <a href="https://my.matterport.com/show/?m=EJ33Bp9SU3j" target="_blank">
                         <img src="3dproject.png" className={classes.img} />

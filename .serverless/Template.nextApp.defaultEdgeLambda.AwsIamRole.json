@@ -2,8 +2,8 @@
   "name": "0yrua2-t9q0ny",
   "arn": "arn:aws:iam::462483490358:role/0yrua2-t9q0ny",
   "service": [
-    "lambda.amazonaws.com",
-    "edgelambda.amazonaws.com"
+    "edgelambda.amazonaws.com",
+    "lambda.amazonaws.com"
   ],
   "policy": {
     "arn": "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"

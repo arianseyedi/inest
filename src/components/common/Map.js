@@ -12,7 +12,11 @@ const styles = theme => ({
       height: 100,
       width: 175,
     },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
+      height: 175,
+      width: 200,
+    },
+    [theme.breakpoints.up('lg')]: {
       height: 175,
       width: 300,
     },

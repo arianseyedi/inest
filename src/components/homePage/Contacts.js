@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import { Container, Typography } from '@material-ui/core'
+import { Container, Typography, useMediaQuery } from '@material-ui/core'
 import EmailIcon from '../../resource/EmailIcon'
 import PhoneIcon from '../../resource/PhoneIcon'
 
@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Contacts() {
   const classes = useStyles()
+  const xsmDown = useMediaQuery(theme => theme.breakpoints.down('xs'))
 
   return (
     <Grid
@@ -67,14 +68,18 @@ export default function Contacts() {
                   <Typography className={classes.text}>647-612-7580</Typography>
                 </a>
               </Grid>
-              <Grid item style={{ marginTop: 3, marginLeft: 8 }}>
-                <Typography className={classes.text}>-</Typography>
-              </Grid>
-              <Grid item style={{ marginTop: 3, marginLeft: 8 }}>
-                <a href="tel:+14165667241" className={classes.text}>
-                  <Typography className={classes.text}>416-566-7241</Typography>
-                </a>
-              </Grid>
+              {!xsmDown ? (
+                <React.Fragment>
+                  <Grid item style={{ marginTop: 3, marginLeft: 8 }}>
+                    <Typography className={classes.text}>-</Typography>
+                  </Grid>
+                  <Grid item style={{ marginTop: 3, marginLeft: 8 }}>
+                    <a href="tel:+14165667241" className={classes.text}>
+                      <Typography className={classes.text}>416-566-7241</Typography>
+                    </a>
+                  </Grid>
+                </React.Fragment>
+              ) : null}
             </Grid>
           </Grid>
           <Grid item></Grid>

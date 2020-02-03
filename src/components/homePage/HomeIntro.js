@@ -24,9 +24,6 @@ const useStyles = makeStyles(theme => ({
     // background: `rgba(255,255,255,0.2)`,
     // borderRadius: 7,
   },
-  text: {
-    color: 'white !important',
-  },
   condMargin: {
     [theme.breakpoints.down('sm')]: {
       marginTop: 16,
@@ -51,23 +48,23 @@ export default function HomeIntro() {
         className={classes.box}
         alignItems="flex-start"
         justify="flex-start"
-        id="unselectable-text"
+        // id="unselectable-text"
       >
-        <Grid item sm={6} md={7}>
-          <Paper className={clsx(classes.paper, classes.condMargin)} elevation={0}>
-            <Typography
-              variant="h2"
-              component="h1"
-              gutterBottom
-              className={classes.textHeader}
-              style={{ paddingBottom: '30px' }}
-            >
-              Smart, Convenient and Secure
-            </Typography>
-            <Typography className={classes.text} variant="h5">
-              Enhance security, save energy, and promote comfort with iNest home automation.
-            </Typography>
-          </Paper>
+        <Grid item sm={12} md={8} className={classes.condMargin}>
+          {/* <Paper > */}
+          <Typography
+            variant="h2"
+            component="h1"
+            gutterBottom
+            className={classes.textHeader}
+            style={{ paddingBottom: '30px' }}
+          >
+            Smart, Convenient and Secure
+          </Typography>
+          <Typography className={classes.text} variant="h5">
+            Enhance security, save energy, and promote comfort with iNest home automation.
+          </Typography>
+          {/* </Paper> */}
         </Grid>
         {/* <Grid item sm={6} md={5}>
           <Paper className={classes.semiTransparentPaper} elevation={2}>

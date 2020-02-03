@@ -30,10 +30,15 @@ const useStyles = makeStyles(theme => ({
   },
   condMargin: {
     [theme.breakpoints.down('sm')]: {
-      // marginBottom: 200,
+      marginBottom: 88,
     },
     [theme.breakpoints.up('sm')]: {
       // marginBottom: 200,
+      // marginTop: 100,
+    },
+    [theme.breakpoints.up('md')]: {
+      // marginBottom: 200,
+      marginTop: 100,
     },
   },
   quotationMarks: {

@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
       minHeight: 400,
     },
     [theme.breakpoints.up('md')]: {
-      minHeight: 400,
+      minHeight: 500,
     },
   },
   box1bg: {

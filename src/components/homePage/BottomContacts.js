@@ -12,7 +12,9 @@ const useStyles = makeStyles(theme => ({
     fontSize: 13,
     textDecoration: 'none',
   },
-  contactBar: {},
+  contactBar: {
+    marginTop: 16,
+  },
   icon: {
     color: theme.palette.text.secondary,
   },
@@ -41,13 +43,7 @@ export default function BottomContacts() {
       </Grid>
       <Grid item>
         <a href="mailto:info@inest.ca" className={classes.text}>
-          <Grid
-            container
-            direction="row"
-            alignItems="center"
-            spacing={1}
-            className={classes.contactBar}
-          >
+          <Grid container direction="row" alignItems="center" className={classes.contactBar}>
             <Grid item>
               <EmailIcon className={classes.icon} />
             </Grid>
@@ -63,7 +59,6 @@ export default function BottomContacts() {
           direction="row"
           justify="flex-start"
           alignItems="center"
-          // spacing={1}
           className={classes.contactBar}
         >
           <Grid item>

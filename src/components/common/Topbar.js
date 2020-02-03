@@ -21,8 +21,8 @@ const useStyles = makeStyles(theme => ({
     background: 'rgba(24,24,24, .3)',
   },
   logo: {
-    fontSize: 90,
-    marginLeft: theme.spacing(0),
+    fontSize: 85,
+    marginBottom: -16,
   },
   hover: {
     '&:hover': {
@@ -40,14 +40,14 @@ export default function Topbar() {
         <div className={classes.root}>
           <Grid container direction="row" justify="space-between" alignItems="center">
             <Grid item>
-              <Grid container direction="column" justify="space-between" alignItems="center">
+              <Grid container direction="row" justify="flex-start" alignItems="center">
                 <Grid item>
                   <a href="/">
                     <TransparentLogo className={classes.logo} />
                   </a>
                 </Grid>
                 <Grid item>
-                  <Grid container direction="row" justify="center" alignItems="center">
+                  <Grid container direction="column" justify="center" alignItems="center">
                     <Grid item>
                       <LinkedinButton
                         href="https://www.linkedin.com/company/inestt/"

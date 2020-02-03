@@ -77,7 +77,7 @@ export default function ContactForm(props) {
         body: formData,
       })
     )
-      .then(function(response) {
+      .then(function(res) {
         console.log(res)
         res && res.status === 200
           ? setSubmitState({ submitted: true, error: false })

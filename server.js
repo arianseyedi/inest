@@ -11,6 +11,7 @@ const mailer = require('./mailer')
 const emailBuilder = require('./emailBuilder')
 
 app.prepare().then(() => {
+  console.log('ENVIRONMENT: ', process.env.NODE_ENV)
   const server = express()
 
   server.use(bodyParser.json())
@@ -89,8 +90,8 @@ app.prepare().then(() => {
       }
     })
   })
-  server.listen(3019, err => {
+  server.listen(3000, err => {
     if (err) throw err
-    console.log('> Read on http://localhost:3019')
+    console.log('> Read on http://localhost:3000')
   })
 })
