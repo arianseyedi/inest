@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "dr9j");
+/******/ 	return __webpack_require__(__webpack_require__.s = "LEcI");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -21119,6 +21119,1098 @@ function createBreakpoints(breakpoints) {
 
 /***/ }),
 
+/***/ "LEcI":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var services_namespaceObject = {};
+__webpack_require__.r(services_namespaceObject);
+__webpack_require__.d(services_namespaceObject, "default", function() { return Services; });
+
+// EXTERNAL MODULE: external "url"
+var external_url_ = __webpack_require__("bzos");
+
+// EXTERNAL MODULE: external "querystring"
+var external_querystring_ = __webpack_require__("8xkj");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
+var render = __webpack_require__("/bjS");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
+var send_html = __webpack_require__("LuNM");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-init-server
+var next_plugin_loadermiddleware_on_init_server = __webpack_require__("GX0O");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server
+var next_plugin_loadermiddleware_on_error_server = __webpack_require__("KqAr");
+
+// EXTERNAL MODULE: ./.next/build-manifest.json
+var build_manifest = __webpack_require__("LZ9C");
+
+// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
+var react_loadable_manifest = __webpack_require__("67Bq");
+
+// EXTERNAL MODULE: ./src/pages/_document.js
+var _document = __webpack_require__("senJ");
+
+// EXTERNAL MODULE: ./src/pages/_error.js
+var _error = __webpack_require__("URMD");
+
+// EXTERNAL MODULE: ./src/pages/_app.js + 2 modules
+var _app = __webpack_require__("IlR1");
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("q1tI");
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.js
+var clsx = __webpack_require__("4k7N");
+var clsx_default = /*#__PURE__*/__webpack_require__.n(clsx);
+
+// EXTERNAL MODULE: ./src/components/common/Bottombar.js + 7 modules
+var Bottombar = __webpack_require__("icW0");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
+var makeStyles = __webpack_require__("R/WZ");
+
+// EXTERNAL MODULE: ./src/components/homePage/PartnersSlideShow.js + 1 modules
+var PartnersSlideShow = __webpack_require__("IGik");
+
+// EXTERNAL MODULE: ./src/components/homePage/SelectiveServices.js + 1 modules
+var SelectiveServices = __webpack_require__("La9E");
+
+// EXTERNAL MODULE: ./src/components/homePage/StepByStepGuide.js + 1 modules
+var StepByStepGuide = __webpack_require__("CeZO");
+
+// EXTERNAL MODULE: ./src/components/homePage/Benefits.js + 1 modules
+var Benefits = __webpack_require__("EWUY");
+
+// EXTERNAL MODULE: ./src/components/homePage/ServicesTour.js
+var ServicesTour = __webpack_require__("Im8p");
+
+// EXTERNAL MODULE: ./src/components/common/Topbar.js + 5 modules
+var Topbar = __webpack_require__("sHXR");
+
+// EXTERNAL MODULE: ./src/components/common/Contactbar.js + 1 modules
+var Contactbar = __webpack_require__("ev8R");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/index.js
+var core = __webpack_require__("m178");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
+var Container = __webpack_require__("Ji2X");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
+var Typography = __webpack_require__("ofer");
+
+// CONCATENATED MODULE: ./src/components/servicesPage/ServicesIntroTitle.js
+var __jsx = react_default.a.createElement;
+
+
+
+
+
+const useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  box: {
+    // marginTop: 200,
+    height: '100%'
+  },
+  text_intro: {
+    color: 'white'
+  },
+  paper: {
+    background: 'transparent'
+  },
+  semiTransparentPaper: {
+    background: `rgba(255,255,255,0.2)`,
+    borderRadius: 7
+  },
+  text: {
+    color: 'white !important'
+  },
+  condMargin: {
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: 84
+    }
+  }
+}));
+function ServicesIntro() {
+  const classes = useStyles();
+  return __jsx(Container["a" /* default */], {
+    maxWidth: "lg"
+  }, __jsx(core["Grid"], {
+    container: true,
+    direction: "row",
+    spacing: 10,
+    className: classes.box
+  }, __jsx(core["Grid"], {
+    item: true,
+    sm: 12,
+    md: 7
+  }, __jsx(core["Paper"], {
+    className: classes.paper,
+    elevation: 0
+  }, __jsx(Typography["a" /* default */], {
+    variant: "h3",
+    component: "h1",
+    gutterBottom: true,
+    className: classes.text_intro,
+    id: "unselectable-text"
+  }, "Excellent service, Great experience and Maximum Security"), __jsx(Typography["a" /* default */], {
+    className: classes.text_intro,
+    id: "unselectable-text"
+  }, "Enhance security, save energy, and promote comfort with iNest home automation."))), __jsx(core["Grid"], {
+    item: true,
+    sm: 12,
+    md: 5
+  })));
+}
+// CONCATENATED MODULE: ./src/components/servicesPage/ServicesTop.js
+var ServicesTop_jsx = react_default.a.createElement;
+
+
+
+
+
+
+const ServicesTop_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  minHeightTop: {
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 600
+    },
+    [theme.breakpoints.down('md')]: {
+      minHeight: 600
+    },
+    [theme.breakpoints.up('md')]: {
+      minHeight: 600
+    }
+  },
+  box1bg: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center bottom'
+  },
+  homeIntro: {
+    marginBottom: 80,
+    marginTop: 50,
+    [theme.breakpoints.up('sm')]: {
+      minHeight: '40vh'
+    }
+  }
+}));
+function ServicesTop() {
+  const classes = ServicesTop_useStyles();
+  return ServicesTop_jsx("div", null, ServicesTop_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    className: classes.minHeightTop
+  }, ServicesTop_jsx(core["Grid"], {
+    item: true
+  }, ServicesTop_jsx(Contactbar["a" /* default */], null)), ServicesTop_jsx(core["Grid"], {
+    item: true
+  }, ServicesTop_jsx(Topbar["a" /* default */], null)), ServicesTop_jsx(core["Grid"], {
+    item: true
+  }, ServicesTop_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    alignItems: "stretch",
+    className: classes.homeIntro
+  }, ServicesTop_jsx(core["Grid"], {
+    item: true
+  }, ServicesTop_jsx(ServicesIntro, null))))));
+}
+// CONCATENATED MODULE: ./src/components/servicesPage/ServicesContainer.js
+var ServicesContainer_jsx = react_default.a.createElement;
+
+
+
+const ServicesContainer_useStyles = Object(makeStyles["a" /* default */])(() => ({
+  root: {
+    height: '100%',
+    width: '100%'
+  }
+}));
+function ServicesContainer(props) {
+  const classes = ServicesContainer_useStyles();
+  return ServicesContainer_jsx(core["Paper"], {
+    elevation: 4,
+    className: classes.root
+  }, props.children);
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js
+var esm_extends = __webpack_require__("kOwS");
+
+// CONCATENATED MODULE: ./src/resource/GuaranteeIcon.js
+
+
+var GuaranteeIcon_jsx = react_default.a.createElement;
+
+
+const GuaranteeIcon = props => {
+  return GuaranteeIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 0 512 512"
+  }), GuaranteeIcon_jsx("g", null, GuaranteeIcon_jsx("path", {
+    d: "m484.574 181.429c-6.756-20.92-3.876-52.323-21.436-76.57-17.698-24.438-48.479-31.384-65.86-44.096-17.198-12.578-33.198-39.949-62.127-49.389-28.113-9.174-56.861 3.275-79.151 3.275-22.287 0-51.033-12.452-79.151-3.276-28.924 9.438-44.937 36.815-62.124 49.387-17.362 12.697-48.166 19.662-65.861 44.096-17.545 24.227-14.694 55.702-21.438 76.572-6.418 19.863-27.426 43.702-27.426 74.574 0 30.891 20.984 54.638 27.426 74.573 6.756 20.92 3.876 52.323 21.436 76.57 17.697 24.439 48.477 31.384 65.86 44.097 17.195 12.576 33.198 39.949 62.127 49.388 28.094 9.168 56.887-3.275 79.151-3.275 22.233 0 51.093 12.43 79.151 3.276 28.925-9.438 44.928-36.809 62.124-49.387 17.362-12.697 48.166-19.662 65.861-44.096 17.546-24.228 14.693-55.7 21.438-76.572 6.418-19.864 27.426-43.703 27.426-74.574 0-30.889-20.979-54.629-27.426-74.573zm-38.061 136.847c-7.875 24.375-5.812 51.654-15.772 65.408-10.094 13.937-36.613 20.303-57.076 35.271-20.239 14.801-34.424 38.264-50.922 43.647-15.608 5.094-41.044-5.249-66.742-5.249-25.886 0-51.06 10.365-66.743 5.249-16.496-5.383-30.661-28.83-50.922-43.648-20.342-14.877-47.012-21.374-57.077-35.272-9.928-13.708-7.943-41.176-15.77-65.405-7.672-23.739-25.489-44.294-25.489-62.275 0-17.999 17.801-38.483 25.487-62.274 7.875-24.374 5.812-51.655 15.772-65.408 10.088-13.928 36.627-20.315 57.077-35.271 20.303-14.849 34.399-38.256 50.92-43.647 15.595-5.088 41.114 5.249 66.743 5.249 25.933 0 51.044-10.372 66.743-5.249 16.494 5.382 30.671 28.838 50.923 43.648 20.339 14.877 47.011 21.374 57.076 35.271 9.93 13.711 7.934 41.151 15.77 65.405v.001c7.672 23.739 25.489 44.294 25.489 62.275 0 17.999-17.801 38.483-25.487 62.274zm-98.37-126.469c7.811 7.811 7.811 20.474 0 28.284l-100.106 100.106c-7.811 7.811-20.475 7.81-28.285 0l-55.894-55.894c-7.811-7.811-7.812-20.474-.001-28.284s20.476-7.811 28.284 0l41.753 41.752 85.963-85.963c7.811-7.811 20.475-7.811 28.286-.001z"
+  })));
+};
+
+/* harmony default export */ var resource_GuaranteeIcon = (GuaranteeIcon);
+// CONCATENATED MODULE: ./src/resource/MaintenanceIcon.js
+
+
+var MaintenanceIcon_jsx = react_default.a.createElement;
+
+
+const MaintenanceIcon = props => {
+  return MaintenanceIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 0 64 64"
+  }), MaintenanceIcon_jsx("g", {
+    id: "Maintenance_tools",
+    "data-name": "Maintenance tools"
+  }, MaintenanceIcon_jsx("path", {
+    d: "M53.476,26.405A2.993,2.993,0,0,0,52.9,23a3.073,3.073,0,0,0-4.242,0l-.706.707-1-1,1.6-1.6a3.111,3.111,0,0,1,2.717-.814,9.074,9.074,0,0,0,7.706-2.538A8.974,8.974,0,0,0,60.9,7.879a1,1,0,0,0-1.628-.318L54.4,12.429l-2.356-.471L51.571,9.6l4.868-4.869A1,1,0,0,0,56.121,3.1a9,9,0,0,0-12.415,9.634,3.123,3.123,0,0,1-.815,2.714l-1.6,1.6-6.662-6.663L33.283,7.7a1,1,0,0,0-.408-.427L26.516,3.746a1,1,0,0,0-1.193.167l-1.41,1.41a1,1,0,0,0-.167,1.192l3.53,6.36a1,1,0,0,0,.426.409l2.686,1.347,6.661,6.662-1.6,1.6a3.111,3.111,0,0,1-2.717.814A9.006,9.006,0,0,0,23.1,36.121a1,1,0,0,0,1.628.318l4.87-4.868,2.356.471.471,2.357-4.868,4.869a1,1,0,0,0,.318,1.628,9,9,0,0,0,12.415-9.634,3.123,3.123,0,0,1,.815-2.714l1.6-1.6,1,1L43,28.657a2.992,2.992,0,0,0,3.407,4.821l5.906,5.907a5,5,0,1,0,7.072-7.071ZM31.687,13.1a.99.99,0,0,0-.258-.187l-2.554-1.281L25.86,6.2,26.2,5.86l5.431,3.015,1.281,2.553a.972.972,0,0,0,.187.259l6.776,6.777-1.416,1.415ZM39.7,27.133a5.1,5.1,0,0,0-1.379,4.426,7.005,7.005,0,0,1-8.16,7.941l4.066-4.065a1,1,0,0,0,.273-.9L33.788,31A1,1,0,0,0,33,30.212l-3.535-.707a1,1,0,0,0-.9.273L24.5,33.843a7.006,7.006,0,0,1,7.938-8.16,5.167,5.167,0,0,0,4.428-1.378l7.439-7.438a5.1,5.1,0,0,0,1.379-4.426A7.005,7.005,0,0,1,53.844,4.5L49.778,8.565a1,1,0,0,0-.273.9L50.212,13a1,1,0,0,0,.784.784l3.535.707a1,1,0,0,0,.9-.273L59.5,10.157a7.006,7.006,0,0,1-7.938,8.16A5.164,5.164,0,0,0,47.134,19.7Zm5.842-3.012,1,1L45.12,26.536l-1-1Zm-1.123,7.364a1,1,0,0,1,0-1.414l5.657-5.657a1,1,0,1,1,1.414,1.415l-5.658,5.657A1.023,1.023,0,0,1,44.414,31.485Zm13.557,6.486a3.005,3.005,0,0,1-4.243,0l-5.779-5.779,4.243-4.242,5.779,5.778a3,3,0,0,1,0,4.243Z"
+  }), MaintenanceIcon_jsx("path", {
+    d: "M61.148,44.9a3.995,3.995,0,0,0-5.458-1.469l-9.751,5.629a3.964,3.964,0,0,0-2.259-1.629l-14.92-4a7,7,0,0,0-3.51-.03L20,44.719V43a1,1,0,0,0-1-1H11a1,1,0,0,0-1,1v1H3a1,1,0,0,0-1,1V59a1,1,0,0,0,1,1h7v1a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V59.618l1.286.643a7.027,7.027,0,0,0,3.13.739H39.393a7.011,7.011,0,0,0,3.5-.938l16.8-9.7A4.011,4.011,0,0,0,61.148,44.9ZM4,58V46h6V58Zm14,2H12V44h6ZM58.69,48.634l-16.8,9.7a5,5,0,0,1-2.5.67H24.416a5.027,5.027,0,0,1-2.235-.528L20,57.382v-10.6l5.734-1.434a5.025,5.025,0,0,1,2.508.021l14.92,4a2,2,0,1,1-1.035,3.863L30.2,50.034a1,1,0,0,0-.517,1.932l11.925,3.2a4.043,4.043,0,0,0,1.042.138,3.952,3.952,0,0,0,3.965-4.317l10.072-5.815a2.035,2.035,0,0,1,2.726.732A2.008,2.008,0,0,1,58.69,48.634Z"
+  })));
+};
+
+/* harmony default export */ var resource_MaintenanceIcon = (MaintenanceIcon);
+// CONCATENATED MODULE: ./src/resource/CertifiedIcon.js
+
+
+var CertifiedIcon_jsx = react_default.a.createElement;
+
+
+const CertifiedIcon = props => {
+  return CertifiedIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 -24 494.00008 494"
+  }), CertifiedIcon_jsx("path", {
+    d: "m441.90625 0h-319.4375c-27.722656 0-50.277344 22.34375-50.277344 49.71875l-2.058594 281.28125h-62.339843c-4.417969 0-7.792969 3.90625-7.792969 8.324219v38.710937c0 36.238282 29 65.875 64 67.5v.464844h269v-.523438c2 .082032 3.210938.523438 4.585938.523438h.191406c37.328125-.21875 67.417968-30.644531 67.222656-67.972656v-246.027344h81.207031c4.417969 0 7.792969-4 7.792969-8.414062v-71.027344c.050781-28.867188-23.226562-52.351563-52.09375-52.558594zm-374.40625 430h-.054688c-28.457031 0-51.445312-23.519531-51.445312-51.972656v-31.027344h254v30.894531c-.0625 18.007813 7.050781 35.296875 19.765625 48.046875 1.351563 1.359375 2.765625 2.058594 4.210937 4.058594zm321.5-51.980469c0 28.460938-22.765625 51.980469-51.234375 51.980469h-.164063c-28.609374-.207031-51.667968-23.492188-51.601562-52.101562v-38.574219c.023438-4.480469-3.519531-8.167969-8-8.324219h-191.867188l2.058594-281.226562c0-18.605469 15.375-33.773438 34.277344-33.773438h281.667969c-9.117188 10-15.136719 22.652344-15.136719 36.773438zm89-325.320312v63.300781h-73v-63.242188c0-20.023437 16.65625-36.757812 36.671875-36.757812h.222656c20.066407.199219 36.199219 16.570312 36.105469 36.640625zm0 0"
+  }), CertifiedIcon_jsx("path", {
+    d: "m187.855469 196.914062 41.246093 28.199219c2.691407 1.855469 6.25 1.855469 8.941407 0l41.121093-28.191406c14.285157-9.746094 24.835938-30.121094 24.835938-47.398437v-57.054688c.085938-3.015625-1.578125-5.8125-4.265625-7.183594l-62.800781-30.890625c-2.203125-1.09375-4.789063-1.09375-6.992188 0l-62.683594 30.804688c-2.6875 1.371093-4.347656 4.167969-4.257812 7.183593v57.140626c0 17.277343 10.574219 37.652343 24.855469 47.390624zm-8.855469-99.539062 54.5-26.890625 54.5 26.964844v52.074219c0 12.050781-7.898438 27.378906-17.863281 34.171874l-36.730469 25.121094-36.585938-25.117187c-9.964843-6.800781-17.820312-22.125-17.820312-34.175781zm0 0"
+  }), CertifiedIcon_jsx("path", {
+    d: "m219.96875 161.601562c1.492188 1.523438 3.53125 2.386719 5.664062 2.398438h.019532c2.125-.007812 4.160156-.859375 5.65625-2.367188l31.824218-31.835937c3.128907-3.125 3.128907-8.195313.003907-11.320313-3.121094-3.128906-8.191407-3.128906-11.316407-.003906l-26.140624 26.136719-10.449219-10.550781c-3.113281-3.140625-8.179688-3.164063-11.320313-.050782-3.140625 3.113282-3.160156 8.179688-.050781 11.320313zm0 0"
+  }), CertifiedIcon_jsx("path", {
+    d: "m333 248h-192c-4.417969 0-8 3.582031-8 8s3.582031 8 8 8h192c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
+  }), CertifiedIcon_jsx("path", {
+    d: "m333 285h-192c-4.417969 0-8 3.582031-8 8s3.582031 8 8 8h192c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
+  }));
+};
+
+/* harmony default export */ var resource_CertifiedIcon = (CertifiedIcon);
+// CONCATENATED MODULE: ./src/components/servicesPage/ServicesOverview.js
+var ServicesOverview_jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+
+const ServicesOverview_useStyles = Object(makeStyles["a" /* default */])(() => ({
+  text_intro: {
+    textAlign: 'center'
+  },
+  icon: {
+    color: '#76c53a',
+    fontSize: 64
+  },
+  container: {
+    marginBottom: 48
+  },
+  checkmark: {// marginLeft: -15,
+    // marginBottom: 40
+  }
+}));
+function ServicesOverview() {
+  const classes = ServicesOverview_useStyles();
+  return ServicesOverview_jsx(Container["a" /* default */], {
+    maxWidth: "lg",
+    id: "overview-parent"
+  }, ServicesOverview_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    alignItems: "stretch",
+    spacing: 10,
+    className: classes.container
+  }, ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(Typography["a" /* default */], {
+    variant: "h3",
+    className: classes.text_intro
+  }, "iNest Services")), ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(Typography["a" /* default */], {
+    variant: "body1",
+    className: classes.text_intro
+  }, "We are experts in commercial and residential integrated technology and bring years of high-end automation experience into each project. iNest services include home theatre, security system, climate control, audio/video, lighting control, smart home, automated shading, and a variety of electrical services. We\u2019re passionate about creating exceptional systems for our clients, and our primary focus is your satisfaction.")), ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(core["Grid"], {
+    container: true,
+    direction: "row",
+    justify: "space-around",
+    alignItems: "center",
+    spacing: 2
+  }, ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    alignItems: "center",
+    spacing: 1
+  }, ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(resource_GuaranteeIcon, {
+    id: "hover-child-1",
+    className: classes.icon
+  })), ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(Typography["a" /* default */], {
+    id: "hover-child-1",
+    variant: "caption"
+  }, "Maximum of 1-Year Guarantee")))), ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    alignItems: "center"
+  }, ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(resource_MaintenanceIcon, {
+    id: "hover-child-2",
+    className: classes.icon
+  })), ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(Typography["a" /* default */], {
+    id: "hover-child-2",
+    variant: "caption"
+  }, "System Maintenance Support")))), ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    alignItems: "center"
+  }, ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(resource_CertifiedIcon, {
+    id: "hover-child-3",
+    className: classes.icon
+  })), ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(core["Grid"], {
+    container: true,
+    direction: "row"
+  }, ServicesOverview_jsx(core["Grid"], {
+    item: true
+  }, ServicesOverview_jsx(Typography["a" /* default */], {
+    id: "hover-child-3",
+    variant: "caption"
+  }, "Control4 Authorized Dealer"))))))))));
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js
+var is_array = __webpack_require__("p0XB");
+var is_array_default = /*#__PURE__*/__webpack_require__.n(is_array);
+
+// EXTERNAL MODULE: ./src/components/servicesPage/ServicePresentation.scss
+var ServicePresentation = __webpack_require__("4MIL");
+
+// CONCATENATED MODULE: ./src/components/servicesPage/ServicePresentation.js
+
+var ServicePresentation_jsx = react_default.a.createElement;
+
+
+
+
+const ServicePresentation_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  root: {},
+  row: {
+    width: '100%',
+    height: '100%',
+    minHeight: '40vh'
+  },
+  // box1bg: {
+  //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
+  //   backgroundSize: 'cover',
+  //   backgroundPosition: 'center bottom',
+  // },
+  condHide: {// [theme.breakpoints.down('xs')]: {
+    //   display: 'none',
+    // },
+  },
+  img: {
+    backgroundImage: props => `linear-gradient(rgba(255,255,255, 0.25), rgba(255, 255, 255, 0.25)), url(${props.image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  },
+  content: {
+    height: '100%',
+    [theme.breakpoints.up('md')]: {
+      marginLeft: props => props.reverse ? '10%' : 'inherit'
+    }
+  },
+  icon: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 32
+    }
+  },
+  title: {
+    fontWeight: 'bold',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 16
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: 20
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 28
+    }
+  }
+}));
+function ServicePresentation_ServicesTop(props) {
+  const classes = ServicePresentation_useStyles(props);
+
+  const handleArry = arr => {
+    const res = arr.map((item, index) => {
+      if (index == 0) {
+        return ServicePresentation_jsx(core["Typography"], {
+          variant: "body1",
+          key: `text-item ${index}`
+        }, item);
+      } else {
+        return ServicePresentation_jsx("li", {
+          key: `tex-item ${index}`
+        }, ServicePresentation_jsx(core["Typography"], {
+          variant: "body1"
+        }, item));
+      }
+    });
+    return ServicePresentation_jsx(core["Grid"], {
+      container: true,
+      direction: "column"
+    }, ServicePresentation_jsx(core["Grid"], {
+      item: true
+    }, " ", res[0]), ServicePresentation_jsx(core["Grid"], {
+      item: true
+    }, ServicePresentation_jsx("ul", {
+      key: 'unique-splice'
+    }, res.splice(1))));
+  };
+
+  const {
+    icon: Icon
+  } = props;
+  return ServicePresentation_jsx("div", {
+    id: props.anchortag
+  }, ServicePresentation_jsx(core["Container"], {
+    maxWidth: "lg",
+    style: {
+      height: '100%'
+    }
+  }, ServicePresentation_jsx("div", {
+    id: "hover-parent",
+    className: classes.root
+  }, ServicePresentation_jsx(core["Grid"], {
+    container: true,
+    direction: props.reverse ? 'row-reverse' : 'row',
+    justify: "space-between",
+    className: classes.row
+  }, ServicePresentation_jsx(core["Grid"], {
+    item: true,
+    className: classes.condHide,
+    xs: 12,
+    sm: 12,
+    md: 4
+  }, ServicePresentation_jsx(core["Grid"], {
+    item: true,
+    style: {
+      height: '100%'
+    }
+  }, ServicePresentation_jsx(core["Grid"], {
+    container: true,
+    justify: "center",
+    alignItems: "center",
+    direction: "column",
+    style: {
+      height: '100%'
+    }
+  }, ServicePresentation_jsx(core["Grid"], {
+    item: true
+  }, ServicePresentation_jsx(Icon, {
+    style: {
+      fontSize: 136
+    },
+    id: "hover-child",
+    className: classes.icon
+  }))))), ServicePresentation_jsx(core["Grid"], {
+    item: true,
+    xs: 12,
+    sm: 12,
+    md: 8
+  }, ServicePresentation_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center" // alignItems="stretch"
+    ,
+    className: classes.content
+  }, ServicePresentation_jsx(core["Grid"], {
+    item: true,
+    id: "hover-child",
+    style: {
+      width: 'fit-content'
+    }
+  }, ServicePresentation_jsx(core["Typography"], {
+    variant: "overline",
+    id: "hover-child-text",
+    className: classes.title
+  }, props.title)), ServicePresentation_jsx(core["Grid"], {
+    item: true
+  }, is_array_default()(props.content) ? handleArry(props.content) : ServicePresentation_jsx(core["Typography"], {
+    variant: "body1"
+  }, props.content))))))));
+}
+// EXTERNAL MODULE: ./src/resource/LightingAutomationIcon.js
+var LightingAutomationIcon = __webpack_require__("ND6/");
+
+// CONCATENATED MODULE: ./src/components/servicesPage/LightingService.js
+
+var LightingService_jsx = react_default.a.createElement;
+
+
+
+function LightingService(props) {
+  const content = 'Lighting Automation is the discipline of creating automated changes in lighting levels to affect mood, emphasize architecture, illuminate art, and influence action. Manage the internal and external lighting of your home more efficiently with iNest lighting Automation systems.';
+  return LightingService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Lighting Automation",
+    image: "gallery/wardrobe.jpg",
+    icon: LightingAutomationIcon["a" /* default */]
+  }, props, {
+    anchortag: "lighting"
+  }));
+}
+// CONCATENATED MODULE: ./src/resource/ElectricalIcon.js
+
+
+var ElectricalIcon_jsx = react_default.a.createElement;
+
+
+const ElectricalIcon = props => {
+  return ElectricalIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 0 511.999 511.999"
+  }), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
+    d: "M278.242,251.796c-1.395-2.062-3.721-3.296-6.21-3.296h-20.987l11.918-29.795c1.539-3.846-0.332-8.211-4.178-9.749 c-3.847-1.542-8.211,0.332-9.749,4.178l-16.032,40.081c-0.924,2.311-0.643,4.93,0.753,6.99c1.395,2.061,3.722,3.295,6.21,3.295 h20.987l-11.918,29.795c-1.539,3.846,0.332,8.211,4.178,9.749c0.914,0.366,1.856,0.539,2.783,0.539 c2.977,0,5.793-1.784,6.966-4.716l16.032-40.081C279.919,256.475,279.638,253.856,278.242,251.796z"
+  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
+    d: "M470.644,42.963c-26.637-27.057-62.143-42.307-99.978-42.941c-37.754-0.644-73.795,14.013-101.478,41.236 c-28.431,27.958-44.736,66.64-44.736,106.125v28.972h-24.564c-12.976,0-23.532,10.557-23.532,23.532v112.225 c0,12.976,10.557,23.532,23.532,23.532h24.564v32.581c0,22.626-9.631,44.371-26.425,59.658 c-17.009,15.483-39.049,22.817-62.049,20.652c-40.868-3.847-72.88-40.258-72.88-82.893c0-4.142-3.358-7.5-7.5-7.5 s-7.5,3.358-7.5,7.5c0,24.188,8.719,47.521,24.55,65.701c16.086,18.472,38.078,29.881,61.924,32.125 c3.132,0.295,6.246,0.441,9.34,0.441c23.841,0,46.359-8.682,64.213-24.934c19.909-18.124,31.328-43.911,31.328-70.75v-32.581 h33.097v28.972c0,35.491-14.672,70.274-40.254,95.43c-24.793,24.381-56.992,37.498-90.709,36.933 c-33.879-0.567-65.679-14.228-89.539-38.466c-23.889-24.266-37.044-56.331-37.044-90.289V264.016c0-0.285,0.231-0.516,0.516-0.516 h32.064c0.285,0,0.516,0.231,0.516,0.516v69.139c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-69.139 c0-8.556-6.96-15.516-15.516-15.516h-8.533v-40.597c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5V248.5h-8.532 c-8.556,0-15.516,6.96-15.516,15.516v104.208c0,37.921,14.687,73.724,41.355,100.812c26.637,27.057,62.143,42.308,99.978,42.941 c0.784,0.013,1.563,0.02,2.345,0.02c36.9,0,72.024-14.597,99.132-41.256c28.431-27.958,44.736-66.64,44.736-106.125v-28.972 h24.564c12.976,0,23.532-10.557,23.532-23.532V199.888c0-12.976-10.557-23.532-23.532-23.532h-24.564v-32.581 c0-22.626,9.631-44.371,26.425-59.658c17.009-15.483,39.048-22.815,62.049-20.652c40.868,3.847,72.88,40.258,72.88,82.893 c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5c0-24.188-8.719-47.521-24.55-65.701c-16.086-18.472-38.078-29.881-61.924-32.125 c-27.265-2.566-53.382,6.132-73.553,24.493c-19.909,18.124-31.328,43.911-31.328,70.75v32.581H239.45v-28.972 c0-35.491,14.672-70.274,40.254-95.43c24.793-24.381,56.996-37.49,90.709-36.933c33.879,0.567,65.679,14.228,89.539,38.466 c23.889,24.266,37.044,56.331,37.044,90.289v104.208c0,0.285-0.231,0.516-0.516,0.516h-32.064c-0.285,0-0.516-0.231-0.516-0.516 v-69.139c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v69.139c0,8.556,6.96,15.516,15.516,15.516h8.532v40.597 c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5V263.5h8.532c8.556,0,15.516-6.96,15.516-15.516V143.775 C511.999,105.854,497.312,70.053,470.644,42.963z M312.113,191.356c4.704,0,8.532,3.828,8.532,8.532v112.225 c0,4.705-3.828,8.532-8.532,8.532H199.888c-4.705,0-8.532-3.828-8.532-8.532V199.888c0-4.705,3.828-8.532,8.532-8.532H312.113z"
+  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
+    d: "M22.226,180.502L14.21,164.47c-1.852-3.705-6.357-5.208-10.062-3.354c-3.705,1.852-5.207,6.357-3.354,10.062L8.81,187.21 c1.314,2.628,3.962,4.147,6.714,4.147c1.127,0,2.271-0.255,3.348-0.793C22.577,188.712,24.079,184.207,22.226,180.502z"
+  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
+    d: "M58.951,161.116c-3.705-1.854-8.21-0.35-10.062,3.354l-8.016,16.032c-1.852,3.705-0.351,8.21,3.354,10.062 c1.077,0.539,2.221,0.793,3.348,0.793c2.751,0,5.4-1.52,6.714-4.147l8.016-16.032C64.158,167.473,62.656,162.968,58.951,161.116z"
+  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
+    d: "M511.206,340.823l-8.016-16.032c-1.852-3.705-6.356-5.208-10.062-3.354c-3.705,1.852-5.207,6.357-3.354,10.062 l8.016,16.032c1.314,2.628,3.962,4.147,6.714,4.147c1.127,0,2.271-0.255,3.348-0.793 C511.557,349.033,513.059,344.528,511.206,340.823z"
+  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
+    d: "M467.772,321.437c-3.705-1.854-8.209-0.35-10.062,3.354l-8.016,16.032c-1.853,3.705-0.351,8.21,3.354,10.062 c1.077,0.539,2.221,0.793,3.348,0.793c2.751,0,5.4-1.52,6.714-4.147l8.016-16.032 C472.979,327.794,471.477,323.289,467.772,321.437z"
+  }))), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null));
+};
+
+/* harmony default export */ var resource_ElectricalIcon = (ElectricalIcon);
+// CONCATENATED MODULE: ./src/components/servicesPage/ElectricalService.js
+
+var ElectricalService_jsx = react_default.a.createElement;
+
+
+
+function ElectricalService(props) {
+  const content = ['iNest provides a variety of electrical services for homes and offices, including but not limited to:', 'Residential and commercial wiring', 'Renovations', 'Knob and Tube Removals', 'Electrical Repairs and troubleshooting'];
+  return ElectricalService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Electrical",
+    image: "gallery/wardrobe.jpg",
+    icon: resource_ElectricalIcon
+  }, props, {
+    anchortag: "electrical"
+  }));
+}
+// CONCATENATED MODULE: ./src/resource/HomeTheatreIcon.js
+
+
+var HomeTheatreIcon_jsx = react_default.a.createElement;
+
+
+const HomeTheatreIcon = props => {
+  return HomeTheatreIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 -47 512 512"
+  }), HomeTheatreIcon_jsx("path", {
+    d: "m503.464844 245.589844v-117.589844c0-4.710938-3.820313-8.535156-8.53125-8.535156h-51.199219c-4.714844 0-8.535156 3.824218-8.535156 8.535156v110.933594h-36.003907l-4.265624-17.066406h6.136718c9.421875-.011719 17.054688-7.644532 17.066406-17.066407v-187.734375c-.011718-9.421875-7.644531-17.0546872-17.066406-17.066406h-290.132812c-9.421875.0078125-17.058594 7.644531-17.066406 17.066406v187.734375c.007812 9.421875 7.644531 17.054688 17.066406 17.066407h6.136718l-4.265624 17.066406h-36.003907v-110.933594c0-4.710938-3.820312-8.535156-8.535156-8.535156h-51.199219c-4.710937 0-8.53125 3.824218-8.53125 8.535156v117.589844c-5.414062 4.8125-8.5156248 11.703125-8.535156 18.945312v85.332032c.015625 14.132812 11.46875 25.582031 25.601562 25.597656h6.65625l-5.121093 25.601562h-18.601563c-4.714844 0-8.535156 3.820313-8.535156 8.535156 0 4.710938 3.820312 8.53125 8.535156 8.53125h494.929688c4.714844 0 8.535156-3.820312 8.535156-8.53125 0-4.714843-3.820312-8.535156-8.535156-8.535156h-18.601563l-5.121093-25.601562h6.65625c14.132812-.015625 25.585937-11.464844 25.601562-25.597656v-85.332032c-.019531-7.242187-3.121094-14.132812-8.535156-18.945312zm-17.066406-109.054688v21.8125c-10.496094-6.332031-23.632813-6.332031-34.132813 0v-21.8125zm0 51.199219c0 9.425781-7.640626 17.066406-17.066407 17.066406s-17.066406-7.640625-17.066406-17.066406 7.640625-17.066406 17.066406-17.066406c9.421875.007812 17.058594 7.644531 17.066407 17.066406zm-34.132813 29.386719c10.5 6.328125 23.636719 6.328125 34.132813 0v21.8125h-34.132813zm-70.660156 21.8125h-10.40625l-12.800781-17.066406h18.941406zm40.230469 136.53125 15.359374 25.601562h-362.390624l15.359374-25.601562zm-84.769532-153.597656 12.800782 17.066406h-187.734376l12.800782-17.066406zm-174.933594 136.53125v-42.664063h187.734376v42.664063zm187.734376-59.730469h-187.734376v-42.667969h187.734376zm-238.933594-281.601563h290.132812v187.734375h-290.132812zm23.730468 204.800782h18.9375l-12.800781 17.066406h-10.40625zm-74.929687-85.332032v21.8125c-10.496094-6.332031-23.636719-6.332031-34.132813 0v-21.8125zm0 51.199219c0 9.425781-7.640625 17.066406-17.066406 17.066406s-17.066407-7.640625-17.066407-17.066406 7.640626-17.066406 17.066407-17.066406c9.421875.007812 17.054687 7.644531 17.066406 17.066406zm-34.132813 29.382813c10.496094 6.332031 23.636719 6.332031 34.132813 0v21.816406h-34.132813zm-8.535156 132.75v-85.332032c.007813-4.710937 3.824219-8.527344 8.535156-8.535156h119.464844v102.398438h-119.464844c-4.710937-.003907-8.527343-3.820313-8.535156-8.53125zm27.476563 51.199218 5.121093-25.601562h20.597657l-15.359375 25.601562zm422.914062 0h-10.355469l-15.363281-25.601562h20.597657zm27.476563-51.199218c-.003906 4.710937-3.824219 8.527343-8.535156 8.53125h-119.464844v-102.398438h119.464844c4.710937.003906 8.53125 3.820312 8.535156 8.535156zm0 0"
+  }), HomeTheatreIcon_jsx("path", {
+    d: "m119.464844 298.667969h-8.53125c-4.714844 0-8.535156 3.820312-8.535156 8.53125 0 4.714843 3.820312 8.535156 8.535156 8.535156h8.53125c4.714844 0 8.535156-3.820313 8.535156-8.535156 0-4.710938-3.820312-8.53125-8.535156-8.53125zm0 0"
+  }), HomeTheatreIcon_jsx("path", {
+    d: "m401.066406 298.667969h-8.53125c-4.714844 0-8.535156 3.820312-8.535156 8.53125 0 4.714843 3.820312 8.535156 8.535156 8.535156h8.53125c4.714844 0 8.535156-3.820313 8.535156-8.535156 0-4.710938-3.820312-8.53125-8.535156-8.53125zm0 0"
+  }), HomeTheatreIcon_jsx("path", {
+    d: "m136.535156 85.332031c2.261719.003907 4.433594-.894531 6.03125-2.5l34.132813-34.132812c3.234375-3.347657 3.1875-8.671875-.101563-11.960938-3.292968-3.292969-8.617187-3.339843-11.964844-.105469l-34.132812 34.132813c-2.441406 2.441406-3.167969 6.113281-1.847656 9.300781 1.320312 3.1875 4.429687 5.265625 7.882812 5.265625zm0 0"
+  }), HomeTheatreIcon_jsx("path", {
+    d: "m207.300781 36.632812-76.800781 76.800782c-2.21875 2.140625-3.109375 5.316406-2.328125 8.296875.78125 2.984375 3.113281 5.316406 6.097656 6.097656 2.980469.78125 6.15625-.109375 8.296875-2.328125l76.800782-76.800781c3.234374-3.347657 3.1875-8.671875-.105469-11.960938-3.289063-3.292969-8.613281-3.339843-11.960938-.105469zm0 0"
+  }));
+};
+
+/* harmony default export */ var resource_HomeTheatreIcon = (HomeTheatreIcon);
+// CONCATENATED MODULE: ./src/components/servicesPage/HomeTheatreService.js
+
+var HomeTheatreService_jsx = react_default.a.createElement;
+
+
+
+function HomeTheatreService(props) {
+  const content = 'The latest Technology of home theatre experience is more than just a nice TV with surround sound. With a home theatre system of all exclusive brands, you can control your theatre lighting, sound, and Vision with the touch of a button. ';
+  return HomeTheatreService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Home Theatre",
+    image: "gallery/wardrobe.jpg",
+    icon: resource_HomeTheatreIcon
+  }, props, {
+    anchortag: "hometheatre"
+  }));
+}
+// CONCATENATED MODULE: ./src/resource/SmartHouseIcon.js
+
+
+var SmartHouseIcon_jsx = react_default.a.createElement;
+
+
+const SmartHouseIcon = props => {
+  return SmartHouseIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 0 512 512"
+  }), SmartHouseIcon_jsx("path", {
+    d: "m436 392c-19.554688 0-36.226562 12.542969-42.421875 30h-32.578125v-62h60v-90h-30v-135c0-74.4375-60.5625-135-135-135s-135 60.5625-135 135v135h-30v90h60v62h-32.578125c-6.195313-17.457031-22.867187-30-42.421875-30-24.8125 0-45 20.1875-45 45s20.1875 45 45 45c19.554688 0 36.226562-12.542969 42.421875-30h62.578125v-92h60v64.578125c-17.460938 6.195313-30 22.867187-30 42.421875 0 24.8125 20.1875 45 45 45s45-20.1875 45-45c0-19.554688-12.539062-36.226562-30-42.421875v-64.578125h60v92h62.578125c6.195313 17.457031 22.867187 30 42.421875 30 24.8125 0 45-20.1875 45-45s-20.1875-45-45-45zm-360 60c-8.269531 0-15-6.730469-15-15s6.730469-15 15-15 15 6.730469 15 15-6.730469 15-15 15zm180 30c-8.269531 0-15-6.730469-15-15s6.730469-15 15-15 15 6.730469 15 15-6.730469 15-15 15zm-105-347c0-57.898438 47.101562-105 105-105s105 47.101562 105 105v135h-90v-62.578125c4.695312 1.664063 9.742188 2.578125 15 2.578125h45v-90h-45c-11.515625 0-22.03125 4.355469-30 11.496094-7.96875-7.140625-18.484375-11.496094-30-11.496094h-45v90h45c5.257812 0 10.304688-.914062 15-2.578125v62.578125h-90zm120 30c0-8.269531 6.730469-15 15-15h15v30h-15c-8.269531 0-15-6.730469-15-15zm-30 0c0 8.269531-6.730469 15-15 15h-15v-30h15c8.269531 0 15 6.730469 15 15zm-120 135h270v30h-270zm315 152c-8.269531 0-15-6.730469-15-15s6.730469-15 15-15 15 6.730469 15 15-6.730469 15-15 15zm0 0"
+  }), SmartHouseIcon_jsx("path", {
+    d: "m0 120h60v30h-60zm0 0"
+  }), SmartHouseIcon_jsx("path", {
+    d: "m452 120h60v30h-60zm0 0"
+  }), SmartHouseIcon_jsx("path", {
+    d: "m72.9375 203.816406 12.675781 27.191406-54.375 25.355469-12.679687-27.191406zm0 0"
+  }), SmartHouseIcon_jsx("path", {
+    d: "m480.773438 13.628906 12.675781 27.191406-54.375 25.355469-12.679688-27.191406zm0 0"
+  }), SmartHouseIcon_jsx("path", {
+    d: "m31.230469 13.636719 54.378906 25.355469-12.679687 27.191406-54.375-25.355469zm0 0"
+  }), SmartHouseIcon_jsx("path", {
+    d: "m480.769531 256.371094-54.378906-25.355469 12.679687-27.1875 54.375 25.355469zm0 0"
+  }));
+};
+
+/* harmony default export */ var resource_SmartHouseIcon = (SmartHouseIcon);
+// CONCATENATED MODULE: ./src/components/servicesPage/NetworkService.js
+
+var NetworkService_jsx = react_default.a.createElement;
+
+
+
+function NetworkService(props) {
+  const content = 'There’s no need for separate applications to control the thermostat, the shades, the music, and the lighting. Replace them all with iNest full home automation system that manages and controls all these devices at once. Smart homes provide high levels of convenience, safety, and energy savings!';
+  return NetworkService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Smart Home",
+    image: "gallery/wardrobe.jpg",
+    icon: resource_SmartHouseIcon
+  }, props, {
+    anchortag: "smarthome"
+  }));
+}
+// CONCATENATED MODULE: ./src/resource/AudioSystemIcon.js
+
+
+var AudioSystemIcon_jsx = react_default.a.createElement;
+
+
+const AudioSystemIcon = props => {
+  return AudioSystemIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 -40 512 511"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m87.660156.5h-64.128906c-12.972656 0-23.53125 10.554688-23.53125 23.53125v384.773438c0 12.976562 10.558594 23.535156 23.53125 23.535156h64.128906c12.976563 0 23.53125-10.558594 23.53125-23.535156v-384.773438c0-12.976562-10.554687-23.53125-23.53125-23.53125zm8.53125 336.675781h-8.53125c-4.140625 0-7.5 3.359375-7.5 7.5 0 4.144531 3.359375 7.5 7.5 7.5h8.53125v56.628907c0 4.707031-3.828125 8.535156-8.53125 8.535156h-64.128906c-4.703125 0-8.53125-3.828125-8.53125-8.535156v-56.628907h40.597656c4.140625 0 7.5-3.355469 7.5-7.5 0-4.140625-3.359375-7.5-7.5-7.5h-40.597656v-313.144531c0-4.703125 3.828125-8.53125 8.53125-8.53125h64.128906c4.707032 0 8.53125 3.828125 8.53125 8.53125zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m55.597656 257.015625c-12.976562 0-23.53125 10.558594-23.53125 23.53125 0 12.976563 10.554688 23.53125 23.53125 23.53125 12.972656 0 23.53125-10.554687 23.53125-23.53125 0-12.972656-10.558594-23.53125-23.53125-23.53125zm0 32.0625c-4.707031 0-8.53125-3.824219-8.53125-8.53125 0-4.703125 3.828125-8.53125 8.53125-8.53125s8.53125 3.828125 8.53125 8.53125c0 4.707031-3.828125 8.53125-8.53125 8.53125zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m55.597656 176.855469c-12.976562 0-23.53125 10.554687-23.53125 23.53125 0 12.976562 10.554688 23.53125 23.53125 23.53125 12.976563 0 23.53125-10.554688 23.53125-23.53125 0-12.976563-10.558594-23.53125-23.53125-23.53125zm0 32.0625c-4.707031 0-8.53125-3.828125-8.53125-8.53125s3.828125-8.53125 8.53125-8.53125 8.53125 3.828125 8.53125 8.53125-3.828125 8.53125-8.53125 8.53125zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m55.597656 96.691406c-12.976562 0-23.53125 10.558594-23.53125 23.535156 0 12.972657 10.554688 23.53125 23.53125 23.53125 12.972656 0 23.53125-10.558593 23.53125-23.53125 0-12.976562-10.558594-23.535156-23.53125-23.535156zm0 32.066406c-4.707031 0-8.53125-3.828124-8.53125-8.53125 0-4.703124 3.828125-8.53125 8.53125-8.53125s8.53125 3.828126 8.53125 8.53125c0 4.703126-3.828125 8.53125-8.53125 8.53125zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m55.675781 63.597656c4.144531 0 7.5-3.359375 7.5-7.5 0-4.144531-3.355469-7.5-7.5-7.5h-.078125c-4.144531 0-7.460937 3.355469-7.460937 7.5 0 4.140625 3.398437 7.5 7.539062 7.5zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m488.46875.5h-64.128906c-12.976563 0-23.53125 10.558594-23.53125 23.53125v272.554688c0 4.140624 3.355468 7.5 7.5 7.5 4.140625 0 7.5-3.359376 7.5-7.5v-272.554688c0-4.703125 3.828125-8.53125 8.53125-8.53125h64.128906c4.703125 0 8.53125 3.828125 8.53125 8.53125v313.148438h-81.191406v-8.535157c0-4.144531-3.359375-7.5-7.5-7.5-4.144532 0-7.5 3.355469-7.5 7.5v80.164063c0 12.972656 10.554687 23.53125 23.53125 23.53125h64.128906c12.976562 0 23.53125-10.558594 23.53125-23.53125v-384.777344c0-12.976562-10.558594-23.53125-23.53125-23.53125zm8.53125 408.304688c0 4.707031-3.828125 8.535156-8.53125 8.535156h-64.128906c-4.707032 0-8.53125-3.828125-8.53125-8.535156v-56.628907h81.191406zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m360.210938 289.078125h-208.421876c-12.972656 0-23.53125 10.558594-23.53125 23.535156v96.191407c0 12.976562 10.558594 23.535156 23.53125 23.535156h208.421876c12.976562 0 23.53125-10.558594 23.53125-23.535156v-96.191407c0-12.976562-10.558594-23.535156-23.53125-23.535156zm8.53125 119.726563c0 4.707031-3.828126 8.535156-8.53125 8.535156h-208.421876c-4.703124 0-8.53125-3.828125-8.53125-8.535156v-96.191407c0-4.707031 3.828126-8.535156 8.53125-8.535156h208.421876c4.703124 0 8.53125 3.828125 8.53125 8.535156zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m456.402344 304.078125c12.976562 0 23.53125-10.554687 23.53125-23.53125 0-12.972656-10.554688-23.53125-23.53125-23.53125-12.972656 0-23.53125 10.558594-23.53125 23.53125 0 12.976563 10.558594 23.53125 23.53125 23.53125zm0-32.0625c4.707031 0 8.53125 3.828125 8.53125 8.53125 0 4.707031-3.828125 8.53125-8.53125 8.53125s-8.53125-3.824219-8.53125-8.53125c0-4.703125 3.828125-8.53125 8.53125-8.53125zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m456.402344 223.917969c12.976562 0 23.53125-10.554688 23.53125-23.53125 0-12.976563-10.554688-23.53125-23.53125-23.53125-12.972656 0-23.53125 10.554687-23.53125 23.53125 0 12.976562 10.558594 23.53125 23.53125 23.53125zm0-32.0625c4.707031 0 8.53125 3.828125 8.53125 8.53125s-3.828125 8.53125-8.53125 8.53125-8.53125-3.828125-8.53125-8.53125 3.828125-8.53125 8.53125-8.53125zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m432.871094 120.226562c0 12.976563 10.558594 23.53125 23.53125 23.53125 12.976562 0 23.53125-10.558593 23.53125-23.53125 0-12.976562-10.554688-23.53125-23.53125-23.53125-12.972656 0-23.53125 10.554688-23.53125 23.53125zm23.53125-8.535156c4.707031 0 8.53125 3.828125 8.53125 8.535156 0 4.703126-3.828125 8.53125-8.53125 8.53125s-8.53125-3.828124-8.53125-8.53125c0-4.707031 3.828125-8.535156 8.53125-8.535156zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m463.984375 56.097656c0-4.144531-3.359375-7.5-7.5-7.5h-.082031c-4.140625 0-7.460938 3.355469-7.460938 7.5 0 4.140625 3.398438 7.5 7.542969 7.5 4.140625 0 7.5-3.359375 7.5-7.5zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m256 321.144531c-21.816406 0-39.5625 17.75-39.5625 39.566407 0 21.816406 17.746094 39.5625 39.5625 39.5625s39.5625-17.75 39.5625-39.5625c0-21.816407-17.746094-39.566407-39.5625-39.566407zm0 64.128907c-13.546875 0-24.5625-11.019532-24.5625-24.5625 0-13.546876 11.019531-24.566407 24.5625-24.566407s24.5625 11.019531 24.5625 24.566407c0 13.542968-11.015625 24.5625-24.5625 24.5625zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m191.871094 353.210938h-16.03125c-4.144532 0-7.5 3.355468-7.5 7.5 0 4.140624 3.355468 7.5 7.5 7.5h16.03125c4.140625 0 7.5-3.359376 7.5-7.5 0-4.144532-3.359375-7.5-7.5-7.5zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m336.160156 353.210938h-16.03125c-4.140625 0-7.5 3.355468-7.5 7.5 0 4.140624 3.359375 7.5 7.5 7.5h16.03125c4.144532 0 7.5-3.359376 7.5-7.5 0-4.144532-3.355468-7.5-7.5-7.5zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m201.230469 167.609375c16.652343-10.359375 35.71875-15.835937 55.144531-15.835937s38.492188 5.476562 55.144531 15.835937c1.230469.765625 2.601563 1.132813 3.953125 1.132813 2.503906 0 4.957032-1.253907 6.375-3.539063 2.1875-3.515625 1.113282-8.140625-2.40625-10.332031-19.03125-11.839844-40.835937-18.097656-63.066406-18.097656s-44.039062 6.257812-63.066406 18.097656c-3.519532 2.1875-4.59375 6.8125-2.40625 10.332031 2.1875 3.515625 6.8125 4.59375 10.328125 2.40625zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m297.164062 196.203125c2.539063 0 5.019532-1.289063 6.429688-3.625 2.140625-3.546875 1-8.15625-2.546875-10.296875-13.546875-8.175781-28.992187-12.5-44.671875-12.5s-31.125 4.324219-44.671875 12.5c-3.546875 2.140625-4.6875 6.75-2.546875 10.296875s6.75 4.6875 10.296875 2.546875c11.207031-6.769531 23.976563-10.34375 36.921875-10.34375s25.710938 3.574219 36.917969 10.34375c1.214843.730469 2.550781 1.078125 3.871093 1.078125zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m278.796875 223.753906c2.628906 0 5.175781-1.382812 6.550781-3.835937 2.023438-3.613281.734375-8.183594-2.878906-10.207031-8.203125-4.59375-16.980469-6.921876-26.09375-6.921876s-17.890625 2.328126-26.09375 6.921876c-3.613281 2.023437-4.902344 6.59375-2.878906 10.207031 2.023437 3.613281 6.59375 4.902343 10.207031 2.878906 5.9375-3.324219 12.25-5.007813 18.765625-5.007813s12.828125 1.683594 18.765625 5.007813c1.160156.648437 2.417969.957031 3.65625.957031zm0 0"
+  }), AudioSystemIcon_jsx("path", {
+    d: "m263.5 248.480469c0 4.144531-3.359375 7.5-7.5 7.5s-7.5-3.355469-7.5-7.5c0-4.140625 3.359375-7.5 7.5-7.5s7.5 3.359375 7.5 7.5zm0 0"
+  }));
+};
+
+/* harmony default export */ var resource_AudioSystemIcon = (AudioSystemIcon);
+// CONCATENATED MODULE: ./src/components/servicesPage/SoundService.js
+
+var SoundService_jsx = react_default.a.createElement;
+
+
+
+function SoundService(props) {
+  const content = 'It’s time for you to stop dragging speakers all over your house! iNest sound system allows you to play music in any room from any source just via your home wifi. Play your favorite song when spending time in the kitchen, the family room, the shower, or in the backyard.';
+  return SoundService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Sound System",
+    image: "gallery/wardrobe.jpg",
+    icon: resource_AudioSystemIcon
+  }, props, {
+    anchortag: "sound"
+  }));
+}
+// CONCATENATED MODULE: ./src/resource/VacuumIcon.js
+
+
+var VacuumIcon_jsx = react_default.a.createElement;
+
+
+const VacuumIcon = props => {
+  return VacuumIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 -24 480.10137 480"
+  }), VacuumIcon_jsx("path", {
+    d: "m80.101562 256.050781c-26.511718 0-48 21.492188-48 48 0 26.507813 21.488282 48 48 48 26.507813 0 48-21.492187 48-48-.027343-26.5-21.5-47.972656-48-48zm0 80c-17.671874 0-32-14.328125-32-32s14.328126-32 32-32c17.671876 0 32 14.328125 32 32s-14.328124 32-32 32zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m472.101562 336.050781h-32.121093c-2.488281-185.992187-91.160157-335.9999998-199.878907-335.9999998h-144c-44.785156-.04687495-83.652343 30.8789068-93.667968 74.5273438-10.019532 43.652344 11.476562 88.429687 51.804687 107.914063l-12.882812 51.621093c-33.253907 18.402344-48.972657 57.664063-37.605469 93.933594 11.371094 36.265625 46.691406 59.527344 84.5 55.648437 37.8125-3.875 67.671875-33.824218 71.445312-71.644531h128.40625v9.136719c-15.601562 4.027344-25.777343 19.03125-23.746093 35.015625s15.632812 27.96875 31.746093 27.96875c16.113282 0 29.714844-11.984375 31.746094-27.96875 2.027344-15.984375-8.144531-30.988281-23.746094-35.015625v-9.136719h32c4.417969 0 8-3.582031 8-8 0-110.28125-68.183593-200-152-200h-112c-3.671874 0-6.871093 2.5-7.761718 6.0625l-5.910156 23.640625c-11.632813-9.039062-18.402344-22.972656-18.328126-37.703125.027344-26.5 21.5-47.972656 48-48h144c81.015626 0 149.601563 131.078125 151.894532 288h-31.894532c-4.417968 0-8 3.582031-8 8v32c0 4.417969 3.582032 8 8 8h112c4.417969 0 8-3.582031 8-8v-32c0-4.417969-3.582031-8-8-8zm-392 32c-35.347656 0-64-28.652343-64-64 0-35.347656 28.652344-64 64-64 35.347657 0 64 28.652344 64 64-.039062 35.328125-28.671874 63.960938-64 64zm232-16c.039063 7.773438-5.515624 14.453125-13.167968 15.828125s-15.1875-2.949218-17.859375-10.25c-2.667969-7.300781.292969-15.464844 7.027343-19.355468v13.777343c0 4.417969 3.582032 8 8 8 4.417969 0 8-3.582031 8-8v-13.777343c4.933594 2.835937 7.984376 8.085937 8 13.777343zm-160-232v48h-40v-48zm-65.753906 0h9.753906v56c0 4.417969 3.582032 8 8 8h56c4.417969 0 8-3.582031 8-8v-56h24c73.007813 0 132.800782 78.238281 135.871094 176h-168.277344c-2.257812-23.328125-14.671874-44.476562-33.9375-57.820312-19.269531-13.34375-43.433593-17.527344-66.0625-11.4375zm153.753906-88h-144c-28.566406-.019531-53.679687 18.910157-61.53125 46.375-7.851562 27.464844 3.464844 56.808594 27.722657 71.890625l-4.054688 16.261719c-32.359375-17.324219-48.777343-54.445313-39.824219-90.042969 8.953126-35.597656 40.980469-60.53125 77.6875-60.484375h144c100 0 181.550782 142.816407 183.945313 320h-16c-2.34375-165.601562-78.34375-304-167.945313-304zm224 336h-96v-16h96zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m176.101562 280.050781h88c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8h-88c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m296.101562 280.050781h16c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m376.101562 400.050781c0-4.417969-3.582031-8-8-8h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m344.101562 416.050781h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m424.101562 400.050781c0-4.417969-3.582031-8-8-8h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m392.101562 416.050781h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m440.101562 416.050781h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m472.101562 400.050781c0-4.417969-3.582031-8-8-8h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8zm0 0"
+  }), VacuumIcon_jsx("path", {
+    d: "m472.101562 416.050781h-8c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h8c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
+  }));
+};
+
+/* harmony default export */ var resource_VacuumIcon = (VacuumIcon);
+// CONCATENATED MODULE: ./src/components/servicesPage/VacuumService.js
+
+var VacuumService_jsx = react_default.a.createElement;
+
+
+
+function VacuumService(props) {
+  const content = 'The Central Vacuum system is designed to be more powerful than the traditional portable vacuum while it produces less noise and reduces the recirculation of dust and dirt into your home. A central vacuum system eliminates the hassle of storing and schlepping heavy equipment, it’s cleaner and quieter than a portable unit, and it just works better! ';
+  return VacuumService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Central Vacuum",
+    image: "gallery/wardrobe.jpg",
+    icon: resource_VacuumIcon
+  }, props, {
+    anchortag: "vacuum"
+  }));
+}
+// EXTERNAL MODULE: ./src/resource/ClimateIcon.js
+var ClimateIcon = __webpack_require__("Ymr7");
+
+// CONCATENATED MODULE: ./src/components/servicesPage/ClimateControlService.js
+
+var ClimateControlService_jsx = react_default.a.createElement;
+
+
+
+function ClimateControlService(props) {
+  const content = 'Control your home’s heating and/or air conditioning throughout a smart system using your laptop or phone. Integrate climate control with the rest of your home for intelligent temperature control, personalized just as you wish for, making your home more comfortable and more “green” at the same time.';
+  return ClimateControlService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Climate Control",
+    image: "gallery/wardrobe.jpg",
+    icon: ClimateIcon["a" /* default */]
+  }, props, {
+    anchortag: "climatecontrol"
+  }));
+}
+// CONCATENATED MODULE: ./src/resource/BlindsIcon.js
+
+
+var BlindsIcon_jsx = react_default.a.createElement;
+
+
+const BlindsIcon = props => {
+  return BlindsIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 0 512.00212 512"
+  }), BlindsIcon_jsx("path", {
+    d: "m477.867188 0h-443.734376c-18.851562 0-34.132812 15.285156-34.132812 34.132812 0 18.851563 15.28125 34.136719 34.132812 34.136719v418.132813c.015626 14.132812 11.46875 25.582031 25.601563 25.597656h375.464844c14.132812-.015625 25.585937-11.464844 25.601562-25.597656v-418.132813h17.066407v8.53125c0 4.714844 3.820312 8.535157 8.53125 8.535157 4.714843 0 8.535156-3.820313 8.535156-8.535157v-13.28125c13.378906-7.691406 19.902344-23.421875 15.898437-38.324219-4.003906-14.902343-17.535156-25.242187-32.964843-25.195312zm-460.800782 34.132812c0-9.425781 7.640625-17.066406 17.066406-17.066406 9.425782 0 17.066407 7.640625 17.066407 17.066406 0 9.425782-7.640625 17.070313-17.066407 17.070313-9.421874-.011719-17.058593-7.648437-17.066406-17.070313zm426.667969 452.269532c-.007813 4.710937-3.824219 8.527344-8.535156 8.53125h-375.464844c-4.710937-.003906-8.527344-3.820313-8.535156-8.53125v-418.132813h17.066406v110.933594c0 4.710937 3.820313 8.53125 8.535156 8.53125 4.710938 0 8.53125-3.820313 8.53125-8.53125v-110.933594h17.066407v68.265625c0 4.710938 3.820312 8.53125 8.535156 8.53125 4.710937 0 8.53125-3.820312 8.53125-8.53125v-68.265625h17.070312v34.132813c0 4.710937 3.820313 8.53125 8.53125 8.53125 4.714844 0 8.535156-3.820313 8.535156-8.53125v-34.132813h290.132813zm34.132813-435.199219h-414.347657c3.074219-5.167969 4.710938-11.058594 4.746094-17.070313-.035156-6.007812-1.671875-11.902343-4.746094-17.066406h414.347657c9.425781 0 17.066406 7.640625 17.066406 17.066406 0 9.425782-7.640625 17.070313-17.066406 17.070313zm0 0"
+  }), BlindsIcon_jsx("path", {
+    d: "m76.800781 460.800781c-4.714843 0-8.535156 3.820313-8.535156 8.535157 0 4.710937 3.820313 8.53125 8.535156 8.53125h341.332031c4.714844 0 8.535157-3.820313 8.535157-8.53125 0-4.714844-3.820313-8.535157-8.535157-8.535157zm0 0"
+  }), BlindsIcon_jsx("path", {
+    d: "m486.398438 153.601562c4.714843 0 8.535156-3.820312 8.535156-8.535156v-34.132812c0-4.710938-3.820313-8.53125-8.535156-8.53125-4.710938 0-8.53125 3.820312-8.53125 8.53125v34.132812c0 4.714844 3.820312 8.535156 8.53125 8.535156zm0 0"
+  }), BlindsIcon_jsx("path", {
+    d: "m477.867188 213.335938c0 4.710937 3.820312 8.53125 8.53125 8.53125 4.714843 0 8.535156-3.820313 8.535156-8.53125v-34.132813c0-4.714844-3.820313-8.535156-8.535156-8.535156-4.710938 0-8.53125 3.820312-8.53125 8.535156zm0 0"
+  }), BlindsIcon_jsx("path", {
+    d: "m477.867188 281.601562c0 4.710938 3.820312 8.53125 8.53125 8.53125 4.714843 0 8.535156-3.820312 8.535156-8.53125v-34.132812c0-4.714844-3.820313-8.535156-8.535156-8.535156-4.710938 0-8.53125 3.820312-8.53125 8.535156zm0 0"
+  }), BlindsIcon_jsx("path", {
+    d: "m477.867188 349.867188c0 4.714843 3.820312 8.535156 8.53125 8.535156 4.714843 0 8.535156-3.820313 8.535156-8.535156v-34.132813c0-4.710937-3.820313-8.53125-8.535156-8.53125-4.710938 0-8.53125 3.820313-8.53125 8.53125zm0 0"
+  }), BlindsIcon_jsx("path", {
+    d: "m477.867188 418.132812c0 4.714844 3.820312 8.535157 8.53125 8.535157 4.714843 0 8.535156-3.820313 8.535156-8.535157v-34.132812c0-4.710938-3.820313-8.53125-8.535156-8.53125-4.710938 0-8.53125 3.820312-8.53125 8.53125zm0 0"
+  }), BlindsIcon_jsx("path", {
+    d: "m76.800781 238.933594c4.710938 0 8.53125-3.820313 8.53125-8.53125v-17.066406c0-4.714844-3.820312-8.535157-8.53125-8.535157-4.714843 0-8.535156 3.820313-8.535156 8.535157v17.066406c0 4.710937 3.820313 8.53125 8.535156 8.53125zm0 0"
+  }));
+};
+
+/* harmony default export */ var resource_BlindsIcon = (BlindsIcon);
+// CONCATENATED MODULE: ./src/components/servicesPage/SmartBlindsService.js
+
+var SmartBlindsService_jsx = react_default.a.createElement;
+
+
+
+function SmartBlindsService(props) {
+  const content = 'Automated Binds provide ideal convenience and comfort for residential homes and offices. Smart blinds are ideal for protecting furniture, floors, carpeting, and artwork from the damaging effects of direct sunlight. They also make it easier to access skylights and other hard-to-reach windows above counters, sinks, and bathtubs. ';
+  return SmartBlindsService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Smart Blinds",
+    image: "gallery/wardrobe.jpg",
+    icon: resource_BlindsIcon
+  }, props, {
+    anchortag: "blinds"
+  }));
+}
+// EXTERNAL MODULE: ./src/resource/SecurityIcon.js
+var SecurityIcon = __webpack_require__("YnJ+");
+
+// CONCATENATED MODULE: ./src/components/servicesPage/SecurityCameraService.js
+
+var SecurityCameraService_jsx = react_default.a.createElement;
+
+
+
+function SecurityCameraService(props) {
+  const content = 'Check-in on things at home from wherever you are and secure your family and property with iNest Security Camera systems. Integrate your security system with your home automation system to enjoy the extra level of security and convenience. Choose between a variety of cameras, including but not limited to Dome Cameras, Bullet Cameras, CCTV Cameras, and C-Mount Cameras.';
+  return SecurityCameraService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
+    content: content,
+    title: "Security System",
+    image: "gallery/wardrobe.jpg",
+    icon: SecurityIcon["a" /* default */]
+  }, props, {
+    anchortag: "security"
+  }));
+}
+// EXTERNAL MODULE: ./src/components/servicesPage/GetQuote.js
+var GetQuote = __webpack_require__("pTcK");
+
+// CONCATENATED MODULE: ./src/pages/services.js
+var services_jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const services_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  box1bg: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.90)), url(${'gallery/home.jpg'})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  },
+  selectiveServices: {
+    background: '#FFFFFF',
+    position: 'relative',
+    zIndex: '3'
+  },
+  selectiveServicesRaised: {
+    margin: '-80px 30px 80px ',
+    borderRadius: '6px',
+    boxShadow: '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
+  }
+}));
+function Services() {
+  const classes = services_useStyles();
+  const selectiveServiceStyles = clsx_default()(classes.selectiveServices, classes.selectiveServicesRaised);
+  const servicesListRaw = [ServicesOverview, LightingService, ElectricalService, HomeTheatreService, NetworkService, SecurityCameraService, SoundService, VacuumService, SmartBlindsService, ClimateControlService];
+  const end = servicesListRaw.length - 1;
+  const servicesList = servicesListRaw.map((Component, index) => services_jsx(react_default.a.Fragment, {
+    key: `service-fgmt-${index}`
+  }, index % 2 ? services_jsx(Component, {
+    key: `sv-component-${index}`
+  }) : services_jsx(Component, {
+    reverse: true,
+    key: `component-${index}`
+  }), end !== index ? services_jsx(core["Divider"], {
+    key: `component-div-${index}`
+  }) : null));
+  return services_jsx(react_default.a.Fragment, null, services_jsx("div", {
+    className: classes.box1bg
+  }, services_jsx(ServicesTop, null)), services_jsx("div", {
+    className: selectiveServiceStyles
+  }, services_jsx(ServicesContainer, null, servicesList)), services_jsx(GetQuote["a" /* default */], null), services_jsx(Bottombar["a" /* default */], null));
+}
+// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fservices&absolutePagePath=private-next-pages%2Fservices.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=private-next-pages%2F_document.js&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=wPOmYtM46OyETaAhXnN7m&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    const next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_Component = Services
+    /* harmony default export */ var next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_Component);
+    const unstable_getStaticProps = services_namespaceObject['unstable_getStaticProp' + 's']
+
+    const unstable_getStaticPaths = undefined
+    const config = services_namespaceObject['confi' + 'g'] || {}
+    const next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
+    async function renderReqToHTML(req, res, fromExport) {
+      const options = {
+        App: _app["a" /* default */],
+        Document: _document["a" /* default */],
+        buildManifest: build_manifest,
+        unstable_getStaticProps,
+        unstable_getStaticPaths,
+        reactLoadableManifest: react_loadable_manifest,
+        canonicalBase: "",
+        buildId: "wPOmYtM46OyETaAhXnN7m",
+        assetPrefix: "",
+        ampBindInitData: false,
+      }
+      let sprData = false
+
+      if (req.url.match(/_next\/data/)) {
+        sprData = true
+        req.url = req.url
+          .replace(new RegExp('/_next/data/wPOmYtM46OyETaAhXnN7m/'), '/')
+          .replace(/\.json$/, '')
+      }
+      const parsedUrl = Object(external_url_["parse"])(req.url, true)
+      const renderOpts = Object.assign(
+        {
+          Component: next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_Component,
+          pageConfig: config,
+          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
+          nextExport: fromExport
+        },
+        options,
+      )
+      try {
+        
+        const params = {};
+        const nowParams = null;
+        let result = await Object(render["renderToHTML"])(req, res, "/services", Object.assign({}, unstable_getStaticProps ? {} : parsedUrl.query, nowParams ? nowParams : params), renderOpts)
+
+        if (sprData && !fromExport) {
+          const payload = JSON.stringify(renderOpts.sprData)
+          res.setHeader('Content-Type', 'application/json')
+          res.setHeader('Content-Length', Buffer.byteLength(payload))
+          res.setHeader(
+            'Cache-Control',
+            `s-maxage=${renderOpts.revalidate}, stale-while-revalidate`
+          )
+          res.end(payload)
+          return null
+        }
+
+        if (fromExport) return { html: result, renderOpts }
+        return result
+      } catch (err) {
+        if (err.code === 'ENOENT') {
+          res.statusCode = 404
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            unstable_getStaticProps: undefined,
+            unstable_getStaticPaths: undefined,
+            Component: _error["default"]
+          }))
+          return result
+        } else {
+          console.error(err)
+          res.statusCode = 500
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            unstable_getStaticProps: undefined,
+            unstable_getStaticPaths: undefined,
+            Component: _error["default"],
+            err
+          }))
+          return result
+        }
+      }
+    }
+    async function next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
+      try {
+        await Object(next_plugin_loadermiddleware_on_init_server["default"])()
+        const html = await renderReqToHTML(req, res)
+        if (html) {
+          Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
+        }
+      } catch(err) {
+        await Object(next_plugin_loadermiddleware_on_error_server["default"])(err)
+        console.error(err)
+        res.statusCode = 500
+        res.end('Internal Server Error')
+      }
+    }
+  
+
+/***/ }),
+
 /***/ "LIKF":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -21207,7 +22299,7 @@ var grey = {
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-83d34a21c3767666fd96.js\"],\"/_app\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-83d34a21c3767666fd96.js\"],\"/_error\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/runtime/main-83d34a21c3767666fd96.js\"],\"/_polyfills\":[\"static/runtime/polyfills-5c6befe99fce5c988bcc.js\"],\"/about\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-83d34a21c3767666fd96.js\"],\"/contact\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-83d34a21c3767666fd96.js\"],\"/gallery\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/runtime/main-83d34a21c3767666fd96.js\"],\"/index\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-83d34a21c3767666fd96.js\"],\"/services\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-83d34a21c3767666fd96.js\"]}}");
+module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_app\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_error\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_polyfills\":[\"static/runtime/polyfills-2889d9d9fcf08314dd3a.js\"],\"/about\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/contact\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/gallery\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/index\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/services\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"]}}");
 
 /***/ }),
 
@@ -37429,1098 +38521,6 @@ exports.NEXT_PROJECT_ROOT_DIST_SERVER=NEXT_PROJECT_ROOT_DIST_SERVER;const API_RO
 // we have to use a private alias
 exports.API_ROUTE=API_ROUTE;const PAGES_DIR_ALIAS='private-next-pages';exports.PAGES_DIR_ALIAS=PAGES_DIR_ALIAS;const DOT_NEXT_ALIAS='private-dot-next';exports.DOT_NEXT_ALIAS=DOT_NEXT_ALIAS;const PUBLIC_DIR_MIDDLEWARE_CONFLICT=`You can not have a '_next' folder inside of your public folder. This conflicts with the internal '/_next' route. https://err.sh/zeit/next.js/public-next-folder-conflict`;exports.PUBLIC_DIR_MIDDLEWARE_CONFLICT=PUBLIC_DIR_MIDDLEWARE_CONFLICT;const SPR_GET_INITIAL_PROPS_CONFLICT=`You can not use getInitialProps with unstable_getStaticProps. To use SPR, please remove your getInitialProps`;exports.SPR_GET_INITIAL_PROPS_CONFLICT=SPR_GET_INITIAL_PROPS_CONFLICT;
 /* WEBPACK VAR INJECTION */}.call(this, "/"))
-
-/***/ }),
-
-/***/ "dr9j":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var services_namespaceObject = {};
-__webpack_require__.r(services_namespaceObject);
-__webpack_require__.d(services_namespaceObject, "default", function() { return Services; });
-
-// EXTERNAL MODULE: external "url"
-var external_url_ = __webpack_require__("bzos");
-
-// EXTERNAL MODULE: external "querystring"
-var external_querystring_ = __webpack_require__("8xkj");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
-var render = __webpack_require__("/bjS");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
-var send_html = __webpack_require__("LuNM");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-init-server
-var next_plugin_loadermiddleware_on_init_server = __webpack_require__("GX0O");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server
-var next_plugin_loadermiddleware_on_error_server = __webpack_require__("KqAr");
-
-// EXTERNAL MODULE: ./.next/build-manifest.json
-var build_manifest = __webpack_require__("LZ9C");
-
-// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
-var react_loadable_manifest = __webpack_require__("67Bq");
-
-// EXTERNAL MODULE: ./src/pages/_document.js
-var _document = __webpack_require__("senJ");
-
-// EXTERNAL MODULE: ./src/pages/_error.js
-var _error = __webpack_require__("URMD");
-
-// EXTERNAL MODULE: ./src/pages/_app.js + 2 modules
-var _app = __webpack_require__("IlR1");
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("q1tI");
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.js
-var clsx = __webpack_require__("4k7N");
-var clsx_default = /*#__PURE__*/__webpack_require__.n(clsx);
-
-// EXTERNAL MODULE: ./src/components/common/Bottombar.js + 7 modules
-var Bottombar = __webpack_require__("icW0");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
-var makeStyles = __webpack_require__("R/WZ");
-
-// EXTERNAL MODULE: ./src/components/homePage/PartnersSlideShow.js + 1 modules
-var PartnersSlideShow = __webpack_require__("IGik");
-
-// EXTERNAL MODULE: ./src/components/homePage/SelectiveServices.js + 1 modules
-var SelectiveServices = __webpack_require__("La9E");
-
-// EXTERNAL MODULE: ./src/components/homePage/StepByStepGuide.js + 1 modules
-var StepByStepGuide = __webpack_require__("CeZO");
-
-// EXTERNAL MODULE: ./src/components/homePage/Benefits.js + 1 modules
-var Benefits = __webpack_require__("EWUY");
-
-// EXTERNAL MODULE: ./src/components/homePage/ServicesTour.js
-var ServicesTour = __webpack_require__("Im8p");
-
-// EXTERNAL MODULE: ./src/components/common/Topbar.js + 5 modules
-var Topbar = __webpack_require__("sHXR");
-
-// EXTERNAL MODULE: ./src/components/common/Contactbar.js + 1 modules
-var Contactbar = __webpack_require__("ev8R");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/index.js
-var core = __webpack_require__("m178");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
-var Container = __webpack_require__("Ji2X");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
-var Typography = __webpack_require__("ofer");
-
-// CONCATENATED MODULE: ./src/components/servicesPage/ServicesIntroTitle.js
-var __jsx = react_default.a.createElement;
-
-
-
-
-
-const useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  box: {
-    // marginTop: 200,
-    height: '100%'
-  },
-  text_intro: {
-    color: 'white'
-  },
-  paper: {
-    background: 'transparent'
-  },
-  semiTransparentPaper: {
-    background: `rgba(255,255,255,0.2)`,
-    borderRadius: 7
-  },
-  text: {
-    color: 'white !important'
-  },
-  condMargin: {
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: 84
-    }
-  }
-}));
-function ServicesIntro() {
-  const classes = useStyles();
-  return __jsx(Container["a" /* default */], {
-    maxWidth: "lg"
-  }, __jsx(core["Grid"], {
-    container: true,
-    direction: "row",
-    spacing: 10,
-    className: classes.box
-  }, __jsx(core["Grid"], {
-    item: true,
-    sm: 12,
-    md: 7
-  }, __jsx(core["Paper"], {
-    className: classes.paper,
-    elevation: 0
-  }, __jsx(Typography["a" /* default */], {
-    variant: "h3",
-    component: "h1",
-    gutterBottom: true,
-    className: classes.text_intro,
-    id: "unselectable-text"
-  }, "Excellent service, Great experience and Maximum Security"), __jsx(Typography["a" /* default */], {
-    className: classes.text_intro,
-    id: "unselectable-text"
-  }, "Enhance security, save energy, and promote comfort with iNest home automation."))), __jsx(core["Grid"], {
-    item: true,
-    sm: 12,
-    md: 5
-  })));
-}
-// CONCATENATED MODULE: ./src/components/servicesPage/ServicesTop.js
-var ServicesTop_jsx = react_default.a.createElement;
-
-
-
-
-
-
-const ServicesTop_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  minHeightTop: {
-    [theme.breakpoints.down('sm')]: {
-      minHeight: 600
-    },
-    [theme.breakpoints.down('md')]: {
-      minHeight: 600
-    },
-    [theme.breakpoints.up('md')]: {
-      minHeight: 600
-    }
-  },
-  box1bg: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center bottom'
-  },
-  homeIntro: {
-    marginBottom: 80,
-    marginTop: 50,
-    [theme.breakpoints.up('sm')]: {
-      minHeight: '40vh'
-    }
-  }
-}));
-function ServicesTop() {
-  const classes = ServicesTop_useStyles();
-  return ServicesTop_jsx("div", null, ServicesTop_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    className: classes.minHeightTop
-  }, ServicesTop_jsx(core["Grid"], {
-    item: true
-  }, ServicesTop_jsx(Contactbar["a" /* default */], null)), ServicesTop_jsx(core["Grid"], {
-    item: true
-  }, ServicesTop_jsx(Topbar["a" /* default */], null)), ServicesTop_jsx(core["Grid"], {
-    item: true
-  }, ServicesTop_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    alignItems: "stretch",
-    className: classes.homeIntro
-  }, ServicesTop_jsx(core["Grid"], {
-    item: true
-  }, ServicesTop_jsx(ServicesIntro, null))))));
-}
-// CONCATENATED MODULE: ./src/components/servicesPage/ServicesContainer.js
-var ServicesContainer_jsx = react_default.a.createElement;
-
-
-
-const ServicesContainer_useStyles = Object(makeStyles["a" /* default */])(() => ({
-  root: {
-    height: '100%',
-    width: '100%'
-  }
-}));
-function ServicesContainer(props) {
-  const classes = ServicesContainer_useStyles();
-  return ServicesContainer_jsx(core["Paper"], {
-    elevation: 4,
-    className: classes.root
-  }, props.children);
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js
-var esm_extends = __webpack_require__("kOwS");
-
-// CONCATENATED MODULE: ./src/resource/GuaranteeIcon.js
-
-
-var GuaranteeIcon_jsx = react_default.a.createElement;
-
-
-const GuaranteeIcon = props => {
-  return GuaranteeIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 0 512 512"
-  }), GuaranteeIcon_jsx("g", null, GuaranteeIcon_jsx("path", {
-    d: "m484.574 181.429c-6.756-20.92-3.876-52.323-21.436-76.57-17.698-24.438-48.479-31.384-65.86-44.096-17.198-12.578-33.198-39.949-62.127-49.389-28.113-9.174-56.861 3.275-79.151 3.275-22.287 0-51.033-12.452-79.151-3.276-28.924 9.438-44.937 36.815-62.124 49.387-17.362 12.697-48.166 19.662-65.861 44.096-17.545 24.227-14.694 55.702-21.438 76.572-6.418 19.863-27.426 43.702-27.426 74.574 0 30.891 20.984 54.638 27.426 74.573 6.756 20.92 3.876 52.323 21.436 76.57 17.697 24.439 48.477 31.384 65.86 44.097 17.195 12.576 33.198 39.949 62.127 49.388 28.094 9.168 56.887-3.275 79.151-3.275 22.233 0 51.093 12.43 79.151 3.276 28.925-9.438 44.928-36.809 62.124-49.387 17.362-12.697 48.166-19.662 65.861-44.096 17.546-24.228 14.693-55.7 21.438-76.572 6.418-19.864 27.426-43.703 27.426-74.574 0-30.889-20.979-54.629-27.426-74.573zm-38.061 136.847c-7.875 24.375-5.812 51.654-15.772 65.408-10.094 13.937-36.613 20.303-57.076 35.271-20.239 14.801-34.424 38.264-50.922 43.647-15.608 5.094-41.044-5.249-66.742-5.249-25.886 0-51.06 10.365-66.743 5.249-16.496-5.383-30.661-28.83-50.922-43.648-20.342-14.877-47.012-21.374-57.077-35.272-9.928-13.708-7.943-41.176-15.77-65.405-7.672-23.739-25.489-44.294-25.489-62.275 0-17.999 17.801-38.483 25.487-62.274 7.875-24.374 5.812-51.655 15.772-65.408 10.088-13.928 36.627-20.315 57.077-35.271 20.303-14.849 34.399-38.256 50.92-43.647 15.595-5.088 41.114 5.249 66.743 5.249 25.933 0 51.044-10.372 66.743-5.249 16.494 5.382 30.671 28.838 50.923 43.648 20.339 14.877 47.011 21.374 57.076 35.271 9.93 13.711 7.934 41.151 15.77 65.405v.001c7.672 23.739 25.489 44.294 25.489 62.275 0 17.999-17.801 38.483-25.487 62.274zm-98.37-126.469c7.811 7.811 7.811 20.474 0 28.284l-100.106 100.106c-7.811 7.811-20.475 7.81-28.285 0l-55.894-55.894c-7.811-7.811-7.812-20.474-.001-28.284s20.476-7.811 28.284 0l41.753 41.752 85.963-85.963c7.811-7.811 20.475-7.811 28.286-.001z"
-  })));
-};
-
-/* harmony default export */ var resource_GuaranteeIcon = (GuaranteeIcon);
-// CONCATENATED MODULE: ./src/resource/MaintenanceIcon.js
-
-
-var MaintenanceIcon_jsx = react_default.a.createElement;
-
-
-const MaintenanceIcon = props => {
-  return MaintenanceIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 0 64 64"
-  }), MaintenanceIcon_jsx("g", {
-    id: "Maintenance_tools",
-    "data-name": "Maintenance tools"
-  }, MaintenanceIcon_jsx("path", {
-    d: "M53.476,26.405A2.993,2.993,0,0,0,52.9,23a3.073,3.073,0,0,0-4.242,0l-.706.707-1-1,1.6-1.6a3.111,3.111,0,0,1,2.717-.814,9.074,9.074,0,0,0,7.706-2.538A8.974,8.974,0,0,0,60.9,7.879a1,1,0,0,0-1.628-.318L54.4,12.429l-2.356-.471L51.571,9.6l4.868-4.869A1,1,0,0,0,56.121,3.1a9,9,0,0,0-12.415,9.634,3.123,3.123,0,0,1-.815,2.714l-1.6,1.6-6.662-6.663L33.283,7.7a1,1,0,0,0-.408-.427L26.516,3.746a1,1,0,0,0-1.193.167l-1.41,1.41a1,1,0,0,0-.167,1.192l3.53,6.36a1,1,0,0,0,.426.409l2.686,1.347,6.661,6.662-1.6,1.6a3.111,3.111,0,0,1-2.717.814A9.006,9.006,0,0,0,23.1,36.121a1,1,0,0,0,1.628.318l4.87-4.868,2.356.471.471,2.357-4.868,4.869a1,1,0,0,0,.318,1.628,9,9,0,0,0,12.415-9.634,3.123,3.123,0,0,1,.815-2.714l1.6-1.6,1,1L43,28.657a2.992,2.992,0,0,0,3.407,4.821l5.906,5.907a5,5,0,1,0,7.072-7.071ZM31.687,13.1a.99.99,0,0,0-.258-.187l-2.554-1.281L25.86,6.2,26.2,5.86l5.431,3.015,1.281,2.553a.972.972,0,0,0,.187.259l6.776,6.777-1.416,1.415ZM39.7,27.133a5.1,5.1,0,0,0-1.379,4.426,7.005,7.005,0,0,1-8.16,7.941l4.066-4.065a1,1,0,0,0,.273-.9L33.788,31A1,1,0,0,0,33,30.212l-3.535-.707a1,1,0,0,0-.9.273L24.5,33.843a7.006,7.006,0,0,1,7.938-8.16,5.167,5.167,0,0,0,4.428-1.378l7.439-7.438a5.1,5.1,0,0,0,1.379-4.426A7.005,7.005,0,0,1,53.844,4.5L49.778,8.565a1,1,0,0,0-.273.9L50.212,13a1,1,0,0,0,.784.784l3.535.707a1,1,0,0,0,.9-.273L59.5,10.157a7.006,7.006,0,0,1-7.938,8.16A5.164,5.164,0,0,0,47.134,19.7Zm5.842-3.012,1,1L45.12,26.536l-1-1Zm-1.123,7.364a1,1,0,0,1,0-1.414l5.657-5.657a1,1,0,1,1,1.414,1.415l-5.658,5.657A1.023,1.023,0,0,1,44.414,31.485Zm13.557,6.486a3.005,3.005,0,0,1-4.243,0l-5.779-5.779,4.243-4.242,5.779,5.778a3,3,0,0,1,0,4.243Z"
-  }), MaintenanceIcon_jsx("path", {
-    d: "M61.148,44.9a3.995,3.995,0,0,0-5.458-1.469l-9.751,5.629a3.964,3.964,0,0,0-2.259-1.629l-14.92-4a7,7,0,0,0-3.51-.03L20,44.719V43a1,1,0,0,0-1-1H11a1,1,0,0,0-1,1v1H3a1,1,0,0,0-1,1V59a1,1,0,0,0,1,1h7v1a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V59.618l1.286.643a7.027,7.027,0,0,0,3.13.739H39.393a7.011,7.011,0,0,0,3.5-.938l16.8-9.7A4.011,4.011,0,0,0,61.148,44.9ZM4,58V46h6V58Zm14,2H12V44h6ZM58.69,48.634l-16.8,9.7a5,5,0,0,1-2.5.67H24.416a5.027,5.027,0,0,1-2.235-.528L20,57.382v-10.6l5.734-1.434a5.025,5.025,0,0,1,2.508.021l14.92,4a2,2,0,1,1-1.035,3.863L30.2,50.034a1,1,0,0,0-.517,1.932l11.925,3.2a4.043,4.043,0,0,0,1.042.138,3.952,3.952,0,0,0,3.965-4.317l10.072-5.815a2.035,2.035,0,0,1,2.726.732A2.008,2.008,0,0,1,58.69,48.634Z"
-  })));
-};
-
-/* harmony default export */ var resource_MaintenanceIcon = (MaintenanceIcon);
-// CONCATENATED MODULE: ./src/resource/CertifiedIcon.js
-
-
-var CertifiedIcon_jsx = react_default.a.createElement;
-
-
-const CertifiedIcon = props => {
-  return CertifiedIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 -24 494.00008 494"
-  }), CertifiedIcon_jsx("path", {
-    d: "m441.90625 0h-319.4375c-27.722656 0-50.277344 22.34375-50.277344 49.71875l-2.058594 281.28125h-62.339843c-4.417969 0-7.792969 3.90625-7.792969 8.324219v38.710937c0 36.238282 29 65.875 64 67.5v.464844h269v-.523438c2 .082032 3.210938.523438 4.585938.523438h.191406c37.328125-.21875 67.417968-30.644531 67.222656-67.972656v-246.027344h81.207031c4.417969 0 7.792969-4 7.792969-8.414062v-71.027344c.050781-28.867188-23.226562-52.351563-52.09375-52.558594zm-374.40625 430h-.054688c-28.457031 0-51.445312-23.519531-51.445312-51.972656v-31.027344h254v30.894531c-.0625 18.007813 7.050781 35.296875 19.765625 48.046875 1.351563 1.359375 2.765625 2.058594 4.210937 4.058594zm321.5-51.980469c0 28.460938-22.765625 51.980469-51.234375 51.980469h-.164063c-28.609374-.207031-51.667968-23.492188-51.601562-52.101562v-38.574219c.023438-4.480469-3.519531-8.167969-8-8.324219h-191.867188l2.058594-281.226562c0-18.605469 15.375-33.773438 34.277344-33.773438h281.667969c-9.117188 10-15.136719 22.652344-15.136719 36.773438zm89-325.320312v63.300781h-73v-63.242188c0-20.023437 16.65625-36.757812 36.671875-36.757812h.222656c20.066407.199219 36.199219 16.570312 36.105469 36.640625zm0 0"
-  }), CertifiedIcon_jsx("path", {
-    d: "m187.855469 196.914062 41.246093 28.199219c2.691407 1.855469 6.25 1.855469 8.941407 0l41.121093-28.191406c14.285157-9.746094 24.835938-30.121094 24.835938-47.398437v-57.054688c.085938-3.015625-1.578125-5.8125-4.265625-7.183594l-62.800781-30.890625c-2.203125-1.09375-4.789063-1.09375-6.992188 0l-62.683594 30.804688c-2.6875 1.371093-4.347656 4.167969-4.257812 7.183593v57.140626c0 17.277343 10.574219 37.652343 24.855469 47.390624zm-8.855469-99.539062 54.5-26.890625 54.5 26.964844v52.074219c0 12.050781-7.898438 27.378906-17.863281 34.171874l-36.730469 25.121094-36.585938-25.117187c-9.964843-6.800781-17.820312-22.125-17.820312-34.175781zm0 0"
-  }), CertifiedIcon_jsx("path", {
-    d: "m219.96875 161.601562c1.492188 1.523438 3.53125 2.386719 5.664062 2.398438h.019532c2.125-.007812 4.160156-.859375 5.65625-2.367188l31.824218-31.835937c3.128907-3.125 3.128907-8.195313.003907-11.320313-3.121094-3.128906-8.191407-3.128906-11.316407-.003906l-26.140624 26.136719-10.449219-10.550781c-3.113281-3.140625-8.179688-3.164063-11.320313-.050782-3.140625 3.113282-3.160156 8.179688-.050781 11.320313zm0 0"
-  }), CertifiedIcon_jsx("path", {
-    d: "m333 248h-192c-4.417969 0-8 3.582031-8 8s3.582031 8 8 8h192c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
-  }), CertifiedIcon_jsx("path", {
-    d: "m333 285h-192c-4.417969 0-8 3.582031-8 8s3.582031 8 8 8h192c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
-  }));
-};
-
-/* harmony default export */ var resource_CertifiedIcon = (CertifiedIcon);
-// CONCATENATED MODULE: ./src/components/servicesPage/ServicesOverview.js
-var ServicesOverview_jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-
-const ServicesOverview_useStyles = Object(makeStyles["a" /* default */])(() => ({
-  text_intro: {
-    textAlign: 'center'
-  },
-  icon: {
-    color: '#76c53a',
-    fontSize: 64
-  },
-  container: {
-    marginBottom: 48
-  },
-  checkmark: {// marginLeft: -15,
-    // marginBottom: 40
-  }
-}));
-function ServicesOverview() {
-  const classes = ServicesOverview_useStyles();
-  return ServicesOverview_jsx(Container["a" /* default */], {
-    maxWidth: "lg",
-    id: "overview-parent"
-  }, ServicesOverview_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    alignItems: "stretch",
-    spacing: 10,
-    className: classes.container
-  }, ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(Typography["a" /* default */], {
-    variant: "h3",
-    className: classes.text_intro
-  }, "iNest Services")), ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(Typography["a" /* default */], {
-    variant: "body1",
-    className: classes.text_intro
-  }, "We are experts in commercial and residential integrated technology and bring years of high-end automation experience into each project. iNest services include home theatre, security system, climate control, audio/video, lighting control, smart home, automated shading, and a variety of electrical services. We\u2019re passionate about creating exceptional systems for our clients, and our primary focus is your satisfaction.")), ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(core["Grid"], {
-    container: true,
-    direction: "row",
-    justify: "space-around",
-    alignItems: "center",
-    spacing: 2
-  }, ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    alignItems: "center",
-    spacing: 1
-  }, ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(resource_GuaranteeIcon, {
-    id: "hover-child-1",
-    className: classes.icon
-  })), ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(Typography["a" /* default */], {
-    id: "hover-child-1",
-    variant: "caption"
-  }, "Maximum of 1-Year Guarantee")))), ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    alignItems: "center"
-  }, ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(resource_MaintenanceIcon, {
-    id: "hover-child-2",
-    className: classes.icon
-  })), ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(Typography["a" /* default */], {
-    id: "hover-child-2",
-    variant: "caption"
-  }, "System Maintenance Support")))), ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    alignItems: "center"
-  }, ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(resource_CertifiedIcon, {
-    id: "hover-child-3",
-    className: classes.icon
-  })), ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(core["Grid"], {
-    container: true,
-    direction: "row"
-  }, ServicesOverview_jsx(core["Grid"], {
-    item: true
-  }, ServicesOverview_jsx(Typography["a" /* default */], {
-    id: "hover-child-3",
-    variant: "caption"
-  }, "Control4 Authorized Dealer"))))))))));
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js
-var is_array = __webpack_require__("p0XB");
-var is_array_default = /*#__PURE__*/__webpack_require__.n(is_array);
-
-// EXTERNAL MODULE: ./src/components/servicesPage/ServicePresentation.scss
-var ServicePresentation = __webpack_require__("4MIL");
-
-// CONCATENATED MODULE: ./src/components/servicesPage/ServicePresentation.js
-
-var ServicePresentation_jsx = react_default.a.createElement;
-
-
-
-
-const ServicePresentation_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  root: {},
-  row: {
-    width: '100%',
-    height: '100%',
-    minHeight: '40vh'
-  },
-  // box1bg: {
-  //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
-  //   backgroundSize: 'cover',
-  //   backgroundPosition: 'center bottom',
-  // },
-  condHide: {// [theme.breakpoints.down('xs')]: {
-    //   display: 'none',
-    // },
-  },
-  img: {
-    backgroundImage: props => `linear-gradient(rgba(255,255,255, 0.25), rgba(255, 255, 255, 0.25)), url(${props.image})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  },
-  content: {
-    height: '100%',
-    [theme.breakpoints.up('md')]: {
-      marginLeft: props => props.reverse ? '10%' : 'inherit'
-    }
-  },
-  icon: {
-    [theme.breakpoints.down('sm')]: {
-      marginTop: 32
-    }
-  },
-  title: {
-    fontWeight: 'bold',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 16
-    },
-    [theme.breakpoints.down('md')]: {
-      fontSize: 20
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: 28
-    }
-  }
-}));
-function ServicePresentation_ServicesTop(props) {
-  const classes = ServicePresentation_useStyles(props);
-
-  const handleArry = arr => {
-    const res = arr.map((item, index) => {
-      if (index == 0) {
-        return ServicePresentation_jsx(core["Typography"], {
-          variant: "body1",
-          key: `text-item ${index}`
-        }, item);
-      } else {
-        return ServicePresentation_jsx("li", {
-          key: `tex-item ${index}`
-        }, ServicePresentation_jsx(core["Typography"], {
-          variant: "body1"
-        }, item));
-      }
-    });
-    return ServicePresentation_jsx(core["Grid"], {
-      container: true,
-      direction: "column"
-    }, ServicePresentation_jsx(core["Grid"], {
-      item: true
-    }, " ", res[0]), ServicePresentation_jsx(core["Grid"], {
-      item: true
-    }, ServicePresentation_jsx("ul", {
-      key: 'unique-splice'
-    }, res.splice(1))));
-  };
-
-  const {
-    icon: Icon
-  } = props;
-  return ServicePresentation_jsx("div", {
-    id: props.anchortag
-  }, ServicePresentation_jsx(core["Container"], {
-    maxWidth: "lg",
-    style: {
-      height: '100%'
-    }
-  }, ServicePresentation_jsx("div", {
-    id: "hover-parent",
-    className: classes.root
-  }, ServicePresentation_jsx(core["Grid"], {
-    container: true,
-    direction: props.reverse ? 'row-reverse' : 'row',
-    justify: "space-between",
-    className: classes.row
-  }, ServicePresentation_jsx(core["Grid"], {
-    item: true,
-    className: classes.condHide,
-    xs: 12,
-    sm: 12,
-    md: 4
-  }, ServicePresentation_jsx(core["Grid"], {
-    item: true,
-    style: {
-      height: '100%'
-    }
-  }, ServicePresentation_jsx(core["Grid"], {
-    container: true,
-    justify: "center",
-    alignItems: "center",
-    direction: "column",
-    style: {
-      height: '100%'
-    }
-  }, ServicePresentation_jsx(core["Grid"], {
-    item: true
-  }, ServicePresentation_jsx(Icon, {
-    style: {
-      fontSize: 136
-    },
-    id: "hover-child",
-    className: classes.icon
-  }))))), ServicePresentation_jsx(core["Grid"], {
-    item: true,
-    xs: 12,
-    sm: 12,
-    md: 8
-  }, ServicePresentation_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center" // alignItems="stretch"
-    ,
-    className: classes.content
-  }, ServicePresentation_jsx(core["Grid"], {
-    item: true,
-    id: "hover-child",
-    style: {
-      width: 'fit-content'
-    }
-  }, ServicePresentation_jsx(core["Typography"], {
-    variant: "overline",
-    id: "hover-child-text",
-    className: classes.title
-  }, props.title)), ServicePresentation_jsx(core["Grid"], {
-    item: true
-  }, is_array_default()(props.content) ? handleArry(props.content) : ServicePresentation_jsx(core["Typography"], {
-    variant: "body1"
-  }, props.content))))))));
-}
-// EXTERNAL MODULE: ./src/resource/LightingAutomationIcon.js
-var LightingAutomationIcon = __webpack_require__("ND6/");
-
-// CONCATENATED MODULE: ./src/components/servicesPage/LightingService.js
-
-var LightingService_jsx = react_default.a.createElement;
-
-
-
-function LightingService(props) {
-  const content = 'Lighting Automation is the discipline of creating automated changes in lighting levels to affect mood, emphasize architecture, illuminate art, and influence action. Manage the internal and external lighting of your home more efficiently with iNest lighting Automation systems.';
-  return LightingService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Lighting Automation",
-    image: "gallery/wardrobe.jpg",
-    icon: LightingAutomationIcon["a" /* default */]
-  }, props, {
-    anchortag: "lighting"
-  }));
-}
-// CONCATENATED MODULE: ./src/resource/ElectricalIcon.js
-
-
-var ElectricalIcon_jsx = react_default.a.createElement;
-
-
-const ElectricalIcon = props => {
-  return ElectricalIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 0 511.999 511.999"
-  }), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
-    d: "M278.242,251.796c-1.395-2.062-3.721-3.296-6.21-3.296h-20.987l11.918-29.795c1.539-3.846-0.332-8.211-4.178-9.749 c-3.847-1.542-8.211,0.332-9.749,4.178l-16.032,40.081c-0.924,2.311-0.643,4.93,0.753,6.99c1.395,2.061,3.722,3.295,6.21,3.295 h20.987l-11.918,29.795c-1.539,3.846,0.332,8.211,4.178,9.749c0.914,0.366,1.856,0.539,2.783,0.539 c2.977,0,5.793-1.784,6.966-4.716l16.032-40.081C279.919,256.475,279.638,253.856,278.242,251.796z"
-  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
-    d: "M470.644,42.963c-26.637-27.057-62.143-42.307-99.978-42.941c-37.754-0.644-73.795,14.013-101.478,41.236 c-28.431,27.958-44.736,66.64-44.736,106.125v28.972h-24.564c-12.976,0-23.532,10.557-23.532,23.532v112.225 c0,12.976,10.557,23.532,23.532,23.532h24.564v32.581c0,22.626-9.631,44.371-26.425,59.658 c-17.009,15.483-39.049,22.817-62.049,20.652c-40.868-3.847-72.88-40.258-72.88-82.893c0-4.142-3.358-7.5-7.5-7.5 s-7.5,3.358-7.5,7.5c0,24.188,8.719,47.521,24.55,65.701c16.086,18.472,38.078,29.881,61.924,32.125 c3.132,0.295,6.246,0.441,9.34,0.441c23.841,0,46.359-8.682,64.213-24.934c19.909-18.124,31.328-43.911,31.328-70.75v-32.581 h33.097v28.972c0,35.491-14.672,70.274-40.254,95.43c-24.793,24.381-56.992,37.498-90.709,36.933 c-33.879-0.567-65.679-14.228-89.539-38.466c-23.889-24.266-37.044-56.331-37.044-90.289V264.016c0-0.285,0.231-0.516,0.516-0.516 h32.064c0.285,0,0.516,0.231,0.516,0.516v69.139c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-69.139 c0-8.556-6.96-15.516-15.516-15.516h-8.533v-40.597c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5V248.5h-8.532 c-8.556,0-15.516,6.96-15.516,15.516v104.208c0,37.921,14.687,73.724,41.355,100.812c26.637,27.057,62.143,42.308,99.978,42.941 c0.784,0.013,1.563,0.02,2.345,0.02c36.9,0,72.024-14.597,99.132-41.256c28.431-27.958,44.736-66.64,44.736-106.125v-28.972 h24.564c12.976,0,23.532-10.557,23.532-23.532V199.888c0-12.976-10.557-23.532-23.532-23.532h-24.564v-32.581 c0-22.626,9.631-44.371,26.425-59.658c17.009-15.483,39.048-22.815,62.049-20.652c40.868,3.847,72.88,40.258,72.88,82.893 c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5c0-24.188-8.719-47.521-24.55-65.701c-16.086-18.472-38.078-29.881-61.924-32.125 c-27.265-2.566-53.382,6.132-73.553,24.493c-19.909,18.124-31.328,43.911-31.328,70.75v32.581H239.45v-28.972 c0-35.491,14.672-70.274,40.254-95.43c24.793-24.381,56.996-37.49,90.709-36.933c33.879,0.567,65.679,14.228,89.539,38.466 c23.889,24.266,37.044,56.331,37.044,90.289v104.208c0,0.285-0.231,0.516-0.516,0.516h-32.064c-0.285,0-0.516-0.231-0.516-0.516 v-69.139c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v69.139c0,8.556,6.96,15.516,15.516,15.516h8.532v40.597 c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5V263.5h8.532c8.556,0,15.516-6.96,15.516-15.516V143.775 C511.999,105.854,497.312,70.053,470.644,42.963z M312.113,191.356c4.704,0,8.532,3.828,8.532,8.532v112.225 c0,4.705-3.828,8.532-8.532,8.532H199.888c-4.705,0-8.532-3.828-8.532-8.532V199.888c0-4.705,3.828-8.532,8.532-8.532H312.113z"
-  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
-    d: "M22.226,180.502L14.21,164.47c-1.852-3.705-6.357-5.208-10.062-3.354c-3.705,1.852-5.207,6.357-3.354,10.062L8.81,187.21 c1.314,2.628,3.962,4.147,6.714,4.147c1.127,0,2.271-0.255,3.348-0.793C22.577,188.712,24.079,184.207,22.226,180.502z"
-  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
-    d: "M58.951,161.116c-3.705-1.854-8.21-0.35-10.062,3.354l-8.016,16.032c-1.852,3.705-0.351,8.21,3.354,10.062 c1.077,0.539,2.221,0.793,3.348,0.793c2.751,0,5.4-1.52,6.714-4.147l8.016-16.032C64.158,167.473,62.656,162.968,58.951,161.116z"
-  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
-    d: "M511.206,340.823l-8.016-16.032c-1.852-3.705-6.356-5.208-10.062-3.354c-3.705,1.852-5.207,6.357-3.354,10.062 l8.016,16.032c1.314,2.628,3.962,4.147,6.714,4.147c1.127,0,2.271-0.255,3.348-0.793 C511.557,349.033,513.059,344.528,511.206,340.823z"
-  }))), ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("g", null, ElectricalIcon_jsx("path", {
-    d: "M467.772,321.437c-3.705-1.854-8.209-0.35-10.062,3.354l-8.016,16.032c-1.853,3.705-0.351,8.21,3.354,10.062 c1.077,0.539,2.221,0.793,3.348,0.793c2.751,0,5.4-1.52,6.714-4.147l8.016-16.032 C472.979,327.794,471.477,323.289,467.772,321.437z"
-  }))), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null), ElectricalIcon_jsx("g", null));
-};
-
-/* harmony default export */ var resource_ElectricalIcon = (ElectricalIcon);
-// CONCATENATED MODULE: ./src/components/servicesPage/ElectricalService.js
-
-var ElectricalService_jsx = react_default.a.createElement;
-
-
-
-function ElectricalService(props) {
-  const content = ['iNest provides a variety of electrical services for homes and offices, including but not limited to:', 'Residential and commercial wiring', 'Renovations', 'Knob and Tube Removals', 'Electrical Repairs and troubleshooting'];
-  return ElectricalService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Electrical",
-    image: "gallery/wardrobe.jpg",
-    icon: resource_ElectricalIcon
-  }, props, {
-    anchortag: "electrical"
-  }));
-}
-// CONCATENATED MODULE: ./src/resource/HomeTheatreIcon.js
-
-
-var HomeTheatreIcon_jsx = react_default.a.createElement;
-
-
-const HomeTheatreIcon = props => {
-  return HomeTheatreIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 -47 512 512"
-  }), HomeTheatreIcon_jsx("path", {
-    d: "m503.464844 245.589844v-117.589844c0-4.710938-3.820313-8.535156-8.53125-8.535156h-51.199219c-4.714844 0-8.535156 3.824218-8.535156 8.535156v110.933594h-36.003907l-4.265624-17.066406h6.136718c9.421875-.011719 17.054688-7.644532 17.066406-17.066407v-187.734375c-.011718-9.421875-7.644531-17.0546872-17.066406-17.066406h-290.132812c-9.421875.0078125-17.058594 7.644531-17.066406 17.066406v187.734375c.007812 9.421875 7.644531 17.054688 17.066406 17.066407h6.136718l-4.265624 17.066406h-36.003907v-110.933594c0-4.710938-3.820312-8.535156-8.535156-8.535156h-51.199219c-4.710937 0-8.53125 3.824218-8.53125 8.535156v117.589844c-5.414062 4.8125-8.5156248 11.703125-8.535156 18.945312v85.332032c.015625 14.132812 11.46875 25.582031 25.601562 25.597656h6.65625l-5.121093 25.601562h-18.601563c-4.714844 0-8.535156 3.820313-8.535156 8.535156 0 4.710938 3.820312 8.53125 8.535156 8.53125h494.929688c4.714844 0 8.535156-3.820312 8.535156-8.53125 0-4.714843-3.820312-8.535156-8.535156-8.535156h-18.601563l-5.121093-25.601562h6.65625c14.132812-.015625 25.585937-11.464844 25.601562-25.597656v-85.332032c-.019531-7.242187-3.121094-14.132812-8.535156-18.945312zm-17.066406-109.054688v21.8125c-10.496094-6.332031-23.632813-6.332031-34.132813 0v-21.8125zm0 51.199219c0 9.425781-7.640626 17.066406-17.066407 17.066406s-17.066406-7.640625-17.066406-17.066406 7.640625-17.066406 17.066406-17.066406c9.421875.007812 17.058594 7.644531 17.066407 17.066406zm-34.132813 29.386719c10.5 6.328125 23.636719 6.328125 34.132813 0v21.8125h-34.132813zm-70.660156 21.8125h-10.40625l-12.800781-17.066406h18.941406zm40.230469 136.53125 15.359374 25.601562h-362.390624l15.359374-25.601562zm-84.769532-153.597656 12.800782 17.066406h-187.734376l12.800782-17.066406zm-174.933594 136.53125v-42.664063h187.734376v42.664063zm187.734376-59.730469h-187.734376v-42.667969h187.734376zm-238.933594-281.601563h290.132812v187.734375h-290.132812zm23.730468 204.800782h18.9375l-12.800781 17.066406h-10.40625zm-74.929687-85.332032v21.8125c-10.496094-6.332031-23.636719-6.332031-34.132813 0v-21.8125zm0 51.199219c0 9.425781-7.640625 17.066406-17.066406 17.066406s-17.066407-7.640625-17.066407-17.066406 7.640626-17.066406 17.066407-17.066406c9.421875.007812 17.054687 7.644531 17.066406 17.066406zm-34.132813 29.382813c10.496094 6.332031 23.636719 6.332031 34.132813 0v21.816406h-34.132813zm-8.535156 132.75v-85.332032c.007813-4.710937 3.824219-8.527344 8.535156-8.535156h119.464844v102.398438h-119.464844c-4.710937-.003907-8.527343-3.820313-8.535156-8.53125zm27.476563 51.199218 5.121093-25.601562h20.597657l-15.359375 25.601562zm422.914062 0h-10.355469l-15.363281-25.601562h20.597657zm27.476563-51.199218c-.003906 4.710937-3.824219 8.527343-8.535156 8.53125h-119.464844v-102.398438h119.464844c4.710937.003906 8.53125 3.820312 8.535156 8.535156zm0 0"
-  }), HomeTheatreIcon_jsx("path", {
-    d: "m119.464844 298.667969h-8.53125c-4.714844 0-8.535156 3.820312-8.535156 8.53125 0 4.714843 3.820312 8.535156 8.535156 8.535156h8.53125c4.714844 0 8.535156-3.820313 8.535156-8.535156 0-4.710938-3.820312-8.53125-8.535156-8.53125zm0 0"
-  }), HomeTheatreIcon_jsx("path", {
-    d: "m401.066406 298.667969h-8.53125c-4.714844 0-8.535156 3.820312-8.535156 8.53125 0 4.714843 3.820312 8.535156 8.535156 8.535156h8.53125c4.714844 0 8.535156-3.820313 8.535156-8.535156 0-4.710938-3.820312-8.53125-8.535156-8.53125zm0 0"
-  }), HomeTheatreIcon_jsx("path", {
-    d: "m136.535156 85.332031c2.261719.003907 4.433594-.894531 6.03125-2.5l34.132813-34.132812c3.234375-3.347657 3.1875-8.671875-.101563-11.960938-3.292968-3.292969-8.617187-3.339843-11.964844-.105469l-34.132812 34.132813c-2.441406 2.441406-3.167969 6.113281-1.847656 9.300781 1.320312 3.1875 4.429687 5.265625 7.882812 5.265625zm0 0"
-  }), HomeTheatreIcon_jsx("path", {
-    d: "m207.300781 36.632812-76.800781 76.800782c-2.21875 2.140625-3.109375 5.316406-2.328125 8.296875.78125 2.984375 3.113281 5.316406 6.097656 6.097656 2.980469.78125 6.15625-.109375 8.296875-2.328125l76.800782-76.800781c3.234374-3.347657 3.1875-8.671875-.105469-11.960938-3.289063-3.292969-8.613281-3.339843-11.960938-.105469zm0 0"
-  }));
-};
-
-/* harmony default export */ var resource_HomeTheatreIcon = (HomeTheatreIcon);
-// CONCATENATED MODULE: ./src/components/servicesPage/HomeTheatreService.js
-
-var HomeTheatreService_jsx = react_default.a.createElement;
-
-
-
-function HomeTheatreService(props) {
-  const content = 'The latest Technology of home theatre experience is more than just a nice TV with surround sound. With a home theatre system of all exclusive brands, you can control your theatre lighting, sound, and Vision with the touch of a button. ';
-  return HomeTheatreService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Home Theatre",
-    image: "gallery/wardrobe.jpg",
-    icon: resource_HomeTheatreIcon
-  }, props, {
-    anchortag: "hometheatre"
-  }));
-}
-// CONCATENATED MODULE: ./src/resource/SmartHouseIcon.js
-
-
-var SmartHouseIcon_jsx = react_default.a.createElement;
-
-
-const SmartHouseIcon = props => {
-  return SmartHouseIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 0 512 512"
-  }), SmartHouseIcon_jsx("path", {
-    d: "m436 392c-19.554688 0-36.226562 12.542969-42.421875 30h-32.578125v-62h60v-90h-30v-135c0-74.4375-60.5625-135-135-135s-135 60.5625-135 135v135h-30v90h60v62h-32.578125c-6.195313-17.457031-22.867187-30-42.421875-30-24.8125 0-45 20.1875-45 45s20.1875 45 45 45c19.554688 0 36.226562-12.542969 42.421875-30h62.578125v-92h60v64.578125c-17.460938 6.195313-30 22.867187-30 42.421875 0 24.8125 20.1875 45 45 45s45-20.1875 45-45c0-19.554688-12.539062-36.226562-30-42.421875v-64.578125h60v92h62.578125c6.195313 17.457031 22.867187 30 42.421875 30 24.8125 0 45-20.1875 45-45s-20.1875-45-45-45zm-360 60c-8.269531 0-15-6.730469-15-15s6.730469-15 15-15 15 6.730469 15 15-6.730469 15-15 15zm180 30c-8.269531 0-15-6.730469-15-15s6.730469-15 15-15 15 6.730469 15 15-6.730469 15-15 15zm-105-347c0-57.898438 47.101562-105 105-105s105 47.101562 105 105v135h-90v-62.578125c4.695312 1.664063 9.742188 2.578125 15 2.578125h45v-90h-45c-11.515625 0-22.03125 4.355469-30 11.496094-7.96875-7.140625-18.484375-11.496094-30-11.496094h-45v90h45c5.257812 0 10.304688-.914062 15-2.578125v62.578125h-90zm120 30c0-8.269531 6.730469-15 15-15h15v30h-15c-8.269531 0-15-6.730469-15-15zm-30 0c0 8.269531-6.730469 15-15 15h-15v-30h15c8.269531 0 15 6.730469 15 15zm-120 135h270v30h-270zm315 152c-8.269531 0-15-6.730469-15-15s6.730469-15 15-15 15 6.730469 15 15-6.730469 15-15 15zm0 0"
-  }), SmartHouseIcon_jsx("path", {
-    d: "m0 120h60v30h-60zm0 0"
-  }), SmartHouseIcon_jsx("path", {
-    d: "m452 120h60v30h-60zm0 0"
-  }), SmartHouseIcon_jsx("path", {
-    d: "m72.9375 203.816406 12.675781 27.191406-54.375 25.355469-12.679687-27.191406zm0 0"
-  }), SmartHouseIcon_jsx("path", {
-    d: "m480.773438 13.628906 12.675781 27.191406-54.375 25.355469-12.679688-27.191406zm0 0"
-  }), SmartHouseIcon_jsx("path", {
-    d: "m31.230469 13.636719 54.378906 25.355469-12.679687 27.191406-54.375-25.355469zm0 0"
-  }), SmartHouseIcon_jsx("path", {
-    d: "m480.769531 256.371094-54.378906-25.355469 12.679687-27.1875 54.375 25.355469zm0 0"
-  }));
-};
-
-/* harmony default export */ var resource_SmartHouseIcon = (SmartHouseIcon);
-// CONCATENATED MODULE: ./src/components/servicesPage/NetworkService.js
-
-var NetworkService_jsx = react_default.a.createElement;
-
-
-
-function NetworkService(props) {
-  const content = 'There’s no need for separate applications to control the thermostat, the shades, the music, and the lighting. Replace them all with iNest full home automation system that manages and controls all these devices at once. Smart homes provide high levels of convenience, safety, and energy savings!';
-  return NetworkService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Smart Home",
-    image: "gallery/wardrobe.jpg",
-    icon: resource_SmartHouseIcon
-  }, props, {
-    anchortag: "smarthome"
-  }));
-}
-// CONCATENATED MODULE: ./src/resource/AudioSystemIcon.js
-
-
-var AudioSystemIcon_jsx = react_default.a.createElement;
-
-
-const AudioSystemIcon = props => {
-  return AudioSystemIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 -40 512 511"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m87.660156.5h-64.128906c-12.972656 0-23.53125 10.554688-23.53125 23.53125v384.773438c0 12.976562 10.558594 23.535156 23.53125 23.535156h64.128906c12.976563 0 23.53125-10.558594 23.53125-23.535156v-384.773438c0-12.976562-10.554687-23.53125-23.53125-23.53125zm8.53125 336.675781h-8.53125c-4.140625 0-7.5 3.359375-7.5 7.5 0 4.144531 3.359375 7.5 7.5 7.5h8.53125v56.628907c0 4.707031-3.828125 8.535156-8.53125 8.535156h-64.128906c-4.703125 0-8.53125-3.828125-8.53125-8.535156v-56.628907h40.597656c4.140625 0 7.5-3.355469 7.5-7.5 0-4.140625-3.359375-7.5-7.5-7.5h-40.597656v-313.144531c0-4.703125 3.828125-8.53125 8.53125-8.53125h64.128906c4.707032 0 8.53125 3.828125 8.53125 8.53125zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m55.597656 257.015625c-12.976562 0-23.53125 10.558594-23.53125 23.53125 0 12.976563 10.554688 23.53125 23.53125 23.53125 12.972656 0 23.53125-10.554687 23.53125-23.53125 0-12.972656-10.558594-23.53125-23.53125-23.53125zm0 32.0625c-4.707031 0-8.53125-3.824219-8.53125-8.53125 0-4.703125 3.828125-8.53125 8.53125-8.53125s8.53125 3.828125 8.53125 8.53125c0 4.707031-3.828125 8.53125-8.53125 8.53125zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m55.597656 176.855469c-12.976562 0-23.53125 10.554687-23.53125 23.53125 0 12.976562 10.554688 23.53125 23.53125 23.53125 12.976563 0 23.53125-10.554688 23.53125-23.53125 0-12.976563-10.558594-23.53125-23.53125-23.53125zm0 32.0625c-4.707031 0-8.53125-3.828125-8.53125-8.53125s3.828125-8.53125 8.53125-8.53125 8.53125 3.828125 8.53125 8.53125-3.828125 8.53125-8.53125 8.53125zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m55.597656 96.691406c-12.976562 0-23.53125 10.558594-23.53125 23.535156 0 12.972657 10.554688 23.53125 23.53125 23.53125 12.972656 0 23.53125-10.558593 23.53125-23.53125 0-12.976562-10.558594-23.535156-23.53125-23.535156zm0 32.066406c-4.707031 0-8.53125-3.828124-8.53125-8.53125 0-4.703124 3.828125-8.53125 8.53125-8.53125s8.53125 3.828126 8.53125 8.53125c0 4.703126-3.828125 8.53125-8.53125 8.53125zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m55.675781 63.597656c4.144531 0 7.5-3.359375 7.5-7.5 0-4.144531-3.355469-7.5-7.5-7.5h-.078125c-4.144531 0-7.460937 3.355469-7.460937 7.5 0 4.140625 3.398437 7.5 7.539062 7.5zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m488.46875.5h-64.128906c-12.976563 0-23.53125 10.558594-23.53125 23.53125v272.554688c0 4.140624 3.355468 7.5 7.5 7.5 4.140625 0 7.5-3.359376 7.5-7.5v-272.554688c0-4.703125 3.828125-8.53125 8.53125-8.53125h64.128906c4.703125 0 8.53125 3.828125 8.53125 8.53125v313.148438h-81.191406v-8.535157c0-4.144531-3.359375-7.5-7.5-7.5-4.144532 0-7.5 3.355469-7.5 7.5v80.164063c0 12.972656 10.554687 23.53125 23.53125 23.53125h64.128906c12.976562 0 23.53125-10.558594 23.53125-23.53125v-384.777344c0-12.976562-10.558594-23.53125-23.53125-23.53125zm8.53125 408.304688c0 4.707031-3.828125 8.535156-8.53125 8.535156h-64.128906c-4.707032 0-8.53125-3.828125-8.53125-8.535156v-56.628907h81.191406zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m360.210938 289.078125h-208.421876c-12.972656 0-23.53125 10.558594-23.53125 23.535156v96.191407c0 12.976562 10.558594 23.535156 23.53125 23.535156h208.421876c12.976562 0 23.53125-10.558594 23.53125-23.535156v-96.191407c0-12.976562-10.558594-23.535156-23.53125-23.535156zm8.53125 119.726563c0 4.707031-3.828126 8.535156-8.53125 8.535156h-208.421876c-4.703124 0-8.53125-3.828125-8.53125-8.535156v-96.191407c0-4.707031 3.828126-8.535156 8.53125-8.535156h208.421876c4.703124 0 8.53125 3.828125 8.53125 8.535156zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m456.402344 304.078125c12.976562 0 23.53125-10.554687 23.53125-23.53125 0-12.972656-10.554688-23.53125-23.53125-23.53125-12.972656 0-23.53125 10.558594-23.53125 23.53125 0 12.976563 10.558594 23.53125 23.53125 23.53125zm0-32.0625c4.707031 0 8.53125 3.828125 8.53125 8.53125 0 4.707031-3.828125 8.53125-8.53125 8.53125s-8.53125-3.824219-8.53125-8.53125c0-4.703125 3.828125-8.53125 8.53125-8.53125zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m456.402344 223.917969c12.976562 0 23.53125-10.554688 23.53125-23.53125 0-12.976563-10.554688-23.53125-23.53125-23.53125-12.972656 0-23.53125 10.554687-23.53125 23.53125 0 12.976562 10.558594 23.53125 23.53125 23.53125zm0-32.0625c4.707031 0 8.53125 3.828125 8.53125 8.53125s-3.828125 8.53125-8.53125 8.53125-8.53125-3.828125-8.53125-8.53125 3.828125-8.53125 8.53125-8.53125zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m432.871094 120.226562c0 12.976563 10.558594 23.53125 23.53125 23.53125 12.976562 0 23.53125-10.558593 23.53125-23.53125 0-12.976562-10.554688-23.53125-23.53125-23.53125-12.972656 0-23.53125 10.554688-23.53125 23.53125zm23.53125-8.535156c4.707031 0 8.53125 3.828125 8.53125 8.535156 0 4.703126-3.828125 8.53125-8.53125 8.53125s-8.53125-3.828124-8.53125-8.53125c0-4.707031 3.828125-8.535156 8.53125-8.535156zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m463.984375 56.097656c0-4.144531-3.359375-7.5-7.5-7.5h-.082031c-4.140625 0-7.460938 3.355469-7.460938 7.5 0 4.140625 3.398438 7.5 7.542969 7.5 4.140625 0 7.5-3.359375 7.5-7.5zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m256 321.144531c-21.816406 0-39.5625 17.75-39.5625 39.566407 0 21.816406 17.746094 39.5625 39.5625 39.5625s39.5625-17.75 39.5625-39.5625c0-21.816407-17.746094-39.566407-39.5625-39.566407zm0 64.128907c-13.546875 0-24.5625-11.019532-24.5625-24.5625 0-13.546876 11.019531-24.566407 24.5625-24.566407s24.5625 11.019531 24.5625 24.566407c0 13.542968-11.015625 24.5625-24.5625 24.5625zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m191.871094 353.210938h-16.03125c-4.144532 0-7.5 3.355468-7.5 7.5 0 4.140624 3.355468 7.5 7.5 7.5h16.03125c4.140625 0 7.5-3.359376 7.5-7.5 0-4.144532-3.359375-7.5-7.5-7.5zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m336.160156 353.210938h-16.03125c-4.140625 0-7.5 3.355468-7.5 7.5 0 4.140624 3.359375 7.5 7.5 7.5h16.03125c4.144532 0 7.5-3.359376 7.5-7.5 0-4.144532-3.355468-7.5-7.5-7.5zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m201.230469 167.609375c16.652343-10.359375 35.71875-15.835937 55.144531-15.835937s38.492188 5.476562 55.144531 15.835937c1.230469.765625 2.601563 1.132813 3.953125 1.132813 2.503906 0 4.957032-1.253907 6.375-3.539063 2.1875-3.515625 1.113282-8.140625-2.40625-10.332031-19.03125-11.839844-40.835937-18.097656-63.066406-18.097656s-44.039062 6.257812-63.066406 18.097656c-3.519532 2.1875-4.59375 6.8125-2.40625 10.332031 2.1875 3.515625 6.8125 4.59375 10.328125 2.40625zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m297.164062 196.203125c2.539063 0 5.019532-1.289063 6.429688-3.625 2.140625-3.546875 1-8.15625-2.546875-10.296875-13.546875-8.175781-28.992187-12.5-44.671875-12.5s-31.125 4.324219-44.671875 12.5c-3.546875 2.140625-4.6875 6.75-2.546875 10.296875s6.75 4.6875 10.296875 2.546875c11.207031-6.769531 23.976563-10.34375 36.921875-10.34375s25.710938 3.574219 36.917969 10.34375c1.214843.730469 2.550781 1.078125 3.871093 1.078125zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m278.796875 223.753906c2.628906 0 5.175781-1.382812 6.550781-3.835937 2.023438-3.613281.734375-8.183594-2.878906-10.207031-8.203125-4.59375-16.980469-6.921876-26.09375-6.921876s-17.890625 2.328126-26.09375 6.921876c-3.613281 2.023437-4.902344 6.59375-2.878906 10.207031 2.023437 3.613281 6.59375 4.902343 10.207031 2.878906 5.9375-3.324219 12.25-5.007813 18.765625-5.007813s12.828125 1.683594 18.765625 5.007813c1.160156.648437 2.417969.957031 3.65625.957031zm0 0"
-  }), AudioSystemIcon_jsx("path", {
-    d: "m263.5 248.480469c0 4.144531-3.359375 7.5-7.5 7.5s-7.5-3.355469-7.5-7.5c0-4.140625 3.359375-7.5 7.5-7.5s7.5 3.359375 7.5 7.5zm0 0"
-  }));
-};
-
-/* harmony default export */ var resource_AudioSystemIcon = (AudioSystemIcon);
-// CONCATENATED MODULE: ./src/components/servicesPage/SoundService.js
-
-var SoundService_jsx = react_default.a.createElement;
-
-
-
-function SoundService(props) {
-  const content = 'It’s time for you to stop dragging speakers all over your house! iNest sound system allows you to play music in any room from any source just via your home wifi. Play your favorite song when spending time in the kitchen, the family room, the shower, or in the backyard.';
-  return SoundService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Sound System",
-    image: "gallery/wardrobe.jpg",
-    icon: resource_AudioSystemIcon
-  }, props, {
-    anchortag: "sound"
-  }));
-}
-// CONCATENATED MODULE: ./src/resource/VacuumIcon.js
-
-
-var VacuumIcon_jsx = react_default.a.createElement;
-
-
-const VacuumIcon = props => {
-  return VacuumIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 -24 480.10137 480"
-  }), VacuumIcon_jsx("path", {
-    d: "m80.101562 256.050781c-26.511718 0-48 21.492188-48 48 0 26.507813 21.488282 48 48 48 26.507813 0 48-21.492187 48-48-.027343-26.5-21.5-47.972656-48-48zm0 80c-17.671874 0-32-14.328125-32-32s14.328126-32 32-32c17.671876 0 32 14.328125 32 32s-14.328124 32-32 32zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m472.101562 336.050781h-32.121093c-2.488281-185.992187-91.160157-335.9999998-199.878907-335.9999998h-144c-44.785156-.04687495-83.652343 30.8789068-93.667968 74.5273438-10.019532 43.652344 11.476562 88.429687 51.804687 107.914063l-12.882812 51.621093c-33.253907 18.402344-48.972657 57.664063-37.605469 93.933594 11.371094 36.265625 46.691406 59.527344 84.5 55.648437 37.8125-3.875 67.671875-33.824218 71.445312-71.644531h128.40625v9.136719c-15.601562 4.027344-25.777343 19.03125-23.746093 35.015625s15.632812 27.96875 31.746093 27.96875c16.113282 0 29.714844-11.984375 31.746094-27.96875 2.027344-15.984375-8.144531-30.988281-23.746094-35.015625v-9.136719h32c4.417969 0 8-3.582031 8-8 0-110.28125-68.183593-200-152-200h-112c-3.671874 0-6.871093 2.5-7.761718 6.0625l-5.910156 23.640625c-11.632813-9.039062-18.402344-22.972656-18.328126-37.703125.027344-26.5 21.5-47.972656 48-48h144c81.015626 0 149.601563 131.078125 151.894532 288h-31.894532c-4.417968 0-8 3.582031-8 8v32c0 4.417969 3.582032 8 8 8h112c4.417969 0 8-3.582031 8-8v-32c0-4.417969-3.582031-8-8-8zm-392 32c-35.347656 0-64-28.652343-64-64 0-35.347656 28.652344-64 64-64 35.347657 0 64 28.652344 64 64-.039062 35.328125-28.671874 63.960938-64 64zm232-16c.039063 7.773438-5.515624 14.453125-13.167968 15.828125s-15.1875-2.949218-17.859375-10.25c-2.667969-7.300781.292969-15.464844 7.027343-19.355468v13.777343c0 4.417969 3.582032 8 8 8 4.417969 0 8-3.582031 8-8v-13.777343c4.933594 2.835937 7.984376 8.085937 8 13.777343zm-160-232v48h-40v-48zm-65.753906 0h9.753906v56c0 4.417969 3.582032 8 8 8h56c4.417969 0 8-3.582031 8-8v-56h24c73.007813 0 132.800782 78.238281 135.871094 176h-168.277344c-2.257812-23.328125-14.671874-44.476562-33.9375-57.820312-19.269531-13.34375-43.433593-17.527344-66.0625-11.4375zm153.753906-88h-144c-28.566406-.019531-53.679687 18.910157-61.53125 46.375-7.851562 27.464844 3.464844 56.808594 27.722657 71.890625l-4.054688 16.261719c-32.359375-17.324219-48.777343-54.445313-39.824219-90.042969 8.953126-35.597656 40.980469-60.53125 77.6875-60.484375h144c100 0 181.550782 142.816407 183.945313 320h-16c-2.34375-165.601562-78.34375-304-167.945313-304zm224 336h-96v-16h96zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m176.101562 280.050781h88c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8h-88c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m296.101562 280.050781h16c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m376.101562 400.050781c0-4.417969-3.582031-8-8-8h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m344.101562 416.050781h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m424.101562 400.050781c0-4.417969-3.582031-8-8-8h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m392.101562 416.050781h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m440.101562 416.050781h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m472.101562 400.050781c0-4.417969-3.582031-8-8-8h-16c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h16c4.417969 0 8-3.582031 8-8zm0 0"
-  }), VacuumIcon_jsx("path", {
-    d: "m472.101562 416.050781h-8c-4.417968 0-8 3.582031-8 8s3.582032 8 8 8h8c4.417969 0 8-3.582031 8-8s-3.582031-8-8-8zm0 0"
-  }));
-};
-
-/* harmony default export */ var resource_VacuumIcon = (VacuumIcon);
-// CONCATENATED MODULE: ./src/components/servicesPage/VacuumService.js
-
-var VacuumService_jsx = react_default.a.createElement;
-
-
-
-function VacuumService(props) {
-  const content = 'The Central Vacuum system is designed to be more powerful than the traditional portable vacuum while it produces less noise and reduces the recirculation of dust and dirt into your home. A central vacuum system eliminates the hassle of storing and schlepping heavy equipment, it’s cleaner and quieter than a portable unit, and it just works better! ';
-  return VacuumService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Central Vacuum",
-    image: "gallery/wardrobe.jpg",
-    icon: resource_VacuumIcon
-  }, props, {
-    anchortag: "vacuum"
-  }));
-}
-// EXTERNAL MODULE: ./src/resource/ClimateIcon.js
-var ClimateIcon = __webpack_require__("Ymr7");
-
-// CONCATENATED MODULE: ./src/components/servicesPage/ClimateControlService.js
-
-var ClimateControlService_jsx = react_default.a.createElement;
-
-
-
-function ClimateControlService(props) {
-  const content = 'Control your home’s heating and/or air conditioning throughout a smart system using your laptop or phone. Integrate climate control with the rest of your home for intelligent temperature control, personalized just as you wish for, making your home more comfortable and more “green” at the same time.';
-  return ClimateControlService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Climate Control",
-    image: "gallery/wardrobe.jpg",
-    icon: ClimateIcon["a" /* default */]
-  }, props, {
-    anchortag: "climatecontrol"
-  }));
-}
-// CONCATENATED MODULE: ./src/resource/BlindsIcon.js
-
-
-var BlindsIcon_jsx = react_default.a.createElement;
-
-
-const BlindsIcon = props => {
-  return BlindsIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 0 512.00212 512"
-  }), BlindsIcon_jsx("path", {
-    d: "m477.867188 0h-443.734376c-18.851562 0-34.132812 15.285156-34.132812 34.132812 0 18.851563 15.28125 34.136719 34.132812 34.136719v418.132813c.015626 14.132812 11.46875 25.582031 25.601563 25.597656h375.464844c14.132812-.015625 25.585937-11.464844 25.601562-25.597656v-418.132813h17.066407v8.53125c0 4.714844 3.820312 8.535157 8.53125 8.535157 4.714843 0 8.535156-3.820313 8.535156-8.535157v-13.28125c13.378906-7.691406 19.902344-23.421875 15.898437-38.324219-4.003906-14.902343-17.535156-25.242187-32.964843-25.195312zm-460.800782 34.132812c0-9.425781 7.640625-17.066406 17.066406-17.066406 9.425782 0 17.066407 7.640625 17.066407 17.066406 0 9.425782-7.640625 17.070313-17.066407 17.070313-9.421874-.011719-17.058593-7.648437-17.066406-17.070313zm426.667969 452.269532c-.007813 4.710937-3.824219 8.527344-8.535156 8.53125h-375.464844c-4.710937-.003906-8.527344-3.820313-8.535156-8.53125v-418.132813h17.066406v110.933594c0 4.710937 3.820313 8.53125 8.535156 8.53125 4.710938 0 8.53125-3.820313 8.53125-8.53125v-110.933594h17.066407v68.265625c0 4.710938 3.820312 8.53125 8.535156 8.53125 4.710937 0 8.53125-3.820312 8.53125-8.53125v-68.265625h17.070312v34.132813c0 4.710937 3.820313 8.53125 8.53125 8.53125 4.714844 0 8.535156-3.820313 8.535156-8.53125v-34.132813h290.132813zm34.132813-435.199219h-414.347657c3.074219-5.167969 4.710938-11.058594 4.746094-17.070313-.035156-6.007812-1.671875-11.902343-4.746094-17.066406h414.347657c9.425781 0 17.066406 7.640625 17.066406 17.066406 0 9.425782-7.640625 17.070313-17.066406 17.070313zm0 0"
-  }), BlindsIcon_jsx("path", {
-    d: "m76.800781 460.800781c-4.714843 0-8.535156 3.820313-8.535156 8.535157 0 4.710937 3.820313 8.53125 8.535156 8.53125h341.332031c4.714844 0 8.535157-3.820313 8.535157-8.53125 0-4.714844-3.820313-8.535157-8.535157-8.535157zm0 0"
-  }), BlindsIcon_jsx("path", {
-    d: "m486.398438 153.601562c4.714843 0 8.535156-3.820312 8.535156-8.535156v-34.132812c0-4.710938-3.820313-8.53125-8.535156-8.53125-4.710938 0-8.53125 3.820312-8.53125 8.53125v34.132812c0 4.714844 3.820312 8.535156 8.53125 8.535156zm0 0"
-  }), BlindsIcon_jsx("path", {
-    d: "m477.867188 213.335938c0 4.710937 3.820312 8.53125 8.53125 8.53125 4.714843 0 8.535156-3.820313 8.535156-8.53125v-34.132813c0-4.714844-3.820313-8.535156-8.535156-8.535156-4.710938 0-8.53125 3.820312-8.53125 8.535156zm0 0"
-  }), BlindsIcon_jsx("path", {
-    d: "m477.867188 281.601562c0 4.710938 3.820312 8.53125 8.53125 8.53125 4.714843 0 8.535156-3.820312 8.535156-8.53125v-34.132812c0-4.714844-3.820313-8.535156-8.535156-8.535156-4.710938 0-8.53125 3.820312-8.53125 8.535156zm0 0"
-  }), BlindsIcon_jsx("path", {
-    d: "m477.867188 349.867188c0 4.714843 3.820312 8.535156 8.53125 8.535156 4.714843 0 8.535156-3.820313 8.535156-8.535156v-34.132813c0-4.710937-3.820313-8.53125-8.535156-8.53125-4.710938 0-8.53125 3.820313-8.53125 8.53125zm0 0"
-  }), BlindsIcon_jsx("path", {
-    d: "m477.867188 418.132812c0 4.714844 3.820312 8.535157 8.53125 8.535157 4.714843 0 8.535156-3.820313 8.535156-8.535157v-34.132812c0-4.710938-3.820313-8.53125-8.535156-8.53125-4.710938 0-8.53125 3.820312-8.53125 8.53125zm0 0"
-  }), BlindsIcon_jsx("path", {
-    d: "m76.800781 238.933594c4.710938 0 8.53125-3.820313 8.53125-8.53125v-17.066406c0-4.714844-3.820312-8.535157-8.53125-8.535157-4.714843 0-8.535156 3.820313-8.535156 8.535157v17.066406c0 4.710937 3.820313 8.53125 8.535156 8.53125zm0 0"
-  }));
-};
-
-/* harmony default export */ var resource_BlindsIcon = (BlindsIcon);
-// CONCATENATED MODULE: ./src/components/servicesPage/SmartBlindsService.js
-
-var SmartBlindsService_jsx = react_default.a.createElement;
-
-
-
-function SmartBlindsService(props) {
-  const content = 'Automated Binds provide ideal convenience and comfort for residential homes and offices. Smart blinds are ideal for protecting furniture, floors, carpeting, and artwork from the damaging effects of direct sunlight. They also make it easier to access skylights and other hard-to-reach windows above counters, sinks, and bathtubs. ';
-  return SmartBlindsService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Smart Blinds",
-    image: "gallery/wardrobe.jpg",
-    icon: resource_BlindsIcon
-  }, props, {
-    anchortag: "blinds"
-  }));
-}
-// EXTERNAL MODULE: ./src/resource/SecurityIcon.js
-var SecurityIcon = __webpack_require__("YnJ+");
-
-// CONCATENATED MODULE: ./src/components/servicesPage/SecurityCameraService.js
-
-var SecurityCameraService_jsx = react_default.a.createElement;
-
-
-
-function SecurityCameraService(props) {
-  const content = 'Check-in on things at home from wherever you are and secure your family and property with iNest Security Camera systems. Integrate your security system with your home automation system to enjoy the extra level of security and convenience. Choose between a variety of cameras, including but not limited to Dome Cameras, Bullet Cameras, CCTV Cameras, and C-Mount Cameras.';
-  return SecurityCameraService_jsx(ServicePresentation_ServicesTop, Object(esm_extends["a" /* default */])({
-    content: content,
-    title: "Security System",
-    image: "gallery/wardrobe.jpg",
-    icon: SecurityIcon["a" /* default */]
-  }, props, {
-    anchortag: "security"
-  }));
-}
-// EXTERNAL MODULE: ./src/components/servicesPage/GetQuote.js
-var GetQuote = __webpack_require__("pTcK");
-
-// CONCATENATED MODULE: ./src/pages/services.js
-var services_jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const services_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  box1bg: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.90)), url(${'gallery/home.jpg'})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  },
-  selectiveServices: {
-    background: '#FFFFFF',
-    position: 'relative',
-    zIndex: '3'
-  },
-  selectiveServicesRaised: {
-    margin: '-80px 30px 80px ',
-    borderRadius: '6px',
-    boxShadow: '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
-  }
-}));
-function Services() {
-  const classes = services_useStyles();
-  const selectiveServiceStyles = clsx_default()(classes.selectiveServices, classes.selectiveServicesRaised);
-  const servicesListRaw = [ServicesOverview, LightingService, ElectricalService, HomeTheatreService, NetworkService, SecurityCameraService, SoundService, VacuumService, SmartBlindsService, ClimateControlService];
-  const end = servicesListRaw.length - 1;
-  const servicesList = servicesListRaw.map((Component, index) => services_jsx(react_default.a.Fragment, {
-    key: `service-fgmt-${index}`
-  }, index % 2 ? services_jsx(Component, {
-    key: `sv-component-${index}`
-  }) : services_jsx(Component, {
-    reverse: true,
-    key: `component-${index}`
-  }), end !== index ? services_jsx(core["Divider"], {
-    key: `component-div-${index}`
-  }) : null));
-  return services_jsx(react_default.a.Fragment, null, services_jsx("div", {
-    className: classes.box1bg
-  }, services_jsx(ServicesTop, null)), services_jsx("div", {
-    className: selectiveServiceStyles
-  }, services_jsx(ServicesContainer, null, servicesList)), services_jsx(GetQuote["a" /* default */], null), services_jsx(Bottombar["a" /* default */], null));
-}
-// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fservices&absolutePagePath=private-next-pages%2Fservices.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=private-next-pages%2F_document.js&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=2hByWkOLdnxzq9l6TQI1N&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2hByWkOLdnxzq9l6TQI1N_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2hByWkOLdnxzq9l6TQI1N_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    const next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2hByWkOLdnxzq9l6TQI1N_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_Component = Services
-    /* harmony default export */ var next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2hByWkOLdnxzq9l6TQI1N_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2hByWkOLdnxzq9l6TQI1N_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_Component);
-    const unstable_getStaticProps = services_namespaceObject['unstable_getStaticProp' + 's']
-
-    const unstable_getStaticPaths = undefined
-    const config = services_namespaceObject['confi' + 'g'] || {}
-    const next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2hByWkOLdnxzq9l6TQI1N_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
-    async function renderReqToHTML(req, res, fromExport) {
-      const options = {
-        App: _app["a" /* default */],
-        Document: _document["a" /* default */],
-        buildManifest: build_manifest,
-        unstable_getStaticProps,
-        unstable_getStaticPaths,
-        reactLoadableManifest: react_loadable_manifest,
-        canonicalBase: "",
-        buildId: "2hByWkOLdnxzq9l6TQI1N",
-        assetPrefix: "",
-        ampBindInitData: false,
-      }
-      let sprData = false
-
-      if (req.url.match(/_next\/data/)) {
-        sprData = true
-        req.url = req.url
-          .replace(new RegExp('/_next/data/2hByWkOLdnxzq9l6TQI1N/'), '/')
-          .replace(/\.json$/, '')
-      }
-      const parsedUrl = Object(external_url_["parse"])(req.url, true)
-      const renderOpts = Object.assign(
-        {
-          Component: next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2hByWkOLdnxzq9l6TQI1N_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_Component,
-          pageConfig: config,
-          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
-          nextExport: fromExport
-        },
-        options,
-      )
-      try {
-        
-        const params = {};
-        const nowParams = null;
-        let result = await Object(render["renderToHTML"])(req, res, "/services", Object.assign({}, unstable_getStaticProps ? {} : parsedUrl.query, nowParams ? nowParams : params), renderOpts)
-
-        if (sprData && !fromExport) {
-          const payload = JSON.stringify(renderOpts.sprData)
-          res.setHeader('Content-Type', 'application/json')
-          res.setHeader('Content-Length', Buffer.byteLength(payload))
-          res.setHeader(
-            'Cache-Control',
-            `s-maxage=${renderOpts.revalidate}, stale-while-revalidate`
-          )
-          res.end(payload)
-          return null
-        }
-
-        if (fromExport) return { html: result, renderOpts }
-        return result
-      } catch (err) {
-        if (err.code === 'ENOENT') {
-          res.statusCode = 404
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            unstable_getStaticProps: undefined,
-            unstable_getStaticPaths: undefined,
-            Component: _error["default"]
-          }))
-          return result
-        } else {
-          console.error(err)
-          res.statusCode = 500
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            unstable_getStaticProps: undefined,
-            unstable_getStaticPaths: undefined,
-            Component: _error["default"],
-            err
-          }))
-          return result
-        }
-      }
-    }
-    async function next_serverless_loaderpage_2Fservices_absolutePagePath_private_next_pages_2Fservices_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2hByWkOLdnxzq9l6TQI1N_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
-      try {
-        await Object(next_plugin_loadermiddleware_on_init_server["default"])()
-        const html = await renderReqToHTML(req, res)
-        if (html) {
-          Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
-        }
-      } catch(err) {
-        await Object(next_plugin_loadermiddleware_on_error_server["default"])(err)
-        console.error(err)
-        res.statusCode = 500
-        res.end('Internal Server Error')
-      }
-    }
-  
 
 /***/ }),
 
