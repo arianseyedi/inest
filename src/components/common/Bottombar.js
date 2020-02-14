@@ -42,11 +42,18 @@ const useStyles = makeStyles(theme => ({
   divider: {
     backgroundColor: `${theme.palette.grey[800]}`,
   },
+  hover: {
+    color: theme.palette.grey[500],
+    fontSize: mdDown => (mdDown ? 16 : 24),
+    '&:hover': {
+      color: 'white',
+    },
+  },
 }))
 
 export default function Bottombar() {
-  const classes = useStyles()
   const mdDown = useMediaQuery(theme => theme.breakpoints.down('md'))
+  const classes = useStyles(mdDown)
 
   return (
     <Grid container direction="row" style={{ height: '1px' }}>
@@ -64,17 +71,17 @@ export default function Bottombar() {
                       <LinkedinButton
                         href="https://www.linkedin.com/company/inestt/"
                         target="_blank"
-                        style={{ fontSize: mdDown ? 16 : 24, color: 'white' }}
+                        className={classes.hover}
                       />
                       <InstagramButton
                         href="https://www.instagram.com/inest.ca/?hl=en"
                         target="_blank"
-                        style={{ fontSize: mdDown ? 16 : 24, color: 'white' }}
+                        className={classes.hover}
                       />
                       <FacebookButton
                         href="https://www.facebook.com/INest-114704206654630/"
                         target="_blank"
-                        style={{ fontSize: mdDown ? 16 : 24, color: 'white' }}
+                        className={classes.hover}
                       />
                     </Grid>
                   </Grid>

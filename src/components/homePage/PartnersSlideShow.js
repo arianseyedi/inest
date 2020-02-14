@@ -31,9 +31,7 @@ const fadeProperties = {
   transitionDuration: 500,
   infinite: true,
   indicators: false,
-  onChange: (oldIndex, newIndex) => {
-    console.log(`fade transition from ${oldIndex} to ${newIndex}`)
-  },
+  onChange: (oldIndex, newIndex) => {},
 }
 export default function Slideshow() {
   const classes = useStyles()
@@ -48,39 +46,57 @@ export default function Slideshow() {
           <div className="each-fade">
             <div className="container-box">
               <div className="box-3">
-                <img className="img-box" src={`${slideImages[0]}`} />
+                <a href="https://ring.com/">
+                  <img className="img-box" src={`${slideImages[0]}`} />
+                </a>
               </div>
               <div className="box-3">
-                <img className="img-box" src={`${slideImages[1]}`} />
+                <a href="https://www.sonos.com/en-ca/home">
+                  <img className="img-box" src={`${slideImages[1]}`} />
+                </a>
               </div>
               <div className="box-3">
-                <img className="img-box" src={`${slideImages[2]}`} />
-              </div>
-            </div>
-          </div>
-          <div className="each-fade">
-            <div className="container-box">
-              <div className="box-3">
-                <img className="img-box" src={`${slideImages[3]}`} />
-              </div>
-              <div className="box-3">
-                <img className="img-box" src={`${slideImages[4]}`} />
-              </div>
-              <div className="box-3">
-                <img className="img-box" src={`${slideImages[5]}`} />
+                <a href="http://www.accelerationelectric.com/">
+                  <img className="img-box" src={`${slideImages[2]}`} />
+                </a>
               </div>
             </div>
           </div>
           <div className="each-fade">
             <div className="container-box">
               <div className="box-3">
-                <img className="img-box" src={`${slideImages[6]}`} />
+                <a href="https://nest.com/">
+                  <img className="img-box" src={`${slideImages[3]}`} />
+                </a>
               </div>
               <div className="box-3">
-                <img className="img-box" src={`${slideImages[7]}`} />
+                <a href="https://www.esasafe.com/">
+                  <img className="img-box" src={`${slideImages[4]}`} />
+                </a>
               </div>
               <div className="box-3">
-                <img className="img-box" src={`${slideImages[8]}`} />
+                <a href="https://ca.denon.com/ca">
+                  <img className="img-box" src={`${slideImages[5]}`} />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="each-fade">
+            <div className="container-box">
+              <div className="box-3">
+                <a href="https://www.control4.com/">
+                  <img className="img-box" src={`${slideImages[6]}`} />
+                </a>
+              </div>
+              <div className="box-3">
+                <a href="https://ca.hikvision.com/en">
+                  <img className="img-box" src={`${slideImages[7]}`} />
+                </a>
+              </div>
+              <div className="box-3">
+                <a href="https://www.dsc.com/">
+                  <img className="img-box" src={`${slideImages[8]}`} />
+                </a>
               </div>
             </div>
           </div>
@@ -90,35 +106,53 @@ export default function Slideshow() {
           <div className="each-fade">
             <div className="container-box">
               <div className="box">
-                <img className="img-box" src={`${slideImages[0]}`} />
+                <a href="https://ring.com/">
+                  <img className="img-box" src={`${slideImages[0]}`} />
+                </a>
               </div>
               <div className="box">
-                <img className="img-box" src={`${slideImages[1]}`} />
+                <a href="https://www.sonos.com/en-ca/home">
+                  <img className="img-box" src={`${slideImages[1]}`} />
+                </a>
               </div>
               <div className="box">
-                <img className="img-box" src={`${slideImages[2]}`} />
+                <a href="http://www.accelerationelectric.com/">
+                  <img className="img-box" src={`${slideImages[2]}`} />
+                </a>
               </div>
               <div className="box">
-                <img className="img-box" src={`${slideImages[3]}`} />
+                <a href="https://nest.com/">
+                  <img className="img-box" src={`${slideImages[3]}`} />
+                </a>
               </div>
               <div className="box">
-                <img className="img-box" src={`${slideImages[4]}`} />
+                <a href="https://www.esasafe.com/">
+                  <img className="img-box" src={`${slideImages[4]}`} />
+                </a>
               </div>
             </div>
           </div>
           <div className="each-fade">
             <div className="container-box">
               <div className="box-2">
-                <img className="img-box" src={`${slideImages[8]}`} />
+                <a href="https://www.dsc.com/">
+                  <img className="img-box" src={`${slideImages[8]}`} />
+                </a>
               </div>
               <div className="box-2">
-                <img className="img-box" src={`${slideImages[7]}`} />
+                <a href="https://ca.hikvision.com/en">
+                  <img className="img-box" src={`${slideImages[7]}`} />
+                </a>
               </div>
               <div className="box-2">
-                <img className="img-box" src={`${slideImages[6]}`} />
+                <a href="https://www.control4.com/">
+                  <img className="img-box" src={`${slideImages[6]}`} />
+                </a>
               </div>
               <div className="box-2">
-                <img className="img-box" src={`${slideImages[5]}`} />
+                <a href="https://ca.denon.com/ca">
+                  <img className="img-box" src={`${slideImages[5]}`} />
+                </a>
               </div>
             </div>
           </div>

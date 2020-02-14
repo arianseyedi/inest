@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "UsIb");
+/******/ 	return __webpack_require__(__webpack_require__.s = "hdNa");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -18581,7 +18581,7 @@ function CustomHead() {
   }), CustomHead_jsx("meta", {
     name: "theme-color",
     content: "#000000"
-  }), CustomHead_jsx("title", null, "Inest.CA"));
+  }));
 }
 // EXTERNAL MODULE: ./node_modules/next-page-transitions/lib/index.js
 var lib = __webpack_require__("FhCX");
@@ -18603,6 +18603,7 @@ var fade = __webpack_require__("5F4o");
 
 
 var _app_jsx = react_default.a.createElement;
+
 
 
 
@@ -18646,7 +18647,40 @@ class _app_MyApp extends app_default.a {
       Component,
       pageProps
     } = this.props;
-    return _app_jsx(react_default.a.Fragment, null, _app_jsx(CustomHead, null), _app_jsx(styles["ThemeProvider"], {
+    return _app_jsx(react_default.a.Fragment, null, _app_jsx(CustomHead, null), _app_jsx(head_default.a, null, _app_jsx("script", {
+      type: "text/javascript"
+    }, function () {
+      var _linkedin_partner_id = '1891689';
+
+      try {
+        if (window !== undefined) {
+          window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+
+          window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        }
+      } catch {}
+    }()), _app_jsx("script", {
+      type: "text/javascript"
+    }, function () {
+      try {
+        if (document !== undefined) {
+          var s = document.getElementsByTagName('script')[0];
+          var b = document.createElement('script');
+          b.type = 'text/javascript';
+          b.async = true;
+          b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+          s.parentNode.insertBefore(b, s);
+        }
+      } catch {}
+    }()), _app_jsx("noscript", null, _app_jsx("img", {
+      height: "1",
+      width: "1",
+      style: {
+        display: 'none'
+      },
+      alt: "",
+      src: "https://px.ads.linkedin.com/collect/?pid=1891689&fmt=gif"
+    }))), _app_jsx(styles["ThemeProvider"], {
       theme: theme["a" /* default */]
     }, _app_jsx(CssBaseline["a" /* default */], null), _app_jsx("div", {
       id: "app",
@@ -20322,7 +20356,7 @@ var grey = {
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_app\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_error\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_polyfills\":[\"static/runtime/polyfills-2889d9d9fcf08314dd3a.js\"],\"/about\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/contact\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/gallery\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/index\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/services\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"]}}");
+module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/_app\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/_error\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/_polyfills\":[\"static/runtime/polyfills-5c6befe99fce5c988bcc.js\"],\"/about\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/contact\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/gallery\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/index\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/services\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"]}}");
 
 /***/ }),
 
@@ -27211,496 +27245,6 @@ module.exports = __webpack_require__("UbbE");
 __webpack_require__("o8NH");
 module.exports = __webpack_require__("WEpk").Object.assign;
 
-
-/***/ }),
-
-/***/ "UsIb":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var about_namespaceObject = {};
-__webpack_require__.r(about_namespaceObject);
-__webpack_require__.d(about_namespaceObject, "default", function() { return Services; });
-
-// EXTERNAL MODULE: external "url"
-var external_url_ = __webpack_require__("bzos");
-
-// EXTERNAL MODULE: external "querystring"
-var external_querystring_ = __webpack_require__("8xkj");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
-var render = __webpack_require__("/bjS");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
-var send_html = __webpack_require__("LuNM");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-init-server
-var next_plugin_loadermiddleware_on_init_server = __webpack_require__("GX0O");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server
-var next_plugin_loadermiddleware_on_error_server = __webpack_require__("KqAr");
-
-// EXTERNAL MODULE: ./.next/build-manifest.json
-var build_manifest = __webpack_require__("LZ9C");
-
-// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
-var react_loadable_manifest = __webpack_require__("67Bq");
-
-// EXTERNAL MODULE: ./src/pages/_document.js
-var _document = __webpack_require__("senJ");
-
-// EXTERNAL MODULE: ./src/pages/_error.js
-var _error = __webpack_require__("URMD");
-
-// EXTERNAL MODULE: ./src/pages/_app.js + 2 modules
-var _app = __webpack_require__("IlR1");
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("q1tI");
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.js
-var clsx = __webpack_require__("4k7N");
-var clsx_default = /*#__PURE__*/__webpack_require__.n(clsx);
-
-// EXTERNAL MODULE: ./src/components/common/Bottombar.js + 7 modules
-var Bottombar = __webpack_require__("icW0");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
-var makeStyles = __webpack_require__("R/WZ");
-
-// EXTERNAL MODULE: ./src/components/servicesPage/GetQuote.js
-var GetQuote = __webpack_require__("pTcK");
-
-// EXTERNAL MODULE: ./src/components/common/Topbar.js + 5 modules
-var Topbar = __webpack_require__("sHXR");
-
-// EXTERNAL MODULE: ./src/components/common/Contactbar.js + 1 modules
-var Contactbar = __webpack_require__("ev8R");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/index.js
-var core = __webpack_require__("m178");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
-var Container = __webpack_require__("Ji2X");
-
-// EXTERNAL MODULE: ./src/components/common/QuoteRotation.js
-var QuoteRotation = __webpack_require__("NV3U");
-
-// CONCATENATED MODULE: ./src/components/about/AboutIntroTitle.js
-var __jsx = react_default.a.createElement;
-
-
-
-
-
-const useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  box: {
-    width: '100%'
-  },
-  text_intro: {
-    color: 'white'
-  },
-  paper: {
-    background: 'transparent'
-  },
-  transparentPaper: {
-    borderRadius: 8,
-    backgroundColor: 'transparent'
-  },
-  text: {
-    color: 'white'
-  },
-  condMarginTop: {
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: '5%'
-    }
-  },
-  condMargin: {
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: 48
-    }
-  },
-  quotationMarks: {
-    color: 'white',
-    fontSize: 29
-  },
-  whom: {
-    paddingLeft: 24
-  },
-  qutoation: {
-    paddingLeft: 24
-  }
-}));
-function AboutIntro() {
-  const classes = useStyles();
-  return __jsx(Container["a" /* default */], {
-    maxWidth: "lg"
-  }, __jsx(core["Grid"], {
-    container: true,
-    direction: "row",
-    justify: "center" // alignItems="center"
-    // className={classes.box}
-
-  }, __jsx(core["Grid"], {
-    item: true,
-    xs: 12,
-    sm: 8
-  }, __jsx(QuoteRotation["a" /* default */], null))));
-}
-// CONCATENATED MODULE: ./src/components/about/AboutTop.js
-var AboutTop_jsx = react_default.a.createElement;
-
-
-
-
-
-
-const AboutTop_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  minHeightTop: {
-    [theme.breakpoints.down('sm')]: {
-      minHeight: 500
-    },
-    [theme.breakpoints.down('md')]: {
-      minHeight: 500
-    },
-    [theme.breakpoints.up('md')]: {
-      minHeight: 500
-    }
-  },
-  box1bg: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center bottom'
-  },
-  homeIntro: {
-    marginBottom: 30,
-    marginTop: 50,
-    [theme.breakpoints.up('sm')]: {// minHeight: '20vh',
-    }
-  }
-}));
-function AboutTop() {
-  const classes = AboutTop_useStyles();
-  return AboutTop_jsx("div", null, AboutTop_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    className: classes.minHeightTop
-  }, AboutTop_jsx(core["Grid"], {
-    item: true
-  }, AboutTop_jsx(Contactbar["a" /* default */], null)), AboutTop_jsx(core["Grid"], {
-    item: true
-  }, AboutTop_jsx(Topbar["a" /* default */], null)), AboutTop_jsx(core["Grid"], {
-    item: true
-  }, AboutTop_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    alignItems: "stretch",
-    className: classes.homeIntro
-  }, AboutTop_jsx(core["Grid"], {
-    item: true
-  }, AboutTop_jsx(AboutIntro, null))))));
-}
-// EXTERNAL MODULE: ./src/components/common/QuoteStrip.js
-var QuoteStrip = __webpack_require__("8r2L");
-
-// CONCATENATED MODULE: ./src/components/about/AboutContent.js
-var AboutContent_jsx = react_default.a.createElement;
-
-
-
-
-const AboutContent_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  root: {// minHeight: '50vh',
-  },
-  aboutBox: {
-    [theme.breakpoints.down('sm')]: {
-      marginTop: 200,
-      marginBottom: 200
-    },
-    [theme.breakpoints.down('md')]: {
-      marginTop: 200,
-      marginBottom: 200
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginTop: 200,
-      marginBottom: 200
-    }
-  },
-  container: {
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: 100,
-      paddingBottom: 100
-    },
-    [theme.breakpoints.down('md')]: {
-      paddingTop: 100,
-      paddingBottom: 100
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 100,
-      paddingBottom: 100
-    }
-  },
-  missionTitle: {
-    textAlign: 'center' // [theme.breakpoints.down('sm')]: {
-    //   fontSize: 19,
-    // },
-    // [theme.breakpoints.down('md')]: {
-    //   fontSize: 22,
-    // },
-    // [theme.breakpoints.up('lg')]: {
-    //   fontSize: 29,
-    // },
-
-  },
-  missionText: {
-    textAlign: 'center'
-  },
-  aboutText: {
-    textAlign: 'center'
-  },
-  aboutTitle: {
-    textAlign: 'center'
-  },
-  visionInner: {
-    [theme.breakpoints.down('sm')]: {
-      marginTop: 72,
-      marginBottom: 72
-    },
-    [theme.breakpoints.down('md')]: {
-      marginTop: 88,
-      marginBottom: 88
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginTop: 128,
-      marginBottom: 128
-    }
-  },
-  aboutInner: {// marginTop: 210,
-    // marginBottom: 110,
-  }
-}));
-function AboutContent(props) {
-  const classes = AboutContent_useStyles();
-  const xsmDown = Object(core["useMediaQuery"])(theme => theme.breakpoints.down('xs'));
-  return AboutContent_jsx("div", {
-    className: classes.root
-  }, AboutContent_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    alignItems: "stretch"
-  }, AboutContent_jsx(core["Grid"], {
-    item: true
-  }, AboutContent_jsx(core["Paper"], {
-    elevation: 0,
-    style: {
-      height: '100%',
-      width: '100%'
-    }
-  }, AboutContent_jsx(core["Container"], {
-    maxWidth: "lg"
-  }, AboutContent_jsx(core["Grid"], {
-    direction: "column",
-    className: classes.visionInner
-  }, AboutContent_jsx(core["Grid"], {
-    item: true
-  }, AboutContent_jsx("div", {
-    style: {
-      marginBottom: 10
-    }
-  }, AboutContent_jsx(core["Typography"], {
-    variant: "h3",
-    className: classes.missionTitle
-  }, "\u2014 Our Mission \u2014"))), AboutContent_jsx(core["Grid"], {
-    item: true
-  }, AboutContent_jsx("div", null, AboutContent_jsx(core["Typography"], {
-    variant: "body1",
-    className: classes.missionText
-  }, "Equip your house with maximum automation, visibility and security using the latest technology at a competitive price."))))))), AboutContent_jsx(core["Grid"], {
-    item: true
-  }, AboutContent_jsx(QuoteStrip["a" /* default */], {
-    text: xsmDown ? 'Fair Pricing & Excellent Business record. Our full Home Automation was completed by a punctual, tidy, and knowledgable team with lots of experience.' : 'Fair Pricing & Excellent Business record. Our full Home Automation was completed by a punctual, tidy, and knowledgable team with lots of experience. We’re enjoying it now and we know it will be an asset to selling our home when the time comes.',
-    by: "K. W",
-    byTitle: "Richmond Hill",
-    image: "gallery/toronto.jpg"
-  })), AboutContent_jsx(core["Grid"], {
-    item: true,
-    className: classes.aboutBox
-  }, AboutContent_jsx(core["Paper"], {
-    elevation: 0
-  }, AboutContent_jsx(core["Container"], {
-    maxWidth: "lg"
-  }, AboutContent_jsx(core["Grid"], {
-    container: true,
-    direction: "column"
-  }, AboutContent_jsx(core["Grid"], {
-    item: true,
-    xs: 12
-  }, AboutContent_jsx("div", {
-    style: {
-      marginBottom: 40
-    }
-  }, AboutContent_jsx(core["Typography"], {
-    variant: "h3",
-    className: classes.aboutTitle
-  }, "\u2014 Our Team \u2014"))), AboutContent_jsx(core["Grid"], {
-    item: true,
-    xs: 12
-  }, AboutContent_jsx("div", null, AboutContent_jsx(core["Typography"], {
-    variant: "body1",
-    className: classes.aboutText
-  }, "iNest has been designing, programming, and installing residential and commercial automation, smart home, and entertainment systems for the past 20 years. Our team of licensed professionals offers the right home control system for you based on your requirements, lifestyle, and budget. iNest is located in the north of GTA, Toronto, Ontario, Canada and it has solutions for condominiums, residential homes, new construction, renovation and commercial applications of all sizes and requirements. We\u2019re passionate about creating exceptional systems for our clients, and we leave behind satisfied clients - that\u2019s a promise!")))))))));
-}
-// CONCATENATED MODULE: ./src/pages/about.js
-var about_jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-const about_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  box1bg: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.90)), url(${'gallery/stairwayToHeaven.jpg'})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  },
-  selectiveServices: {
-    position: 'relative',
-    zIndex: '3'
-  },
-  selectiveServicesRaised: {
-    margin: '-80px 30px 80px ',
-    borderRadius: '6px',
-    boxShadow: '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
-  }
-}));
-function Services() {
-  const classes = about_useStyles();
-  const selectiveServiceStyles = clsx_default()(classes.selectiveServices, classes.selectiveServicesRaised);
-  return about_jsx(react_default.a.Fragment, null, about_jsx("div", {
-    className: classes.box1bg
-  }, about_jsx(AboutTop, null)), about_jsx(AboutContent, null), about_jsx(GetQuote["a" /* default */], null), about_jsx(Bottombar["a" /* default */], null));
-}
-// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fabout&absolutePagePath=private-next-pages%2Fabout.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=private-next-pages%2F_document.js&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=wPOmYtM46OyETaAhXnN7m&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    const Component = Services
-    /* harmony default export */ var next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
-    const unstable_getStaticProps = about_namespaceObject['unstable_getStaticProp' + 's']
-
-    const unstable_getStaticPaths = undefined
-    const config = about_namespaceObject['confi' + 'g'] || {}
-    const next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
-    async function renderReqToHTML(req, res, fromExport) {
-      const options = {
-        App: _app["a" /* default */],
-        Document: _document["a" /* default */],
-        buildManifest: build_manifest,
-        unstable_getStaticProps,
-        unstable_getStaticPaths,
-        reactLoadableManifest: react_loadable_manifest,
-        canonicalBase: "",
-        buildId: "wPOmYtM46OyETaAhXnN7m",
-        assetPrefix: "",
-        ampBindInitData: false,
-      }
-      let sprData = false
-
-      if (req.url.match(/_next\/data/)) {
-        sprData = true
-        req.url = req.url
-          .replace(new RegExp('/_next/data/wPOmYtM46OyETaAhXnN7m/'), '/')
-          .replace(/\.json$/, '')
-      }
-      const parsedUrl = Object(external_url_["parse"])(req.url, true)
-      const renderOpts = Object.assign(
-        {
-          Component,
-          pageConfig: config,
-          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
-          nextExport: fromExport
-        },
-        options,
-      )
-      try {
-        
-        const params = {};
-        const nowParams = null;
-        let result = await Object(render["renderToHTML"])(req, res, "/about", Object.assign({}, unstable_getStaticProps ? {} : parsedUrl.query, nowParams ? nowParams : params), renderOpts)
-
-        if (sprData && !fromExport) {
-          const payload = JSON.stringify(renderOpts.sprData)
-          res.setHeader('Content-Type', 'application/json')
-          res.setHeader('Content-Length', Buffer.byteLength(payload))
-          res.setHeader(
-            'Cache-Control',
-            `s-maxage=${renderOpts.revalidate}, stale-while-revalidate`
-          )
-          res.end(payload)
-          return null
-        }
-
-        if (fromExport) return { html: result, renderOpts }
-        return result
-      } catch (err) {
-        if (err.code === 'ENOENT') {
-          res.statusCode = 404
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            unstable_getStaticProps: undefined,
-            unstable_getStaticPaths: undefined,
-            Component: _error["default"]
-          }))
-          return result
-        } else {
-          console.error(err)
-          res.statusCode = 500
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            unstable_getStaticProps: undefined,
-            unstable_getStaticPaths: undefined,
-            Component: _error["default"],
-            err
-          }))
-          return result
-        }
-      }
-    }
-    async function next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
-      try {
-        await Object(next_plugin_loadermiddleware_on_init_server["default"])()
-        const html = await renderReqToHTML(req, res)
-        if (html) {
-          Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
-        }
-      } catch(err) {
-        await Object(next_plugin_loadermiddleware_on_error_server["default"])(err)
-        console.error(err)
-        res.statusCode = 500
-        res.end('Internal Server Error')
-      }
-    }
-  
 
 /***/ }),
 
@@ -40366,6 +39910,501 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "hdNa":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var about_namespaceObject = {};
+__webpack_require__.r(about_namespaceObject);
+__webpack_require__.d(about_namespaceObject, "default", function() { return Services; });
+
+// EXTERNAL MODULE: external "url"
+var external_url_ = __webpack_require__("bzos");
+
+// EXTERNAL MODULE: external "querystring"
+var external_querystring_ = __webpack_require__("8xkj");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
+var render = __webpack_require__("/bjS");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
+var send_html = __webpack_require__("LuNM");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-init-server
+var next_plugin_loadermiddleware_on_init_server = __webpack_require__("GX0O");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server
+var next_plugin_loadermiddleware_on_error_server = __webpack_require__("KqAr");
+
+// EXTERNAL MODULE: ./.next/build-manifest.json
+var build_manifest = __webpack_require__("LZ9C");
+
+// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
+var react_loadable_manifest = __webpack_require__("67Bq");
+
+// EXTERNAL MODULE: ./src/pages/_document.js
+var _document = __webpack_require__("senJ");
+
+// EXTERNAL MODULE: ./src/pages/_error.js
+var _error = __webpack_require__("URMD");
+
+// EXTERNAL MODULE: ./src/pages/_app.js + 2 modules
+var _app = __webpack_require__("IlR1");
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("q1tI");
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.js
+var clsx = __webpack_require__("4k7N");
+var clsx_default = /*#__PURE__*/__webpack_require__.n(clsx);
+
+// EXTERNAL MODULE: ./src/components/common/Bottombar.js + 7 modules
+var Bottombar = __webpack_require__("icW0");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
+var makeStyles = __webpack_require__("R/WZ");
+
+// EXTERNAL MODULE: ./src/components/servicesPage/GetQuote.js
+var GetQuote = __webpack_require__("pTcK");
+
+// EXTERNAL MODULE: ./src/components/common/Topbar.js + 5 modules
+var Topbar = __webpack_require__("sHXR");
+
+// EXTERNAL MODULE: ./src/components/common/Contactbar.js + 1 modules
+var Contactbar = __webpack_require__("ev8R");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/index.js
+var core = __webpack_require__("m178");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
+var Container = __webpack_require__("Ji2X");
+
+// EXTERNAL MODULE: ./src/components/common/QuoteRotation.js
+var QuoteRotation = __webpack_require__("NV3U");
+
+// CONCATENATED MODULE: ./src/components/about/AboutIntroTitle.js
+var __jsx = react_default.a.createElement;
+
+
+
+
+
+const useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  box: {
+    width: '100%'
+  },
+  text_intro: {
+    color: 'white'
+  },
+  paper: {
+    background: 'transparent'
+  },
+  transparentPaper: {
+    borderRadius: 8,
+    backgroundColor: 'transparent'
+  },
+  text: {
+    color: 'white'
+  },
+  condMarginTop: {
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '5%'
+    }
+  },
+  condMargin: {
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: 48
+    }
+  },
+  quotationMarks: {
+    color: 'white',
+    fontSize: 29
+  },
+  whom: {
+    paddingLeft: 24
+  },
+  qutoation: {
+    paddingLeft: 24
+  }
+}));
+function AboutIntro() {
+  const classes = useStyles();
+  return __jsx(Container["a" /* default */], {
+    maxWidth: "lg"
+  }, __jsx(core["Grid"], {
+    container: true,
+    direction: "row",
+    justify: "center" // alignItems="center"
+    // className={classes.box}
+
+  }, __jsx(core["Grid"], {
+    item: true,
+    xs: 12,
+    sm: 8
+  }, __jsx(QuoteRotation["a" /* default */], null))));
+}
+// CONCATENATED MODULE: ./src/components/about/AboutTop.js
+var AboutTop_jsx = react_default.a.createElement;
+
+
+
+
+
+
+const AboutTop_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  minHeightTop: {
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 500
+    },
+    [theme.breakpoints.down('md')]: {
+      minHeight: 500
+    },
+    [theme.breakpoints.up('md')]: {
+      minHeight: 500
+    }
+  },
+  box1bg: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center bottom'
+  },
+  homeIntro: {
+    marginBottom: 30,
+    marginTop: 50,
+    [theme.breakpoints.up('sm')]: {// minHeight: '20vh',
+    }
+  }
+}));
+function AboutTop() {
+  const classes = AboutTop_useStyles();
+  return AboutTop_jsx("div", null, AboutTop_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    className: classes.minHeightTop
+  }, AboutTop_jsx(core["Grid"], {
+    item: true
+  }, AboutTop_jsx(Contactbar["a" /* default */], null)), AboutTop_jsx(core["Grid"], {
+    item: true
+  }, AboutTop_jsx(Topbar["a" /* default */], null)), AboutTop_jsx(core["Grid"], {
+    item: true
+  }, AboutTop_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    alignItems: "stretch",
+    className: classes.homeIntro
+  }, AboutTop_jsx(core["Grid"], {
+    item: true
+  }, AboutTop_jsx(AboutIntro, null))))));
+}
+// EXTERNAL MODULE: ./src/components/common/QuoteStrip.js
+var QuoteStrip = __webpack_require__("8r2L");
+
+// CONCATENATED MODULE: ./src/components/about/AboutContent.js
+var AboutContent_jsx = react_default.a.createElement;
+
+
+
+
+const AboutContent_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  root: {// minHeight: '50vh',
+  },
+  aboutBox: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 200,
+      marginBottom: 200
+    },
+    [theme.breakpoints.down('md')]: {
+      marginTop: 200,
+      marginBottom: 200
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: 200,
+      marginBottom: 200
+    }
+  },
+  container: {
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: 100,
+      paddingBottom: 100
+    },
+    [theme.breakpoints.down('md')]: {
+      paddingTop: 100,
+      paddingBottom: 100
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: 100,
+      paddingBottom: 100
+    }
+  },
+  missionTitle: {
+    textAlign: 'center' // [theme.breakpoints.down('sm')]: {
+    //   fontSize: 19,
+    // },
+    // [theme.breakpoints.down('md')]: {
+    //   fontSize: 22,
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //   fontSize: 29,
+    // },
+
+  },
+  missionText: {
+    textAlign: 'center'
+  },
+  aboutText: {
+    textAlign: 'center'
+  },
+  aboutTitle: {
+    textAlign: 'center'
+  },
+  visionInner: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 72,
+      marginBottom: 72
+    },
+    [theme.breakpoints.down('md')]: {
+      marginTop: 88,
+      marginBottom: 88
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: 128,
+      marginBottom: 128
+    }
+  },
+  aboutInner: {// marginTop: 210,
+    // marginBottom: 110,
+  }
+}));
+function AboutContent(props) {
+  const classes = AboutContent_useStyles();
+  const xsmDown = Object(core["useMediaQuery"])(theme => theme.breakpoints.down('xs'));
+  return AboutContent_jsx("div", {
+    className: classes.root
+  }, AboutContent_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    alignItems: "stretch"
+  }, AboutContent_jsx(core["Grid"], {
+    item: true
+  }, AboutContent_jsx(core["Paper"], {
+    elevation: 0,
+    style: {
+      height: '100%',
+      width: '100%'
+    }
+  }, AboutContent_jsx(core["Container"], {
+    maxWidth: "lg"
+  }, AboutContent_jsx(core["Grid"], {
+    direction: "column",
+    className: classes.visionInner
+  }, AboutContent_jsx(core["Grid"], {
+    item: true
+  }, AboutContent_jsx("div", {
+    style: {
+      marginBottom: 10
+    }
+  }, AboutContent_jsx(core["Typography"], {
+    variant: "h3",
+    className: classes.missionTitle
+  }, "\u2014 Our Mission \u2014"))), AboutContent_jsx(core["Grid"], {
+    item: true
+  }, AboutContent_jsx("div", null, AboutContent_jsx(core["Typography"], {
+    variant: "body1",
+    className: classes.missionText
+  }, "Equip your house with maximum automation, visibility and security using the latest technology at a competitive price."))))))), AboutContent_jsx(core["Grid"], {
+    item: true
+  }, AboutContent_jsx(QuoteStrip["a" /* default */], {
+    text: xsmDown ? 'Fair Pricing & Excellent Business record. Our full Home Automation was completed by a punctual, tidy, and knowledgable team with lots of experience.' : 'Fair Pricing & Excellent Business record. Our full Home Automation was completed by a punctual, tidy, and knowledgable team with lots of experience. We’re enjoying it now and we know it will be an asset to selling our home when the time comes.',
+    by: "K. W",
+    byTitle: "Richmond Hill",
+    image: "gallery/toronto.jpg"
+  })), AboutContent_jsx(core["Grid"], {
+    item: true,
+    className: classes.aboutBox
+  }, AboutContent_jsx(core["Paper"], {
+    elevation: 0
+  }, AboutContent_jsx(core["Container"], {
+    maxWidth: "lg"
+  }, AboutContent_jsx(core["Grid"], {
+    container: true,
+    direction: "column"
+  }, AboutContent_jsx(core["Grid"], {
+    item: true,
+    xs: 12
+  }, AboutContent_jsx("div", {
+    style: {
+      marginBottom: 40
+    }
+  }, AboutContent_jsx(core["Typography"], {
+    variant: "h3",
+    className: classes.aboutTitle
+  }, "\u2014 Our Team \u2014"))), AboutContent_jsx(core["Grid"], {
+    item: true,
+    xs: 12
+  }, AboutContent_jsx("div", null, AboutContent_jsx(core["Typography"], {
+    variant: "body1",
+    className: classes.aboutText
+  }, "iNest has been designing, programming, and installing residential and commercial automation, smart home, and entertainment systems for the past 20 years. Our team of licensed professionals offers the right home control system for you based on your requirements, lifestyle, and budget. iNest is located in the north of GTA, Toronto, Ontario, Canada and it has solutions for condominiums, residential homes, new construction, renovation and commercial applications of all sizes and requirements. We\u2019re passionate about creating exceptional systems for our clients, and we leave behind satisfied clients - that\u2019s a promise!")))))))));
+}
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/lib/head.js
+var head = __webpack_require__("8Kt/");
+var head_default = /*#__PURE__*/__webpack_require__.n(head);
+
+// CONCATENATED MODULE: ./src/pages/about.js
+var about_jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+
+const about_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  box1bg: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.90)), url(${'gallery/stairwayToHeaven.jpg'})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  },
+  selectiveServices: {
+    position: 'relative',
+    zIndex: '3'
+  },
+  selectiveServicesRaised: {
+    margin: '-80px 30px 80px ',
+    borderRadius: '6px',
+    boxShadow: '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
+  }
+}));
+function Services() {
+  const classes = about_useStyles();
+  const selectiveServiceStyles = clsx_default()(classes.selectiveServices, classes.selectiveServicesRaised);
+  return about_jsx(react_default.a.Fragment, null, about_jsx(head_default.a, null, about_jsx("title", null, "about")), about_jsx("div", {
+    className: classes.box1bg
+  }, about_jsx(AboutTop, null)), about_jsx(AboutContent, null), about_jsx(GetQuote["a" /* default */], null), about_jsx(Bottombar["a" /* default */], null));
+}
+// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fabout&absolutePagePath=private-next-pages%2Fabout.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=private-next-pages%2F_document.js&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=2bv4MuMKJxmOy0EYfqZsy&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    const Component = Services
+    /* harmony default export */ var next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
+    const unstable_getStaticProps = about_namespaceObject['unstable_getStaticProp' + 's']
+
+    const unstable_getStaticPaths = undefined
+    const config = about_namespaceObject['confi' + 'g'] || {}
+    const next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
+    async function renderReqToHTML(req, res, fromExport) {
+      const options = {
+        App: _app["a" /* default */],
+        Document: _document["a" /* default */],
+        buildManifest: build_manifest,
+        unstable_getStaticProps,
+        unstable_getStaticPaths,
+        reactLoadableManifest: react_loadable_manifest,
+        canonicalBase: "",
+        buildId: "2bv4MuMKJxmOy0EYfqZsy",
+        assetPrefix: "",
+        ampBindInitData: false,
+      }
+      let sprData = false
+
+      if (req.url.match(/_next\/data/)) {
+        sprData = true
+        req.url = req.url
+          .replace(new RegExp('/_next/data/2bv4MuMKJxmOy0EYfqZsy/'), '/')
+          .replace(/\.json$/, '')
+      }
+      const parsedUrl = Object(external_url_["parse"])(req.url, true)
+      const renderOpts = Object.assign(
+        {
+          Component,
+          pageConfig: config,
+          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
+          nextExport: fromExport
+        },
+        options,
+      )
+      try {
+        
+        const params = {};
+        const nowParams = null;
+        let result = await Object(render["renderToHTML"])(req, res, "/about", Object.assign({}, unstable_getStaticProps ? {} : parsedUrl.query, nowParams ? nowParams : params), renderOpts)
+
+        if (sprData && !fromExport) {
+          const payload = JSON.stringify(renderOpts.sprData)
+          res.setHeader('Content-Type', 'application/json')
+          res.setHeader('Content-Length', Buffer.byteLength(payload))
+          res.setHeader(
+            'Cache-Control',
+            `s-maxage=${renderOpts.revalidate}, stale-while-revalidate`
+          )
+          res.end(payload)
+          return null
+        }
+
+        if (fromExport) return { html: result, renderOpts }
+        return result
+      } catch (err) {
+        if (err.code === 'ENOENT') {
+          res.statusCode = 404
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            unstable_getStaticProps: undefined,
+            unstable_getStaticPaths: undefined,
+            Component: _error["default"]
+          }))
+          return result
+        } else {
+          console.error(err)
+          res.statusCode = 500
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            unstable_getStaticProps: undefined,
+            unstable_getStaticPaths: undefined,
+            Component: _error["default"],
+            err
+          }))
+          return result
+        }
+      }
+    }
+    async function next_serverless_loaderpage_2Fabout_absolutePagePath_private_next_pages_2Fabout_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
+      try {
+        await Object(next_plugin_loadermiddleware_on_init_server["default"])()
+        const html = await renderReqToHTML(req, res)
+        if (html) {
+          Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
+        }
+      } catch(err) {
+        await Object(next_plugin_loadermiddleware_on_error_server["default"])(err)
+        console.error(err)
+        res.statusCode = 500
+        res.end('Internal Server Error')
+      }
+    }
+  
+
+/***/ }),
+
 /***/ "hfKm":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41807,11 +41846,18 @@ const Bottombar_useStyles = Object(makeStyles["a" /* default */])(theme => ({
   },
   divider: {
     backgroundColor: `${theme.palette.grey[800]}`
+  },
+  hover: {
+    color: theme.palette.grey[500],
+    fontSize: mdDown => mdDown ? 16 : 24,
+    '&:hover': {
+      color: 'white'
+    }
   }
 }));
 function Bottombar() {
-  const classes = Bottombar_useStyles();
   const mdDown = Object(core["useMediaQuery"])(theme => theme.breakpoints.down('md'));
+  const classes = Bottombar_useStyles(mdDown);
   return Bottombar_jsx(Grid["a" /* default */], {
     container: true,
     direction: "row",
@@ -41851,24 +41897,15 @@ function Bottombar() {
   }, Bottombar_jsx(LinkedinButton["a" /* default */], {
     href: "https://www.linkedin.com/company/inestt/",
     target: "_blank",
-    style: {
-      fontSize: mdDown ? 16 : 24,
-      color: 'white'
-    }
+    className: classes.hover
   }), Bottombar_jsx(InstagramButton["a" /* default */], {
     href: "https://www.instagram.com/inest.ca/?hl=en",
     target: "_blank",
-    style: {
-      fontSize: mdDown ? 16 : 24,
-      color: 'white'
-    }
+    className: classes.hover
   }), Bottombar_jsx(FacebookButton["a" /* default */], {
     href: "https://www.facebook.com/INest-114704206654630/",
     target: "_blank",
-    style: {
-      fontSize: mdDown ? 16 : 24,
-      color: 'white'
-    }
+    className: classes.hover
   })))), Bottombar_jsx(Divider["a" /* default */], {
     orientation: "vertical",
     className: clsx_default()([classes.hideOnSize, classes.divider])
@@ -54000,9 +54037,6 @@ var FacebookButton = __webpack_require__("2p08");
 // EXTERNAL MODULE: ./src/components/common/button/InstagramButton.js + 1 modules
 var InstagramButton = __webpack_require__("JyTl");
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/colors/grey.js
-var grey = __webpack_require__("LXXt");
-
 // CONCATENATED MODULE: ./src/components/common/Topbar.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Topbar; });
 var Topbar_jsx = react_default.a.createElement;
@@ -54032,6 +54066,8 @@ const Topbar_useStyles = Object(makeStyles["a" /* default */])(theme => ({
     marginBottom: -16
   },
   hover: {
+    fontSize: 16,
+    color: theme.palette.grey[500],
     '&:hover': {
       color: 'white'
     }
@@ -54075,30 +54111,18 @@ function Topbar() {
   }, Topbar_jsx(LinkedinButton["a" /* default */], {
     href: "https://www.linkedin.com/company/inestt/",
     target: "_blank",
-    style: {
-      fontSize: 16,
-      color: grey["a" /* default */][500]
-    },
     className: classes.hover
   })), Topbar_jsx(Grid["a" /* default */], {
     item: true
   }, Topbar_jsx(InstagramButton["a" /* default */], {
     href: "https://www.instagram.com/inest.ca/?hl=en",
     target: "_blank",
-    style: {
-      fontSize: 16,
-      color: grey["a" /* default */][500]
-    },
     className: classes.hover
   })), Topbar_jsx(Grid["a" /* default */], {
     item: true
   }, Topbar_jsx(FacebookButton["a" /* default */], {
     href: "https://www.facebook.com/INest-114704206654630/",
     target: "_blank",
-    style: {
-      fontSize: 16,
-      color: grey["a" /* default */][500]
-    },
     className: classes.hover
   })))))), Topbar_jsx(Grid["a" /* default */], {
     item: true

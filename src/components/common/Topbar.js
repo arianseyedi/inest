@@ -25,6 +25,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: -16,
   },
   hover: {
+    fontSize: 16,
+    color: theme.palette.grey[500],
     '&:hover': {
       color: 'white',
     },
@@ -52,7 +54,6 @@ export default function Topbar() {
                       <LinkedinButton
                         href="https://www.linkedin.com/company/inestt/"
                         target="_blank"
-                        style={{ fontSize: 16, color: grey[500] }}
                         className={classes.hover}
                       />
                     </Grid>
@@ -61,7 +62,6 @@ export default function Topbar() {
                       <InstagramButton
                         href="https://www.instagram.com/inest.ca/?hl=en"
                         target="_blank"
-                        style={{ fontSize: 16, color: grey[500] }}
                         className={classes.hover}
                       />
                     </Grid>
@@ -69,7 +69,6 @@ export default function Topbar() {
                       <FacebookButton
                         href="https://www.facebook.com/INest-114704206654630/"
                         target="_blank"
-                        style={{ fontSize: 16, color: grey[500] }}
                         className={classes.hover}
                       />
                     </Grid>

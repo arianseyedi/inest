@@ -10,6 +10,7 @@ import '../components/common/FancyQuotation.scss'
 import '../components/servicesPage/ServicePresentation.scss'
 import '../components/homePage/HomeIntro.scss'
 import '../components/common/imageSlideshow/fade.scss'
+import Head from 'next/head'
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -35,6 +36,42 @@ export default class MyApp extends App {
     return (
       <React.Fragment>
         <CustomHead />
+        <Head>
+          <script type="text/javascript">
+            {(function() {
+              var _linkedin_partner_id = '1891689'
+              try {
+                if (window !== undefined) {
+                  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []
+                  window._linkedin_data_partner_ids.push(_linkedin_partner_id)
+                }
+              } catch {}
+            })()}
+          </script>
+          <script type="text/javascript">
+            {(function() {
+              try {
+                if (document !== undefined) {
+                  var s = document.getElementsByTagName('script')[0]
+                  var b = document.createElement('script')
+                  b.type = 'text/javascript'
+                  b.async = true
+                  b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js'
+                  s.parentNode.insertBefore(b, s)
+                }
+              } catch {}
+            })()}
+          </script>
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: 'none' }}
+              alt=""
+              src="https://px.ads.linkedin.com/collect/?pid=1891689&fmt=gif"
+            />
+          </noscript>
+        </Head>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />

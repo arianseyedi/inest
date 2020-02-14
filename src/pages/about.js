@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import GetQuote from '../components/servicesPage/GetQuote'
 import AboutTop from '../components/about/AboutTop'
 import AboutContent from '../components/about/AboutContent'
+import Head from 'next/head'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
@@ -32,6 +33,9 @@ export default function Services() {
   )
   return (
     <React.Fragment>
+      <Head>
+        <title>about</title>
+      </Head>
       <div className={classes.box1bg}>
         <AboutTop />
       </div>

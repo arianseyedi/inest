@@ -16,7 +16,6 @@ export default function CustomHead() {
       <link rel="mask-icon" href="fv/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="msapplication-TileColor" content="#2b5797" />
       <meta name="theme-color" content="#000000" />
-      <title>Inest.CA</title>
     </Head>
   )
 }

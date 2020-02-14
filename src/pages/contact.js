@@ -6,6 +6,7 @@ import ContactTop from '../components/contact/ContactTop'
 import ContactContent from '../components/contact/ContactContent'
 import { Grid } from '@material-ui/core'
 import ContactFormFormik from '../components/contact/ContactFormContent'
+import Head from 'next/head'
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -14,18 +15,23 @@ const useStyles = makeStyles(theme => ({
 export default function Services() {
   const classes = useStyles()
   return (
-    <Grid container style={{ height: '100%' }}>
-      <Grid item xs={12}>
-        <ContactTop />
+    <React.Fragment>
+      <Head>
+        <title>services</title>
+      </Head>
+      <Grid container style={{ height: '100%' }}>
+        <Grid item xs={12}>
+          <ContactTop />
+        </Grid>
+        <Grid item xs={12}>
+          <ContactContent />
+        </Grid>
+        <Grid item xs={12}>
+          <div>
+            <Bottombar />
+          </div>
+        </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <ContactContent />
-      </Grid>
-      <Grid item xs={12}>
-        <div>
-          <Bottombar />
-        </div>
-      </Grid>
-    </Grid>
+    </React.Fragment>
   )
 }

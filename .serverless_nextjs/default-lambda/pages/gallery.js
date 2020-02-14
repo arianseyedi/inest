@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "8haL");
+/******/ 	return __webpack_require__(__webpack_require__.s = "UeKq");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -12732,945 +12732,6 @@ module.exports = function (O, D) {
 
 /***/ }),
 
-/***/ "8haL":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var gallery_namespaceObject = {};
-__webpack_require__.r(gallery_namespaceObject);
-__webpack_require__.d(gallery_namespaceObject, "default", function() { return Services; });
-
-// EXTERNAL MODULE: external "url"
-var external_url_ = __webpack_require__("bzos");
-
-// EXTERNAL MODULE: external "querystring"
-var external_querystring_ = __webpack_require__("8xkj");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
-var render = __webpack_require__("/bjS");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
-var send_html = __webpack_require__("LuNM");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-init-server
-var next_plugin_loadermiddleware_on_init_server = __webpack_require__("GX0O");
-
-// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server
-var next_plugin_loadermiddleware_on_error_server = __webpack_require__("KqAr");
-
-// EXTERNAL MODULE: ./.next/build-manifest.json
-var build_manifest = __webpack_require__("LZ9C");
-
-// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
-var react_loadable_manifest = __webpack_require__("67Bq");
-
-// EXTERNAL MODULE: ./src/pages/_document.js
-var _document = __webpack_require__("senJ");
-
-// EXTERNAL MODULE: ./src/pages/_error.js
-var _error = __webpack_require__("URMD");
-
-// EXTERNAL MODULE: ./src/pages/_app.js + 2 modules
-var _app = __webpack_require__("IlR1");
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("q1tI");
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.js
-var clsx = __webpack_require__("4k7N");
-var clsx_default = /*#__PURE__*/__webpack_require__.n(clsx);
-
-// EXTERNAL MODULE: ./src/components/common/Bottombar.js + 7 modules
-var Bottombar = __webpack_require__("icW0");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
-var makeStyles = __webpack_require__("R/WZ");
-
-// EXTERNAL MODULE: ./src/components/servicesPage/GetQuote.js
-var GetQuote = __webpack_require__("pTcK");
-
-// EXTERNAL MODULE: ./src/components/common/Topbar.js + 5 modules
-var Topbar = __webpack_require__("sHXR");
-
-// EXTERNAL MODULE: ./src/components/common/Contactbar.js + 1 modules
-var Contactbar = __webpack_require__("ev8R");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/index.js
-var core = __webpack_require__("m178");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
-var Container = __webpack_require__("Ji2X");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
-var Typography = __webpack_require__("ofer");
-
-// EXTERNAL MODULE: ./src/components/common/FancyQuotation.js
-var FancyQuotation = __webpack_require__("itGI");
-
-// CONCATENATED MODULE: ./src/components/galleryPage/GalleryIntroTitle.js
-var __jsx = react_default.a.createElement;
-
-
-
-
-
-
-const useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  box: {
-    width: '100%'
-  },
-  text_intro: {
-    color: 'white'
-  },
-  paper: {
-    background: 'transparent'
-  },
-  transparentPaper: {
-    borderRadius: 8,
-    backgroundColor: 'transparent'
-  },
-  text: {
-    color: 'white'
-  },
-  condMarginTop: {
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: '5%'
-    }
-  },
-  condMargin: {
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: 48
-    }
-  },
-  quotationMarks: {
-    color: 'white',
-    fontSize: 29
-  },
-  whom: {
-    paddingLeft: 24
-  },
-  qutoation: {
-    paddingLeft: 24
-  }
-}));
-function GalleryIntro() {
-  const classes = useStyles();
-  return __jsx(Container["a" /* default */], {
-    maxWidth: "lg"
-  }, __jsx(core["Grid"], {
-    container: true,
-    direction: "row",
-    justify: "space-between",
-    alignItems: "center",
-    className: classes.box
-  }, __jsx(core["Grid"], {
-    item: true,
-    xs: 12,
-    sm: 4
-  }, __jsx(core["Paper"], {
-    className: classes.paper,
-    elevation: 0
-  }, __jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    style: {
-      paddingTop: 35,
-      paddingBottom: 35
-    },
-    className: classes.condMarginTop
-  }, __jsx(core["Grid"], {
-    item: true
-  }, __jsx(Typography["a" /* default */], {
-    variant: "h3",
-    component: "h1",
-    gutterBottom: true,
-    className: classes.text_intro,
-    id: "unselectable-text"
-  }, "iNest Gallery")), __jsx(core["Grid"], {
-    item: true
-  }, __jsx(Typography["a" /* default */], {
-    className: classes.text_intro,
-    id: "unselectable-text"
-  }, "presenting our previous projects."))))), __jsx(core["Grid"], {
-    item: true,
-    xs: 12,
-    sm: 7
-  }, __jsx(core["Paper"], {
-    className: classes.transparentPaper,
-    elevation: 6
-  }, __jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    alignItems: "stretch",
-    style: {
-      padding: 35
-    },
-    className: classes.condMargin
-  }, __jsx(core["Grid"], {
-    item: true
-  }, __jsx(FancyQuotation["a" /* default */], {
-    text: 'iNest team went above & beyond to make sure we’re happy with the final results.',
-    by: 'S.S.',
-    byTitle: 'Toronto'
-  })))))));
-}
-// CONCATENATED MODULE: ./src/components/galleryPage/GalleryTop.js
-var GalleryTop_jsx = react_default.a.createElement;
-
-
-
-
-
-
-const GalleryTop_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  minHeightTop: {
-    [theme.breakpoints.down('sm')]: {
-      minHeight: 400
-    },
-    [theme.breakpoints.down('md')]: {
-      minHeight: 400
-    },
-    [theme.breakpoints.up('md')]: {
-      minHeight: 400
-    }
-  },
-  box1bg: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center bottom'
-  },
-  homeIntro: {
-    marginBottom: 80,
-    marginTop: 50,
-    [theme.breakpoints.up('sm')]: {
-      minHeight: '30vh'
-    }
-  }
-}));
-function GalleryTop() {
-  const classes = GalleryTop_useStyles();
-  return GalleryTop_jsx("div", null, GalleryTop_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    className: classes.minHeightTop
-  }, GalleryTop_jsx(core["Grid"], {
-    item: true
-  }, GalleryTop_jsx(Contactbar["a" /* default */], null)), GalleryTop_jsx(core["Grid"], {
-    item: true
-  }, GalleryTop_jsx(Topbar["a" /* default */], null)), GalleryTop_jsx(core["Grid"], {
-    item: true
-  }, GalleryTop_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    justify: "center",
-    alignItems: "stretch",
-    className: classes.homeIntro
-  }, GalleryTop_jsx(core["Grid"], {
-    item: true
-  }, GalleryTop_jsx(GalleryIntro, null))))));
-}
-// EXTERNAL MODULE: ./src/components/common/QuoteStrip.js
-var QuoteStrip = __webpack_require__("8r2L");
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
-var define_property = __webpack_require__("hfKm");
-var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js
-var define_properties = __webpack_require__("2Eek");
-var define_properties_default = /*#__PURE__*/__webpack_require__.n(define_properties);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js
-var get_own_property_descriptors = __webpack_require__("XoMD");
-var get_own_property_descriptors_default = /*#__PURE__*/__webpack_require__.n(get_own_property_descriptors);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
-var get_own_property_descriptor = __webpack_require__("Jo+v");
-var get_own_property_descriptor_default = /*#__PURE__*/__webpack_require__.n(get_own_property_descriptor);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js
-var get_own_property_symbols = __webpack_require__("4mXO");
-var get_own_property_symbols_default = /*#__PURE__*/__webpack_require__.n(get_own_property_symbols);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js
-var object_keys = __webpack_require__("pLtp");
-var keys_default = /*#__PURE__*/__webpack_require__.n(object_keys);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__("vYYK");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/GridList/GridList.js
-var GridList = __webpack_require__("RHQs");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/GridListTile/GridListTile.js
-var GridListTile = __webpack_require__("kKik");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/GridListTileBar/GridListTileBar.js
-var GridListTileBar = __webpack_require__("ldJd");
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js
-var esm_extends = __webpack_require__("kOwS");
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js + 1 modules
-var objectWithoutProperties = __webpack_require__("qNsG");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js
-var withStyles = __webpack_require__("H2TA");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Dialog/Dialog.js
-var Dialog = __webpack_require__("kfFl");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js
-var DialogTitle = __webpack_require__("yv+Y");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js
-var DialogContent = __webpack_require__("EQI2");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/IconButton/IconButton.js
-var IconButton = __webpack_require__("PsDL");
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/icons/Close.js
-var Close = __webpack_require__("ZPUd");
-var Close_default = /*#__PURE__*/__webpack_require__.n(Close);
-
-// CONCATENATED MODULE: ./src/components/common/CustomDialog.js
-
-
-var CustomDialog_jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-
-
-
-
-const styles = theme => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(2)
-  },
-  closeButton: {
-    position: 'absolute',
-    right: theme.spacing(1),
-    top: theme.spacing(1),
-    color: theme.palette.grey[500]
-  }
-});
-
-const CustomDialog_DialogTitle = Object(withStyles["a" /* default */])(styles)(props => {
-  const {
-    children,
-    classes,
-    onClose
-  } = props,
-        other = Object(objectWithoutProperties["a" /* default */])(props, ["children", "classes", "onClose"]);
-
-  return CustomDialog_jsx(DialogTitle["a" /* default */], Object(esm_extends["a" /* default */])({
-    disableTypography: true,
-    className: classes.root
-  }, other), CustomDialog_jsx(Typography["a" /* default */], {
-    variant: "h6"
-  }, children), onClose ? CustomDialog_jsx(IconButton["a" /* default */], {
-    "aria-label": "close",
-    className: classes.closeButton,
-    onClick: onClose
-  }, CustomDialog_jsx(Close_default.a, null)) : null);
-});
-const CustomDialog_DialogContent = Object(withStyles["a" /* default */])(theme => ({
-  root: {
-    padding: theme.spacing(2)
-  }
-}))(DialogContent["a" /* default */]);
-const CustomDialog_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  topRibbon: {
-    color: theme.palette.grey[100],
-    backgroundColor: theme.palette.grey[900],
-    maxHeight: '80vh'
-  },
-  bg: {}
-}));
-function CustomizedDialogs(props) {
-  const classes = CustomDialog_useStyles();
-  return CustomDialog_jsx("div", null, CustomDialog_jsx(Dialog["a" /* default */], {
-    onClose: props.handleClose,
-    "aria-labelledby": "customized-dialog-title",
-    open: props.open,
-    fullWidth: true,
-    maxWidth: "lg" // PaperProps={{ style: { borderRadius: 15 } }}
-
-  }, CustomDialog_jsx(CustomDialog_DialogTitle, {
-    id: "customized-dialog-title",
-    onClose: props.handleClose,
-    className: classes.topRibbon
-  }, props.title), CustomDialog_jsx(CustomDialog_DialogContent, {
-    className: classes.bg
-  }, CustomDialog_jsx("div", null, CustomDialog_jsx(Typography["a" /* default */], {
-    gutterBottom: true,
-    variant: "overline",
-    style: {
-      fontWeight: 'bold'
-    },
-    color: "textPrimary"
-  }, props.description), CustomDialog_jsx("img", {
-    style: {
-      width: '100%',
-      maxHeight: '80vh',
-      borderRadius: 4
-    },
-    src: props.img
-  })))));
-}
-// CONCATENATED MODULE: ./src/resource/EnlargeIcon.js
-
-
-var EnlargeIcon_jsx = react_default.a.createElement;
-
-
-const EnlargeIcon = props => {
-  return EnlargeIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
-    viewBox: "0 0 512 512"
-  }), EnlargeIcon_jsx("g", null, EnlargeIcon_jsx("g", null, EnlargeIcon_jsx("path", {
-    d: "M492,0H344.212c-11.046,0-20,8.954-20,20s8.954,20,20,20h99.503L283.394,200.322c-7.811,7.811-7.811,20.474,0,28.284 c7.81,7.81,20.473,7.811,28.284,0L472,68.284v99.503c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V20 C512,9.115,503.154,0,492,0z"
-  }))), EnlargeIcon_jsx("g", null, EnlargeIcon_jsx("g", null, EnlargeIcon_jsx("path", {
-    d: "M228.606,283.394c-7.811-7.81-20.474-7.811-28.284,0L40,443.716v-99.503c0-11.046-8.954-20-20-20s-20,8.954-20,20V492 c0,10.866,8.853,20,20,20h147.788c11.046,0,20-8.954,20-20c0-11.046-8.954-20-20-20H68.284l160.322-160.322 C236.417,303.867,236.417,291.204,228.606,283.394z"
-  }))), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null));
-};
-
-/* harmony default export */ var resource_EnlargeIcon = (EnlargeIcon);
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/useMediaQuery/useMediaQuery.js
-var useMediaQuery = __webpack_require__("lopY");
-
-// EXTERNAL MODULE: ./src/components/common/Link.js
-var Link = __webpack_require__("frks");
-
-// CONCATENATED MODULE: ./src/components/galleryPage/PhotoGallery.js
-
-
-
-
-
-
-
-var PhotoGallery_jsx = react_default.a.createElement;
-
-function ownKeys(object, enumerableOnly) { var keys = keys_default()(object); if (get_own_property_symbols_default.a) { var symbols = get_own_property_symbols_default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return get_own_property_descriptor_default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (get_own_property_descriptors_default.a) { define_properties_default()(target, get_own_property_descriptors_default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { define_property_default()(target, key, get_own_property_descriptor_default()(source, key)); }); } } return target; }
-
-
-
-
-
-
-
-
-
-
-
-
-const PhotoGallery_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
-    marginBottom: 45,
-    overflowY: 'hidden'
-  },
-  gridList: {
-    width: '100%',
-    height: 'auto',
-    overflowY: 'hidden' // [theme.breakpoints.down('sm')]: {
-    //   width: '100%',
-    // },
-    // [theme.breakpoints.down('md')]: {
-    //   width: '100%',
-    // },
-    // [theme.breakpoints.up('md')]: {
-    //   width: 1280,
-    // },
-
-  },
-  gridItem: {
-    height: '100%',
-    cursor: 'pointer',
-    '&:hover': {
-      cursor: 'pointer',
-      transform: 'scale(1.015)',
-      webkitTransition: ' all 0.5s ease',
-      mozTransition: ' all 0.5s ease',
-      oTransition: ' all 0.5s ease',
-      msTransition: ' all 0.5s ease',
-      transition: 'all 0.5s ease'
-    },
-    overflowY: 'hidden'
-  },
-  title: {
-    '&:hover': {
-      color: '#FBC02D'
-    }
-  },
-  icon: {
-    color: theme.palette.grey[500],
-    '&:hover': {
-      color: '#FBC02D'
-    }
-  }
-}));
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *  *     cols: 2,
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
-
-function ImageGridList(props) {
-  const classes = PhotoGallery_useStyles();
-  const smDown = Object(useMediaQuery["a" /* default */])(theme => theme.breakpoints.down('xs'));
-  const mdDown = Object(useMediaQuery["a" /* default */])(theme => theme.breakpoints.down('sm'));
-  const mdUp = Object(useMediaQuery["a" /* default */])(theme => theme.breakpoints.down('md'));
-  const [state, setState] = react_default.a.useState({
-    description: '',
-    img: undefined,
-    open: false
-  });
-
-  const handleClickOpen = (img, title) => {
-    setState({
-      description: title,
-      img,
-      open: true
-    });
-  };
-
-  const handleClose = () => {
-    setState(_objectSpread({}, state, {
-      open: false
-    }));
-  };
-
-  const tileData = [{
-    img: '3dproject.png',
-    title: '3DProject',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }, {
-    img: 'gallery/livingroom.jpg',
-    title: 'Lighting Automation',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }, {
-    img: 'gallery/stairwayToHeaven.jpg',
-    title: 'Lighting Automation',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }, // ------------------------------
-  {
-    img: 'gallerytwo/homesecurity3.jpeg',
-    title: 'Security System',
-    cols: smDown ? 1 : mdDown ? 6 : 3
-  }, {
-    img: 'gallery/home.jpg',
-    title: 'Lighting Automation',
-    cols: smDown ? 1 : mdDown ? 6 : 3
-  }, {
-    img: 'gallerytwo/camera.jpeg',
-    title: 'Security Camera',
-    cols: smDown ? 1 : mdDown ? 6 : 3
-  }, {
-    img: 'gallerytwo/camera2.jpeg',
-    title: 'Security Camera 2',
-    cols: smDown ? 1 : mdDown ? 6 : 3
-  }, // ------------------------------
-  {
-    img: '/gallery/theatre-gallery.jpg',
-    title: 'Home Theatre',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }, {
-    img: 'gallerytwo/climate-control.jpeg',
-    title: 'Climate Control',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }, {
-    img: 'gallery/wardrobe.jpg',
-    title: 'Electrical',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }, // ------------------------------
-  {
-    img: 'gallerytwo/sound.jpeg',
-    title: 'Sound System',
-    cols: smDown ? 1 : mdDown ? 6 : 3
-  }, {
-    img: 'gallerytwo/security.jpeg',
-    title: 'Security System',
-    cols: smDown ? 1 : mdDown ? 6 : 3
-  }, {
-    img: 'gallerytwo/lightautomation2.jpeg',
-    title: 'Lighting Controls',
-    cols: smDown ? 1 : mdDown ? 6 : 3
-  }, {
-    img: '/gallerytwo/smarthome2.jpeg',
-    title: 'Smart Home',
-    cols: smDown ? 1 : mdDown ? 6 : 3
-  }, // ------------------------------
-  {
-    img: '/gallerytwo/lighting.jpeg',
-    title: 'Lighting Automation',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }, {
-    img: 'gallerytwo/lighting3.jpeg',
-    title: 'Lighting Automation',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }, {
-    img: 'gallery/lighting-gallery.jpg',
-    title: 'Lighting Automation',
-    cols: smDown ? 1 : mdDown ? 6 : 4
-  }];
-  return PhotoGallery_jsx(react_default.a.Fragment, null, PhotoGallery_jsx("div", {
-    className: classes.root
-  }, PhotoGallery_jsx(core["Container"], {
-    maxWidth: "lg"
-  }, PhotoGallery_jsx(GridList["a" /* default */], {
-    cellHeight: 260,
-    className: classes.gridList,
-    cols: smDown ? 1 : mdDown ? 12 : 12
-  }, tileData.map((tile, index) => PhotoGallery_jsx(GridListTile["a" /* default */], {
-    key: `tile-gallery-${index}`,
-    cols: tile.cols || 1,
-    title: tile.title,
-    onClick: () => tile.title === '3DProject' ? "location.href='pageurl.html';" : handleClickOpen(tile.img, tile.title),
-    className: classes.gridItem
-  }, tile.title === '3DProject' ? PhotoGallery_jsx("a", {
-    href: "https://my.matterport.com/show/?m=EJ33Bp9SU3j",
-    target: "_blank"
-  }, PhotoGallery_jsx("img", {
-    src: tile.img,
-    alt: tile.title,
-    style: {
-      width: '100%',
-      height: '100%'
-    }
-  }), PhotoGallery_jsx(GridListTileBar["a" /* default */], {
-    title: tile.title,
-    classes: {
-      title: classes.title,
-      root: classes.title
-    },
-    style: {
-      height: '100%',
-      textAlign: 'center',
-      fontWeight: 'bolder'
-    } // actionIcon={
-    //   // <IconButton
-    //   //   aria-label={`info about ${tile.title}`}
-    //   //   className={classes.icon}
-    //   // >
-    //   //   <EnlargeIcon />
-    //   // </IconButton>
-    // }
-
-  })) : PhotoGallery_jsx(react_default.a.Fragment, null, PhotoGallery_jsx("img", {
-    src: tile.img,
-    alt: tile.title,
-    style: {
-      width: '100%',
-      height: '100%'
-    }
-  }), PhotoGallery_jsx(GridListTileBar["a" /* default */], {
-    title: tile.title,
-    classes: {
-      title: classes.title,
-      root: classes.title
-    },
-    style: {
-      height: '100%',
-      textAlign: 'center',
-      fontWeight: 'bolder'
-    } // actionIcon={
-    //   // <IconButton
-    //   //   aria-label={`info about ${tile.title}`}
-    //   //   className={classes.icon}
-    //   // >
-    //   //   <EnlargeIcon />
-    //   // </IconButton>
-    // }
-
-  }))))))), PhotoGallery_jsx(CustomizedDialogs, {
-    content: 'gallery item',
-    handleClose: handleClose,
-    open: state.open,
-    img: state.img,
-    title: 'Gallery',
-    description: state.description
-  }));
-}
-// CONCATENATED MODULE: ./src/components/galleryPage/GalleryContent.js
-var GalleryContent_jsx = react_default.a.createElement;
-
-
-
-
-
-const GalleryContent_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  root: {// minHeight: '50vh',
-  },
-  aboutBox: {
-    [theme.breakpoints.down('sm')]: {
-      marginTop: 200,
-      marginBottom: 200
-    },
-    [theme.breakpoints.down('md')]: {
-      marginTop: 200,
-      marginBottom: 200
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginTop: 200,
-      marginBottom: 200
-    }
-  },
-  container: {
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: 100,
-      paddingBottom: 100
-    },
-    [theme.breakpoints.down('md')]: {
-      paddingTop: 100,
-      paddingBottom: 100
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 100,
-      paddingBottom: 100
-    }
-  },
-  missionTitle: {
-    textAlign: 'center' // [theme.breakpoints.down('sm')]: {
-    //   fontSize: 19,
-    // },
-    // [theme.breakpoints.down('md')]: {
-    //   fontSize: 22,
-    // },
-    // [theme.breakpoints.up('lg')]: {
-    //   fontSize: 29,
-    // },
-
-  },
-  missionText: {
-    textAlign: 'center'
-  },
-  aboutText: {
-    textAlign: 'center'
-  },
-  aboutTitle: {
-    textAlign: 'center'
-  },
-  visionInner: {
-    [theme.breakpoints.down('sm')]: {
-      marginTop: 72,
-      marginBottom: 72
-    },
-    [theme.breakpoints.down('md')]: {
-      marginTop: 88,
-      marginBottom: 88
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginTop: 128,
-      marginBottom: 128
-    }
-  },
-  aboutInner: {// marginTop: 210,
-    // marginBottom: 110,
-  }
-}));
-function GalleryContent(props) {
-  const classes = GalleryContent_useStyles();
-  return GalleryContent_jsx("div", {
-    className: classes.root
-  }, GalleryContent_jsx(core["Grid"], {
-    container: true,
-    direction: "column",
-    spacing: 0
-  }, GalleryContent_jsx(core["Grid"], {
-    item: true,
-    xs: 12
-  }, GalleryContent_jsx(core["Container"], {
-    maxWidth: "lg"
-  }, GalleryContent_jsx(core["Grid"], {
-    item: true,
-    className: classes.visionInner
-  }, GalleryContent_jsx(core["Typography"], {
-    variant: "h3",
-    className: classes.missionTitle
-  }, "At iNest, we let our work speak for itself.")))), GalleryContent_jsx(core["Grid"], {
-    item: true
-  }, GalleryContent_jsx(ImageGridList, null))));
-}
-// CONCATENATED MODULE: ./src/pages/gallery.js
-var gallery_jsx = react_default.a.createElement;
-
-
-
-
-
-
-
-const gallery_useStyles = Object(makeStyles["a" /* default */])(theme => ({
-  box1bg: {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.90)), url(${'gallery/livingroom.jpg'})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  },
-  selectiveServices: {
-    position: 'relative',
-    zIndex: '3'
-  },
-  selectiveServicesRaised: {
-    margin: '-80px 30px 80px ',
-    borderRadius: '6px',
-    boxShadow: '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
-  }
-}));
-function Services() {
-  const classes = gallery_useStyles();
-  const selectiveServiceStyles = clsx_default()(classes.selectiveServices, classes.selectiveServicesRaised);
-  return gallery_jsx(react_default.a.Fragment, null, gallery_jsx("div", {
-    className: classes.box1bg
-  }, gallery_jsx(GalleryTop, null)), gallery_jsx(GalleryContent, null), gallery_jsx(GetQuote["a" /* default */], null), gallery_jsx(Bottombar["a" /* default */], null));
-}
-// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fgallery&absolutePagePath=private-next-pages%2Fgallery.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=private-next-pages%2F_document.js&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=wPOmYtM46OyETaAhXnN7m&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    const Component = Services
-    /* harmony default export */ var next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
-    const unstable_getStaticProps = gallery_namespaceObject['unstable_getStaticProp' + 's']
-
-    const unstable_getStaticPaths = undefined
-    const config = gallery_namespaceObject['confi' + 'g'] || {}
-    const next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
-    async function renderReqToHTML(req, res, fromExport) {
-      const options = {
-        App: _app["a" /* default */],
-        Document: _document["a" /* default */],
-        buildManifest: build_manifest,
-        unstable_getStaticProps,
-        unstable_getStaticPaths,
-        reactLoadableManifest: react_loadable_manifest,
-        canonicalBase: "",
-        buildId: "wPOmYtM46OyETaAhXnN7m",
-        assetPrefix: "",
-        ampBindInitData: false,
-      }
-      let sprData = false
-
-      if (req.url.match(/_next\/data/)) {
-        sprData = true
-        req.url = req.url
-          .replace(new RegExp('/_next/data/wPOmYtM46OyETaAhXnN7m/'), '/')
-          .replace(/\.json$/, '')
-      }
-      const parsedUrl = Object(external_url_["parse"])(req.url, true)
-      const renderOpts = Object.assign(
-        {
-          Component,
-          pageConfig: config,
-          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
-          nextExport: fromExport
-        },
-        options,
-      )
-      try {
-        
-        const params = {};
-        const nowParams = null;
-        let result = await Object(render["renderToHTML"])(req, res, "/gallery", Object.assign({}, unstable_getStaticProps ? {} : parsedUrl.query, nowParams ? nowParams : params), renderOpts)
-
-        if (sprData && !fromExport) {
-          const payload = JSON.stringify(renderOpts.sprData)
-          res.setHeader('Content-Type', 'application/json')
-          res.setHeader('Content-Length', Buffer.byteLength(payload))
-          res.setHeader(
-            'Cache-Control',
-            `s-maxage=${renderOpts.revalidate}, stale-while-revalidate`
-          )
-          res.end(payload)
-          return null
-        }
-
-        if (fromExport) return { html: result, renderOpts }
-        return result
-      } catch (err) {
-        if (err.code === 'ENOENT') {
-          res.statusCode = 404
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            unstable_getStaticProps: undefined,
-            unstable_getStaticPaths: undefined,
-            Component: _error["default"]
-          }))
-          return result
-        } else {
-          console.error(err)
-          res.statusCode = 500
-          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-            unstable_getStaticProps: undefined,
-            unstable_getStaticPaths: undefined,
-            Component: _error["default"],
-            err
-          }))
-          return result
-        }
-      }
-    }
-    async function next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_wPOmYtM46OyETaAhXnN7m_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
-      try {
-        await Object(next_plugin_loadermiddleware_on_init_server["default"])()
-        const html = await renderReqToHTML(req, res)
-        if (html) {
-          Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
-        }
-      } catch(err) {
-        await Object(next_plugin_loadermiddleware_on_error_server["default"])(err)
-        console.error(err)
-        res.statusCode = 500
-        res.end('Internal Server Error')
-      }
-    }
-  
-
-/***/ }),
-
 /***/ "8iia":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19520,7 +18581,7 @@ function CustomHead() {
   }), CustomHead_jsx("meta", {
     name: "theme-color",
     content: "#000000"
-  }), CustomHead_jsx("title", null, "Inest.CA"));
+  }));
 }
 // EXTERNAL MODULE: ./node_modules/next-page-transitions/lib/index.js
 var lib = __webpack_require__("FhCX");
@@ -19542,6 +18603,7 @@ var fade = __webpack_require__("5F4o");
 
 
 var _app_jsx = react_default.a.createElement;
+
 
 
 
@@ -19585,7 +18647,40 @@ class _app_MyApp extends app_default.a {
       Component,
       pageProps
     } = this.props;
-    return _app_jsx(react_default.a.Fragment, null, _app_jsx(CustomHead, null), _app_jsx(styles["ThemeProvider"], {
+    return _app_jsx(react_default.a.Fragment, null, _app_jsx(CustomHead, null), _app_jsx(head_default.a, null, _app_jsx("script", {
+      type: "text/javascript"
+    }, function () {
+      var _linkedin_partner_id = '1891689';
+
+      try {
+        if (window !== undefined) {
+          window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+
+          window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+        }
+      } catch {}
+    }()), _app_jsx("script", {
+      type: "text/javascript"
+    }, function () {
+      try {
+        if (document !== undefined) {
+          var s = document.getElementsByTagName('script')[0];
+          var b = document.createElement('script');
+          b.type = 'text/javascript';
+          b.async = true;
+          b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js';
+          s.parentNode.insertBefore(b, s);
+        }
+      } catch {}
+    }()), _app_jsx("noscript", null, _app_jsx("img", {
+      height: "1",
+      width: "1",
+      style: {
+        display: 'none'
+      },
+      alt: "",
+      src: "https://px.ads.linkedin.com/collect/?pid=1891689&fmt=gif"
+    }))), _app_jsx(styles["ThemeProvider"], {
       theme: theme["a" /* default */]
     }, _app_jsx(CssBaseline["a" /* default */], null), _app_jsx("div", {
       id: "app",
@@ -21261,7 +20356,7 @@ var grey = {
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_app\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_error\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/_polyfills\":[\"static/runtime/polyfills-2889d9d9fcf08314dd3a.js\"],\"/about\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/contact\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/gallery\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/index\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"],\"/services\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.4b80e9733c1b8b193132.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-85f30cfd58ecb0e58451.js\"]}}");
+module.exports = JSON.parse("{\"devFiles\":[],\"pages\":{\"/\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/_app\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/_error\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/_polyfills\":[\"static/runtime/polyfills-5c6befe99fce5c988bcc.js\"],\"/about\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/contact\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/gallery\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/index\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"],\"/services\":[\"static/runtime/webpack-4b444dab214c6491079c.js\",\"static/css/commons.7017dbc9.chunk.css\",\"static/chunks/commons.c9521652cd8cbf25ed03.js\",\"static/css/styles.4f50debc.chunk.css\",\"static/chunks/styles.f4d216a8975eb64c3bd5.js\",\"static/runtime/main-7cbf590430b0324d293b.js\"]}}");
 
 /***/ }),
 
@@ -28071,6 +27166,958 @@ module.exports = __webpack_require__("UbbE");
 __webpack_require__("o8NH");
 module.exports = __webpack_require__("WEpk").Object.assign;
 
+
+/***/ }),
+
+/***/ "UeKq":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var gallery_namespaceObject = {};
+__webpack_require__.r(gallery_namespaceObject);
+__webpack_require__.d(gallery_namespaceObject, "default", function() { return Services; });
+
+// EXTERNAL MODULE: external "url"
+var external_url_ = __webpack_require__("bzos");
+
+// EXTERNAL MODULE: external "querystring"
+var external_querystring_ = __webpack_require__("8xkj");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/render.js
+var render = __webpack_require__("/bjS");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/server/send-html.js
+var send_html = __webpack_require__("LuNM");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-init-server
+var next_plugin_loadermiddleware_on_init_server = __webpack_require__("GX0O");
+
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-plugin-loader.js?middleware=on-error-server
+var next_plugin_loadermiddleware_on_error_server = __webpack_require__("KqAr");
+
+// EXTERNAL MODULE: ./.next/build-manifest.json
+var build_manifest = __webpack_require__("LZ9C");
+
+// EXTERNAL MODULE: ./.next/react-loadable-manifest.json
+var react_loadable_manifest = __webpack_require__("67Bq");
+
+// EXTERNAL MODULE: ./src/pages/_document.js
+var _document = __webpack_require__("senJ");
+
+// EXTERNAL MODULE: ./src/pages/_error.js
+var _error = __webpack_require__("URMD");
+
+// EXTERNAL MODULE: ./src/pages/_app.js + 2 modules
+var _app = __webpack_require__("IlR1");
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("q1tI");
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.js
+var clsx = __webpack_require__("4k7N");
+var clsx_default = /*#__PURE__*/__webpack_require__.n(clsx);
+
+// EXTERNAL MODULE: ./src/components/common/Bottombar.js + 7 modules
+var Bottombar = __webpack_require__("icW0");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/makeStyles.js
+var makeStyles = __webpack_require__("R/WZ");
+
+// EXTERNAL MODULE: ./src/components/servicesPage/GetQuote.js
+var GetQuote = __webpack_require__("pTcK");
+
+// EXTERNAL MODULE: ./src/components/common/Topbar.js + 5 modules
+var Topbar = __webpack_require__("sHXR");
+
+// EXTERNAL MODULE: ./src/components/common/Contactbar.js + 1 modules
+var Contactbar = __webpack_require__("ev8R");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/index.js
+var core = __webpack_require__("m178");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
+var Container = __webpack_require__("Ji2X");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
+var Typography = __webpack_require__("ofer");
+
+// EXTERNAL MODULE: ./src/components/common/FancyQuotation.js
+var FancyQuotation = __webpack_require__("itGI");
+
+// CONCATENATED MODULE: ./src/components/galleryPage/GalleryIntroTitle.js
+var __jsx = react_default.a.createElement;
+
+
+
+
+
+
+const useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  box: {
+    width: '100%'
+  },
+  text_intro: {
+    color: 'white'
+  },
+  paper: {
+    background: 'transparent'
+  },
+  transparentPaper: {
+    borderRadius: 8,
+    backgroundColor: 'transparent'
+  },
+  text: {
+    color: 'white'
+  },
+  condMarginTop: {
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '5%'
+    }
+  },
+  condMargin: {
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: 48
+    }
+  },
+  quotationMarks: {
+    color: 'white',
+    fontSize: 29
+  },
+  whom: {
+    paddingLeft: 24
+  },
+  qutoation: {
+    paddingLeft: 24
+  }
+}));
+function GalleryIntro() {
+  const classes = useStyles();
+  return __jsx(Container["a" /* default */], {
+    maxWidth: "lg"
+  }, __jsx(core["Grid"], {
+    container: true,
+    direction: "row",
+    justify: "space-between",
+    alignItems: "center",
+    className: classes.box
+  }, __jsx(core["Grid"], {
+    item: true,
+    xs: 12,
+    sm: 4
+  }, __jsx(core["Paper"], {
+    className: classes.paper,
+    elevation: 0
+  }, __jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    style: {
+      paddingTop: 35,
+      paddingBottom: 35
+    },
+    className: classes.condMarginTop
+  }, __jsx(core["Grid"], {
+    item: true
+  }, __jsx(Typography["a" /* default */], {
+    variant: "h3",
+    component: "h1",
+    gutterBottom: true,
+    className: classes.text_intro,
+    id: "unselectable-text"
+  }, "iNest Gallery")), __jsx(core["Grid"], {
+    item: true
+  }, __jsx(Typography["a" /* default */], {
+    className: classes.text_intro,
+    id: "unselectable-text"
+  }, "presenting our previous projects."))))), __jsx(core["Grid"], {
+    item: true,
+    xs: 12,
+    sm: 7
+  }, __jsx(core["Paper"], {
+    className: classes.transparentPaper,
+    elevation: 6
+  }, __jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    alignItems: "stretch",
+    style: {
+      padding: 35
+    },
+    className: classes.condMargin
+  }, __jsx(core["Grid"], {
+    item: true
+  }, __jsx(FancyQuotation["a" /* default */], {
+    text: 'iNest team went above & beyond to make sure we’re happy with the final results.',
+    by: 'S.S.',
+    byTitle: 'Toronto'
+  })))))));
+}
+// CONCATENATED MODULE: ./src/components/galleryPage/GalleryTop.js
+var GalleryTop_jsx = react_default.a.createElement;
+
+
+
+
+
+
+const GalleryTop_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  minHeightTop: {
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 400
+    },
+    [theme.breakpoints.down('md')]: {
+      minHeight: 400
+    },
+    [theme.breakpoints.up('md')]: {
+      minHeight: 400
+    }
+  },
+  box1bg: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center bottom'
+  },
+  homeIntro: {
+    marginBottom: 80,
+    marginTop: 50,
+    [theme.breakpoints.up('sm')]: {
+      minHeight: '30vh'
+    }
+  }
+}));
+function GalleryTop() {
+  const classes = GalleryTop_useStyles();
+  return GalleryTop_jsx("div", null, GalleryTop_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    className: classes.minHeightTop
+  }, GalleryTop_jsx(core["Grid"], {
+    item: true
+  }, GalleryTop_jsx(Contactbar["a" /* default */], null)), GalleryTop_jsx(core["Grid"], {
+    item: true
+  }, GalleryTop_jsx(Topbar["a" /* default */], null)), GalleryTop_jsx(core["Grid"], {
+    item: true
+  }, GalleryTop_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    justify: "center",
+    alignItems: "stretch",
+    className: classes.homeIntro
+  }, GalleryTop_jsx(core["Grid"], {
+    item: true
+  }, GalleryTop_jsx(GalleryIntro, null))))));
+}
+// EXTERNAL MODULE: ./src/components/common/QuoteStrip.js
+var QuoteStrip = __webpack_require__("8r2L");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
+var define_property = __webpack_require__("hfKm");
+var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js
+var define_properties = __webpack_require__("2Eek");
+var define_properties_default = /*#__PURE__*/__webpack_require__.n(define_properties);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js
+var get_own_property_descriptors = __webpack_require__("XoMD");
+var get_own_property_descriptors_default = /*#__PURE__*/__webpack_require__.n(get_own_property_descriptors);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
+var get_own_property_descriptor = __webpack_require__("Jo+v");
+var get_own_property_descriptor_default = /*#__PURE__*/__webpack_require__.n(get_own_property_descriptor);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js
+var get_own_property_symbols = __webpack_require__("4mXO");
+var get_own_property_symbols_default = /*#__PURE__*/__webpack_require__.n(get_own_property_symbols);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js
+var object_keys = __webpack_require__("pLtp");
+var keys_default = /*#__PURE__*/__webpack_require__.n(object_keys);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__("vYYK");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/GridList/GridList.js
+var GridList = __webpack_require__("RHQs");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/GridListTile/GridListTile.js
+var GridListTile = __webpack_require__("kKik");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/GridListTileBar/GridListTileBar.js
+var GridListTileBar = __webpack_require__("ldJd");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js
+var esm_extends = __webpack_require__("kOwS");
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js + 1 modules
+var objectWithoutProperties = __webpack_require__("qNsG");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js
+var withStyles = __webpack_require__("H2TA");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Dialog/Dialog.js
+var Dialog = __webpack_require__("kfFl");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/DialogTitle/DialogTitle.js
+var DialogTitle = __webpack_require__("yv+Y");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/DialogContent/DialogContent.js
+var DialogContent = __webpack_require__("EQI2");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/IconButton/IconButton.js
+var IconButton = __webpack_require__("PsDL");
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/icons/Close.js
+var Close = __webpack_require__("ZPUd");
+var Close_default = /*#__PURE__*/__webpack_require__.n(Close);
+
+// CONCATENATED MODULE: ./src/components/common/CustomDialog.js
+
+
+var CustomDialog_jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+
+
+
+const styles = theme => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(2)
+  },
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500]
+  }
+});
+
+const CustomDialog_DialogTitle = Object(withStyles["a" /* default */])(styles)(props => {
+  const {
+    children,
+    classes,
+    onClose
+  } = props,
+        other = Object(objectWithoutProperties["a" /* default */])(props, ["children", "classes", "onClose"]);
+
+  return CustomDialog_jsx(DialogTitle["a" /* default */], Object(esm_extends["a" /* default */])({
+    disableTypography: true,
+    className: classes.root
+  }, other), CustomDialog_jsx(Typography["a" /* default */], {
+    variant: "h6"
+  }, children), onClose ? CustomDialog_jsx(IconButton["a" /* default */], {
+    "aria-label": "close",
+    className: classes.closeButton,
+    onClick: onClose
+  }, CustomDialog_jsx(Close_default.a, null)) : null);
+});
+const CustomDialog_DialogContent = Object(withStyles["a" /* default */])(theme => ({
+  root: {
+    padding: theme.spacing(2)
+  }
+}))(DialogContent["a" /* default */]);
+const CustomDialog_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  topRibbon: {
+    color: theme.palette.grey[100],
+    backgroundColor: theme.palette.grey[900],
+    maxHeight: '80vh'
+  },
+  bg: {}
+}));
+function CustomizedDialogs(props) {
+  const classes = CustomDialog_useStyles();
+  return CustomDialog_jsx("div", null, CustomDialog_jsx(Dialog["a" /* default */], {
+    onClose: props.handleClose,
+    "aria-labelledby": "customized-dialog-title",
+    open: props.open,
+    fullWidth: true,
+    maxWidth: "lg" // PaperProps={{ style: { borderRadius: 15 } }}
+
+  }, CustomDialog_jsx(CustomDialog_DialogTitle, {
+    id: "customized-dialog-title",
+    onClose: props.handleClose,
+    className: classes.topRibbon
+  }, props.title), CustomDialog_jsx(CustomDialog_DialogContent, {
+    className: classes.bg
+  }, CustomDialog_jsx("div", null, CustomDialog_jsx(core["Grid"], {
+    container: true,
+    justify: "center",
+    alignItems: "center",
+    direction: "column"
+  }, CustomDialog_jsx(core["Grid"], {
+    item: true
+  }, CustomDialog_jsx(Typography["a" /* default */], {
+    gutterBottom: true,
+    variant: "overline",
+    style: {
+      fontWeight: 'bold'
+    },
+    color: "textPrimary"
+  }, props.description)), CustomDialog_jsx(core["Grid"], {
+    item: true
+  }, CustomDialog_jsx("img", {
+    style: {
+      maxWidth: '100%',
+      maxHeight: '80vh',
+      borderRadius: 4
+    },
+    src: props.img
+  })))))));
+}
+// CONCATENATED MODULE: ./src/resource/EnlargeIcon.js
+
+
+var EnlargeIcon_jsx = react_default.a.createElement;
+
+
+const EnlargeIcon = props => {
+  return EnlargeIcon_jsx(core["SvgIcon"], Object(esm_extends["a" /* default */])({}, props, {
+    viewBox: "0 0 512 512"
+  }), EnlargeIcon_jsx("g", null, EnlargeIcon_jsx("g", null, EnlargeIcon_jsx("path", {
+    d: "M492,0H344.212c-11.046,0-20,8.954-20,20s8.954,20,20,20h99.503L283.394,200.322c-7.811,7.811-7.811,20.474,0,28.284 c7.81,7.81,20.473,7.811,28.284,0L472,68.284v99.503c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V20 C512,9.115,503.154,0,492,0z"
+  }))), EnlargeIcon_jsx("g", null, EnlargeIcon_jsx("g", null, EnlargeIcon_jsx("path", {
+    d: "M228.606,283.394c-7.811-7.81-20.474-7.811-28.284,0L40,443.716v-99.503c0-11.046-8.954-20-20-20s-20,8.954-20,20V492 c0,10.866,8.853,20,20,20h147.788c11.046,0,20-8.954,20-20c0-11.046-8.954-20-20-20H68.284l160.322-160.322 C236.417,303.867,236.417,291.204,228.606,283.394z"
+  }))), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null), EnlargeIcon_jsx("g", null));
+};
+
+/* harmony default export */ var resource_EnlargeIcon = (EnlargeIcon);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/useMediaQuery/useMediaQuery.js
+var useMediaQuery = __webpack_require__("lopY");
+
+// EXTERNAL MODULE: ./src/components/common/Link.js
+var Link = __webpack_require__("frks");
+
+// CONCATENATED MODULE: ./src/components/galleryPage/PhotoGallery.js
+
+
+
+
+
+
+
+var PhotoGallery_jsx = react_default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = keys_default()(object); if (get_own_property_symbols_default.a) { var symbols = get_own_property_symbols_default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return get_own_property_descriptor_default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(defineProperty["a" /* default */])(target, key, source[key]); }); } else if (get_own_property_descriptors_default.a) { define_properties_default()(target, get_own_property_descriptors_default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { define_property_default()(target, key, get_own_property_descriptor_default()(source, key)); }); } } return target; }
+
+
+
+
+
+
+
+
+
+
+
+
+const PhotoGallery_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
+    marginBottom: 45,
+    overflowY: 'hidden'
+  },
+  gridList: {
+    width: '100%',
+    height: 'auto',
+    overflowY: 'hidden' // [theme.breakpoints.down('sm')]: {
+    //   width: '100%',
+    // },
+    // [theme.breakpoints.down('md')]: {
+    //   width: '100%',
+    // },
+    // [theme.breakpoints.up('md')]: {
+    //   width: 1280,
+    // },
+
+  },
+  gridItem: {
+    height: '100%',
+    cursor: 'pointer',
+    '&:hover': {
+      cursor: 'pointer',
+      transform: 'scale(1.015)',
+      webkitTransition: ' all 0.5s ease',
+      mozTransition: ' all 0.5s ease',
+      oTransition: ' all 0.5s ease',
+      msTransition: ' all 0.5s ease',
+      transition: 'all 0.5s ease'
+    },
+    overflowY: 'hidden'
+  },
+  title: {
+    '&:hover': {
+      color: '#FBC02D'
+    }
+  },
+  icon: {
+    color: theme.palette.grey[500],
+    '&:hover': {
+      color: '#FBC02D'
+    }
+  }
+}));
+/**
+ * The example data is structured as follows:
+ *
+ * import image from 'path/to/image.jpg';
+ * [etc...]
+ *
+ * const tileData = [
+ *   {
+ *     img: image,
+ *     title: 'Image',
+ *  *     cols: 2,
+ *   },
+ *   {
+ *     [etc...]
+ *   },
+ * ];
+ */
+
+function ImageGridList(props) {
+  const classes = PhotoGallery_useStyles();
+  const smDown = Object(useMediaQuery["a" /* default */])(theme => theme.breakpoints.down('xs'));
+  const mdDown = Object(useMediaQuery["a" /* default */])(theme => theme.breakpoints.down('sm'));
+  const mdUp = Object(useMediaQuery["a" /* default */])(theme => theme.breakpoints.down('md'));
+  const [state, setState] = react_default.a.useState({
+    description: '',
+    img: undefined,
+    open: false
+  });
+
+  const handleClickOpen = (img, title) => {
+    setState({
+      description: title,
+      img,
+      open: true
+    });
+  };
+
+  const handleClose = () => {
+    setState(_objectSpread({}, state, {
+      open: false
+    }));
+  };
+
+  const tileData = [{
+    img: '3dproject.png',
+    title: '3DProject',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }, {
+    img: 'gallery/livingroom.jpg',
+    title: 'Lighting Automation',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }, {
+    img: 'gallery/stairwayToHeaven.jpg',
+    title: 'Lighting Automation',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }, // ------------------------------
+  {
+    img: 'gallerytwo/homesecurity3.jpeg',
+    title: 'Security System',
+    cols: smDown ? 1 : mdDown ? 6 : 3
+  }, {
+    img: 'gallery/home.jpg',
+    title: 'Lighting Automation',
+    cols: smDown ? 1 : mdDown ? 6 : 3
+  }, {
+    img: 'gallerytwo/camera.jpeg',
+    title: 'Security Camera',
+    cols: smDown ? 1 : mdDown ? 6 : 3
+  }, {
+    img: 'gallerytwo/camera2.jpeg',
+    title: 'Security Camera 2',
+    cols: smDown ? 1 : mdDown ? 6 : 3
+  }, // ------------------------------
+  {
+    img: '/gallery/theatre-gallery.jpg',
+    title: 'Home Theatre',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }, {
+    img: 'gallerytwo/climate-control.jpeg',
+    title: 'Climate Control',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }, {
+    img: 'gallery/wardrobe.jpg',
+    title: 'Electrical',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }, // ------------------------------
+  {
+    img: 'gallerytwo/sound.jpeg',
+    title: 'Sound System',
+    cols: smDown ? 1 : mdDown ? 6 : 3
+  }, {
+    img: 'gallerytwo/security.jpeg',
+    title: 'Security System',
+    cols: smDown ? 1 : mdDown ? 6 : 3
+  }, {
+    img: 'gallerytwo/lightautomation2.jpeg',
+    title: 'Lighting Controls',
+    cols: smDown ? 1 : mdDown ? 6 : 3
+  }, {
+    img: '/gallerytwo/smarthome2.jpeg',
+    title: 'Smart Home',
+    cols: smDown ? 1 : mdDown ? 6 : 3
+  }, // ------------------------------
+  {
+    img: '/gallerytwo/lighting.jpeg',
+    title: 'Lighting Automation',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }, {
+    img: 'gallerytwo/lighting3.jpeg',
+    title: 'Lighting Automation',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }, {
+    img: 'gallery/lighting-gallery.jpg',
+    title: 'Lighting Automation',
+    cols: smDown ? 1 : mdDown ? 6 : 4
+  }];
+  return PhotoGallery_jsx(react_default.a.Fragment, null, PhotoGallery_jsx("div", {
+    className: classes.root
+  }, PhotoGallery_jsx(core["Container"], {
+    maxWidth: "lg"
+  }, PhotoGallery_jsx(GridList["a" /* default */], {
+    cellHeight: 260,
+    className: classes.gridList,
+    cols: smDown ? 1 : mdDown ? 12 : 12
+  }, tileData.map((tile, index) => PhotoGallery_jsx(GridListTile["a" /* default */], {
+    key: `tile-gallery-${index}`,
+    cols: tile.cols || 1,
+    title: tile.title,
+    onClick: () => tile.title === '3DProject' ? "location.href='pageurl.html';" : handleClickOpen(tile.img, tile.title),
+    className: classes.gridItem
+  }, tile.title === '3DProject' ? PhotoGallery_jsx("a", {
+    href: "https://my.matterport.com/show/?m=EJ33Bp9SU3j",
+    target: "_blank"
+  }, PhotoGallery_jsx("img", {
+    src: tile.img,
+    alt: tile.title,
+    style: {
+      width: '100%',
+      height: '100%'
+    }
+  }), PhotoGallery_jsx(GridListTileBar["a" /* default */], {
+    title: tile.title,
+    classes: {
+      title: classes.title,
+      root: classes.title
+    },
+    style: {
+      height: '100%',
+      textAlign: 'center',
+      fontWeight: 'bolder'
+    } // actionIcon={
+    //   // <IconButton
+    //   //   aria-label={`info about ${tile.title}`}
+    //   //   className={classes.icon}
+    //   // >
+    //   //   <EnlargeIcon />
+    //   // </IconButton>
+    // }
+
+  })) : PhotoGallery_jsx(react_default.a.Fragment, null, PhotoGallery_jsx("img", {
+    src: tile.img,
+    alt: tile.title,
+    style: {
+      width: '100%',
+      height: '100%'
+    }
+  }), PhotoGallery_jsx(GridListTileBar["a" /* default */], {
+    title: tile.title,
+    classes: {
+      title: classes.title,
+      root: classes.title
+    },
+    style: {
+      height: '100%',
+      textAlign: 'center',
+      fontWeight: 'bolder'
+    } // actionIcon={
+    //   // <IconButton
+    //   //   aria-label={`info about ${tile.title}`}
+    //   //   className={classes.icon}
+    //   // >
+    //   //   <EnlargeIcon />
+    //   // </IconButton>
+    // }
+
+  }))))))), PhotoGallery_jsx(CustomizedDialogs, {
+    content: 'gallery item',
+    handleClose: handleClose,
+    open: state.open,
+    img: state.img,
+    title: 'Gallery',
+    description: state.description
+  }));
+}
+// CONCATENATED MODULE: ./src/components/galleryPage/GalleryContent.js
+var GalleryContent_jsx = react_default.a.createElement;
+
+
+
+
+
+const GalleryContent_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  root: {// minHeight: '50vh',
+  },
+  aboutBox: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 200,
+      marginBottom: 200
+    },
+    [theme.breakpoints.down('md')]: {
+      marginTop: 200,
+      marginBottom: 200
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: 200,
+      marginBottom: 200
+    }
+  },
+  container: {
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: 100,
+      paddingBottom: 100
+    },
+    [theme.breakpoints.down('md')]: {
+      paddingTop: 100,
+      paddingBottom: 100
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: 100,
+      paddingBottom: 100
+    }
+  },
+  missionTitle: {
+    textAlign: 'center' // [theme.breakpoints.down('sm')]: {
+    //   fontSize: 19,
+    // },
+    // [theme.breakpoints.down('md')]: {
+    //   fontSize: 22,
+    // },
+    // [theme.breakpoints.up('lg')]: {
+    //   fontSize: 29,
+    // },
+
+  },
+  missionText: {
+    textAlign: 'center'
+  },
+  aboutText: {
+    textAlign: 'center'
+  },
+  aboutTitle: {
+    textAlign: 'center'
+  },
+  visionInner: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 72,
+      marginBottom: 72
+    },
+    [theme.breakpoints.down('md')]: {
+      marginTop: 88,
+      marginBottom: 88
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: 128,
+      marginBottom: 128
+    }
+  },
+  aboutInner: {// marginTop: 210,
+    // marginBottom: 110,
+  }
+}));
+function GalleryContent(props) {
+  const classes = GalleryContent_useStyles();
+  return GalleryContent_jsx("div", {
+    className: classes.root
+  }, GalleryContent_jsx(core["Grid"], {
+    container: true,
+    direction: "column",
+    spacing: 0
+  }, GalleryContent_jsx(core["Grid"], {
+    item: true,
+    xs: 12
+  }, GalleryContent_jsx(core["Container"], {
+    maxWidth: "lg"
+  }, GalleryContent_jsx(core["Grid"], {
+    item: true,
+    className: classes.visionInner
+  }, GalleryContent_jsx(core["Typography"], {
+    variant: "h3",
+    className: classes.missionTitle
+  }, "At iNest, we let our work speak for itself.")))), GalleryContent_jsx(core["Grid"], {
+    item: true
+  }, GalleryContent_jsx(ImageGridList, null))));
+}
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/lib/head.js
+var head = __webpack_require__("8Kt/");
+var head_default = /*#__PURE__*/__webpack_require__.n(head);
+
+// CONCATENATED MODULE: ./src/pages/gallery.js
+var gallery_jsx = react_default.a.createElement;
+
+
+
+
+
+
+
+
+const gallery_useStyles = Object(makeStyles["a" /* default */])(theme => ({
+  box1bg: {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.90)), url(${'gallery/livingroom.jpg'})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
+  },
+  selectiveServices: {
+    position: 'relative',
+    zIndex: '3'
+  },
+  selectiveServicesRaised: {
+    margin: '-80px 30px 80px ',
+    borderRadius: '6px',
+    boxShadow: '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
+  }
+}));
+function Services() {
+  const classes = gallery_useStyles();
+  const selectiveServiceStyles = clsx_default()(classes.selectiveServices, classes.selectiveServicesRaised);
+  return gallery_jsx(react_default.a.Fragment, null, gallery_jsx(head_default.a, null, gallery_jsx("title", null, "gallery")), gallery_jsx("div", {
+    className: classes.box1bg
+  }, gallery_jsx(GalleryTop, null)), gallery_jsx(GalleryContent, null), gallery_jsx(GetQuote["a" /* default */], null), gallery_jsx(Bottombar["a" /* default */], null));
+}
+// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-serverless-loader.js?page=%2Fgallery&absolutePagePath=private-next-pages%2Fgallery.js&absoluteAppPath=private-next-pages%2F_app.js&absoluteDocumentPath=private-next-pages%2F_document.js&absoluteErrorPath=private-next-pages%2F_error.js&distDir=private-dot-next&buildId=2bv4MuMKJxmOy0EYfqZsy&assetPrefix=&generateEtags=true&ampBindInitData=false&canonicalBase=
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render; });
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    const Component = Services
+    /* harmony default export */ var next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_ = __webpack_exports__["default"] = (Component);
+    const unstable_getStaticProps = gallery_namespaceObject['unstable_getStaticProp' + 's']
+
+    const unstable_getStaticPaths = undefined
+    const config = gallery_namespaceObject['confi' + 'g'] || {}
+    const next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_app = _app["a" /* default */]
+    async function renderReqToHTML(req, res, fromExport) {
+      const options = {
+        App: _app["a" /* default */],
+        Document: _document["a" /* default */],
+        buildManifest: build_manifest,
+        unstable_getStaticProps,
+        unstable_getStaticPaths,
+        reactLoadableManifest: react_loadable_manifest,
+        canonicalBase: "",
+        buildId: "2bv4MuMKJxmOy0EYfqZsy",
+        assetPrefix: "",
+        ampBindInitData: false,
+      }
+      let sprData = false
+
+      if (req.url.match(/_next\/data/)) {
+        sprData = true
+        req.url = req.url
+          .replace(new RegExp('/_next/data/2bv4MuMKJxmOy0EYfqZsy/'), '/')
+          .replace(/\.json$/, '')
+      }
+      const parsedUrl = Object(external_url_["parse"])(req.url, true)
+      const renderOpts = Object.assign(
+        {
+          Component,
+          pageConfig: config,
+          dataOnly: req.headers && (req.headers.accept || '').indexOf('application/amp.bind+json') !== -1,
+          nextExport: fromExport
+        },
+        options,
+      )
+      try {
+        
+        const params = {};
+        const nowParams = null;
+        let result = await Object(render["renderToHTML"])(req, res, "/gallery", Object.assign({}, unstable_getStaticProps ? {} : parsedUrl.query, nowParams ? nowParams : params), renderOpts)
+
+        if (sprData && !fromExport) {
+          const payload = JSON.stringify(renderOpts.sprData)
+          res.setHeader('Content-Type', 'application/json')
+          res.setHeader('Content-Length', Buffer.byteLength(payload))
+          res.setHeader(
+            'Cache-Control',
+            `s-maxage=${renderOpts.revalidate}, stale-while-revalidate`
+          )
+          res.end(payload)
+          return null
+        }
+
+        if (fromExport) return { html: result, renderOpts }
+        return result
+      } catch (err) {
+        if (err.code === 'ENOENT') {
+          res.statusCode = 404
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            unstable_getStaticProps: undefined,
+            unstable_getStaticPaths: undefined,
+            Component: _error["default"]
+          }))
+          return result
+        } else {
+          console.error(err)
+          res.statusCode = 500
+          const result = await Object(render["renderToHTML"])(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+            unstable_getStaticProps: undefined,
+            unstable_getStaticPaths: undefined,
+            Component: _error["default"],
+            err
+          }))
+          return result
+        }
+      }
+    }
+    async function next_serverless_loaderpage_2Fgallery_absolutePagePath_private_next_pages_2Fgallery_js_absoluteAppPath_private_next_pages_2F_app_js_absoluteDocumentPath_private_next_pages_2F_document_js_absoluteErrorPath_private_next_pages_2F_error_js_distDir_private_dot_next_buildId_2bv4MuMKJxmOy0EYfqZsy_assetPrefix_generateEtags_true_ampBindInitData_false_canonicalBase_render (req, res) {
+      try {
+        await Object(next_plugin_loadermiddleware_on_init_server["default"])()
+        const html = await renderReqToHTML(req, res)
+        if (html) {
+          Object(send_html["sendHTML"])(req, res, html, {generateEtags: true})
+        }
+      } catch(err) {
+        await Object(next_plugin_loadermiddleware_on_error_server["default"])(err)
+        console.error(err)
+        res.statusCode = 500
+        res.end('Internal Server Error')
+      }
+    }
+  
 
 /***/ }),
 
@@ -42195,11 +42242,18 @@ const Bottombar_useStyles = Object(makeStyles["a" /* default */])(theme => ({
   },
   divider: {
     backgroundColor: `${theme.palette.grey[800]}`
+  },
+  hover: {
+    color: theme.palette.grey[500],
+    fontSize: mdDown => mdDown ? 16 : 24,
+    '&:hover': {
+      color: 'white'
+    }
   }
 }));
 function Bottombar() {
-  const classes = Bottombar_useStyles();
   const mdDown = Object(core["useMediaQuery"])(theme => theme.breakpoints.down('md'));
+  const classes = Bottombar_useStyles(mdDown);
   return Bottombar_jsx(Grid["a" /* default */], {
     container: true,
     direction: "row",
@@ -42239,24 +42293,15 @@ function Bottombar() {
   }, Bottombar_jsx(LinkedinButton["a" /* default */], {
     href: "https://www.linkedin.com/company/inestt/",
     target: "_blank",
-    style: {
-      fontSize: mdDown ? 16 : 24,
-      color: 'white'
-    }
+    className: classes.hover
   }), Bottombar_jsx(InstagramButton["a" /* default */], {
     href: "https://www.instagram.com/inest.ca/?hl=en",
     target: "_blank",
-    style: {
-      fontSize: mdDown ? 16 : 24,
-      color: 'white'
-    }
+    className: classes.hover
   }), Bottombar_jsx(FacebookButton["a" /* default */], {
     href: "https://www.facebook.com/INest-114704206654630/",
     target: "_blank",
-    style: {
-      fontSize: mdDown ? 16 : 24,
-      color: 'white'
-    }
+    className: classes.hover
   })))), Bottombar_jsx(Divider["a" /* default */], {
     orientation: "vertical",
     className: clsx_default()([classes.hideOnSize, classes.divider])
@@ -54388,9 +54433,6 @@ var FacebookButton = __webpack_require__("2p08");
 // EXTERNAL MODULE: ./src/components/common/button/InstagramButton.js + 1 modules
 var InstagramButton = __webpack_require__("JyTl");
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/colors/grey.js
-var grey = __webpack_require__("LXXt");
-
 // CONCATENATED MODULE: ./src/components/common/Topbar.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Topbar; });
 var Topbar_jsx = react_default.a.createElement;
@@ -54420,6 +54462,8 @@ const Topbar_useStyles = Object(makeStyles["a" /* default */])(theme => ({
     marginBottom: -16
   },
   hover: {
+    fontSize: 16,
+    color: theme.palette.grey[500],
     '&:hover': {
       color: 'white'
     }
@@ -54463,30 +54507,18 @@ function Topbar() {
   }, Topbar_jsx(LinkedinButton["a" /* default */], {
     href: "https://www.linkedin.com/company/inestt/",
     target: "_blank",
-    style: {
-      fontSize: 16,
-      color: grey["a" /* default */][500]
-    },
     className: classes.hover
   })), Topbar_jsx(Grid["a" /* default */], {
     item: true
   }, Topbar_jsx(InstagramButton["a" /* default */], {
     href: "https://www.instagram.com/inest.ca/?hl=en",
     target: "_blank",
-    style: {
-      fontSize: 16,
-      color: grey["a" /* default */][500]
-    },
     className: classes.hover
   })), Topbar_jsx(Grid["a" /* default */], {
     item: true
   }, Topbar_jsx(FacebookButton["a" /* default */], {
     href: "https://www.facebook.com/INest-114704206654630/",
     target: "_blank",
-    style: {
-      fontSize: 16,
-      color: grey["a" /* default */][500]
-    },
     className: classes.hover
   })))))), Topbar_jsx(Grid["a" /* default */], {
     item: true

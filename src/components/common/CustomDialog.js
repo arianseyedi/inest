@@ -1,13 +1,12 @@
 import React from 'react'
 import { withStyles, makeStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
 import MuiDialogTitle from '@material-ui/core/DialogTitle'
 import MuiDialogContent from '@material-ui/core/DialogContent'
-import MuiDialogActions from '@material-ui/core/DialogActions'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
 import Typography from '@material-ui/core/Typography'
+import { Grid } from '@material-ui/core'
 
 const styles = theme => ({
   root: {
@@ -72,18 +71,24 @@ export default function CustomizedDialogs(props) {
         </DialogTitle>
         <DialogContent className={classes.bg}>
           <div>
-            <Typography
-              gutterBottom
-              variant="overline"
-              style={{ fontWeight: 'bold' }}
-              color="textPrimary"
-            >
-              {props.description}
-            </Typography>
-            <img
-              style={{ width: '100%', maxHeight: '80vh', borderRadius: 4 }}
-              src={props.img}
-            />
+            <Grid container justify="center" alignItems="center" direction="column">
+              <Grid item>
+                <Typography
+                  gutterBottom
+                  variant="overline"
+                  style={{ fontWeight: 'bold' }}
+                  color="textPrimary"
+                >
+                  {props.description}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <img
+                  style={{ maxWidth: '100%', maxHeight: '80vh', borderRadius: 4 }}
+                  src={props.img}
+                />
+              </Grid>
+            </Grid>
           </div>
         </DialogContent>
       </Dialog>

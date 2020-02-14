@@ -12,6 +12,7 @@ import StepByStepGuide from '../components/homePage/StepByStepGuide'
 import Benefits from '../components/homePage/Benefits'
 import ServicesTour from '../components/homePage/ServicesTour'
 import { Router } from 'next/router'
+import Head from 'next/head'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
@@ -109,6 +110,9 @@ export default function Index() {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>home</title>
+      </Head>
       <div className={classes.box1bg}>
         <Grid
           container

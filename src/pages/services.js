@@ -21,6 +21,7 @@ import ClimateControlService from '../components/servicesPage/ClimateControlServ
 import SmartBlindsService from '../components/servicesPage/SmartBlindsService'
 import SecurityCameraService from '../components/servicesPage/SecurityCameraService'
 import GetQuote from '../components/servicesPage/GetQuote'
+import Head from 'next/head'
 
 const useStyles = makeStyles(theme => ({
   box1bg: {
@@ -72,6 +73,9 @@ export default function Services() {
   ))
   return (
     <React.Fragment>
+      <Head>
+        <title>services</title>
+      </Head>
       <div className={classes.box1bg}>
         <ServicesTop />
       </div>
