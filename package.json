@@ -4,12 +4,10 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "olddev": "node server.js",
     "prodstart": "NODE_ENV=production node server.js",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "oldstart": "NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "dependencies": {
     "@material-ui/core": "latest",

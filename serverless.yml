@@ -1,2 +1,2 @@
-nextApp:
+nextApp: # make sure to have a .env file in the root with your valid AWS_ACCESS_KEY_ID=<put value> and AWS_SECRET_ACCESS_KEY =<put value here> for this to work. Then simply type 'serverless' in the console at the root of this project to deploy.
   component: 'serverless-next.js'

@@ -26,7 +26,7 @@
             "PATCH"
           ],
           "lambda@edge": {
-            "origin-request": "arn:aws:lambda:us-east-1:462483490358:function:0yrua2-1gx0ohh:26"
+            "origin-request": "arn:aws:lambda:us-east-1:462483490358:function:0yrua2-1gx0ohh:28"
           }
         }
       }
@@ -43,7 +43,7 @@
       "queryString": true
     },
     "lambda@edge": {
-      "origin-request": "arn:aws:lambda:us-east-1:462483490358:function:0yrua2-be0eiof:26"
+      "origin-request": "arn:aws:lambda:us-east-1:462483490358:function:0yrua2-be0eiof:28"
     }
   }
 }
