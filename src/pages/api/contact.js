@@ -5,13 +5,6 @@ const formidable = require('formidable')
 
 export default (req, res) => {
   const mailer = ({ subject, body, attachments }) => {
-    // var transporter = nodemailer.createTransport({
-    //   service: 'gmail',
-    //   auth: {
-    //     user: 'freelanceinest@gmail.com',
-    //     pass: 'Fa787ARL@',
-    //   },
-    // })
     let refreshToken =
       '1//0fvosuc_hdRcvCgYIARAAGA8SNwF-L9Iri80EnnUS-G9RPM_6EROBFxY9D_yAvjQFV-VPjpU1h6W5cL8IEs5egNqfBdtajICLwv0'
     let expires = 1580711243786
@@ -29,14 +22,12 @@ export default (req, res) => {
       },
     })
     transporter.on('token', token => {
-      console.log('token:', token)
       accessToken = token.accessToken
       expires = token.expires
     })
     const message = {
       from: 'freelanceinest@gmail.com',
       to: 'info@inest.ca',
-      // to: 'freelanceinest@gmail.com',
       subject,
       html: body,
       attachments,
@@ -58,12 +49,11 @@ export default (req, res) => {
       form.maxFieldsSize = 2 * 1024 * 1024 // 2 MB
       form.maxFileSize = 10 * 1024 * 1024 // 10 MB
       form.parse(req, (err, fields, files) => {
-        console.log(fields)
         if (err) {
-          console.log('500', err)
           res.status(500).send(`parsing error occured`)
         } else {
           try {
+            // expected shape of payload:
             //   event = {
             //      email: "abc",
             //      name: 'Asghar Farhadi',
@@ -110,15 +100,12 @@ export default (req, res) => {
                 : undefined
             mailer({ subject, body, attachments })
               .then(info => {
-                console.log('200 success', info)
                 res.status(200).send('success')
               })
               .catch(error => {
-                console.log('204', error)
                 res.status(204).send('An error occured:') //\n ${error}
               })
           } catch (error) {
-            console.log(error)
             res.status(500).send('an error occured while building email body')
           }
         }
