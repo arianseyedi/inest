@@ -26,6 +26,7 @@ module.exports = withCSS(
     env: {
       email_to: '',
     },
-    target: 'serverless',
+    target: 'server', // TO EHSAN: This is the line I was talking about. 'server' is the correct value. Run yarn build, then yarn export.
+    // target: 'serverless' // for future in case you want to build for serverless instead.
   })
 )

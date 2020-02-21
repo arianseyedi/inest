@@ -7,7 +7,8 @@
     "prodstart": "NODE_ENV=production node server.js",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "@material-ui/core": "latest",
