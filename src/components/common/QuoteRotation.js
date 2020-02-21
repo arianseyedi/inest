@@ -46,7 +46,7 @@ export default function QuoteRotation() {
       naturalSlideHeight={125}
       totalSlides={3}
       interval={5000}
-      infinite
+      infinite={true}
       isPlaying
       dragEnabled={false}
       playDirection="forward"

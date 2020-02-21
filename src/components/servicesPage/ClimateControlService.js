@@ -13,6 +13,7 @@ export default function ClimateControlService(props) {
       icon={ClimateIcon}
       {...props}
       anchortag="climatecontrol"
+      style={{paddingBottom: 24}}
     />
   )
 }

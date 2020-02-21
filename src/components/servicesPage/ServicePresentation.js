@@ -9,6 +9,9 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: '100%',
     minHeight: '40vh',
+    [theme.breakpoints.down('sm')]: {
+      paddingBottom: 24
+    }
   },
   // box1bg: {
   //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.90)), url(${'dims.jpeg'})`,

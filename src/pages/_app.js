@@ -35,8 +35,48 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <React.Fragment>
-        <CustomHead />
         <Head>
+          {console.log('_appjs')}
+          {/* Global Site Tag  - START - Put As high up in the head */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-158791532-1"
+          ></script>
+          <script>
+            {(function() {
+              try {
+                if (window !== undefined) {
+                  window.dataLayer = window.dataLayer || []
+                  function gtag() {
+                    dataLayer.push(arguments)
+                  }
+                  gtag('js', new Date())
+                  gtag('config', 'UA-158791532-1')
+                }
+              } catch {}
+            })()}
+          </script>
+          {/* Global Site Tag  - END - Put As high up in the head */}
+          {/* Google Tag Manager  - START - Put as high in the <head> of the page as possible */}
+          <script>
+            {(function() {
+              try {
+                if ((window !== undefined) & (document !== undefined)) {
+                  ;(function(w, d, s, l, i) {
+                    w[l] = w[l] || []
+                    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+                    var f = d.getElementsByTagName(s)[0],
+                      j = d.createElement(s),
+                      dl = l != 'dataLayer' ? '&l=' + l : ''
+                    j.async = true
+                    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+                    f.parentNode.insertBefore(j, f)
+                  })(window, document, 'script', 'dataLayer', 'GTM-NWXMPDX')
+                }
+              } catch {}
+            })()}
+          </script>
+          {/* Google Tag Manager  - START - Put as high in the <head> of the page as possible */}
           <script type="text/javascript">
             {(function() {
               var _linkedin_partner_id = '1891689'
@@ -62,16 +102,8 @@ export default class MyApp extends App {
               } catch {}
             })()}
           </script>
-          <noscript>
-            <img
-              height="1"
-              width="1"
-              style={{ display: 'none' }}
-              alt=""
-              src="https://px.ads.linkedin.com/collect/?pid=1891689&fmt=gif"
-            />
-          </noscript>
         </Head>
+        <CustomHead />
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
